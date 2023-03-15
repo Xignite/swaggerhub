@@ -1,0 +1,549 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "XigniteLogos",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://logos.xignite.com/"
+    }
+  ],
+  "paths": {
+    "/xLogos/GetLogos": {
+      "get": {
+        "tags": [
+          "XigniteLogos"
+        ],
+        "parameters": [
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierAsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Scale",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LogosResult"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LogosResult"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LogosResult"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LogosResult"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xLogos/GetLogosByExchange": {
+      "get": {
+        "tags": [
+          "XigniteLogos"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NextPage",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogosByExchange"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogosByExchange"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogosByExchange"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogosByExchange"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xLogos/ListExchanges": {
+      "get": {
+        "tags": [
+          "XigniteLogos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xLogos/ListSymbols": {
+      "get": {
+        "tags": [
+          "XigniteLogos"
+        ],
+        "parameters": [
+          {
+            "name": "exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Security": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "InstrumentClass": {
+            "type": "string",
+            "nullable": true
+          },
+          "Industry": {
+            "type": "string",
+            "nullable": true
+          },
+          "Sector": {
+            "type": "string",
+            "nullable": true
+          },
+          "FIGI": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompositeFIGI": {
+            "type": "string",
+            "nullable": true
+          },
+          "SEDOL": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "CIK": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Files": {
+        "type": "object",
+        "properties": {
+          "LogoLight": {
+            "type": "string",
+            "nullable": true
+          },
+          "LogoDark": {
+            "type": "string",
+            "nullable": true
+          },
+          "LogoLightVector": {
+            "type": "string",
+            "nullable": true
+          },
+          "LogoDarkVector": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarkLight": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarkDark": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarkLightVector": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarkDarkVector": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarkComposite": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastUpdated": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Logo": {
+        "type": "object",
+        "properties": {
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "Files": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Files"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LogosResult": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "Logo": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Logo"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LogosByExchange": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "NextPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "TotalLogosByExchange": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Logos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Logo"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExchangeDescription": {
+        "type": "object",
+        "properties": {
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExchangeList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "ExchangeDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExchangeDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SymbolDescription": {
+        "type": "object",
+        "properties": {
+          "CompanyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompanyIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompanyDomicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompanyRegion": {
+            "type": "string",
+            "nullable": true
+          },
+          "SecurityName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SymbolList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "SymbolDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SymbolDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "apiKey",
+        "description": "Token for your account.",
+        "name": "_token",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
