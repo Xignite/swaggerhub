@@ -1,0 +1,1881 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "XigniteGlobalIndicesHistorical",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://globalindiceshistorical.xignite.com/"
+    }
+  ],
+  "paths": {
+    "/xGlobalIndicesHistorical/ListIndexGroups": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexGroup"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexGroup"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexGroup"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexGroup"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/ListIndicesByIndexGroup": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "indexGroup",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexDescription"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexDescription"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexDescription"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexDescription"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/GetIndexSymbolMappingByOldSymbol": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "oldSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexSymbolMapping"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexSymbolMapping"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexSymbolMapping"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexSymbolMapping"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/GetIndexSymbolMappingsByOldSymbols": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "oldSymbols",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexSymbolMapping"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexSymbolMapping"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexSymbolMapping"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexSymbolMapping"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/SearchIndicesByName": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "indexName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexDescription"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexDescription"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexDescription"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexDescription"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/GetHistoricalIndexValue": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "asOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValue"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValue"
+                    }
+                  ]
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValue"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValue"
+                    }
+                  ]
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValue"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValue"
+                    }
+                  ]
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValue"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValue"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/GetHistoricalIndicesValue": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "asOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/IndexValue"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Weeks.IndexValue"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/IndexValue"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Weeks.IndexValue"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/IndexValue"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Weeks.IndexValue"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/IndexValue"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Weeks.IndexValue"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/GetLastClosingIndexValue": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValue"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValue"
+                    }
+                  ]
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValue"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValue"
+                    }
+                  ]
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValue"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValue"
+                    }
+                  ]
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValue"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValue"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/GetLastClosingIndicesValue": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/IndexValue"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Weeks.IndexValue"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/IndexValue"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Weeks.IndexValue"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/IndexValue"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Weeks.IndexValue"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/IndexValue"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Weeks.IndexValue"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/GetHistoricalIndexValues": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/GetHistoricalIndexValuesTrailing": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "periodType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/PeriodTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "periods",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/GetHistoricalIndexWeeklyValues": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/GetHistoricalIndexMonthlyValues": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/GetHistoricalIndexQuarterlyValues": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/IndexValues"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Weeks.IndexValues"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/GetIndexBars": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "startTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "endTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "precision",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/BarPrecision"
+                }
+              ]
+            }
+          },
+          {
+            "name": "period",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexBars"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexBars"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexBars"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexBars"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexBars"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/GetChartBars": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "startTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "endTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "precision",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "period",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "adjustmentMethod",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "includeExtended",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexChartBars"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexChartBars"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexChartBars"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexChartBars"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexChartBars"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IndexGroup": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IndexDescription": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IndexName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "IndexGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IndexDescriptionDto": {
+        "type": "object",
+        "properties": {
+          "IndexName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "IndexGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IndexSymbolMapping": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Index": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/IndexDescriptionDto"
+              }
+            ],
+            "nullable": true
+          },
+          "OldSymbol": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IdentifierTypes": {
+        "enum": [
+          "Symbol",
+          "CIK",
+          "CUSIP",
+          "ISIN",
+          "Valoren",
+          "SEDOL",
+          "FIGI",
+          "CompositeFIGI"
+        ],
+        "type": "string"
+      },
+      "IndexQuote": {
+        "type": "object",
+        "properties": {
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "Time": {
+            "type": "string",
+            "nullable": true
+          },
+          "UTCOffset": {
+            "type": "number",
+            "format": "double"
+          },
+          "Volume": {
+            "type": "number",
+            "format": "double"
+          },
+          "Open": {
+            "type": "number",
+            "format": "double"
+          },
+          "High": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Last": {
+            "type": "number",
+            "format": "double"
+          },
+          "Close": {
+            "type": "number",
+            "format": "double"
+          },
+          "ChangeFromOpen": {
+            "type": "number",
+            "format": "double"
+          },
+          "PercentChangeFromOpen": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousClose": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousCloseDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ChangeFromPreviousClose": {
+            "type": "number",
+            "format": "double"
+          },
+          "PercentChangeFromPreviousClose": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Weeks.IndexQuote": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/IndexQuote"
+          }
+        ],
+        "properties": {
+          "High52Weeks": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low52Weeks": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IndexValue": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Index": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/IndexDescriptionDto"
+              }
+            ],
+            "nullable": true
+          },
+          "Value": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/IndexQuote"
+              },
+              {
+                "$ref": "#/components/schemas/Weeks.IndexQuote"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Weeks.IndexValue": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/IndexValue"
+          }
+        ],
+        "properties": {
+          "Value": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Weeks.IndexQuote"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IndexValues": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Index": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/IndexDescriptionDto"
+              }
+            ],
+            "nullable": true
+          },
+          "StartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Values": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/IndexQuote"
+                },
+                {
+                  "$ref": "#/components/schemas/Weeks.IndexQuote"
+                }
+              ]
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Weeks.IndexValues": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/IndexValues"
+          }
+        ],
+        "properties": {
+          "Values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Weeks.IndexQuote"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PeriodTypes": {
+        "enum": [
+          "Day",
+          "Week",
+          "Month",
+          "Quarter",
+          "Year"
+        ],
+        "type": "string"
+      },
+      "BarPrecision": {
+        "enum": [
+          "Minutes",
+          "Hours"
+        ],
+        "type": "string"
+      },
+      "Bar": {
+        "type": "object",
+        "properties": {
+          "StartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "StartTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "UTCOffset": {
+            "type": "number",
+            "format": "double"
+          },
+          "Open": {
+            "type": "number",
+            "format": "double"
+          },
+          "High": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Close": {
+            "type": "number",
+            "format": "double"
+          },
+          "Volume": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IndexBars": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Index": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/IndexDescriptionDto"
+              }
+            ],
+            "nullable": true
+          },
+          "Bars": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Bar"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChartBar": {
+        "type": "object",
+        "properties": {
+          "StartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "StartTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "UTCOffset": {
+            "type": "number",
+            "format": "double"
+          },
+          "Open": {
+            "type": "number",
+            "format": "double"
+          },
+          "High": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Close": {
+            "type": "number",
+            "format": "double"
+          },
+          "Volume": {
+            "type": "number",
+            "format": "double"
+          },
+          "Trades": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TWAP": {
+            "type": "number",
+            "format": "double"
+          },
+          "VWAP": {
+            "type": "number",
+            "format": "double"
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Session": {
+            "type": "string",
+            "nullable": true
+          },
+          "AdjustmentRatio": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IndexChartBars": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Timing": {
+            "type": "string",
+            "nullable": true
+          },
+          "Index": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/IndexDescriptionDto"
+              }
+            ],
+            "nullable": true
+          },
+          "ChartBars": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChartBar"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "apiKey",
+        "description": "Token for your account.",
+        "name": "_token",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
