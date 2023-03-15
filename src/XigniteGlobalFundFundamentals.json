@@ -1,0 +1,3224 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "XigniteGlobalFundFundamentals",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://globalfundfundamentals.xignite.com/"
+    }
+  ],
+  "paths": {
+    "/V2/xGlobalFundFundamentals/ListCountries": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountryList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountryList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountryList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/CountryList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/ListFundsByCountry": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "CountryCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FundTypes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/ListFundTypes": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundTypeList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundTypeList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundTypeList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundTypeList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/ListFundFundamentals": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundFundamentalDescriptionList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundFundamentalDescriptionList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundFundamentalDescriptionList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundFundamentalDescriptionList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundFundamentals": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FundFundamentalTypes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundFundamentals"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundFundamentals"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundFundamentals"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundFundamentals"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundFundamentalsRange": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FundFundamentalTypes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundFundamentals"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundFundamentals"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundFundamentals"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundFundamentals"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundProfiles": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundProfiles"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundProfiles"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundProfiles"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundProfiles"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundFeeSchedules": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FeeScheduleTypes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundFeeSchedules"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundFeeSchedules"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundFeeSchedules"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundFeeSchedules"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundHoldings": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundHoldings"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundHoldings"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundHoldings"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundHoldings"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundHoldingsRange": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundHoldings"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundHoldings"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundHoldings"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundHoldings"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundManagers": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundManagers"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundManagers"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundManagers"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundManagers"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundManagersRange": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundManagers"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundManagers"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundManagers"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundManagers"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundMonthEndTrailingReturns": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundMonthEndTrailingReturns"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundMonthEndTrailingReturns"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundMonthEndTrailingReturns"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundMonthEndTrailingReturns"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundMonthEndTrailingReturnsRange": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundMonthEndTrailingReturns"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundMonthEndTrailingReturns"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundMonthEndTrailingReturns"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundMonthEndTrailingReturns"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundQuarterEndTrailingReturns": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundQuarterEndTrailingReturns"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundQuarterEndTrailingReturns"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundQuarterEndTrailingReturns"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundQuarterEndTrailingReturns"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundQuarterEndTrailingReturnsRange": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundQuarterEndTrailingReturns"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundQuarterEndTrailingReturns"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundQuarterEndTrailingReturns"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundQuarterEndTrailingReturns"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundNAVs": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundNAV"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundNAV"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundNAV"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundNAV"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundHistoricalNAVs": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AdjustmentMethod",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundNAVHistory"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundNAVHistory"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundNAVHistory"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundNAVHistory"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundDividendHistory": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundDividendHistory"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundDividendHistory"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundDividendHistory"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundDividendHistory"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundBreakdowns": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Breakdown",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundBreakdownsRange": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Breakdown",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundFullHoldings": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/V2/xGlobalFundFundamentals/GetFundFullHoldingsRange": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFundFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdowns"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundType": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "LegalType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CountryDescription": {
+        "type": "object",
+        "properties": {
+          "CountryName": {
+            "type": "string",
+            "nullable": true
+          },
+          "CountryCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Region": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketSize": {
+            "type": "string",
+            "nullable": true
+          },
+          "FundTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FundType"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CountryList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "CountryDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CountryDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExchangeDescription": {
+        "type": "object",
+        "properties": {
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundDescription": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "SEDOL": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "CIK": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "CountryOfSales": {
+            "type": "string",
+            "nullable": true
+          },
+          "CountryOfSalesCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "CountryOfDomicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "CountryOfDomicileCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExchangeDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExchangeDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "FundDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FundDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundTypeList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "FundTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FundType"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundFundamentalDescription": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Unit": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "DataPackage": {
+            "type": "string",
+            "nullable": true
+          },
+          "Source": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundFundamentalDescriptionList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "FundFundamentalDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FundFundamentalDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fund": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "SEDOL": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "CIK": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "CountryOfSales": {
+            "type": "string",
+            "nullable": true
+          },
+          "CountryOfSalesCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "CountryOfDomicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "CountryOfDomicileCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fundamental": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "Value": {
+            "type": "string",
+            "nullable": true
+          },
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "Unit": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundamentalsSet": {
+        "type": "object",
+        "properties": {
+          "AsOfDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Fundamentals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Fundamental"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundFundamentals": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Fund": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Fund"
+              }
+            ],
+            "nullable": true
+          },
+          "FundamentalsSets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FundamentalsSet"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProfileBreakdown": {
+        "type": "object",
+        "properties": {
+          "FundName": {
+            "type": "string",
+            "nullable": true
+          },
+          "LegalName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ProviderCompany": {
+            "type": "string",
+            "nullable": true
+          },
+          "ProviderCompanyCompleteAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "RegistrationCompany": {
+            "type": "string",
+            "nullable": true
+          },
+          "RegistrationCompanyCompleteAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "ShareClass": {
+            "type": "string",
+            "nullable": true
+          },
+          "InceptionDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "VendorCategory": {
+            "type": "string",
+            "nullable": true
+          },
+          "MinimumInitialInvestment": {
+            "type": "string",
+            "nullable": true
+          },
+          "MinimumInitialInvestmentUnit": {
+            "type": "string",
+            "nullable": true
+          },
+          "MinimumInvestmentCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "NetAssets": {
+            "type": "string",
+            "nullable": true
+          },
+          "MonthEndNAV": {
+            "type": "string",
+            "nullable": true
+          },
+          "MonthEndNAVDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "FundObjective": {
+            "type": "string",
+            "nullable": true
+          },
+          "InvestmentStrategy": {
+            "type": "string",
+            "nullable": true
+          },
+          "IndexFund": {
+            "type": "string",
+            "nullable": true
+          },
+          "FundOfFunds": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExchangeTradedNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "LeveragedFund": {
+            "type": "string",
+            "nullable": true
+          },
+          "TrueNoLoadFund": {
+            "type": "string",
+            "nullable": true
+          },
+          "ClosedToNewInvestors": {
+            "type": "string",
+            "nullable": true
+          },
+          "ClosedToAllInvestors": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProfilesSet": {
+        "type": "object",
+        "properties": {
+          "AsOfDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ProfileBreakdown": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProfileBreakdown"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundProfiles": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Fund": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Fund"
+              }
+            ],
+            "nullable": true
+          },
+          "ProfilesSets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProfilesSet"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecordBreakDownBase": {
+        "type": "object",
+        "properties": {
+          "RecordNumber": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FeeSchedule": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/RecordBreakDownBase"
+          }
+        ],
+        "properties": {
+          "FeeValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "FeeUnit": {
+            "type": "string",
+            "nullable": true
+          },
+          "LowBreakpoint": {
+            "type": "string",
+            "nullable": true
+          },
+          "HighBreakpoint": {
+            "type": "string",
+            "nullable": true
+          },
+          "BreakpointUnit": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FeeSchedules": {
+        "type": "object",
+        "properties": {
+          "MaxFee": {
+            "type": "string",
+            "nullable": true
+          },
+          "FeeSchedule": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FeeSchedule"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FeeSchedulesSet": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "AsOfDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "FeeScheduleType": {
+            "type": "string",
+            "nullable": true
+          },
+          "FeeSchedules": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FeeSchedules"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundFeeSchedules": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Fund": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Fund"
+              }
+            ],
+            "nullable": true
+          },
+          "FeeSchedulesSets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FeeSchedulesSet"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HoldingsBreakdown": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/RecordBreakDownBase"
+          }
+        ],
+        "properties": {
+          "HoldingSecurityName": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingDetailTypeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingSymbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingCUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingSEDOL": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingCountryCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingCurrencyCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingVendorIndustry": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingWeighting": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingNumberOfShare": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingSharePercentage": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingMarketValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingCostBasis": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingMaturityDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingCoupon": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingCreditQuality": {
+            "type": "string",
+            "nullable": true
+          },
+          "HoldingDuration": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HoldingsSet": {
+        "type": "object",
+        "properties": {
+          "PortfolioDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Holdings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HoldingsBreakdown"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundHoldings": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Fund": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Fund"
+              }
+            ],
+            "nullable": true
+          },
+          "HoldingsSets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HoldingsSet"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ManagerBreakdown": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/RecordBreakDownBase"
+          }
+        ],
+        "properties": {
+          "ManagerFirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ManagerMiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ManagerLastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ManagerStartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ManagerTenure": {
+            "type": "string",
+            "nullable": true
+          },
+          "ManagerBiography": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ManagersSet": {
+        "type": "object",
+        "properties": {
+          "PortfolioDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ManagerBreakdowns": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ManagerBreakdown"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundManagers": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Fund": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Fund"
+              }
+            ],
+            "nullable": true
+          },
+          "ManagersSets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ManagersSet"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TrailingReturns": {
+        "type": "object",
+        "properties": {
+          "TrailingReturnYTD": {
+            "type": "number",
+            "format": "double"
+          },
+          "TrailingReturnM1": {
+            "type": "number",
+            "format": "double"
+          },
+          "TrailingReturnM2": {
+            "type": "number",
+            "format": "double"
+          },
+          "TrailingReturnM3": {
+            "type": "number",
+            "format": "double"
+          },
+          "TrailingReturnM6": {
+            "type": "number",
+            "format": "double"
+          },
+          "TrailingReturnM9": {
+            "type": "number",
+            "format": "double"
+          },
+          "TrailingReturnY1": {
+            "type": "number",
+            "format": "double"
+          },
+          "TrailingReturnY2": {
+            "type": "number",
+            "format": "double"
+          },
+          "TrailingReturnY3": {
+            "type": "number",
+            "format": "double"
+          },
+          "TrailingReturnY4": {
+            "type": "number",
+            "format": "double"
+          },
+          "TrailingReturnY5": {
+            "type": "number",
+            "format": "double"
+          },
+          "TrailingReturnY10": {
+            "type": "number",
+            "format": "double"
+          },
+          "TrailingReturnY15": {
+            "type": "number",
+            "format": "double"
+          },
+          "TrailingReturnY20": {
+            "type": "number",
+            "format": "double"
+          },
+          "TrailingReturnSinceInception": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadAdjustedTrailingReturns": {
+        "type": "object",
+        "properties": {
+          "LoadAdjustedTrailingReturnYTD": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoadAdjustedTrailingReturnM1": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoadAdjustedTrailingReturnM3": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoadAdjustedTrailingReturnM6": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoadAdjustedTrailingReturnY1": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoadAdjustedTrailingReturnY2": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoadAdjustedTrailingReturnY3": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoadAdjustedTrailingReturnY4": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoadAdjustedTrailingReturnY5": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoadAdjustedTrailingReturnY10": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoadAdjustedTrailingReturnY15": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoadAdjustedTrailingReturnY20": {
+            "type": "number",
+            "format": "double"
+          },
+          "LoadAdjustedTrailingReturnSinceInception": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MonthEndTrailingReturnsSet": {
+        "type": "object",
+        "properties": {
+          "MonthEndPerformanceAsOfDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "TrailingReturns": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TrailingReturns"
+              }
+            ],
+            "nullable": true
+          },
+          "LoadAdjustedTrailingReturns": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LoadAdjustedTrailingReturns"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundMonthEndTrailingReturns": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Fund": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Fund"
+              }
+            ],
+            "nullable": true
+          },
+          "MonthEndTrailingReturnsSets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MonthEndTrailingReturnsSet"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuarterEndTrailingReturns": {
+        "type": "object",
+        "properties": {
+          "QuarterEndTrailingReturnYTD": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndTrailingReturnM1": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndTrailingReturnM2": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndTrailingReturnM3": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndTrailingReturnM6": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndTrailingReturnM9": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndTrailingReturnY1": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndTrailingReturnY2": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndTrailingReturnY3": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndTrailingReturnY4": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndTrailingReturnY5": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndTrailingReturnY10": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndTrailingReturnY15": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndTrailingReturnY20": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndTrailingReturnSinceInception": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuarterEndLoadAdjustedTrailingReturns": {
+        "type": "object",
+        "properties": {
+          "QuarterEndLoadAdjustedTrailingReturnYTD": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnM1": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnM3": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnM6": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnY1": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnY2": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnY3": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnY4": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnY5": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnY10": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnY15": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnY20": {
+            "type": "number",
+            "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnSinceInception": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuarterEndTrailingReturnsSet": {
+        "type": "object",
+        "properties": {
+          "QuarterEndPerformanceAsOfDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "QuarterEndTrailingReturns": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/QuarterEndTrailingReturns"
+              }
+            ],
+            "nullable": true
+          },
+          "QuarterEndLoadAdjustedTrailingReturns": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/QuarterEndLoadAdjustedTrailingReturns"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundQuarterEndTrailingReturns": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Fund": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Fund"
+              }
+            ],
+            "nullable": true
+          },
+          "QuarterEndTrailingReturnsSets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QuarterEndTrailingReturnsSet"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundNAV": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Fund": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Fund"
+              }
+            ],
+            "nullable": true
+          },
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "NAV": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousNAV": {
+            "type": "number",
+            "format": "double"
+          },
+          "Change": {
+            "type": "number",
+            "format": "double"
+          },
+          "PercentChange": {
+            "type": "number",
+            "format": "double"
+          },
+          "SevenDayYield": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousSevenDayYield": {
+            "type": "number",
+            "format": "double"
+          },
+          "PremiumDiscount": {
+            "type": "number",
+            "format": "double"
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NAVs": {
+        "type": "object",
+        "properties": {
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "NAV": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousNAV": {
+            "type": "number",
+            "format": "double"
+          },
+          "Change": {
+            "type": "number",
+            "format": "double"
+          },
+          "PercentChange": {
+            "type": "number",
+            "format": "double"
+          },
+          "SevenDayYield": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousSevenDayYield": {
+            "type": "number",
+            "format": "double"
+          },
+          "PremiumDiscount": {
+            "type": "number",
+            "format": "double"
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundNAVHistory": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "AdjustmentMethod": {
+            "type": "string",
+            "nullable": true
+          },
+          "Fund": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Fund"
+              }
+            ],
+            "nullable": true
+          },
+          "StartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "NAVs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NAVs"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Dividend": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "PaymentFrequency": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "PayDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "RecordDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "DeclaredDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "DividendAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundDividendHistory": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Fund": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Fund"
+              }
+            ],
+            "nullable": true
+          },
+          "Dividends": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Dividend"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BreakdownRecord": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Value": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BreakdownSet": {
+        "type": "object",
+        "properties": {
+          "BreakdownSetName": {
+            "type": "string",
+            "nullable": true
+          },
+          "BreakdownRecords": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BreakdownRecord"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Breakdown": {
+        "type": "object",
+        "properties": {
+          "BreakdownType": {
+            "type": "string",
+            "nullable": true
+          },
+          "BreakdownSets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BreakdownSet"
+            },
+            "nullable": true
+          },
+          "PortfolioDate": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundBreakdowns": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Fund": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Fund"
+              }
+            ],
+            "nullable": true
+          },
+          "Breakdowns": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Breakdown"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "apiKey",
+        "description": "Token for your account.",
+        "name": "_token",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
