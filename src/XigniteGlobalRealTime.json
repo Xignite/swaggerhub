@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalRealTime",
-    "version": "3.0.0"
+    "version": "3.0.1"
   },
   "servers": [
     {
@@ -256,62 +256,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/GlobalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/GlobalExtendedQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/GlobalQuote"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/GlobalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/GlobalExtendedQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/GlobalQuote"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/GlobalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/GlobalExtendedQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/GlobalQuote"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/GlobalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/GlobalExtendedQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/GlobalQuote"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/GlobalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/GlobalExtendedQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/GlobalQuote"
                 }
               }
             }
@@ -426,14 +391,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/GlobalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/GlobalExtendedQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/GlobalQuote"
                   }
                 }
               },
@@ -441,14 +399,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/GlobalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/GlobalExtendedQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/GlobalQuote"
                   }
                 }
               },
@@ -456,14 +407,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/GlobalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/GlobalExtendedQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/GlobalQuote"
                   }
                 }
               },
@@ -471,14 +415,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/GlobalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/GlobalExtendedQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/GlobalQuote"
                   }
                 }
               },
@@ -486,14 +423,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/GlobalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/GlobalExtendedQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/GlobalQuote"
                   }
                 }
               }
@@ -1140,31 +1070,6 @@
         },
         "additionalProperties": false
       },
-      "Common": {
-        "type": "object",
-        "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
       "ExchangeDescription": {
         "type": "object",
         "properties": {
@@ -1199,12 +1104,26 @@
       },
       "SymbolList": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
           "Exchange": {
             "allOf": [
               {
@@ -1313,41 +1232,72 @@
         },
         "additionalProperties": false
       },
-      "QuoteWithSecurity": {
+      "GlobalExtendedQuote": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
+          "Outcome": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/Security"
+                "$ref": "#/components/schemas/OutcomeTypes"
               }
-            ],
+            ]
+          },
+          "Message": {
+            "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "GlobalQuote": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/QuoteWithSecurity"
-          }
-        ],
-        "properties": {
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "VolumeDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursType": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "ExtendedHoursChange": {
+            "type": "number",
+            "format": "double"
+          },
+          "ExtendedHoursPercentChange": {
+            "type": "number",
+            "format": "double"
+          },
+          "LimitDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "LimitTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "LimitDown": {
+            "type": "number",
+            "format": "double"
+          },
+          "LimitUp": {
+            "type": "number",
+            "format": "double"
+          },
           "Date": {
             "type": "string",
             "nullable": true
@@ -1462,73 +1412,204 @@
           "LastMarketIdentificationCode": {
             "type": "string",
             "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "GlobalExtendedQuote": {
+      "GlobalQuote": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GlobalQuote"
-          }
-        ],
         "properties": {
-          "VolumeDate": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
             "type": "string",
             "nullable": true
           },
-          "ExtendedHoursDate": {
+          "Identity": {
             "type": "string",
             "nullable": true
           },
-          "ExtendedHoursTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExtendedHoursType": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExtendedHoursPrice": {
+          "Delay": {
             "type": "number",
             "format": "double"
           },
-          "ExtendedHoursChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "ExtendedHoursPercentChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "LimitDate": {
+          "Date": {
             "type": "string",
             "nullable": true
           },
-          "LimitTime": {
+          "Time": {
             "type": "string",
             "nullable": true
           },
-          "LimitDown": {
+          "UTCOffset": {
             "type": "number",
             "format": "double"
           },
-          "LimitUp": {
+          "Open": {
             "type": "number",
             "format": "double"
+          },
+          "Close": {
+            "type": "number",
+            "format": "double"
+          },
+          "High": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Last": {
+            "type": "number",
+            "format": "double"
+          },
+          "LastSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "Volume": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousClose": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousCloseDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ChangeFromPreviousClose": {
+            "type": "number",
+            "format": "double"
+          },
+          "PercentChangeFromPreviousClose": {
+            "type": "number",
+            "format": "double"
+          },
+          "Bid": {
+            "type": "number",
+            "format": "double"
+          },
+          "BidSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "BidDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "BidTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "Ask": {
+            "type": "number",
+            "format": "double"
+          },
+          "AskSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "AskDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "AskTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "High52Weeks": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low52Weeks": {
+            "type": "number",
+            "format": "double"
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "TradingHalted": {
+            "type": "boolean"
+          },
+          "BidMarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "AskMarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastMarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
       "GlobalAuctionQuote": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/QuoteWithSecurity"
-          }
-        ],
         "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
           "OpeningAuction": {
             "type": "number",
             "format": "double"
@@ -1588,24 +1669,27 @@
           "Time": {
             "type": "string",
             "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "IntradayVWAPTypes": {
-        "enum": [
-          "RealTime",
-          "Delayed",
-          "OneMinute",
-          "FiveMinute",
-          "TenMinute",
-          "ThirtyMinute",
-          "OneHour",
-          "Period"
-        ],
-        "type": "string"
-      },
-      "IntradayVWAP": {
+      "Common": {
         "type": "object",
         "properties": {
           "Outcome": {
@@ -1626,7 +1710,31 @@
           "Delay": {
             "type": "number",
             "format": "double"
-          },
+          }
+        },
+        "additionalProperties": false
+      },
+      "IntradayVWAPTypes": {
+        "enum": [
+          "RealTime",
+          "Delayed",
+          "OneMinute",
+          "FiveMinute",
+          "TenMinute",
+          "ThirtyMinute",
+          "OneHour",
+          "Period"
+        ],
+        "type": "string"
+      },
+      "IntradayVWAP": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
           "Date": {
             "type": "string",
             "nullable": true
@@ -1707,12 +1815,26 @@
       },
       "MarketMover": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
           "MarketMoverType": {
             "type": "string",
             "nullable": true
@@ -1774,12 +1896,26 @@
       },
       "MarketMovers": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
           "MarketMoverType": {
             "type": "string",
             "nullable": true
@@ -1882,26 +2018,12 @@
       },
       "EquityChartBars": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Security": {
             "allOf": [
               {
@@ -1992,26 +2114,12 @@
       },
       "GlobalBars": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Identifier": {
             "type": "string",
             "nullable": true
@@ -2040,26 +2148,12 @@
       },
       "GlobalBar": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Bar": {
             "allOf": [
               {
