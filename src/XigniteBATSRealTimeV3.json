@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteBATSRealTimeV3",
-    "version": "3.0.1"
+    "version": "3.0.2"
   },
   "servers": [
     {
@@ -502,31 +502,6 @@
         ],
         "type": "string"
       },
-      "Common": {
-        "type": "object",
-        "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
       "Security": {
         "type": "object",
         "properties": {
@@ -572,41 +547,72 @@
         },
         "additionalProperties": false
       },
-      "QuoteWithSecurity": {
+      "GlobalExtendedQuote": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
+          "Outcome": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/Security"
+                "$ref": "#/components/schemas/OutcomeTypes"
               }
-            ],
+            ]
+          },
+          "Message": {
+            "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "GlobalQuote": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/QuoteWithSecurity"
-          }
-        ],
-        "properties": {
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "VolumeDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursType": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "ExtendedHoursChange": {
+            "type": "number",
+            "format": "double"
+          },
+          "ExtendedHoursPercentChange": {
+            "type": "number",
+            "format": "double"
+          },
+          "LimitDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "LimitTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "LimitDown": {
+            "type": "number",
+            "format": "double"
+          },
+          "LimitUp": {
+            "type": "number",
+            "format": "double"
+          },
           "Date": {
             "type": "string",
             "nullable": true
@@ -721,61 +727,22 @@
           "LastMarketIdentificationCode": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "GlobalExtendedQuote": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/GlobalQuote"
-          }
-        ],
-        "properties": {
-          "VolumeDate": {
+          },
+          "Identifier": {
             "type": "string",
             "nullable": true
           },
-          "ExtendedHoursDate": {
+          "IdentifierType": {
             "type": "string",
             "nullable": true
           },
-          "ExtendedHoursTime": {
-            "type": "string",
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
             "nullable": true
-          },
-          "ExtendedHoursType": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExtendedHoursPrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "ExtendedHoursChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "ExtendedHoursPercentChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "LimitDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "LimitTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "LimitDown": {
-            "type": "number",
-            "format": "double"
-          },
-          "LimitUp": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -814,12 +781,26 @@
       },
       "TradedSymbolList": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
           "Exchange": {
             "allOf": [
               {
@@ -834,6 +815,31 @@
               "$ref": "#/components/schemas/TradedSecurityDescription"
             },
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
@@ -910,26 +916,12 @@
       },
       "EquityChartBars": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Security": {
             "allOf": [
               {
@@ -1020,26 +1012,12 @@
       },
       "GlobalBars": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Identifier": {
             "type": "string",
             "nullable": true
@@ -1068,26 +1046,12 @@
       },
       "GlobalBar": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Bar": {
             "allOf": [
               {
