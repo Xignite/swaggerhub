@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteNASDAQLastSale",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "servers": [
     {
@@ -418,27 +418,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Quote"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Quote"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedQuote"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Quote"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Quote"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedQuote"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/Quote"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Quote"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedQuote"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/Quote"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Quote"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedQuote"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/Quote"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Quote"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedQuote"
+                    }
+                  ]
                 }
               }
             }
@@ -479,7 +514,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Quote"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Quote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ExtendedQuote"
+                      }
+                    ]
                   }
                 }
               },
@@ -487,7 +529,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Quote"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Quote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ExtendedQuote"
+                      }
+                    ]
                   }
                 }
               },
@@ -495,7 +544,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Quote"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Quote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ExtendedQuote"
+                      }
+                    ]
                   }
                 }
               },
@@ -503,7 +559,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Quote"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Quote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ExtendedQuote"
+                      }
+                    ]
                   }
                 }
               },
@@ -511,7 +574,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Quote"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Quote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ExtendedQuote"
+                      }
+                    ]
                   }
                 }
               }
@@ -857,6 +927,31 @@
         ],
         "type": "string"
       },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
       "Security": {
         "type": "object",
         "properties": {
@@ -902,52 +997,14 @@
         },
         "additionalProperties": false
       },
-      "ExtendedQuote": {
+      "Quote": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
-          "ExtendedHoursDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExtendedHoursTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExtendedHoursType": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExtendedHoursPrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "ExtendedHoursChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "ExtendedHoursPercentChange": {
-            "type": "number",
-            "format": "double"
-          },
           "Date": {
             "type": "string",
             "nullable": true
@@ -1054,8 +1111,48 @@
         },
         "additionalProperties": false
       },
+      "ExtendedQuote": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Quote"
+          }
+        ],
+        "properties": {
+          "ExtendedHoursDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursType": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "ExtendedHoursChange": {
+            "type": "number",
+            "format": "double"
+          },
+          "ExtendedHoursPercentChange": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
       "LastSaleQuote": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "Symbol": {
             "type": "string",
@@ -1115,153 +1212,6 @@
           },
           "TradingHalted": {
             "type": "boolean"
-          },
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Quote": {
-        "type": "object",
-        "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCOffset": {
-            "type": "number",
-            "format": "double"
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "Close": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Last": {
-            "type": "number",
-            "format": "double"
-          },
-          "LastSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "Volume": {
-            "type": "number",
-            "format": "double"
-          },
-          "VolumeDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousClose": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousCloseDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Change": {
-            "type": "number",
-            "format": "double"
-          },
-          "PercentChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "Bid": {
-            "type": "number",
-            "format": "double"
-          },
-          "BidSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "BidDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "BidTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "Ask": {
-            "type": "number",
-            "format": "double"
-          },
-          "AskSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "AskDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "AskTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "TradingHalted": {
-            "type": "boolean"
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1300,26 +1250,12 @@
       },
       "TradedSymbolList": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Exchange": {
             "allOf": [
               {
@@ -1334,31 +1270,6 @@
               "$ref": "#/components/schemas/TradedSecurityDescription"
             },
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Common": {
-        "type": "object",
-        "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
