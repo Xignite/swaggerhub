@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteBATSRealTimeV3",
-    "version": "3.0.3"
+    "version": "3.0.4"
   },
   "servers": [
     {
@@ -350,7 +350,11 @@
             "name": "Precision",
             "in": "query",
             "schema": {
-              "type": "string"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/TickPrecisions"
+                }
+              ]
             }
           },
           {
@@ -431,7 +435,11 @@
             "name": "Precision",
             "in": "query",
             "schema": {
-              "type": "string"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/TickPrecisions"
+                }
+              ]
             }
           },
           {
@@ -945,6 +953,14 @@
           }
         },
         "additionalProperties": false
+      },
+      "TickPrecisions": {
+        "enum": [
+          "Seconds",
+          "Minutes",
+          "Hours"
+        ],
+        "type": "string"
       },
       "Bar": {
         "type": "object",
