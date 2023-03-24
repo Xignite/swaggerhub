@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalQuotes",
-    "version": "3.0.3"
+    "version": "3.0.4"
   },
   "servers": [
     {
@@ -1431,6 +1431,14 @@
           "TradingHalted": {
             "type": "boolean"
           },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
           "BidMarketIdentificationCode": {
             "type": "string",
             "nullable": true
@@ -1518,7 +1526,7 @@
         "type": "object",
         "allOf": [
           {
-            "$ref": "#/components/schemas/Common"
+            "$ref": "#/components/schemas/QuoteWithSecurity"
           }
         ],
         "properties": {
@@ -1572,22 +1580,6 @@
           "Trades": {
             "type": "integer",
             "format": "int32"
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
           }
         },
         "additionalProperties": false
