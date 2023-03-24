@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteNASDAQLastSale",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "servers": [
     {
@@ -625,27 +625,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TradedSymbolList"
+                  "$ref": "#/components/schemas/SymbolList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TradedSymbolList"
+                  "$ref": "#/components/schemas/SymbolList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/TradedSymbolList"
+                  "$ref": "#/components/schemas/SymbolList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/TradedSymbolList"
+                  "$ref": "#/components/schemas/SymbolList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/TradedSymbolList"
+                  "$ref": "#/components/schemas/SymbolList"
                 }
               }
             }
@@ -1005,11 +1005,38 @@
         },
         "additionalProperties": false
       },
-      "Quote": {
+      "QuoteWithSecurity": {
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Quote": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/QuoteWithSecurity"
           }
         ],
         "properties": {
@@ -1107,14 +1134,6 @@
           },
           "TradingHalted": {
             "type": "boolean"
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1238,7 +1257,7 @@
         },
         "additionalProperties": false
       },
-      "TradedSecurityDescription": {
+      "SecurityDescription": {
         "type": "object",
         "properties": {
           "Symbol": {
@@ -1256,7 +1275,7 @@
         },
         "additionalProperties": false
       },
-      "TradedSymbolList": {
+      "SymbolList": {
         "type": "object",
         "allOf": [
           {
@@ -1275,7 +1294,7 @@
           "SecurityDescriptions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/TradedSecurityDescription"
+              "$ref": "#/components/schemas/SecurityDescription"
             },
             "nullable": true
           }
