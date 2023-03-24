@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteBATSRealTimeV3",
-    "version": "3.0.4"
+    "version": "3.0.5"
   },
   "servers": [
     {
@@ -178,27 +178,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TradedSymbolList"
+                  "$ref": "#/components/schemas/SymbolList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TradedSymbolList"
+                  "$ref": "#/components/schemas/SymbolList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/TradedSymbolList"
+                  "$ref": "#/components/schemas/SymbolList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/TradedSymbolList"
+                  "$ref": "#/components/schemas/SymbolList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/TradedSymbolList"
+                  "$ref": "#/components/schemas/SymbolList"
                 }
               }
             }
@@ -718,6 +718,14 @@
           "TradingHalted": {
             "type": "boolean"
           },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
           "BidMarketIdentificationCode": {
             "type": "string",
             "nullable": true
@@ -802,7 +810,7 @@
         },
         "additionalProperties": false
       },
-      "TradedSecurityDescription": {
+      "SecurityDescription": {
         "type": "object",
         "properties": {
           "Symbol": {
@@ -820,7 +828,7 @@
         },
         "additionalProperties": false
       },
-      "TradedSymbolList": {
+      "SymbolList": {
         "type": "object",
         "allOf": [
           {
@@ -839,7 +847,7 @@
           "SecurityDescriptions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/TradedSecurityDescription"
+              "$ref": "#/components/schemas/SecurityDescription"
             },
             "nullable": true
           }
