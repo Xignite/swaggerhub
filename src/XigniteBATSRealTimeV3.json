@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteBATSRealTimeV3",
-    "version": "3.0.5"
+    "version": "3.0.6"
   },
   "servers": [
     {
@@ -717,14 +717,6 @@
           },
           "TradingHalted": {
             "type": "boolean"
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
           },
           "BidMarketIdentificationCode": {
             "type": "string",
