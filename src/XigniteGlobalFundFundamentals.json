@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalFundFundamentals",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -2004,6 +2004,15 @@
         },
         "additionalProperties": false
       },
+      "FundWithName": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Fund"
+          }
+        ],
+        "additionalProperties": false
+      },
       "Fundamental": {
         "type": "object",
         "properties": {
@@ -2068,9 +2077,12 @@
         ],
         "properties": {
           "Fund": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Fund"
+              },
+              {
+                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -2218,9 +2230,12 @@
         ],
         "properties": {
           "Fund": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Fund"
+              },
+              {
+                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -2332,9 +2347,12 @@
         ],
         "properties": {
           "Fund": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Fund"
+              },
+              {
+                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -2458,9 +2476,12 @@
         ],
         "properties": {
           "Fund": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Fund"
+              },
+              {
+                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -2536,9 +2557,12 @@
         ],
         "properties": {
           "Fund": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Fund"
+              },
+              {
+                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -2712,9 +2736,12 @@
         ],
         "properties": {
           "Fund": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Fund"
+              },
+              {
+                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -2888,9 +2915,12 @@
         ],
         "properties": {
           "Fund": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Fund"
+              },
+              {
+                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -2922,9 +2952,12 @@
             "nullable": true
           },
           "Fund": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Fund"
+              },
+              {
+                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -3031,9 +3064,12 @@
             "nullable": true
           },
           "Fund": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Fund"
+              },
+              {
+                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -3111,9 +3147,12 @@
             "nullable": true
           },
           "Fund": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Fund"
+              },
+              {
+                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -3189,9 +3228,12 @@
         ],
         "properties": {
           "Fund": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Fund"
+              },
+              {
+                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
