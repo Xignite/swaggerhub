@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteBATSRealTime",
-    "version": "1.0.4"
+    "version": "1.0.5"
   },
   "servers": [
     {
@@ -909,14 +909,6 @@
           }
         ],
         "properties": {
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
           "Security": {
             "allOf": [
               {
@@ -1039,14 +1031,6 @@
           "TradingHalted": {
             "type": "boolean"
           },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
           "BidMarketIdentificationCode": {
             "type": "string",
             "nullable": true
@@ -1056,6 +1040,14 @@
             "nullable": true
           },
           "LastMarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
             "type": "string",
             "nullable": true
           }
