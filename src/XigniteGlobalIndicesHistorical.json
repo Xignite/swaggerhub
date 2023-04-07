@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalIndicesHistorical",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -28,6 +28,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexGroup"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -63,7 +71,7 @@
         ],
         "parameters": [
           {
-            "name": "indexGroup",
+            "name": "IndexGroup",
             "in": "query",
             "schema": {
               "type": "string"
@@ -83,6 +91,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexDescription"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -118,7 +134,7 @@
         ],
         "parameters": [
           {
-            "name": "oldSymbol",
+            "name": "OldSymbol",
             "in": "query",
             "schema": {
               "type": "string"
@@ -135,6 +151,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexSymbolMapping"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/IndexSymbolMapping"
                 }
@@ -161,7 +182,7 @@
         ],
         "parameters": [
           {
-            "name": "oldSymbols",
+            "name": "OldSymbols",
             "in": "query",
             "schema": {
               "type": "string"
@@ -181,6 +202,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexSymbolMapping"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -243,6 +272,14 @@
                   }
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexDescription"
+                  }
+                }
+              },
               "text/xml": {
                 "schema": {
                   "type": "array",
@@ -271,14 +308,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -289,7 +326,7 @@
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -302,50 +339,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValue"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValue"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValue"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValue"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValue"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValue"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexValue"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValue"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValue"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValue"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValue"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValue"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValue"
                 }
               }
             }
@@ -360,14 +374,14 @@
         ],
         "parameters": [
           {
-            "name": "identifiers",
+            "name": "Identifiers",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -378,7 +392,7 @@
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -393,14 +407,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/IndexValue"
-                      },
-                      {
-                        "$ref": "#/components/schemas/Weeks.IndexValue"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/IndexValue"
                   }
                 }
               },
@@ -408,14 +415,15 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/IndexValue"
-                      },
-                      {
-                        "$ref": "#/components/schemas/Weeks.IndexValue"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/IndexValue"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexValue"
                   }
                 }
               },
@@ -423,14 +431,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/IndexValue"
-                      },
-                      {
-                        "$ref": "#/components/schemas/Weeks.IndexValue"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/IndexValue"
                   }
                 }
               },
@@ -438,14 +439,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/IndexValue"
-                      },
-                      {
-                        "$ref": "#/components/schemas/Weeks.IndexValue"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/IndexValue"
                   }
                 }
               }
@@ -461,14 +455,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -485,50 +479,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValue"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValue"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValue"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValue"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValue"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValue"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexValue"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValue"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValue"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValue"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValue"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValue"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValue"
                 }
               }
             }
@@ -543,14 +514,14 @@
         ],
         "parameters": [
           {
-            "name": "identifiers",
+            "name": "Identifiers",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -569,14 +540,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/IndexValue"
-                      },
-                      {
-                        "$ref": "#/components/schemas/Weeks.IndexValue"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/IndexValue"
                   }
                 }
               },
@@ -584,14 +548,15 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/IndexValue"
-                      },
-                      {
-                        "$ref": "#/components/schemas/Weeks.IndexValue"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/IndexValue"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexValue"
                   }
                 }
               },
@@ -599,14 +564,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/IndexValue"
-                      },
-                      {
-                        "$ref": "#/components/schemas/Weeks.IndexValue"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/IndexValue"
                   }
                 }
               },
@@ -614,14 +572,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/IndexValue"
-                      },
-                      {
-                        "$ref": "#/components/schemas/Weeks.IndexValue"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/IndexValue"
                   }
                 }
               }
@@ -637,14 +588,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -655,14 +606,14 @@
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -675,50 +626,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               }
             }
@@ -733,14 +661,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -751,14 +679,14 @@
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "periodType",
+            "name": "PeriodType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -769,7 +697,7 @@
             }
           },
           {
-            "name": "periods",
+            "name": "Periods",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -783,50 +711,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               }
             }
@@ -841,14 +746,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -859,14 +764,14 @@
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -879,50 +784,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               }
             }
@@ -937,14 +819,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -955,14 +837,14 @@
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -975,50 +857,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               }
             }
@@ -1033,14 +892,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -1051,14 +910,14 @@
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1071,50 +930,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/IndexValues"
-                    },
-                    {
-                      "$ref": "#/components/schemas/Weeks.IndexValues"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/IndexValues"
                 }
               }
             }
@@ -1588,25 +1424,6 @@
         },
         "additionalProperties": false
       },
-      "Weeks.IndexValue": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/IndexValue"
-          }
-        ],
-        "properties": {
-          "Value": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Weeks.IndexQuote"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "IndexValues": {
         "type": "object",
         "allOf": [
@@ -1650,24 +1467,6 @@
                   "$ref": "#/components/schemas/Weeks.IndexQuote"
                 }
               ]
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Weeks.IndexValues": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/IndexValues"
-          }
-        ],
-        "properties": {
-          "Values": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Weeks.IndexQuote"
             },
             "nullable": true
           }
