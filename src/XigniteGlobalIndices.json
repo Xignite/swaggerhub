@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalIndices",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -28,6 +28,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexGroup"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -63,7 +71,7 @@
         ],
         "parameters": [
           {
-            "name": "indexGroup",
+            "name": "IndexGroup",
             "in": "query",
             "schema": {
               "type": "string"
@@ -83,6 +91,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexDescription"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -118,7 +134,7 @@
         ],
         "parameters": [
           {
-            "name": "oldSymbol",
+            "name": "OldSymbol",
             "in": "query",
             "schema": {
               "type": "string"
@@ -135,6 +151,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexSymbolMapping"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/IndexSymbolMapping"
                 }
@@ -161,7 +182,7 @@
         ],
         "parameters": [
           {
-            "name": "oldSymbols",
+            "name": "OldSymbols",
             "in": "query",
             "schema": {
               "type": "string"
@@ -181,6 +202,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexSymbolMapping"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -216,7 +245,7 @@
         ],
         "parameters": [
           {
-            "name": "indexName",
+            "name": "IndexName",
             "in": "query",
             "schema": {
               "type": "string"
@@ -236,6 +265,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IndexDescription"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -271,14 +308,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -299,6 +336,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Weeks.IndexValue"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/Weeks.IndexValue"
                 }
@@ -325,14 +367,14 @@
         ],
         "parameters": [
           {
-            "name": "identifiers",
+            "name": "Identifiers",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -356,6 +398,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Weeks.IndexValue"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -897,7 +947,7 @@
         },
         "additionalProperties": false
       },
-      "IndexValue": {
+      "Weeks.IndexValue": {
         "type": "object",
         "allOf": [
           {
@@ -921,28 +971,6 @@
             ],
             "nullable": true
           },
-          "Value": {
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/IndexQuote"
-              },
-              {
-                "$ref": "#/components/schemas/Weeks.IndexQuote"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Weeks.IndexValue": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/IndexValue"
-          }
-        ],
-        "properties": {
           "Value": {
             "allOf": [
               {
