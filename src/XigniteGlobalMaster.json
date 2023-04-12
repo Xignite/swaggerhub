@@ -1,0 +1,4774 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "XigniteGlobalMaster",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://globalmaster.xignite.com/"
+    }
+  ],
+  "paths": {
+    "/xGlobalMaster/ListExchanges": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/ListIndustries": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/ListSectors": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/ListInstrumentClasses": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/ListGlobalIndustries": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/ListGlobalSectors": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/PossibleValues"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/ListMICToLegacyExchange": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/ListMICToLegacySuffix": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/ListSymbolChanges": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ChangesSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolChangeList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolChangeList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolChangeList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolChangeList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolChangeList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/ListIdentifiersByExchange": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Exchanges"
+                }
+              ]
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "InstrumentClass",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/InstrumentClasses"
+                }
+              ]
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IdentifiersByExchange"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IdentifiersByExchange"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IdentifiersByExchange"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IdentifiersByExchange"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/IdentifiersByExchange"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetSecurity": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetSecurities": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetInstrument": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "IncludeRelated",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/InstrumentRelatedTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Instrument"
+                      },
+                      {
+                        "$ref": "#/components/schemas/IndexInstrument"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Instrument"
+                      },
+                      {
+                        "$ref": "#/components/schemas/IndexInstrument"
+                      }
+                    ]
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Instrument"
+                      },
+                      {
+                        "$ref": "#/components/schemas/IndexInstrument"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Instrument"
+                      },
+                      {
+                        "$ref": "#/components/schemas/IndexInstrument"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Instrument"
+                      },
+                      {
+                        "$ref": "#/components/schemas/IndexInstrument"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetInstruments": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "IncludeRelated",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/InstrumentRelatedTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Instrument"
+                      },
+                      {
+                        "$ref": "#/components/schemas/IndexInstrument"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Instrument"
+                      },
+                      {
+                        "$ref": "#/components/schemas/IndexInstrument"
+                      }
+                    ]
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Instrument"
+                      },
+                      {
+                        "$ref": "#/components/schemas/IndexInstrument"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Instrument"
+                      },
+                      {
+                        "$ref": "#/components/schemas/IndexInstrument"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Instrument"
+                      },
+                      {
+                        "$ref": "#/components/schemas/IndexInstrument"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetIssuer": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "IncludeRelated",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IssuerRelatedTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Issuer"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Issuer"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Issuer"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Issuer"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Issuer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetIssuers": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "IncludeRelated",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IssuerRelatedTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Issuer"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Issuer"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Issuer"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Issuer"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Issuer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetIssuerByCompanyIdentifier": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "IncludeRelated",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IssuerRelatedTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Issuer"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Issuer"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Issuer"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Issuer"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/Issuer"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetMasterByIdentifier": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetMasterByIdentifiers": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/LookupSecurity": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "InstrumentClass",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LookupItems"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LookupItems"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LookupItems"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LookupItems"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/LookupItems"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetMasterByExchange": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Exchanges"
+                }
+              ]
+            }
+          },
+          {
+            "name": "StartSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "InstrumentClass",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/InstrumentClasses"
+                }
+              ]
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetMasterByExchangeChanges": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Exchanges"
+                }
+              ]
+            }
+          },
+          {
+            "name": "StartSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "InstrumentClass",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/InstrumentClasses"
+                }
+              ]
+            }
+          },
+          {
+            "name": "StartModifiedDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndModifiedDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetMasterBySector": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Exchanges"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Sector",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Sectors"
+                }
+              ]
+            }
+          },
+          {
+            "name": "StartSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "InstrumentClass",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/InstrumentClasses"
+                }
+              ]
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetMasterByIndustry": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Exchanges"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Industry",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Industries"
+                }
+              ]
+            }
+          },
+          {
+            "name": "StartSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "InstrumentClass",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/InstrumentClasses"
+                }
+              ]
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetMasterByGlobalSector": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Sector",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "InstrumentClass",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetMasterByGlobalIndustry": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Industry",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "InstrumentClass",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Record"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalMaster/GetMasterStatisticsByExchange": {
+      "get": {
+        "tags": [
+          "XigniteGlobalMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Exchanges"
+                }
+              ]
+            }
+          },
+          {
+            "name": "StartSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "InstrumentClass",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/InstrumentClasses"
+                }
+              ]
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Statistics"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Statistics"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Statistics"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Statistics"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/Statistics"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
+      "DataProviders": {
+        "enum": [
+          "XigniteComposite",
+          "Telekurs",
+          "LegacyXignite",
+          "ExchangeWebsite",
+          "FactSet",
+          "ManualXignite"
+        ],
+        "type": "string"
+      },
+      "AbstractPublicWebServiceObj": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "DataProvider": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/DataProviders"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "PossibleValue": {
+        "type": "object",
+        "properties": {
+          "ProviderValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "XigniteValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PossibleValues": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AbstractPublicWebServiceObj"
+          }
+        ],
+        "properties": {
+          "PossibleValuesOf": {
+            "type": "string",
+            "nullable": true
+          },
+          "Values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PossibleValue"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LegacyExchangeMapping": {
+        "type": "object",
+        "properties": {
+          "MIC": {
+            "type": "string",
+            "nullable": true
+          },
+          "LegacyValues": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SymbolChange": {
+        "type": "object",
+        "properties": {
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "OldSymbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "OldName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Exchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "OldExchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "OldCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "InstrumentClass": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SymbolChangeList": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "DateTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "SymbolChanges": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SymbolChange"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Exchanges": {
+        "enum": [
+          "XALG",
+          "BCFS",
+          "MVCX",
+          "XA1X",
+          "XBCC",
+          "XBCM",
+          "XBCX",
+          "XBUE",
+          "XCNF",
+          "XMAB",
+          "XMEV",
+          "XMTB",
+          "XMVL",
+          "XROS",
+          "XROX",
+          "XTUC",
+          "XARM",
+          "AWBX",
+          "AWEX",
+          "NSXB",
+          "XASX",
+          "XNEC",
+          "XSFE",
+          "XYIE",
+          "EXAA",
+          "WBAH",
+          "WBDM",
+          "WBGF",
+          "BSEX",
+          "XIBE",
+          "XBAA",
+          "XBAH",
+          "XCHG",
+          "XDHA",
+          "XBAB",
+          "BCSE",
+          "ALXB",
+          "BLPX",
+          "BMTS",
+          "FRRF",
+          "MLXB",
+          "MTSD",
+          "MTSF",
+          "TNLB",
+          "VPXB",
+          "XBRD",
+          "XBRU",
+          "XEAS",
+          "XBDA",
+          "XBOL",
+          "XBLB",
+          "XSSE",
+          "XBOT",
+          "XBMF",
+          "XBSP",
+          "XBUL",
+          "CANX",
+          "CHIC",
+          "MATN",
+          "OMGA",
+          "PURE",
+          "XCNQ",
+          "XMOD",
+          "XTNX",
+          "XTSE",
+          "XTSX",
+          "XWCE",
+          "XBVC",
+          "XCAY",
+          "XBCL",
+          "XSGO",
+          "CCFX",
+          "SGEX",
+          "XCFE",
+          "XDCE",
+          "XSGE",
+          "XSHE",
+          "XSHG",
+          "XZCE",
+          "XBOG",
+          "XBNV",
+          "XTRZ",
+          "XZAG",
+          "XCYS",
+          "XPRA",
+          "XRMZ",
+          "DAMP",
+          "DKTC",
+          "XCSE",
+          "XFND",
+          "XBVR",
+          "XGUA",
+          "XQUI",
+          "XCAI",
+          "XSVA",
+          "XTAA",
+          "XTAL",
+          "XTAR",
+          "XSPS",
+          "XHEL",
+          "ALXP",
+          "FMTS",
+          "VRXP",
+          "XMAT",
+          "XMLI",
+          "XMON",
+          "XPAR",
+          "XPOW",
+          "XGSE",
+          "_360T",
+          "BERA",
+          "BERB",
+          "DUSA",
+          "DUSB",
+          "DUSC",
+          "ECAG",
+          "EUWX",
+          "GMTS",
+          "HAMA",
+          "HAMB",
+          "HANA",
+          "HANB",
+          "MUNA",
+          "MUNB",
+          "STUA",
+          "STUB",
+          "XBER",
+          "XDUS",
+          "XEEE",
+          "XETR",
+          "XEUB",
+          "XEUP",
+          "XEUR",
+          "XFRA",
+          "XGAT",
+          "XHAM",
+          "XHAN",
+          "XHCE",
+          "XMUN",
+          "XNEW",
+          "XRTR",
+          "XSTU",
+          "ZOBX",
+          "XGHA",
+          "ENAX",
+          "HDAT",
+          "XADE",
+          "XATH",
+          "XGTG",
+          "XCIE",
+          "XBCV",
+          "XHON",
+          "XCGS",
+          "XGEM",
+          "XHKF",
+          "XHKG",
+          "XBUD",
+          "ISEC",
+          "XICE",
+          "ISEX",
+          "NMCE",
+          "OTCX",
+          "XBAN",
+          "XBOM",
+          "XCAL",
+          "XDES",
+          "XIMC",
+          "XMDS",
+          "XNCD",
+          "XNSE",
+          "XBBJ",
+          "XJKT",
+          "XJNB",
+          "XSUR",
+          "XTEH",
+          "XIQS",
+          "XASM",
+          "XDUB",
+          "XFNX",
+          "XIEX",
+          "XPOS",
+          "XTAE",
+          "BOND",
+          "ETFP",
+          "ETLX",
+          "EXPA",
+          "HMTF",
+          "MACX",
+          "MOTX",
+          "MTAA",
+          "MTAX",
+          "MTSC",
+          "MTSM",
+          "SEDX",
+          "SSOB",
+          "XDMI",
+          "XTLX",
+          "XBRV",
+          "XJAM",
+          "JASR",
+          "XFKA",
+          "XHER",
+          "XJAS",
+          "XKAC",
+          "XNGO",
+          "XNKS",
+          "XOSE",
+          "XOSJ",
+          "XSAP",
+          "XTFF",
+          "XTK1",
+          "XTK2",
+          "XTKO",
+          "XTKS",
+          "XTKT",
+          "XAMM",
+          "XKAZ",
+          "XNAI",
+          "XKFE",
+          "XKOS",
+          "XKRX",
+          "XKUW",
+          "XKSE",
+          "XRIS",
+          "XBEY",
+          "XLIT",
+          "FNLT",
+          "CCLX",
+          "EMTF",
+          "XLUX",
+          "XVES",
+          "XMAE",
+          "XMDG",
+          "XMSW",
+          "XKLS",
+          "XLFX",
+          "XLOF",
+          "XRBM",
+          "XMAL",
+          "XMAU",
+          "XEMD",
+          "XMEX",
+          "XMOL",
+          "XULA",
+          "XMNX",
+          "XCAS",
+          "XMAP",
+          "XNAM",
+          "XNEP",
+          "NZFX",
+          "XNZE",
+          "XMAN",
+          "XNSA",
+          "FISH",
+          "FSHX",
+          "NORX",
+          "NOTC",
+          "XIMA",
+          "XOAM",
+          "XOAS",
+          "XOSL",
+          "XMUS",
+          "XISL",
+          "XKAR",
+          "XLAH",
+          "XPAE",
+          "XPTY",
+          "XPOM",
+          "XVPA",
+          "XLIM",
+          "XPHS",
+          "CETO",
+          "MTSP",
+          "PLPX",
+          "RPWC",
+          "XNCO",
+          "XWAR",
+          "ENXL",
+          "MDIP",
+          "MFOX",
+          "OMIP",
+          "OPEX",
+          "WQXL",
+          "XLIS",
+          "DSMD",
+          "BMFM",
+          "XBRM",
+          "XBSD",
+          "XBSE",
+          "XRAS",
+          "NNCS",
+          "RTSX",
+          "URCE",
+          "XAPI",
+          "XMIC",
+          "XMOS",
+          "XPET",
+          "XPIC",
+          "XROV",
+          "XRUS",
+          "XSAM",
+          "XSIB",
+          "XSIC",
+          "XECS",
+          "XSAU",
+          "XBEL",
+          "JADX",
+          "XSCE",
+          "XSES",
+          "XSIM",
+          "XBRA",
+          "XLJS",
+          "XLJU",
+          "ALTX",
+          "XBES",
+          "XJSE",
+          "XSAF",
+          "XSFA",
+          "YLDX",
+          "MABX",
+          "OMEL",
+          "SMTS",
+          "XBAR",
+          "XBIL",
+          "XDPA",
+          "XDRF",
+          "XLAT",
+          "XMAD",
+          "XMCE",
+          "XMEF",
+          "XMRV",
+          "XNAF",
+          "XSRM",
+          "XVAL",
+          "XCOL",
+          "XKHA",
+          "XSWA",
+          "FNSE",
+          "NMTF",
+          "XNGM",
+          "XOPV",
+          "XSAT",
+          "XSTO",
+          "XBRN",
+          "XQMH",
+          "XSWX",
+          "ROCO",
+          "XTAF",
+          "XTAI",
+          "XDAR",
+          "AFET",
+          "BEEX",
+          "TFEX",
+          "XBKF",
+          "XBKK",
+          "ALXA",
+          "AMTS",
+          "NDEX",
+          "NLPX",
+          "TNLA",
+          "XAMS",
+          "XEUC",
+          "XEUE",
+          "XEUI",
+          "XTRN",
+          "XTUN",
+          "XIAB",
+          "XIST",
+          "XTUR",
+          "XUGA",
+          "PFTS",
+          "XDFB",
+          "XKHR",
+          "XKIE",
+          "XKIS",
+          "XODE",
+          "XPRI",
+          "XUAX",
+          "XUKR",
+          "DGCX",
+          "DIFX",
+          "DUMX",
+          "XADS",
+          "XDFM",
+          "BGCI",
+          "BLOX",
+          "BOSC",
+          "BTEE",
+          "CAZE",
+          "CCO2",
+          "CHIX",
+          "CMTS",
+          "CRDL",
+          "CXRT",
+          "EMTS",
+          "FAIR",
+          "FXMT",
+          "GEMX",
+          "GFIC",
+          "GFIF",
+          "GFIN",
+          "ICAH",
+          "ICAP",
+          "ICEN",
+          "ICSE",
+          "IEPA",
+          "IMTS",
+          "KMTS",
+          "LIQU",
+          "LMTS",
+          "LPPM",
+          "MAEL",
+          "MFGL",
+          "MTSA",
+          "MTSG",
+          "MTSS",
+          "MYTR",
+          "NMTS",
+          "NYFX",
+          "PCDS",
+          "QMTS",
+          "QWIX",
+          "RMTS",
+          "RTSL",
+          "SHAR",
+          "SPEC",
+          "SWAP",
+          "TBEN",
+          "TBLA",
+          "TCDS",
+          "TFSG",
+          "TFSS",
+          "TFSV",
+          "TMTS",
+          "TPIE",
+          "TPIM",
+          "TREU",
+          "TRQX",
+          "UKPX",
+          "UMTS",
+          "VMTS",
+          "WCLK",
+          "XADF",
+          "XALT",
+          "XCOR",
+          "XEDX",
+          "XLBM",
+          "XLIF",
+          "XLME",
+          "XLON",
+          "ISDX",
+          "XVTX",
+          "ARCX",
+          "BATS",
+          "BGCF",
+          "BIDS",
+          "BLTD",
+          "BNDD",
+          "BTEC",
+          "CBSX",
+          "CCFE",
+          "EDGA",
+          "EDGX",
+          "FCBT",
+          "FCME",
+          "HEGX",
+          "ICEL",
+          "ITGI",
+          "LEVL",
+          "PINX",
+          "PIPE",
+          "THRD",
+          "TRWB",
+          "XASE",
+          "XBMK",
+          "XBOS",
+          "XBOX",
+          "XBRT",
+          "XCBF",
+          "XCBO",
+          "XCBT",
+          "XCCX",
+          "XCEC",
+          "XCFF",
+          "XCHI",
+          "XCIS",
+          "XCME",
+          "XEUS",
+          "XIMM",
+          "XIOM",
+          "XISX",
+          "XKBT",
+          "XMER",
+          "XMGE",
+          "XNAS",
+          "XNCM",
+          "XNDQ",
+          "XNGS",
+          "XNIM",
+          "XNMS",
+          "ICUS",
+          "XNYM",
+          "XNYS",
+          "XOCH",
+          "XOTC",
+          "XPBT",
+          "XPHL",
+          "XPHO",
+          "XPOR",
+          "XMNT",
+          "XCET",
+          "XCUE",
+          "XKCE",
+          "XSTE",
+          "XUNI",
+          "GXMA",
+          "BVCA",
+          "XCAR",
+          "HSTC",
+          "XSTC",
+          "XLUS",
+          "XZIM",
+          "FNFI",
+          "FRAA",
+          "FRAB",
+          "XETA",
+          "XETB",
+          "FNLV",
+          "IXSP",
+          "XNDX",
+          "ICAT",
+          "SGMA",
+          "ICEU",
+          "XISE",
+          "XIDX",
+          "SBIJ",
+          "XNMR",
+          "XBLN",
+          "XISA",
+          "XEQT",
+          "EQTA",
+          "EQTB",
+          "XNYE",
+          "XNYL",
+          "XCDE",
+          "XDSX",
+          "XBBK",
+          "XTIR",
+          "PIEU",
+          "XMOC",
+          "EMID",
+          "BATE",
+          "HMOD",
+          "ICAS",
+          "XATS",
+          "NURO",
+          "OOTC",
+          "PSGM",
+          "XAFR",
+          "ROTC",
+          "ENXB",
+          "TPCD",
+          "TPRE",
+          "EMDR",
+          "XPIN",
+          "BACE",
+          "BOAT",
+          "HOTC",
+          "DUSD",
+          "BAIK",
+          "OTCQ",
+          "MESQ",
+          "XGFI",
+          "XSWB",
+          "XSCA",
+          "XSCL",
+          "GTCO",
+          "AQUA",
+          "XNLI",
+          "GLBX",
+          "XSMP",
+          "KABU",
+          "XINV",
+          "XAQS",
+          "XHFT",
+          "HKME",
+          "BALT",
+          "KNMX",
+          "ICBX",
+          "AMXO",
+          "QMTF",
+          "GFIM",
+          "KNLI",
+          "XIHK",
+          "XIJP",
+          "NBOT",
+          "HSFX",
+          "XAIM",
+          "SECF",
+          "XCUR",
+          "FXAL",
+          "XDSE",
+          "XFCI",
+          "XTAM",
+          "VTEX",
+          "LAFX",
+          "KLEU",
+          "XWEE",
+          "BURG",
+          "XGME",
+          "XPXE",
+          "XRPM",
+          "XSOP",
+          "HUPX",
+          "PLUS",
+          "XTPE",
+          "NCEL",
+          "XLSM",
+          "C2OX",
+          "XECM",
+          "IIDX",
+          "ICRO",
+          "IBLX",
+          "NXEU",
+          "XETI",
+          "XETC",
+          "XETD",
+          "XELX",
+          "MIVX",
+          "XRMO",
+          "BLKX",
+          "XMOT",
+          "OILX",
+          "XHNX",
+          "CITX",
+          "PXIL",
+          "CLMX",
+          "SPRZ",
+          "GREE",
+          "BLNK",
+          "XZAM",
+          "NASB",
+          "CETI",
+          "VEGA",
+          "CAES",
+          "EPEX",
+          "ROFX",
+          "ARCO",
+          "XCYO",
+          "FNEE",
+          "CHIA",
+          "N2EX",
+          "BATO",
+          "BATY",
+          "NODX",
+          "SMEX",
+          "BVUR",
+          "LMAX",
+          "CHIE",
+          "JATA",
+          "BARX",
+          "LMAE",
+          "LMAO",
+          "LMAF",
+          "SGMX",
+          "GFIA",
+          "CHIJ",
+          "SBMF",
+          "XGRM",
+          "DBOX",
+          "EOTC",
+          "ICDX",
+          "TOMX",
+          "BAPX",
+          "RPDX",
+          "ICTQ",
+          "XLDN",
+          "MSPL",
+          "ICXL",
+          "UBSX",
+          "BVMF",
+          "SPIM",
+          "UKEX",
+          "NGXC",
+          "EESE",
+          "SEPE",
+          "SPAD",
+          "PDEX",
+          "XSC1",
+          "XSC2",
+          "XSC3",
+          "KNEM",
+          "KNCM",
+          "CSLP",
+          "OTCB",
+          "SEND",
+          "NASN",
+          "LAFL",
+          "CHIY",
+          "BOSP",
+          "BMFX",
+          "FINR",
+          "FINN",
+          "FINY",
+          "FINO",
+          "ETSC",
+          "GLLC",
+          "BURM",
+          "XUBS",
+          "BERC",
+          "EQTC",
+          "XKFB",
+          "MSTC",
+          "LICA",
+          "DBHK",
+          "GFIR",
+          "PFTQ",
+          "BFEX",
+          "XCAN",
+          "BMFA",
+          "GBOT",
+          "TRDE",
+          "XUSE",
+          "BAML",
+          "HSXA",
+          "CATS",
+          "PULX",
+          "MTCH",
+          "XICX",
+          "MCXX",
+          "TMXS",
+          "GSCI",
+          "PRSE",
+          "TRCK",
+          "BOVA",
+          "BCMM",
+          "BOVM",
+          "SELC",
+          "NILX",
+          "EQTD",
+          "MEAU",
+          "MEHK",
+          "NXUS",
+          "XLAO",
+          "TRQD",
+          "VKAB",
+          "NFSC",
+          "NAMX",
+          "XSTX",
+          "XSCU",
+          "XSTV",
+          "TOMD",
+          "XDBX",
+          "XDBC",
+          "XDBV",
+          "MISX",
+          "XPST",
+          "GMTF",
+          "XCEG",
+          "XVIE",
+          "XMAI",
+          "TPSD",
+          "TOCP",
+          "ACEX",
+          "CDEL",
+          "MCZK",
+          "ALXL",
+          "ARCD",
+          "BATD",
+          "CHID",
+          "EDGD",
+          "EDDP",
+          "NURD",
+          "TRDP",
+          "BOSD",
+          "NECD",
+          "NASD",
+          "NYSD",
+          "BARD",
+          "FRAD",
+          "NFSD",
+          "LAFD",
+          "LIQH",
+          "BAMP",
+          "CITD",
+          "CDED",
+          "ALDP",
+          "RICX",
+          "RICD",
+          "PDQX",
+          "PDQD",
+          "BRIX",
+          "SHAW",
+          "SHAD",
+          "IMFX",
+          "RBSX",
+          "POEE",
+          "PLDX",
+          "NOPS",
+          "GMEX",
+          "IMEQ",
+          "IMEN",
+          "IMCR",
+          "IMCO",
+          "IMBD",
+          "IMAG",
+          "EUAX",
+          "NPGA",
+          "ZKBX",
+          "TBSP",
+          "UKGD",
+          "SIGX",
+          "XTK3",
+          "PIRM",
+          "LMAD",
+          "MALX",
+          "IMEX",
+          "VMFX",
+          "ASXP",
+          "ASXV",
+          "ASXC",
+          "RSEX",
+          "DEAL",
+          "FXCM",
+          "APXL",
+          "HUNG",
+          "COAL",
+          "PRME",
+          "GXGM",
+          "IMIR",
+          "IFEU",
+          "IFUS",
+          "IFCA",
+          "XXSC",
+          "AATS",
+          "XMIO",
+          "XEUM",
+          "EMIR",
+          "OPRA",
+          "BSME",
+          "BETA",
+          "SIMV",
+          "CMEC",
+          "CLTD",
+          "ISWA",
+          "DCSX",
+          "SIGJ",
+          "SIGA",
+          "CICX",
+          "UBSA",
+          "JPMX",
+          "CSSX",
+          "MSRP",
+          "MAQX",
+          "CGMH",
+          "XEYE",
+          "ITSM",
+          "XSBI",
+          "TFSA",
+          "PAVE",
+          "CGME",
+          "NAVE",
+          "PLSX",
+          "TFSC",
+          "TFSE",
+          "TRDX",
+          "CGMU",
+          "CGMI",
+          "SSTX",
+          "ERIS",
+          "GOVX",
+          "XSEF",
+          "TFSU",
+          "TRFX",
+          "UBSP",
+          "CGMX",
+          "GXGF",
+          "NOFF",
+          "NFSA",
+          "EWSM",
+          "TPFD",
+          "XBXO",
+          "NYPC",
+          "ATSA",
+          "OTCM",
+          "PINC",
+          "PINL",
+          "PINI",
+          "FAST",
+          "XECC",
+          "XCSX",
+          "WDER",
+          "WBON",
+          "WGAS",
+          "WIND",
+          "WETP",
+          "WMTF",
+          "MTAH",
+          "ASXT",
+          "GXGR",
+          "CHEV",
+          "XSCO",
+          "NEOE",
+          "IEXG",
+          "NEXX",
+          "XKON",
+          "TRPX",
+          "XSSC",
+          "XSEC",
+          "SHSC",
+          "SZSC",
+          "ZARX",
+          "A2XX",
+          "AIXK",
+          "GROW",
+          "CEUX",
+          "IFBX",
+          "XFTA",
+          "XAUK",
+          "XACE",
+          "XAEX",
+          "XMID",
+          "XSWO",
+          "XKYO",
+          "XNII",
+          "XHIR",
+          "XDTB",
+          "XVSE",
+          "XALB",
+          "XANT",
+          "XIPE",
+          "XTFN",
+          "XJWY",
+          "XOST",
+          "XNST",
+          "XKST",
+          "XKGT",
+          "XKKT",
+          "XTKA",
+          "XCCE",
+          "TLAB",
+          "XOME",
+          "XMIL",
+          "XFOM",
+          "XTRA",
+          "AIMX",
+          "XKOR",
+          "ECXE",
+          "XDWZ",
+          "XABJ",
+          "XMOO",
+          "XRMS",
+          "XMLX",
+          "XBVP",
+          "XBAV",
+          "XFCM",
+          "XWBO",
+          "XBFO",
+          "XAOM",
+          "XOTB",
+          "PMTS",
+          "XFMN",
+          "XYKT",
+          "XIME",
+          "XSOM",
+          "NYMX",
+          "XVLA",
+          "XTAD",
+          "XBTF",
+          "XTFE",
+          "XTOE",
+          "XARC",
+          "XNYC",
+          "XBCE",
+          "OFEX",
+          "XPSE",
+          "XCSC",
+          "XLCE",
+          "XRIO",
+          "XBBF",
+          "XLTO",
+          "XSME",
+          "XVAR",
+          "XMIF",
+          "XCRC",
+          "XOSM",
+          "XMAC",
+          "XFFE",
+          "XAZX",
+          "XNQL",
+          "KOCN",
+          "XNEE",
+          "XBRE",
+          "XNAN",
+          "XLYO",
+          "XMAR",
+          "XNAY",
+          "XBOR",
+          "XLIL",
+          "XZRH",
+          "XBSL",
+          "XGVA",
+          "_CBOMSCI",
+          "_CBOM",
+          "_CBOF",
+          "_CBOI",
+          "_CBOC",
+          "_OMXN",
+          "_FNYM",
+          "_FCEC",
+          "_MSCILOCALEM",
+          "_MSCIEM",
+          "_MSCIAP",
+          "_MSCILOCALAP",
+          "_MSCILOCALDM",
+          "_MSCIDM",
+          "_MSCIUS",
+          "_GIDS",
+          "_MFQS",
+          "_MSCILOCAL",
+          "_GIF",
+          "_MSCI"
+        ],
+        "type": "string"
+      },
+      "IdentifierTypes": {
+        "enum": [
+          "Symbol",
+          "CIK",
+          "CUSIP",
+          "ISIN",
+          "Valoren",
+          "SEDOL",
+          "FIGI",
+          "CompositeFIGI"
+        ],
+        "type": "string"
+      },
+      "InstrumentClasses": {
+        "enum": [
+          "Bond",
+          "Indices",
+          "Stock",
+          "Other",
+          "StructuredProduct",
+          "Fund",
+          "MoneyMarket",
+          "Derivative",
+          "Currency",
+          "Technical",
+          "Commodity",
+          "CurrencyForward",
+          "InterestRateSwaps",
+          "DepositoryReceipt",
+          "ExchangeTradedFund",
+          "PreferredShares",
+          "CoveredWarrant",
+          "Warrant",
+          "Units",
+          "ExchangeTradedCommodity",
+          "All"
+        ],
+        "type": "string"
+      },
+      "IdentifierRecord": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IdentifiersByExchange": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Exchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "InstrumentClass": {
+            "type": "string",
+            "nullable": true
+          },
+          "Count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ArrayOfIdentifierRecords": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IdentifierRecord"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AlternateIdentifierTypes": {
+        "enum": [
+          "Unknown",
+          "Symbol",
+          "CUSIP",
+          "CIK",
+          "Valoren",
+          "SEDOL",
+          "DataSourceIdentifier",
+          "ISIN",
+          "AlternateSymbol"
+        ],
+        "type": "string"
+      },
+      "AlternateSecurityIdentifier": {
+        "type": "object",
+        "properties": {
+          "AlternateIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/AlternateIdentifierTypes"
+              }
+            ]
+          },
+          "StartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndDate": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CustomAttribute": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "DataType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Value": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Security": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "SEDOL": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Exchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "ActiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "InactiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "HomeTradingPlace": {
+            "type": "boolean"
+          },
+          "FIGI": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompositeFIGI": {
+            "type": "string",
+            "nullable": true
+          },
+          "Active": {
+            "type": "boolean"
+          },
+          "AlternateSecurityIdentifiers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AlternateSecurityIdentifier"
+            },
+            "nullable": true
+          },
+          "CustomAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomAttribute"
+            },
+            "nullable": true
+          },
+          "DataProvider": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/DataProviders"
+              }
+            ]
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InstrumentRelatedTypes": {
+        "enum": [
+          "None",
+          "Securities"
+        ],
+        "type": "string"
+      },
+      "Instrument": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "InstrumentClass": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "ActiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "InactiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "MostLiquidExchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "CFICode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "Active": {
+            "type": "boolean"
+          },
+          "CustomAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomAttribute"
+            },
+            "nullable": true
+          },
+          "Securities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Security"
+            },
+            "nullable": true
+          },
+          "DataProvider": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/DataProviders"
+              }
+            ]
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OptionalBoolean": {
+        "enum": [
+          "Unknown",
+          "True",
+          "False"
+        ],
+        "type": "string"
+      },
+      "InstrumentProperty": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AbstractPublicWebServiceObj"
+          }
+        ],
+        "properties": {
+          "CallableByDebtor": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "CallableByCreditor": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "Amortization": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "PartlyPaidIssue": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "ExtensionByDebtor": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "ExtensionByCreditor": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "ConversionByDebtor": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "ConversionByCreditor": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "RepaymentsInOtherCurrencies": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "StockingUp": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "NominalReduction": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "PaymentsKnownOnIssue": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "Jurisdiction": {
+            "type": "string",
+            "nullable": true
+          },
+          "CoveredWarrant": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "VoteCarrying": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "DueDateAtEndOfMonth": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "DistributionsInOtherCurrencies": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "WithoutPhysicalCoupon": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "LastDeductedCoupon": {
+            "type": "string",
+            "nullable": true
+          },
+          "ICMARegulated": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "CombinedInstrument": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "CallableOnlyForTaxReasons": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "Class": {
+            "type": "string",
+            "nullable": true
+          },
+          "Series": {
+            "type": "string",
+            "nullable": true
+          },
+          "Tranche": {
+            "type": "string",
+            "nullable": true
+          },
+          "PoolNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "Trust": {
+            "type": "string",
+            "nullable": true
+          },
+          "Program": {
+            "type": "string",
+            "nullable": true
+          },
+          "Underlying": {
+            "type": "string",
+            "nullable": true
+          },
+          "DividendReinvestmentPlan": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "NotionalAmount": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionalBoolean"
+              }
+            ]
+          },
+          "EquityType": {
+            "type": "string",
+            "nullable": true
+          },
+          "ParValueType": {
+            "type": "string",
+            "nullable": true
+          },
+          "NumberOfVotingRights": {
+            "type": "number",
+            "format": "double"
+          },
+          "DateOfFinalMaturity": {
+            "type": "string",
+            "nullable": true
+          },
+          "DateOfFinalMaturityCapitalPaymentDelay": {
+            "type": "string",
+            "nullable": true
+          },
+          "DateOfLegalMaturity": {
+            "type": "string",
+            "nullable": true
+          },
+          "DateOfLegalMaturityCapitalPaymentDelay": {
+            "type": "string",
+            "nullable": true
+          },
+          "IndexStartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "IndexStartingValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "IndexType": {
+            "type": "string",
+            "nullable": true
+          },
+          "IndexWeightingType": {
+            "type": "string",
+            "nullable": true
+          },
+          "CapitalisationType": {
+            "type": "string",
+            "nullable": true
+          },
+          "IndexDivisor": {
+            "type": "number",
+            "format": "double"
+          },
+          "IndexDivisorDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "InterestRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "InterestType": {
+            "type": "string",
+            "nullable": true
+          },
+          "DateOfInterestBegin": {
+            "type": "string",
+            "nullable": true
+          },
+          "LiquidationRight": {
+            "type": "string",
+            "nullable": true
+          },
+          "IncomeDistributionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "DomicileOfApplicableLaw": {
+            "type": "string",
+            "nullable": true
+          },
+          "DayCountConvention": {
+            "type": "string",
+            "nullable": true
+          },
+          "DistributionFrequency": {
+            "type": "number",
+            "format": "double"
+          },
+          "DistributionFrequencyUnit": {
+            "type": "string",
+            "nullable": true
+          },
+          "Denomination": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InstrumentCapitalStructure": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AbstractPublicWebServiceObj"
+          }
+        ],
+        "properties": {
+          "OutstandingCapitalNumberOfInstruments": {
+            "type": "number",
+            "format": "double"
+          },
+          "OutstandingCapitalCapitalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "OutstandingCapitalEffectiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "OutstandingCapitalInputGrade": {
+            "type": "string",
+            "nullable": true
+          },
+          "OutstandingCapitalDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "IssuedCapitalNumberOfInstruments": {
+            "type": "number",
+            "format": "double"
+          },
+          "IssuedCapitalCapitalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "IssuedCapitalEffectiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "IssuedCapitalInputGrade": {
+            "type": "string",
+            "nullable": true
+          },
+          "IssuedCapitalDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "ContingentCapitalNumberOfInstruments": {
+            "type": "number",
+            "format": "double"
+          },
+          "ContingentCapitalCapitalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "ContingentCapitalEffectiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ContingentCapitalInputGrade": {
+            "type": "string",
+            "nullable": true
+          },
+          "ContingentCapitalDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "TreasuryStockNumberOfInstruments": {
+            "type": "number",
+            "format": "double"
+          },
+          "TreasuryStockCapitalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "TreasuryStockEffectiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "TreasuryStockInputGrade": {
+            "type": "string",
+            "nullable": true
+          },
+          "TreasuryStockDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "AuthorizedButUnissuedCapitalNumberOfInstruments": {
+            "type": "number",
+            "format": "double"
+          },
+          "AuthorizedButUnissuedCapitalCapitalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "AuthorizedButUnissuedCapitalEffectiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "AuthorizedButUnissuedCapitalInputGrade": {
+            "type": "string",
+            "nullable": true
+          },
+          "AuthorizedButUnissuedCapitalDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "VotingRightsNumberOfVotingRights": {
+            "type": "number",
+            "format": "double"
+          },
+          "VotingRightsCapitalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "VotingRightsEffectiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "VotingRightsInputGrade": {
+            "type": "string",
+            "nullable": true
+          },
+          "VotingRightsDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "FreeFloatNumberOfInstruments": {
+            "type": "number",
+            "format": "double"
+          },
+          "FreeFloatCapitalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "FreeFloatEffectiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "FreeFloatInputGrade": {
+            "type": "string",
+            "nullable": true
+          },
+          "FreeFloatDescription": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IndexInstrument": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Instrument"
+          }
+        ],
+        "properties": {
+          "InstrumentProperty": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/InstrumentProperty"
+              }
+            ],
+            "nullable": true
+          },
+          "InstrumentCapitalStructure": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/InstrumentCapitalStructure"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IssuerRelatedTypes": {
+        "enum": [
+          "None",
+          "Instruments",
+          "InstrumentsAndSecurities"
+        ],
+        "type": "string"
+      },
+      "Classification": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Industry": {
+            "type": "string",
+            "nullable": true
+          },
+          "Sector": {
+            "type": "string",
+            "nullable": true
+          },
+          "Scheme": {
+            "type": "string",
+            "nullable": true
+          },
+          "ClassificationCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Issuer": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "CIK": {
+            "type": "string",
+            "nullable": true
+          },
+          "Industry": {
+            "type": "string",
+            "nullable": true
+          },
+          "Sector": {
+            "type": "string",
+            "nullable": true
+          },
+          "ActiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "InactiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompanyIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "Domicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "Active": {
+            "type": "boolean"
+          },
+          "CustomAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomAttribute"
+            },
+            "nullable": true
+          },
+          "Instruments": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Instrument"
+                },
+                {
+                  "$ref": "#/components/schemas/IndexInstrument"
+                }
+              ]
+            },
+            "nullable": true
+          },
+          "DataProvider": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/DataProviders"
+              }
+            ]
+          },
+          "Classifications": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Classification"
+            },
+            "nullable": true
+          },
+          "FactSetEntityId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Record": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "CIK": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "SEDOL": {
+            "type": "string",
+            "nullable": true
+          },
+          "CFICode": {
+            "type": "string",
+            "nullable": true
+          },
+          "InstrumentClass": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExchangeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Sector": {
+            "type": "string",
+            "nullable": true
+          },
+          "Industry": {
+            "type": "string",
+            "nullable": true
+          },
+          "Exchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "ActiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "InactiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastUpdateDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "HomeTradingPlace": {
+            "type": "boolean"
+          },
+          "CompanyIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "FIGI": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompositeFIGI": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LookUpSecurity": {
+        "type": "object",
+        "properties": {
+          "CIK": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "SEDOL": {
+            "type": "string",
+            "nullable": true
+          },
+          "FIGI": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompositeFIGI": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "InstrumentClass": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Sector": {
+            "type": "string",
+            "nullable": true
+          },
+          "Industry": {
+            "type": "string",
+            "nullable": true
+          },
+          "HomeTradingPlace": {
+            "type": "boolean"
+          },
+          "Active": {
+            "type": "boolean"
+          },
+          "MostLiquidExchange": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LookupItems": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Securities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LookUpSecurity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sectors": {
+        "enum": [
+          "NonEnergyMinerals",
+          "ProducerManufacturing",
+          "ElectronicTechnology",
+          "ConsumerDurables",
+          "EnergyMinerals",
+          "ProcessIndustries",
+          "HealthTechnology",
+          "ConsumerNonDurables",
+          "IndustrialServices",
+          "CommercialServices",
+          "DistributionServices",
+          "TechnologyServices",
+          "HealthServices",
+          "ConsumerServices",
+          "RetailTrade",
+          "Transportation",
+          "Utilities",
+          "Finance",
+          "Communications",
+          "Miscellaneous",
+          "Government",
+          "NotClassified"
+        ],
+        "type": "string"
+      },
+      "Industries": {
+        "enum": [
+          "Steel",
+          "Aluminum",
+          "PreciousMetals",
+          "OtherMetalsOrMinerals",
+          "ForestProducts",
+          "ConstructionMaterials",
+          "MetalFabrication",
+          "IndustrialMachinery",
+          "TrucksOrConstructionOrFarmMachinery",
+          "AutoPartsOEM",
+          "BuildingProducts",
+          "ElectricalProducts",
+          "OfficeEquipmentOrSupplies",
+          "MiscellaneousManufacturing",
+          "IndustrialConglomerates",
+          "Semiconductors",
+          "ElectronicComponents",
+          "ElectronicEquipmentOrInstruments",
+          "TelecommunicationsEquipment",
+          "AerospaceAndDefense",
+          "ComputerProcessingHardware",
+          "ComputerPeripherals",
+          "ComputerCommunications",
+          "ElectronicProductionEquipment",
+          "MotorVehicles",
+          "AutomotiveAftermarket",
+          "Homebuilding",
+          "HomeFurnishings",
+          "ElectronicsOrAppliances",
+          "ToolsAndHardware",
+          "RecreationalProducts",
+          "OtherConsumerSpecialties",
+          "OilAndGasProduction",
+          "IntegratedOil",
+          "OilRefiningOrMarketing",
+          "Coal",
+          "ChemicalsMajorDiversified",
+          "ChemicalsSpecialty",
+          "ChemicalsAgricultural",
+          "Textiles",
+          "AgriculturalCommoditiesOrMilling",
+          "PulpAndPaper",
+          "ContainersOrPackaging",
+          "IndustrialSpecialties",
+          "PharmaceuticalsMajor",
+          "PharmaceuticalsOther",
+          "PharmaceuticalsGeneric",
+          "Biotechnology",
+          "MedicalSpecialties",
+          "FoodMajorDiversified",
+          "FoodSpecialtyOrCandy",
+          "FoodMeatOrFishOrDairy",
+          "BeveragesNonAlcoholic",
+          "BeveragesAlcoholic",
+          "Tobacco",
+          "HouseholdOrPersonalCare",
+          "ApparelOrFootwear",
+          "ConsumerSundries",
+          "ContractDrilling",
+          "OilfieldServicesOrEquipment",
+          "EngineeringAndConstruction",
+          "EnvironmentalServices",
+          "OilAndGasPipelines",
+          "MiscellaneousCommercialServices",
+          "AdvertisingOrMarketingServices",
+          "CommercialPrintingOrForms",
+          "FinancialPublishingOrServices",
+          "PersonnelServices",
+          "WholesaleDistributors",
+          "FoodDistributors",
+          "ElectronicsDistributors",
+          "MedicalDistributors",
+          "DataProcessingServices",
+          "InformationTechnologyServices",
+          "PackagedSoftware",
+          "InternetSoftwareOrServices",
+          "ManagedHealthCare",
+          "HospitalOrNursingManagement",
+          "MedicalOrNursingServices",
+          "ServicestotheHealthIndustry",
+          "MediaConglomerates",
+          "Broadcasting",
+          "CableOrSatelliteTV",
+          "PublishingNewspapers",
+          "PublishingBooksOrMagazines",
+          "MoviesOrEntertainment",
+          "Restaurants",
+          "HotelsOrResortsOrCruiselines",
+          "CasinosOrGaming",
+          "OtherConsumerServices",
+          "FoodRetail",
+          "DrugstoreChains",
+          "DepartmentStores",
+          "DiscountStores",
+          "ApparelOrFootwearRetail",
+          "HomeImprovementChains",
+          "ElectronicsOrApplianceStores",
+          "SpecialtyStores",
+          "CatalogOrSpecialtyDistribution",
+          "InternetRetail",
+          "AirFreightOrCouriers",
+          "Airlines",
+          "Trucking",
+          "Railroads",
+          "MarineShipping",
+          "OtherTransportation",
+          "ElectricUtilities",
+          "GasDistributors",
+          "WaterUtilities",
+          "AlternativePowerGeneration",
+          "MajorBanks",
+          "RegionalBanks",
+          "SavingsBanks",
+          "FinanceOrRentalOrLeasing",
+          "InvestmentBanksOrBrokers",
+          "InvestmentManagers",
+          "FinancialConglomerates",
+          "PropertyOrCasualtyInsurance",
+          "MultiLineInsurance",
+          "LifeOrHealthInsurance",
+          "SpecialtyInsurance",
+          "InsuranceBrokersOrServices",
+          "RealEstateDevelopment",
+          "RealEstateInvestmentTrusts",
+          "MajorTelecommunications",
+          "SpecialtyTelecommunications",
+          "WirelessTelecommunications",
+          "Miscellaneous",
+          "InvestmentTrustsOrMutualFunds",
+          "SovereignGovernment",
+          "ProvinceOrStateGovernment",
+          "MunicipalGovernment",
+          "NationalAgencies",
+          "StateAgencies",
+          "LocalAgencies",
+          "SupranationalGovernment",
+          "GeneralGovernment",
+          "NotClassified"
+        ],
+        "type": "string"
+      },
+      "Statistics": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "Exchange": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "apiKey",
+        "description": "Token for your account.",
+        "name": "_token",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
