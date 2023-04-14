@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteEarningsCalendar",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -882,6 +882,14 @@
           }
         ],
         "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
           "Security": {
             "allOf": [
               {
@@ -936,6 +944,14 @@
           }
         ],
         "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
           "Security": {
             "allOf": [
               {
@@ -1007,6 +1023,14 @@
           }
         ],
         "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
           "Security": {
             "allOf": [
               {
@@ -1062,6 +1086,14 @@
           }
         ],
         "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
           "Security": {
             "allOf": [
               {
@@ -1085,6 +1117,10 @@
           "Notes": {
             "type": "string",
             "nullable": true
+          },
+          "TimeZone": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1097,6 +1133,14 @@
           }
         ],
         "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
           "Security": {
             "allOf": [
               {
@@ -1132,6 +1176,14 @@
           }
         ],
         "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
           "Security": {
             "allOf": [
               {
@@ -1251,6 +1303,14 @@
           }
         ],
         "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
           "Security": {
             "allOf": [
               {
@@ -1286,6 +1346,14 @@
           }
         ],
         "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
           "Security": {
             "allOf": [
               {
