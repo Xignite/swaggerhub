@@ -1,0 +1,28 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "XigniteGlobalMetals",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://globalmetals.xignite.com/"
+    }
+  ],
+  "paths": { },
+  "components": {
+    "securitySchemes": {
+      "basic": {
+        "type": "apiKey",
+        "description": "Token for your account.",
+        "name": "_token",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
