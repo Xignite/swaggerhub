@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalESG",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -34,6 +34,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/ExchangeList"
                 }
@@ -88,6 +93,11 @@
                   "$ref": "#/components/schemas/SymbolList"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/SymbolList"
@@ -122,6 +132,11 @@
                   "$ref": "#/components/schemas/CategoryList"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoryList"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/CategoryList"
@@ -152,6 +167,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvolvementList"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/InvolvementList"
                 }
@@ -219,6 +239,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ESGScores"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -310,6 +338,11 @@
                   "$ref": "#/components/schemas/HistoricalESGScoresRange"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalESGScoresRange"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/HistoricalESGScoresRange"
@@ -373,6 +406,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ESGCategories"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -464,6 +505,11 @@
                   "$ref": "#/components/schemas/HistoricalESGCategoriesRange"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalESGCategoriesRange"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/HistoricalESGCategoriesRange"
@@ -527,6 +573,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TemperatureScores"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -610,6 +664,14 @@
                   }
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Emissions"
+                  }
+                }
+              },
               "text/xml": {
                 "schema": {
                   "type": "array",
@@ -679,6 +741,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalCompactScores"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -770,6 +840,11 @@
                   "$ref": "#/components/schemas/HistoricalGlobalCompactScoresRange"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalGlobalCompactScoresRange"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/HistoricalGlobalCompactScoresRange"
@@ -847,6 +922,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Involvements"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -941,6 +1024,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScreenByInvolvementsResult"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/ScreenByInvolvementsResult"
                 }
