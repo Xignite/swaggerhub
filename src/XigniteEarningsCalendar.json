@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteEarningsCalendar",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "servers": [
     {
@@ -34,6 +34,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/ExchangeList"
                 }
@@ -81,6 +86,11 @@
                   "$ref": "#/components/schemas/SymbolList"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/SymbolList"
@@ -115,6 +125,11 @@
                   "$ref": "#/components/schemas/FundamentalTypesItems"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundamentalTypesItems"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/FundamentalTypesItems"
@@ -137,21 +152,21 @@
         ],
         "parameters": [
           {
-            "name": "type",
+            "name": "Type",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -168,6 +183,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EarningCalendarItem"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/EarningCalendarItem"
                 }
@@ -194,21 +214,21 @@
         ],
         "parameters": [
           {
-            "name": "types",
+            "name": "Types",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifiers",
+            "name": "Identifiers",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -225,6 +245,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityItemsSets"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/SecurityItemsSets"
                 }
@@ -251,14 +276,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -275,6 +300,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EarningCall"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/EarningCall"
                 }
@@ -301,14 +331,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -325,6 +355,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConferenceCallInformation"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/ConferenceCallInformation"
                 }
@@ -351,14 +386,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -375,6 +410,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReplayInformation"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/ReplayInformation"
                 }
@@ -401,14 +441,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -425,6 +465,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Announcement"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/Announcement"
                 }
@@ -451,14 +496,14 @@
         ],
         "parameters": [
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "minimumMarketCap",
+            "name": "MinimumMarketCap",
             "in": "query",
             "schema": {
               "type": "number",
@@ -476,6 +521,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EarningCalendarDay"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/EarningCalendarDay"
                 }
@@ -502,21 +552,21 @@
         ],
         "parameters": [
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "minimumMarketCap",
+            "name": "MinimumMarketCap",
             "in": "query",
             "schema": {
               "type": "number",
@@ -534,6 +584,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EarningCalendar"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/EarningCalendar"
                 }
@@ -560,14 +615,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -584,6 +639,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EarningDates"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/EarningDates"
                 }
@@ -610,14 +670,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -634,6 +694,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BoardMeeting"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/BoardMeeting"
                 }
