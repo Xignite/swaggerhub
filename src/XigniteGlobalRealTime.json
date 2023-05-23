@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalRealTime",
-    "version": "3.0.5"
+    "version": "3.0.6"
   },
   "servers": [
     {
@@ -17,14 +17,14 @@
         ],
         "parameters": [
           {
-            "name": "exchange",
+            "name": "Exchange",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "changesSince",
+            "name": "ChangesSince",
             "in": "query",
             "schema": {
               "type": "string"
@@ -72,21 +72,21 @@
         ],
         "parameters": [
           {
-            "name": "exchange",
+            "name": "Exchange",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startSymbol",
+            "name": "StartSymbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endSymbol",
+            "name": "EndSymbol",
             "in": "query",
             "schema": {
               "type": "string"
@@ -173,14 +173,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -232,14 +232,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -326,14 +326,14 @@
         ],
         "parameters": [
           {
-            "name": "identifiers",
+            "name": "Identifiers",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -400,14 +400,14 @@
         ],
         "parameters": [
           {
-            "name": "identifiers",
+            "name": "Identifiers",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -509,14 +509,14 @@
         ],
         "parameters": [
           {
-            "name": "identifiers",
+            "name": "Identifiers",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -583,14 +583,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -642,7 +642,7 @@
         ],
         "parameters": [
           {
-            "name": "marketMoverType",
+            "name": "MarketMoverType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -653,7 +653,7 @@
             }
           },
           {
-            "name": "numberOfMarketMovers",
+            "name": "NumberOfMarketMovers",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -661,7 +661,7 @@
             }
           },
           {
-            "name": "exchanges",
+            "name": "Exchanges",
             "in": "query",
             "schema": {
               "type": "string"
