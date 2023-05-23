@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteNASDAQLastSale",
-    "version": "1.0.6"
+    "version": "1.0.7"
   },
   "servers": [
     {
@@ -17,14 +17,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -76,14 +76,14 @@
         ],
         "parameters": [
           {
-            "name": "identifiers",
+            "name": "Identifiers",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -150,7 +150,7 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
@@ -198,14 +198,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -257,7 +257,7 @@
         ],
         "parameters": [
           {
-            "name": "symbols",
+            "name": "Symbols",
             "in": "query",
             "schema": {
               "type": "string"
@@ -320,14 +320,14 @@
         ],
         "parameters": [
           {
-            "name": "identifiers",
+            "name": "Identifiers",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -394,14 +394,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -488,14 +488,14 @@
         ],
         "parameters": [
           {
-            "name": "identifiers",
+            "name": "Identifiers",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -597,7 +597,7 @@
         ],
         "parameters": [
           {
-            "name": "numberOfDays",
+            "name": "NumberOfDays",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -605,14 +605,14 @@
             }
           },
           {
-            "name": "startSymbol",
+            "name": "StartSymbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endSymbol",
+            "name": "EndSymbol",
             "in": "query",
             "schema": {
               "type": "string"
