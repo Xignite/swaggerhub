@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalCurrencies",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -85,21 +85,21 @@
         ],
         "parameters": [
           {
-            "name": "from",
+            "name": "From",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "to",
+            "name": "To",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "amount",
+            "name": "Amount",
             "in": "query",
             "schema": {
               "type": "number",
@@ -143,21 +143,21 @@
         ],
         "parameters": [
           {
-            "name": "from",
+            "name": "From",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "to",
+            "name": "To",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "amount",
+            "name": "Amount",
             "in": "query",
             "schema": {
               "type": "number",
@@ -165,14 +165,14 @@
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "fixingTime",
+            "name": "FixingTime",
             "in": "query",
             "schema": {
               "type": "string"
@@ -215,7 +215,7 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
@@ -228,50 +228,22 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Rate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalRate"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/Rate"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Rate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalRate"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/Rate"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Rate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalRate"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/Rate"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Rate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalRate"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/Rate"
                 }
               }
             }
@@ -286,7 +258,7 @@
         ],
         "parameters": [
           {
-            "name": "symbols",
+            "name": "Symbols",
             "in": "query",
             "schema": {
               "type": "string"
@@ -301,14 +273,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Rate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalRate"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Rate"
                   }
                 }
               },
@@ -316,14 +281,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Rate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalRate"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Rate"
                   }
                 }
               },
@@ -331,14 +289,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Rate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalRate"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Rate"
                   }
                 }
               },
@@ -346,14 +297,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Rate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalRate"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Rate"
                   }
                 }
               }
@@ -369,7 +313,7 @@
         ],
         "parameters": [
           {
-            "name": "symbols",
+            "name": "Symbols",
             "in": "query",
             "schema": {
               "type": "string"
@@ -384,14 +328,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Rate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalRate"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Rate"
                   }
                 }
               },
@@ -399,14 +336,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Rate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalRate"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Rate"
                   }
                 }
               },
@@ -414,14 +344,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Rate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalRate"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Rate"
                   }
                 }
               },
@@ -429,14 +352,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Rate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalRate"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Rate"
                   }
                 }
               }
@@ -486,14 +402,14 @@
         ],
         "parameters": [
           {
-            "name": "symbols",
+            "name": "Symbols",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -536,28 +452,28 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "fixingTime",
+            "name": "FixingTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -640,28 +556,28 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "fixingTime",
+            "name": "FixingTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -744,28 +660,28 @@
         ],
         "parameters": [
           {
-            "name": "symbols",
+            "name": "Symbols",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "fixingTime",
+            "name": "FixingTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -860,28 +776,28 @@
         ],
         "parameters": [
           {
-            "name": "symbols",
+            "name": "Symbols",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "fixingTime",
+            "name": "FixingTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -976,42 +892,42 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "fixingTime",
+            "name": "FixingTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "periodType",
+            "name": "PeriodType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1106,42 +1022,42 @@
         ],
         "parameters": [
           {
-            "name": "symbols",
+            "name": "Symbols",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "fixingTime",
+            "name": "FixingTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "periodType",
+            "name": "PeriodType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1236,28 +1152,28 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfTime",
+            "name": "AsOfTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1300,49 +1216,49 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startTime",
+            "name": "StartTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endTime",
+            "name": "EndTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "tickPrecision",
+            "name": "TickPrecision",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "tickPeriods",
+            "name": "TickPeriods",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -1398,42 +1314,42 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startTime",
+            "name": "StartTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endTime",
+            "name": "EndTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "precision",
+            "name": "Precision",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "period",
+            "name": "Period",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -1477,21 +1393,21 @@
         ],
         "parameters": [
           {
-            "name": "country",
+            "name": "Country",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1574,21 +1490,21 @@
         ],
         "parameters": [
           {
-            "name": "country",
+            "name": "Country",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1631,21 +1547,21 @@
         ],
         "parameters": [
           {
-            "name": "country",
+            "name": "Country",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "symbols",
+            "name": "Symbols",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1700,21 +1616,21 @@
         ],
         "parameters": [
           {
-            "name": "country",
+            "name": "Country",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "symbols",
+            "name": "Symbols",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1809,21 +1725,21 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1918,7 +1834,7 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1931,50 +1847,22 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/ForwardRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalForwardRateGeneralSources"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ForwardRate"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/ForwardRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalForwardRateGeneralSources"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ForwardRate"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/ForwardRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalForwardRateGeneralSources"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ForwardRate"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/ForwardRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalForwardRateGeneralSources"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ForwardRate"
                 }
               }
             }
@@ -2196,62 +2084,6 @@
         },
         "additionalProperties": false
       },
-      "InternalRate": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Rate"
-          }
-        ],
-        "properties": {
-          "From": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Currency"
-              }
-            ],
-            "nullable": true
-          },
-          "To": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Currency"
-              }
-            ],
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "Date": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "Bid": {
-            "type": "number",
-            "format": "double"
-          },
-          "Mid": {
-            "type": "number",
-            "format": "double"
-          },
-          "Ask": {
-            "type": "number",
-            "format": "double"
-          },
-          "Spread": {
-            "type": "number",
-            "format": "double"
-          },
-          "DailyVolume": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
       "OfficialCurrency": {
         "type": "object",
         "properties": {
@@ -2419,76 +2251,6 @@
             "$ref": "#/components/schemas/HistoricalRate"
           }
         ],
-        "properties": {
-          "isNewDate": {
-            "type": "boolean"
-          },
-          "From": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Currency"
-              }
-            ],
-            "nullable": true
-          },
-          "To": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Currency"
-              }
-            ],
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "Start": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "End": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Close": {
-            "type": "number",
-            "format": "double"
-          },
-          "Average": {
-            "type": "number",
-            "format": "double"
-          },
-          "Volatility": {
-            "type": "number",
-            "format": "double"
-          },
-          "InvertedAverage": {
-            "type": "number",
-            "format": "double"
-          },
-          "InvertedVolatility": {
-            "type": "number",
-            "format": "double"
-          },
-          "Source": {
-            "type": "string",
-            "nullable": true
-          }
-        },
         "additionalProperties": false
       },
       "HistoricalRateBidAsk": {
@@ -2759,42 +2521,6 @@
               "$ref": "#/components/schemas/ForwardContract"
             },
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "InternalForwardRateGeneralSources": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/ForwardRate"
-          }
-        ],
-        "properties": {
-          "From": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Currency"
-              }
-            ],
-            "nullable": true
-          },
-          "To": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Currency"
-              }
-            ],
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "Date": {
-            "type": "string",
-            "format": "date-time"
           }
         },
         "additionalProperties": false
