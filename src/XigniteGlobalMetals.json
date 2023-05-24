@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalMetals",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -51,14 +51,14 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
@@ -71,50 +71,22 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/MetalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalMetalQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/MetalQuote"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/MetalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalMetalQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/MetalQuote"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/MetalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalMetalQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/MetalQuote"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/MetalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalMetalQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/MetalQuote"
                 }
               }
             }
@@ -129,14 +101,14 @@
         ],
         "parameters": [
           {
-            "name": "symbols",
+            "name": "Symbols",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
@@ -151,14 +123,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/MetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/MetalQuote"
                   }
                 }
               },
@@ -166,14 +131,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/MetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/MetalQuote"
                   }
                 }
               },
@@ -181,14 +139,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/MetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/MetalQuote"
                   }
                 }
               },
@@ -196,14 +147,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/MetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/MetalQuote"
                   }
                 }
               }
@@ -219,14 +163,14 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
@@ -269,35 +213,35 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "fixingTime",
+            "name": "FixingTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -310,50 +254,22 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalMetalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalMetalQuote"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalMetalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalMetalQuote"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalMetalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalMetalQuote"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalMetalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalMetalQuote"
                 }
               }
             }
@@ -368,21 +284,21 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -396,7 +312,7 @@
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -439,56 +355,56 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startTime",
+            "name": "StartTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endTime",
+            "name": "EndTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "tickPrecision",
+            "name": "TickPrecision",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "tickPeriods",
+            "name": "TickPeriods",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -544,7 +460,7 @@
         ],
         "parameters": [
           {
-            "name": "metalType",
+            "name": "MetalType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -587,35 +503,35 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startTime",
+            "name": "StartTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endTime",
+            "name": "EndTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -673,35 +589,35 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "fixingType",
+            "name": "FixingType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -756,35 +672,35 @@
         ],
         "parameters": [
           {
-            "name": "symbols",
+            "name": "Symbols",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "fixingTime",
+            "name": "FixingTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -799,14 +715,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               },
@@ -814,14 +723,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               },
@@ -829,14 +731,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               },
@@ -844,14 +739,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               }
@@ -867,49 +755,49 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "fixingTime",
+            "name": "FixingTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "periodType",
+            "name": "PeriodType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -924,14 +812,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               },
@@ -939,14 +820,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               },
@@ -954,14 +828,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               },
@@ -969,14 +836,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               }
@@ -992,35 +852,35 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "fixingTime",
+            "name": "FixingTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1033,50 +893,22 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalMetalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalMetalQuote"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalMetalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalMetalQuote"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalMetalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalMetalQuote"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalMetalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalMetalQuote"
                 }
               }
             }
@@ -1091,35 +923,35 @@
         ],
         "parameters": [
           {
-            "name": "symbols",
+            "name": "Symbols",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "fixingTime",
+            "name": "FixingTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "priceType",
+            "name": "PriceType",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1134,14 +966,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               },
@@ -1149,14 +974,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               },
@@ -1164,14 +982,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               },
@@ -1179,14 +990,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               }
@@ -1202,14 +1006,14 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1252,28 +1056,28 @@
         ],
         "parameters": [
           {
-            "name": "symbol",
+            "name": "Symbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "currency",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1288,14 +1092,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               },
@@ -1303,14 +1100,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               },
@@ -1318,14 +1108,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               },
@@ -1333,14 +1116,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalMetalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalMetalQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
                   }
                 }
               }
@@ -1356,7 +1132,7 @@
         ],
         "parameters": [
           {
-            "name": "count",
+            "name": "Count",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -1544,107 +1320,6 @@
         },
         "additionalProperties": false
       },
-      "Country": {
-        "type": "object",
-        "properties": {
-          "Code": {
-            "type": "string",
-            "nullable": true
-          },
-          "Name": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Currency": {
-        "type": "object",
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "Plural": {
-            "type": "string",
-            "nullable": true
-          },
-          "Active": {
-            "type": "boolean"
-          },
-          "Digital": {
-            "type": "boolean"
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Countries": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Country"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "InternalMetalQuote": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/MetalQuote"
-          }
-        ],
-        "properties": {
-          "From": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Metal"
-              }
-            ],
-            "nullable": true
-          },
-          "To": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Currency"
-              }
-            ],
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "Date": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "Bid": {
-            "type": "number",
-            "format": "double"
-          },
-          "Mid": {
-            "type": "number",
-            "format": "double"
-          },
-          "Ask": {
-            "type": "number",
-            "format": "double"
-          },
-          "Spread": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
       "ExtendedMetalQuote": {
         "type": "object",
         "allOf": [
@@ -1789,121 +1464,6 @@
             "format": "double"
           },
           "Close": {
-            "type": "number",
-            "format": "double"
-          },
-          "Average": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "InternalHistoricalMetalQuote": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/HistoricalMetalQuote"
-          }
-        ],
-        "properties": {
-          "isNewDate": {
-            "type": "boolean"
-          },
-          "TelekursSource": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "DigitalCurrencySource": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "MorningstarSource": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "SwissQuoteSource": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "RadaSource": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "PeggedSource": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "MorningstarCurrencySuffix": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "MorningstarMetalSuffix": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "MetalAliasesPair": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "string"
-            },
-            "nullable": true,
-            "readOnly": true
-          },
-          "From": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Metal"
-              }
-            ],
-            "nullable": true
-          },
-          "To": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Currency"
-              }
-            ],
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "Start": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "End": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Close": {
-            "type": "number",
-            "format": "double"
-          },
-          "Volume": {
             "type": "number",
             "format": "double"
           },
