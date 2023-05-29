@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteLogos",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -191,7 +191,7 @@
         ],
         "parameters": [
           {
-            "name": "exchange",
+            "name": "Exchange",
             "in": "query",
             "schema": {
               "type": "string"
