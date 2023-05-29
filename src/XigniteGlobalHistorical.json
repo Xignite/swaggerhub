@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalHistorical",
-    "version": "3.0.1"
+    "version": "3.0.2"
   },
   "servers": [
     {
@@ -56,21 +56,21 @@
         ],
         "parameters": [
           {
-            "name": "exchange",
+            "name": "Exchange",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startSymbol",
+            "name": "StartSymbol",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endSymbol",
+            "name": "EndSymbol",
             "in": "query",
             "schema": {
               "type": "string"
@@ -118,14 +118,14 @@
         ],
         "parameters": [
           {
-            "name": "exchange",
+            "name": "Exchange",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "changesSince",
+            "name": "ChangesSince",
             "in": "query",
             "schema": {
               "type": "string"
@@ -173,14 +173,14 @@
         ],
         "parameters": [
           {
-            "name": "exchange",
+            "name": "Exchange",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "changesSince",
+            "name": "ChangesSince",
             "in": "query",
             "schema": {
               "type": "string"
@@ -228,42 +228,42 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierAsOfDate",
+            "name": "IdentifierAsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "corporateActionsAdjusted",
+            "name": "CorporateActionsAdjusted",
             "in": "query",
             "schema": {
               "type": "string"
@@ -311,21 +311,21 @@
         ],
         "parameters": [
           {
-            "name": "exchange",
+            "name": "Exchange",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "exDate",
+            "name": "ExDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "corporateActionsAdjusted",
+            "name": "CorporateActionsAdjusted",
             "in": "query",
             "schema": {
               "type": "string"
@@ -373,35 +373,35 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierAsOfDate",
+            "name": "IdentifierAsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -449,14 +449,14 @@
         ],
         "parameters": [
           {
-            "name": "exchange",
+            "name": "Exchange",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "exDate",
+            "name": "ExDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -504,35 +504,35 @@
         ],
         "parameters": [
           {
-            "name": "identifiers",
+            "name": "Identifiers",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierAsOfDate",
+            "name": "IdentifierAsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "adjustmentMethod",
+            "name": "AdjustmentMethod",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -595,49 +595,49 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierAsOfDate",
+            "name": "IdentifierAsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "adjustmentMethod",
+            "name": "AdjustmentMethod",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "periodType",
+            "name": "PeriodType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "periods",
+            "name": "Periods",
             "in": "query",
             "schema": {
               "type": "string"
@@ -685,42 +685,42 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierAsOfDate",
+            "name": "IdentifierAsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "adjustmentMethod",
+            "name": "AdjustmentMethod",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -768,42 +768,42 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierAsOfDate",
+            "name": "IdentifierAsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "adjustmentMethod",
+            "name": "AdjustmentMethod",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -851,42 +851,42 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierAsOfDate",
+            "name": "IdentifierAsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "adjustmentMethod",
+            "name": "AdjustmentMethod",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -934,42 +934,42 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierAsOfDate",
+            "name": "IdentifierAsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "adjustmentMethod",
+            "name": "AdjustmentMethod",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1017,35 +1017,35 @@
         ],
         "parameters": [
           {
-            "name": "identifiers",
+            "name": "Identifiers",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierAsOfDate",
+            "name": "IdentifierAsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "adjustmentMethod",
+            "name": "AdjustmentMethod",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "asOfDate",
+            "name": "AsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1108,42 +1108,42 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierAsOfDate",
+            "name": "IdentifierAsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "adjustmentMethod",
+            "name": "AdjustmentMethod",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1191,21 +1191,21 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startDate",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string",
@@ -1213,7 +1213,7 @@
             }
           },
           {
-            "name": "endDate",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string",
@@ -1262,49 +1262,49 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierAsOfDate",
+            "name": "IdentifierAsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "historicalVwapType",
+            "name": "HistoricalVWAPType",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "adjustmentMethod",
+            "name": "AdjustmentMethod",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "startTime",
+            "name": "StartTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endTime",
+            "name": "EndTime",
             "in": "query",
             "schema": {
               "type": "string"
@@ -2292,11 +2292,11 @@
           },
           "Factor": {
             "type": "number",
-            "format": "double"
+            "format": "decimal"
           },
           "CumulativeAdjustmentFactor": {
             "type": "number",
-            "format": "double"
+            "format": "decimal"
           }
         },
         "additionalProperties": false
