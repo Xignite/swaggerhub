@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalIndicesHistorical",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "servers": [
     {
@@ -965,14 +965,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -983,21 +983,21 @@
             }
           },
           {
-            "name": "startTime",
+            "name": "StartTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endTime",
+            "name": "EndTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "precision",
+            "name": "Precision",
             "in": "query",
             "schema": {
               "allOf": [
@@ -1008,7 +1008,7 @@
             }
           },
           {
-            "name": "period",
+            "name": "Period",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -1057,14 +1057,14 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "identifierType",
+            "name": "IdentifierType",
             "in": "query",
             "schema": {
               "allOf": [
@@ -1075,28 +1075,28 @@
             }
           },
           {
-            "name": "startTime",
+            "name": "StartTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "endTime",
+            "name": "EndTime",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "precision",
+            "name": "Precision",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "period",
+            "name": "Period",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -1104,14 +1104,14 @@
             }
           },
           {
-            "name": "adjustmentMethod",
+            "name": "AdjustmentMethod",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "includeExtended",
+            "name": "IncludeExtended",
             "in": "query",
             "schema": {
               "type": "boolean"
