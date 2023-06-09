@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteBondMaster",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -692,8 +692,56 @@
         ],
         "type": "string"
       },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InstrumentIdentifierBrief": {
+        "type": "object",
+        "properties": {
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "InstrumentIdentifier": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+          }
+        ],
         "properties": {
           "CompanyIdentifier": {
             "type": "string",
@@ -720,18 +768,6 @@
             "nullable": true
           },
           "OriginalCompanyIdentifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "Valoren": {
-            "type": "string",
-            "nullable": true
-          },
-          "CUSIP": {
-            "type": "string",
-            "nullable": true
-          },
-          "ISIN": {
             "type": "string",
             "nullable": true
           }
@@ -780,8 +816,59 @@
         },
         "additionalProperties": false
       },
+      "BondInstrumentBrief": {
+        "type": "object",
+        "properties": {
+          "Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "MaturityDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "CouponRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "CouponType": {
+            "type": "string",
+            "nullable": true
+          },
+          "ConvertibleByIssuer": {
+            "type": "string",
+            "nullable": true
+          },
+          "ConvertibleByHolder": {
+            "type": "string",
+            "nullable": true
+          },
+          "CallableByIssuer": {
+            "type": "string",
+            "nullable": true
+          },
+          "CallableByHolder": {
+            "type": "string",
+            "nullable": true
+          },
+          "Denomination": {
+            "type": "string",
+            "nullable": true
+          },
+          "DenominationCurrency": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "BondInstrument": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BondInstrumentBrief"
+          }
+        ],
         "properties": {
           "ProductName": {
             "type": "string",
@@ -866,72 +953,18 @@
           "GuaranteeType": {
             "type": "string",
             "nullable": true
-          },
-          "Description": {
-            "type": "string",
-            "nullable": true
-          },
-          "MaturityDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "CouponRate": {
-            "type": "number",
-            "format": "double"
-          },
-          "CouponType": {
-            "type": "string",
-            "nullable": true
-          },
-          "ConvertibleByIssuer": {
-            "type": "string",
-            "nullable": true
-          },
-          "ConvertibleByHolder": {
-            "type": "string",
-            "nullable": true
-          },
-          "CallableByIssuer": {
-            "type": "string",
-            "nullable": true
-          },
-          "CallableByHolder": {
-            "type": "string",
-            "nullable": true
-          },
-          "Denomination": {
-            "type": "string",
-            "nullable": true
-          },
-          "DenominationCurrency": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
       },
       "BondDescription": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "InstrumentIdentifier": {
             "allOf": [
               {
@@ -955,31 +988,6 @@
               }
             ],
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Common": {
-        "type": "object",
-        "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1131,24 +1139,6 @@
         },
         "additionalProperties": false
       },
-      "InstrumentIdentifierBrief": {
-        "type": "object",
-        "properties": {
-          "Valoren": {
-            "type": "string",
-            "nullable": true
-          },
-          "CUSIP": {
-            "type": "string",
-            "nullable": true
-          },
-          "ISIN": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "EarlyRedemptionSchedule": {
         "type": "object",
         "properties": {
@@ -1179,30 +1169,19 @@
       },
       "EarlyRedemptionScheduleComposite": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "InstrumentIdentifierBrief": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+              },
+              {
+                "$ref": "#/components/schemas/InstrumentIdentifier"
               }
             ],
             "nullable": true
