@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalFundFundamentals",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -1176,7 +1176,7 @@
         ],
         "parameters": [
           {
-            "name": "identifier",
+            "name": "Identifier",
             "in": "query",
             "schema": {
               "type": "string"
