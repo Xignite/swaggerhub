@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteMunicipalBondMaster",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -72,6 +72,83 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/BondDescription"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMunicipalBondMaster/GetBondDataPoints": {
+      "get": {
+        "tags": [
+          "XigniteMunicipalBondMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "DataPointTypes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GenericDataPoints"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GenericDataPoints"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GenericDataPoints"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GenericDataPoints"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GenericDataPoints"
                   }
                 }
               }
@@ -211,6 +288,129 @@
           },
           "IsActive": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InstrumentIdentifierBrief": {
+        "type": "object",
+        "properties": {
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InstrumentIdentifier": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+          }
+        ],
+        "properties": {
+          "CompanyIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "ShortName": {
+            "type": "string",
+            "nullable": true
+          },
+          "IssuerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "IssuerDomicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "CFICode": {
+            "type": "string",
+            "nullable": true
+          },
+          "OriginalIssuerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "OriginalCompanyIdentifier": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DataValue": {
+        "type": "object",
+        "properties": {
+          "OutCome": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "DataPoint": {
+            "type": "string",
+            "nullable": true
+          },
+          "Value": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastUpdated": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DataSets": {
+        "type": "object",
+        "properties": {
+          "DataValues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataValue"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GenericDataPoints": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "InstrumentIdentifier": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/InstrumentIdentifier"
+              }
+            ],
+            "nullable": true
+          },
+          "DataSets": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/DataSets"
+              }
+            ],
+            "nullable": true
           }
         },
         "additionalProperties": false
