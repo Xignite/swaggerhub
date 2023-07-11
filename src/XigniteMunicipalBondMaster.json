@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteMunicipalBondMaster",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "servers": [
     {
@@ -150,6 +150,45 @@
                   "items": {
                     "$ref": "#/components/schemas/GenericDataPoints"
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMunicipalBondMaster/ListBondDataPoints": {
+      "get": {
+        "tags": [
+          "XigniteMunicipalBondMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataPointsList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataPointsList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataPointsList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataPointsList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataPointsList"
                 }
               }
             }
@@ -410,6 +449,42 @@
                 "$ref": "#/components/schemas/DataSets"
               }
             ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DataPoint": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DataPointsList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "DataPoints": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataPoint"
+            },
             "nullable": true
           }
         },
