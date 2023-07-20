@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteNAVs",
-    "version": "2.0.1"
+    "version": "2.0.2"
   },
   "servers": [
     {
@@ -1184,14 +1184,7 @@
         ],
         "type": "string"
       },
-      "SymbolType": {
-        "enum": [
-          "NetAssetValue",
-          "IntradayIndicativeValue"
-        ],
-        "type": "string"
-      },
-      "Fund": {
+      "Common": {
         "type": "object",
         "properties": {
           "Outcome": {
@@ -1212,7 +1205,25 @@
           "Delay": {
             "type": "number",
             "format": "double"
-          },
+          }
+        },
+        "additionalProperties": false
+      },
+      "SymbolType": {
+        "enum": [
+          "NetAssetValue",
+          "IntradayIndicativeValue"
+        ],
+        "type": "string"
+      },
+      "Fund": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
           "CIK": {
             "type": "string",
             "nullable": true
@@ -1273,26 +1284,12 @@
       },
       "NewFund": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Symbol": {
             "type": "string",
             "nullable": true
@@ -1333,26 +1330,12 @@
       },
       "DividendHistory": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Symbol": {
             "type": "string",
             "nullable": true
@@ -1367,7 +1350,7 @@
         },
         "additionalProperties": false
       },
-      "Common": {
+      "Security": {
         "type": "object",
         "properties": {
           "Outcome": {
@@ -1388,18 +1371,7 @@
           "Delay": {
             "type": "number",
             "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Security": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
+          },
           "CIK": {
             "type": "string",
             "nullable": true
@@ -1444,26 +1416,12 @@
       },
       "CompleteDividend": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Security": {
             "allOf": [
               {
@@ -1517,26 +1475,12 @@
       },
       "CompleteDividendHistory": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Security": {
             "allOf": [
               {
@@ -1557,26 +1501,12 @@
       },
       "GlobalNAV": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Fund": {
             "allOf": [
               {
@@ -1647,26 +1577,12 @@
       },
       "GlobalNAVs": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Fund": {
             "allOf": [
               {
@@ -1703,7 +1619,7 @@
         ],
         "type": "string"
       },
-      "FundNAV": {
+      "QuoteWithSecurity": {
         "type": "object",
         "properties": {
           "Outcome": {
@@ -1725,6 +1641,25 @@
             "type": "number",
             "format": "double"
           },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FundNAV": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/QuoteWithSecurity"
+          }
+        ],
+        "properties": {
           "Date": {
             "type": "string",
             "nullable": true
@@ -1756,40 +1691,18 @@
           "PercentChangeFromLastClose": {
             "type": "number",
             "format": "double"
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
           }
         },
         "additionalProperties": false
       },
       "FundNAVs": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/QuoteWithSecurity"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "StartDate": {
             "type": "string",
             "nullable": true
@@ -1804,40 +1717,18 @@
               "$ref": "#/components/schemas/FundNAV"
             },
             "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
           }
         },
         "additionalProperties": false
       },
       "Split": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "ExDate": {
             "type": "string",
             "nullable": true
@@ -1859,26 +1750,12 @@
       },
       "SplitHistory": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Security": {
             "allOf": [
               {
@@ -1933,26 +1810,12 @@
       },
       "ExchangeSplitsList": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "ExchangeSplits": {
             "type": "array",
             "items": {
@@ -1991,26 +1854,12 @@
       },
       "AdjustmentFactors": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Security": {
             "allOf": [
               {
