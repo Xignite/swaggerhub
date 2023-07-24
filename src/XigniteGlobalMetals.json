@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalMetals",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "servers": [
     {
@@ -25,6 +25,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Metals"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/Metals"
                 }
@@ -75,6 +80,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetalQuote"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/MetalQuote"
                 }
@@ -135,6 +145,14 @@
                   }
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MetalQuote"
+                  }
+                }
+              },
               "text/xml": {
                 "schema": {
                   "type": "array",
@@ -187,6 +205,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtendedMetalQuote"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/ExtendedMetalQuote"
                 }
@@ -262,6 +285,11 @@
                   "$ref": "#/components/schemas/HistoricalMetalQuote"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalMetalQuote"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/HistoricalMetalQuote"
@@ -305,7 +333,7 @@
             }
           },
           {
-            "name": "asOfTime",
+            "name": "AsOfTime",
             "in": "query",
             "schema": {
               "type": "string"
@@ -329,6 +357,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bar"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/Bar"
                 }
@@ -432,6 +465,14 @@
                   }
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Bar"
+                  }
+                }
+              },
               "text/xml": {
                 "schema": {
                   "type": "array",
@@ -477,6 +518,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseMetalPrice"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/BaseMetalPrice"
                 }
@@ -567,6 +613,11 @@
                   "$ref": "#/components/schemas/MetalChartBars"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetalChartBars"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/MetalChartBars"
@@ -637,6 +688,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LondonFixing"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -720,6 +779,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -824,6 +891,14 @@
                   }
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
+                  }
+                }
+              },
               "text/xml": {
                 "schema": {
                   "type": "array",
@@ -897,6 +972,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalMetalQuote"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/HistoricalMetalQuote"
                 }
@@ -978,6 +1058,14 @@
                   }
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
+                  }
+                }
+              },
               "text/xml": {
                 "schema": {
                   "type": "array",
@@ -1030,6 +1118,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LondonFixing"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/LondonFixing"
                 }
@@ -1104,6 +1197,14 @@
                   }
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HistoricalMetalQuote"
+                  }
+                }
+              },
               "text/xml": {
                 "schema": {
                   "type": "array",
@@ -1153,6 +1254,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MarketNews"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
