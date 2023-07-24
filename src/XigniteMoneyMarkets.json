@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteMoneyMarkets",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -28,6 +28,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RateDescription"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -97,6 +105,14 @@
                   }
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateDescription"
+                  }
+                }
+              },
               "text/xml": {
                 "schema": {
                   "type": "array",
@@ -145,6 +161,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RateDescription"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -204,6 +228,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRate"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/SwapRate"
                 }
@@ -272,6 +301,11 @@
                   "$ref": "#/components/schemas/SwapRateExtended"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRateExtended"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/SwapRateExtended"
@@ -314,6 +348,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRate"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -390,6 +432,14 @@
                   }
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateExtended"
+                  }
+                }
+              },
               "text/xml": {
                 "schema": {
                   "type": "array",
@@ -453,6 +503,11 @@
                   "$ref": "#/components/schemas/SwapRate"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRate"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/SwapRate"
@@ -482,14 +537,14 @@
             }
           },
           {
-            "name": "Tenor",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "Currency",
+            "name": "Tenor",
             "in": "query",
             "schema": {
               "type": "string"
@@ -520,6 +575,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRateExtended"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/SwapRateExtended"
                 }
@@ -594,6 +654,14 @@
                   }
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRate"
+                  }
+                }
+              },
               "text/xml": {
                 "schema": {
                   "type": "array",
@@ -629,14 +697,14 @@
             }
           },
           {
-            "name": "Tenor",
+            "name": "Currency",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "Currency",
+            "name": "Tenor",
             "in": "query",
             "schema": {
               "type": "string"
@@ -677,6 +745,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateExtended"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -740,6 +816,11 @@
                   "$ref": "#/components/schemas/InterestRate"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterestRate"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/InterestRate"
@@ -782,6 +863,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InterestRate"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -859,6 +948,11 @@
                   "$ref": "#/components/schemas/Swaption"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Swaption"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/Swaption"
@@ -908,6 +1002,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Swaption"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -978,6 +1080,11 @@
                   "$ref": "#/components/schemas/Swaption"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Swaption"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/Swaption"
@@ -1020,6 +1127,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Swaption"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -1093,6 +1208,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRateAgreement"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/ForwardRateAgreement"
                 }
