@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteNAVs",
-    "version": "2.0.2"
+    "version": "2.0.3"
   },
   "servers": [
     {
@@ -1569,9 +1569,11 @@
       "AdjustmentMethods": {
         "enum": [
           "None",
+          "DefaultValue",
           "SplitOnly",
           "CashDividendOnly",
-          "All"
+          "All",
+          "SplitAndProportionalCashDividend"
         ],
         "type": "string"
       },
