@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteNAVs",
-    "version": "2.0.2"
+    "version": "2.0.3"
   },
   "servers": [
     {
@@ -39,7 +39,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Fund"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Fund"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -47,7 +54,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Fund"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Fund"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -55,7 +69,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Fund"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Fund"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -63,7 +84,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Fund"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Fund"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -71,7 +99,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Fund"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Fund"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               }
@@ -109,7 +144,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/NewFund"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/NewFund"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -117,7 +159,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/NewFund"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/NewFund"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -125,7 +174,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/NewFund"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/NewFund"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -133,7 +189,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/NewFund"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/NewFund"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -141,7 +204,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/NewFund"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/NewFund"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               }
@@ -195,27 +265,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DividendHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/DividendHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DividendHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/DividendHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/DividendHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/DividendHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/DividendHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/DividendHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/DividendHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/DividendHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -268,27 +373,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CompleteDividendHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/CompleteDividendHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CompleteDividendHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/CompleteDividendHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/CompleteDividendHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/CompleteDividendHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/CompleteDividendHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/CompleteDividendHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/CompleteDividendHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/CompleteDividendHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -325,7 +465,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CompleteDividendHistory"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/CompleteDividendHistory"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -333,7 +480,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CompleteDividendHistory"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/CompleteDividendHistory"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -341,7 +495,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CompleteDividendHistory"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/CompleteDividendHistory"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -349,7 +510,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CompleteDividendHistory"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/CompleteDividendHistory"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -357,7 +525,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CompleteDividendHistory"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/CompleteDividendHistory"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               }
@@ -397,27 +572,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalNAV"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalNAV"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalNAV"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalNAV"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalNAV"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalNAV"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalNAV"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalNAV"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalNAV"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalNAV"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -458,7 +668,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/GlobalNAV"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/GlobalNAV"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -466,7 +683,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/GlobalNAV"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/GlobalNAV"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -474,7 +698,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/GlobalNAV"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/GlobalNAV"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -482,7 +713,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/GlobalNAV"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/GlobalNAV"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -490,7 +728,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/GlobalNAV"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/GlobalNAV"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               }
@@ -555,27 +800,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -651,27 +931,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -710,27 +1025,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FundNAV"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/FundNAV"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FundNAV"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/FundNAV"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/FundNAV"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/FundNAV"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/FundNAV"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/FundNAV"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/FundNAV"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/FundNAV"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -771,7 +1121,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/FundNAV"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/FundNAV"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -779,7 +1136,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/FundNAV"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/FundNAV"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -787,7 +1151,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/FundNAV"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/FundNAV"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -795,7 +1166,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/FundNAV"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/FundNAV"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -803,7 +1181,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/FundNAV"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/FundNAV"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               }
@@ -857,27 +1242,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FundNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/FundNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FundNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/FundNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/FundNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/FundNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/FundNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/FundNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/FundNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/FundNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -942,27 +1362,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FundNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/FundNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FundNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/FundNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/FundNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/FundNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/FundNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/FundNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/FundNAVs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/FundNAVs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -1018,27 +1473,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SplitHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SplitHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SplitHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SplitHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/SplitHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SplitHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/SplitHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SplitHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/SplitHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SplitHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -1073,27 +1563,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeSplitsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeSplitsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeSplitsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeSplitsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeSplitsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -1144,27 +1669,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdjustmentFactors"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/AdjustmentFactors"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdjustmentFactors"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/AdjustmentFactors"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdjustmentFactors"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/AdjustmentFactors"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdjustmentFactors"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/AdjustmentFactors"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdjustmentFactors"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/AdjustmentFactors"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -1282,6 +1842,56 @@
         },
         "additionalProperties": false
       },
+      "Security": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "CIK": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "MostLiquidExchange": {
+            "type": "boolean"
+          },
+          "CategoryOrIndustry": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "NewFund": {
         "type": "object",
         "allOf": [
@@ -1343,72 +1953,15 @@
           "Dividends": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Dividend"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Dividend"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Security": {
-        "type": "object",
-        "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
-          "CIK": {
-            "type": "string",
-            "nullable": true
-          },
-          "CUSIP": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "ISIN": {
-            "type": "string",
-            "nullable": true
-          },
-          "Valoren": {
-            "type": "string",
-            "nullable": true
-          },
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "Market": {
-            "type": "string",
-            "nullable": true
-          },
-          "MarketIdentificationCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "MostLiquidExchange": {
-            "type": "boolean"
-          },
-          "CategoryOrIndustry": {
-            "type": "string",
             "nullable": true
           }
         },
@@ -1423,7 +1976,7 @@
         ],
         "properties": {
           "Security": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Security"
               }
@@ -1482,7 +2035,7 @@
         ],
         "properties": {
           "Security": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Security"
               }
@@ -1492,7 +2045,14 @@
           "Dividends": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CompleteDividend"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/CompleteDividend"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
           }
@@ -1508,9 +2068,12 @@
         ],
         "properties": {
           "Fund": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Fund"
+              },
+              {
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
@@ -1569,9 +2132,11 @@
       "AdjustmentMethods": {
         "enum": [
           "None",
+          "DefaultValue",
           "SplitOnly",
           "CashDividendOnly",
-          "All"
+          "All",
+          "SplitAndProportionalCashDividend"
         ],
         "type": "string"
       },
@@ -1584,9 +2149,12 @@
         ],
         "properties": {
           "Fund": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Fund"
+              },
+              {
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
@@ -1602,7 +2170,14 @@
           "NAVs": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GlobalNAV"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/GlobalNAV"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
           }
@@ -1621,28 +2196,17 @@
       },
       "QuoteWithSecurity": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Security": {
-            "allOf": [
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              },
               {
                 "$ref": "#/components/schemas/Security"
               }
@@ -1714,7 +2278,14 @@
           "NAVs": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/FundNAV"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/FundNAV"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
           }
@@ -1757,7 +2328,10 @@
         ],
         "properties": {
           "Security": {
-            "allOf": [
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              },
               {
                 "$ref": "#/components/schemas/Security"
               }
@@ -1779,7 +2353,14 @@
           "Splits": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Split"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Split"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
           }
@@ -1790,7 +2371,10 @@
         "type": "object",
         "properties": {
           "Security": {
-            "allOf": [
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              },
               {
                 "$ref": "#/components/schemas/Security"
               }
@@ -1798,9 +2382,12 @@
             "nullable": true
           },
           "Split": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Split"
+              },
+              {
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
@@ -1819,7 +2406,14 @@
           "ExchangeSplits": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ExchangeSplit"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ExchangeSplit"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
           }
@@ -1861,7 +2455,10 @@
         ],
         "properties": {
           "Security": {
-            "allOf": [
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              },
               {
                 "$ref": "#/components/schemas/Security"
               }
@@ -1871,7 +2468,14 @@
           "ArrayOfAdjustmentFactor": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/AdjustmentFactor"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/AdjustmentFactor"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
           }
