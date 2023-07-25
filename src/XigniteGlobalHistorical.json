@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalHistorical",
-    "version": "3.0.3"
+    "version": "3.0.4"
   },
   "servers": [
     {
@@ -21,27 +21,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -83,27 +118,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SymbolList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SymbolList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SymbolList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SymbolList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SymbolList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -138,27 +208,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolChangeList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SymbolChangeList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolChangeList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SymbolChangeList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolChangeList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SymbolChangeList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolChangeList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SymbolChangeList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolChangeList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SymbolChangeList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -193,27 +298,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -276,27 +416,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CashDividendHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/CashDividendHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CashDividendHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/CashDividendHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/CashDividendHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/CashDividendHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/CashDividendHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/CashDividendHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/CashDividendHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/CashDividendHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -338,27 +513,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeDividendsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeDividendsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeDividendsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeDividendsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeDividendsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeDividendsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeDividendsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeDividendsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeDividendsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeDividendsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -414,27 +624,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SplitHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SplitHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SplitHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SplitHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/SplitHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SplitHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/SplitHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SplitHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/SplitHistory"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/SplitHistory"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -469,27 +714,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeSplitsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeSplitsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeSplitsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeSplitsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/ExchangeSplitsList"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -547,7 +827,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -555,7 +842,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -563,7 +857,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -571,7 +872,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -579,7 +887,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               }
@@ -650,27 +965,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -733,27 +1083,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -816,27 +1201,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -899,27 +1319,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -982,27 +1437,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -1060,7 +1550,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -1068,7 +1565,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -1076,7 +1580,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -1084,7 +1595,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               },
@@ -1092,7 +1610,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/GlobalHistoricalQuote"
+                      },
+                      {
+                        "$ref": "#/components/schemas/Security"
+                      }
+                    ]
                   }
                 }
               }
@@ -1156,27 +1681,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -1227,27 +1787,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdjustmentFactors"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/AdjustmentFactors"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdjustmentFactors"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/AdjustmentFactors"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdjustmentFactors"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/AdjustmentFactors"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdjustmentFactors"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/AdjustmentFactors"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdjustmentFactors"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/AdjustmentFactors"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -1317,132 +1912,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v3/xGlobalHistorical/GetChartBars": {
-      "get": {
-        "tags": [
-          "XigniteGlobalHistorical"
-        ],
-        "parameters": [
-          {
-            "name": "Identifier",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IdentifierType",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IdentifierAsOfDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "StartTime",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "EndTime",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Precision",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Period",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "AdjustmentMethod",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IncludeExtended",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ChartBarsSet"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ChartBarsSet"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ChartBarsSet"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ChartBarsSet"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/ChartBarsSet"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Security"
+                    }
+                  ]
                 }
               }
             }
@@ -1476,6 +2001,81 @@
         },
         "additionalProperties": false
       },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Security": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "CIK": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "MostLiquidExchange": {
+            "type": "boolean"
+          },
+          "CategoryOrIndustry": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ExchangeList": {
         "type": "object",
         "properties": {
@@ -1501,7 +2101,14 @@
           "ExchangeDescriptions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ExchangeDescription"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ExchangeDescription"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
           }
@@ -1553,9 +2160,12 @@
             "format": "double"
           },
           "Exchange": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/ExchangeDescription"
+              },
+              {
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
@@ -1563,7 +2173,14 @@
           "SecurityDescriptions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/SecurityDescription"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/SecurityDescription"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
           }
@@ -1645,34 +2262,16 @@
           "SymbolChanges": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/SymbolChange"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/SymbolChange"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Common": {
-        "type": "object",
-        "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1718,70 +2317,15 @@
           "EventSymbols": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/EventSymbol"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/EventSymbol"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Security": {
-        "type": "object",
-        "properties": {
-          "CIK": {
-            "type": "string",
-            "nullable": true
-          },
-          "CUSIP": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "ISIN": {
-            "type": "string",
-            "nullable": true
-          },
-          "Valoren": {
-            "type": "string",
-            "nullable": true
-          },
-          "SEDOL": {
-            "type": "string",
-            "nullable": true
-          },
-          "FIGI": {
-            "type": "string",
-            "nullable": true
-          },
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "InstrumentClass": {
-            "type": "string",
-            "nullable": true
-          },
-          "Market": {
-            "type": "string",
-            "nullable": true
-          },
-          "MarketIdentificationCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "Sector": {
-            "type": "string",
-            "nullable": true
-          },
-          "Industry": {
-            "type": "string",
-            "nullable": true
-          },
-          "CompositeFIGI": {
-            "type": "string",
             "nullable": true
           }
         },
@@ -1850,7 +2394,10 @@
             "nullable": true
           },
           "Security": {
-            "allOf": [
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              },
               {
                 "$ref": "#/components/schemas/Security"
               }
@@ -1872,7 +2419,14 @@
           "CashDividends": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CashDividend"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/CashDividend"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
           }
@@ -1883,7 +2437,10 @@
         "type": "object",
         "properties": {
           "Security": {
-            "allOf": [
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              },
               {
                 "$ref": "#/components/schemas/Security"
               }
@@ -1891,9 +2448,12 @@
             "nullable": true
           },
           "CashDividend": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/CashDividend"
+              },
+              {
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
@@ -1924,7 +2484,14 @@
           "ExchangeDividends": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ExchangeDividend"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ExchangeDividend"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
           }
@@ -1967,7 +2534,10 @@
         ],
         "properties": {
           "Security": {
-            "allOf": [
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              },
               {
                 "$ref": "#/components/schemas/Security"
               }
@@ -1989,7 +2559,14 @@
           "Splits": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Split"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Split"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
           }
@@ -2000,7 +2577,10 @@
         "type": "object",
         "properties": {
           "Security": {
-            "allOf": [
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              },
               {
                 "$ref": "#/components/schemas/Security"
               }
@@ -2008,9 +2588,12 @@
             "nullable": true
           },
           "Split": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/Split"
+              },
+              {
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
@@ -2029,7 +2612,14 @@
           "ExchangeSplits": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ExchangeSplit"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ExchangeSplit"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
           }
@@ -2128,7 +2718,10 @@
             "nullable": true
           },
           "Security": {
-            "allOf": [
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              },
               {
                 "$ref": "#/components/schemas/Security"
               }
@@ -2136,9 +2729,12 @@
             "nullable": true
           },
           "HistoricalQuote": {
-            "allOf": [
+            "oneOf": [
               {
                 "$ref": "#/components/schemas/HistoricalQuote"
+              },
+              {
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
@@ -2163,7 +2759,10 @@
             "nullable": true
           },
           "Security": {
-            "allOf": [
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              },
               {
                 "$ref": "#/components/schemas/Security"
               }
@@ -2181,7 +2780,14 @@
           "HistoricalQuotes": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/HistoricalQuote"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/HistoricalQuote"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
           }
@@ -2223,7 +2829,10 @@
         ],
         "properties": {
           "Security": {
-            "allOf": [
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              },
               {
                 "$ref": "#/components/schemas/Security"
               }
@@ -2233,7 +2842,14 @@
           "ArrayOfAdjustmentFactor": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/AdjustmentFactor"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/AdjustmentFactor"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
           }
@@ -2324,7 +2940,10 @@
             "nullable": true
           },
           "Security": {
-            "allOf": [
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              },
               {
                 "$ref": "#/components/schemas/Security"
               }
@@ -2334,99 +2953,14 @@
           "HistoricalVWAPs": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/HistoricalVWAP"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ChartBar": {
-        "type": "object",
-        "properties": {
-          "StartDateTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndDateTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCOffset": {
-            "type": "number",
-            "format": "double"
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Close": {
-            "type": "number",
-            "format": "double"
-          },
-          "Volume": {
-            "type": "number",
-            "format": "double"
-          },
-          "Trades": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "TWAP": {
-            "type": "number",
-            "format": "double"
-          },
-          "VWAP": {
-            "type": "number",
-            "format": "double"
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "CumulativeAdjustmentFactor": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "ChartBarsSet": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "ChartBars": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ChartBar"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/HistoricalVWAP"
+                },
+                {
+                  "$ref": "#/components/schemas/Security"
+                }
+              ]
             },
             "nullable": true
           }
