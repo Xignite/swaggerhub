@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteNAVs",
-    "version": "2.0.2"
+    "version": "2.0.3"
   },
   "servers": [
     {
@@ -1352,26 +1352,12 @@
       },
       "Security": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "CIK": {
             "type": "string",
             "nullable": true
@@ -1569,9 +1555,11 @@
       "AdjustmentMethods": {
         "enum": [
           "None",
+          "DefaultValue",
           "SplitOnly",
           "CashDividendOnly",
-          "All"
+          "All",
+          "SplitAndProportionalCashDividend"
         ],
         "type": "string"
       },
@@ -1621,26 +1609,12 @@
       },
       "QuoteWithSecurity": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Security": {
             "allOf": [
               {
