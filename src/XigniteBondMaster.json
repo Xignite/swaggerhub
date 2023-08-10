@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteBondMaster",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "servers": [
     {
@@ -988,6 +988,14 @@
               }
             ],
             "nullable": true
+          },
+          "RequestIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "RequestIdentifierType": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1192,6 +1200,14 @@
               "$ref": "#/components/schemas/EarlyRedemptionSchedule"
             },
             "nullable": true
+          },
+          "RequestIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "RequestIdentifierType": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1333,6 +1349,14 @@
                 "$ref": "#/components/schemas/DataSets"
               }
             ],
+            "nullable": true
+          },
+          "RequestIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "RequestIdentifierType": {
+            "type": "string",
             "nullable": true
           }
         },
