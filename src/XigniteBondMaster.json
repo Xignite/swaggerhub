@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteBondMaster",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -989,11 +989,11 @@
             ],
             "nullable": true
           },
-          "RequestIdentifier": {
+          "Identifier": {
             "type": "string",
             "nullable": true
           },
-          "RequestIdentifierType": {
+          "IdentifierType": {
             "type": "string",
             "nullable": true
           }
@@ -1201,11 +1201,11 @@
             },
             "nullable": true
           },
-          "RequestIdentifier": {
+          "Identifier": {
             "type": "string",
             "nullable": true
           },
-          "RequestIdentifierType": {
+          "IdentifierType": {
             "type": "string",
             "nullable": true
           }
@@ -1351,11 +1351,11 @@
             ],
             "nullable": true
           },
-          "RequestIdentifier": {
+          "Identifier": {
             "type": "string",
             "nullable": true
           },
-          "RequestIdentifierType": {
+          "IdentifierType": {
             "type": "string",
             "nullable": true
           }
