@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteMunicipalBondMaster",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "servers": [
     {
@@ -451,11 +451,11 @@
             ],
             "nullable": true
           },
-          "RequestIdentifier": {
+          "Identifier": {
             "type": "string",
             "nullable": true
           },
-          "RequestIdentifierType": {
+          "IdentifierType": {
             "type": "string",
             "nullable": true
           }
