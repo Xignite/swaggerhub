@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalCurrencies",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -402,45 +402,6 @@
         }
       }
     },
-    "/xGlobalCurrencies/ListOfficialRates": {
-      "get": {
-        "tags": [
-          "XigniteGlobalCurrencies"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/OfficialRates"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/OfficialRates"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/OfficialRates"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/OfficialRates"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/OfficialRates"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/xGlobalCurrencies/GetRealTimeRateTable": {
       "get": {
         "tags": [
@@ -489,6 +450,45 @@
               "text/csv": {
                 "schema": {
                   "$ref": "#/components/schemas/RateTable"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/ListOfficialRates": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OfficialRates"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OfficialRates"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/OfficialRates"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/OfficialRates"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/OfficialRates"
                 }
               }
             }
@@ -2324,6 +2324,55 @@
         },
         "additionalProperties": false
       },
+      "QuoteCurrencyItem": {
+        "type": "object",
+        "properties": {
+          "QuoteCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Rate": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RateTableLine": {
+        "type": "object",
+        "properties": {
+          "BaseCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Columns": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QuoteCurrencyItem"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RateTable": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Lines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RateTableLine"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "OfficialCurrency": {
         "type": "object",
         "properties": {
@@ -2370,55 +2419,6 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/OfficialCountry"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "QuoteCurrencyItem": {
-        "type": "object",
-        "properties": {
-          "QuoteCurrency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Rate": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "RateTableLine": {
-        "type": "object",
-        "properties": {
-          "BaseCurrency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Columns": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/QuoteCurrencyItem"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "RateTable": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Lines": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RateTableLine"
             },
             "nullable": true
           }
