@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalOptionMaster",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -181,11 +181,7 @@
             "name": "IdentifierType",
             "in": "query",
             "schema": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/IdentifierTypes"
-                }
-              ]
+              "type": "string"
             }
           },
           {
@@ -490,19 +486,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "IdentifierTypes": {
-        "enum": [
-          "Symbol",
-          "CIK",
-          "CUSIP",
-          "ISIN",
-          "Valoren",
-          "SEDOL",
-          "FIGI",
-          "CompositeFIGI"
-        ],
-        "type": "string"
       },
       "Expiration": {
         "type": "object",
