@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalRealTimeOptions",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -10,6 +10,249 @@
     }
   ],
   "paths": {
+    "/xGlobalRealTimeOptions/GetOptionGreeks": {
+      "get": {
+        "tags": [
+          "XigniteGlobalRealTimeOptions"
+        ],
+        "parameters": [
+          {
+            "name": "Symbols",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SymbologyType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CalculationType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OptionGreeks"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OptionGreeks"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OptionGreeks"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OptionGreeks"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OptionGreeks"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalRealTimeOptions/GetOptionGreeksByChain": {
+      "get": {
+        "tags": [
+          "XigniteGlobalRealTimeOptions"
+        ],
+        "parameters": [
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Month",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Year",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SymbologyType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OptionExchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CalculationType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionGreeksByChain"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionGreeksByChain"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionGreeksByChain"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionGreeksByChain"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionGreeksByChain"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalRealTimeOptions/GetAllOptionGreeksByChain": {
+      "get": {
+        "tags": [
+          "XigniteGlobalRealTimeOptions"
+        ],
+        "parameters": [
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SymbologyType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OptionExchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CalculationType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionGreeksByChain"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionGreeksByChain"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionGreeksByChain"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionGreeksByChain"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionGreeksByChain"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/xGlobalRealTimeOptions/GetAllEquityOptionChain": {
       "get": {
         "tags": [
@@ -1260,19 +1503,6 @@
   },
   "components": {
     "schemas": {
-      "IdentifierTypes": {
-        "enum": [
-          "Symbol",
-          "CIK",
-          "CUSIP",
-          "ISIN",
-          "Valoren",
-          "SEDOL",
-          "FIGI",
-          "CompositeFIGI"
-        ],
-        "type": "string"
-      },
       "OutcomeTypes": {
         "enum": [
           "Success",
@@ -1306,6 +1536,236 @@
           }
         },
         "additionalProperties": false
+      },
+      "OptionSummary": {
+        "type": "object",
+        "properties": {
+          "BaseSymbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "StrikePrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "ExpirationDate": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Greeks": {
+        "type": "object",
+        "properties": {
+          "Delta": {
+            "type": "number",
+            "format": "double"
+          },
+          "Gamma": {
+            "type": "number",
+            "format": "double"
+          },
+          "Theta": {
+            "type": "number",
+            "format": "double"
+          },
+          "Vega": {
+            "type": "number",
+            "format": "double"
+          },
+          "Rho": {
+            "type": "number",
+            "format": "double"
+          },
+          "ImpliedVolatility": {
+            "type": "number",
+            "format": "double"
+          },
+          "OptionPriceTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "CalculationTime": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OptionGreeks": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "CalculationType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Exchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "SymbologyType": {
+            "type": "string",
+            "nullable": true
+          },
+          "OptionSummary": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionSummary"
+              }
+            ],
+            "nullable": true
+          },
+          "Greeks": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Greeks"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GreeksByExpiration": {
+        "type": "object",
+        "properties": {
+          "ExpirationDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "CallOptionGreeks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OptionGreeks"
+            },
+            "nullable": true
+          },
+          "PutOptionGreeks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OptionGreeks"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Security": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "CIK": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "MostLiquidExchange": {
+            "type": "boolean"
+          },
+          "CategoryOrIndustry": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OptionGreeksByChain": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "GreeksByExpirations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GreeksByExpiration"
+            },
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IdentifierTypes": {
+        "enum": [
+          "Symbol",
+          "CIK",
+          "CUSIP",
+          "ISIN",
+          "Valoren",
+          "SEDOL",
+          "FIGI",
+          "CompositeFIGI"
+        ],
+        "type": "string"
       },
       "QuickQuote": {
         "type": "object",
@@ -1546,70 +2006,6 @@
             "items": {
               "$ref": "#/components/schemas/Option"
             },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Security": {
-        "type": "object",
-        "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
-          "CIK": {
-            "type": "string",
-            "nullable": true
-          },
-          "CUSIP": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "ISIN": {
-            "type": "string",
-            "nullable": true
-          },
-          "Valoren": {
-            "type": "string",
-            "nullable": true
-          },
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "Market": {
-            "type": "string",
-            "nullable": true
-          },
-          "MarketIdentificationCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "MostLiquidExchange": {
-            "type": "boolean"
-          },
-          "CategoryOrIndustry": {
-            "type": "string",
             "nullable": true
           }
         },
