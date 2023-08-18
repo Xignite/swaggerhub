@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalOptions",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -1610,6 +1610,10 @@
             "nullable": true
           },
           "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Exchange": {
             "type": "string",
             "nullable": true
           },
