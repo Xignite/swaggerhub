@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteMunicipalBondMaster",
-    "version": "1.0.4"
+    "version": "1.0.5"
   },
   "servers": [
     {
@@ -189,6 +189,64 @@
               "text/csv": {
                 "schema": {
                   "$ref": "#/components/schemas/DataPointsList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMunicipalBondMaster/ListIssues": {
+      "get": {
+        "tags": [
+          "XigniteMunicipalBondMaster"
+        ],
+        "parameters": [
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "NextPage",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IssueList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IssueList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IssueList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IssueList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/IssueList"
                 }
               }
             }
@@ -494,6 +552,46 @@
               "$ref": "#/components/schemas/DataPoint"
             },
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IssueDescription": {
+        "type": "object",
+        "properties": {
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "IssuerName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IssueList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IssueDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IssueDescription"
+            },
+            "nullable": true
+          },
+          "NextPage": {
+            "type": "integer",
+            "format": "int64"
           }
         },
         "additionalProperties": false
