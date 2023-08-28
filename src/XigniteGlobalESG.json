@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalESG",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "servers": [
     {
@@ -1324,22 +1324,22 @@
           },
           "ESG": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "Environmental": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "Social": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "Governance": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "Version": {
@@ -1427,112 +1427,112 @@
           },
           "Emissions": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "EnvironmentalStewardship": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "ResourceUse": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "EnvironmentalSolutions": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "Waste": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "Water": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "EnvironmentalManagement": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "Diversity": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "OccupationalHealthAndSafety": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "TrainingAndDevelopment": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "ProductAccess": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "CommunityRelations": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "ProductQualityAndSafety": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "HumanRights": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "LabourRights": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "Compensation": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "EmploymentQuality": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "BusinessEthics": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "CorporateGovernance": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "Transparency": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "ForensicAccounting": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "CapitalStructure": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "Version": {
@@ -1689,17 +1689,17 @@
           },
           "Scope1Emissions": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "Scope2Emissions": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "Scope3Emissions": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "ReportDate": {
@@ -1757,27 +1757,27 @@
           },
           "GlobalCompact": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "HumanRights": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "LabourRights": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "Environment": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "AntiCorruption": {
             "type": "number",
-            "format": "double",
+            "format": "decimal",
             "nullable": true
           },
           "Version": {
