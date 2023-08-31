@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteLogos",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "servers": [
     {
@@ -58,6 +58,14 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LogosResult"
+                  }
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -135,6 +143,11 @@
                   "$ref": "#/components/schemas/LogosByExchange"
                 }
               },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogosByExchange"
+                }
+              },
               "text/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/LogosByExchange"
@@ -165,6 +178,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/ExchangeList"
                 }
@@ -208,6 +226,11 @@
                 }
               },
               "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              },
+              "application/xml": {
                 "schema": {
                   "$ref": "#/components/schemas/SymbolList"
                 }
