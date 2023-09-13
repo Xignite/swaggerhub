@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalOptions",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "servers": [
     {
@@ -2053,144 +2053,6 @@
           }
         ],
         "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "SymbologyType": {
-            "type": "string",
-            "nullable": true
-          },
-          "BaseSymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "Type": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionTypes"
-              }
-            ]
-          },
-          "ExpirationDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Month": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Year": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "StrikePrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "Last": {
-            "type": "number",
-            "format": "double"
-          },
-          "LastSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "Close": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Volume": {
-            "type": "number",
-            "format": "double"
-          },
-          "OpenInterest": {
-            "type": "number",
-            "format": "double"
-          },
-          "OpenInterestDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousClose": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousCloseDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Change": {
-            "type": "number",
-            "format": "double"
-          },
-          "PercentChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "Bid": {
-            "type": "number",
-            "format": "double"
-          },
-          "BidDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "BidTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "BidSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "Ask": {
-            "type": "number",
-            "format": "double"
-          },
-          "AskDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "AskTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "AskSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "InTheMoney": {
-            "type": "boolean"
-          },
-          "Exchange": {
-            "type": "string",
-            "nullable": true
-          },
           "CFI": {
             "type": "string",
             "nullable": true
@@ -2384,6 +2246,144 @@
             "nullable": true
           },
           "PreviousDayMidStyle": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "SymbologyType": {
+            "type": "string",
+            "nullable": true
+          },
+          "BaseSymbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionTypes"
+              }
+            ]
+          },
+          "ExpirationDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Month": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "StrikePrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "Time": {
+            "type": "string",
+            "nullable": true
+          },
+          "Last": {
+            "type": "number",
+            "format": "double"
+          },
+          "LastSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "Open": {
+            "type": "number",
+            "format": "double"
+          },
+          "Close": {
+            "type": "number",
+            "format": "double"
+          },
+          "High": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Volume": {
+            "type": "number",
+            "format": "double"
+          },
+          "OpenInterest": {
+            "type": "number",
+            "format": "double"
+          },
+          "OpenInterestDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "PreviousClose": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousCloseDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Change": {
+            "type": "number",
+            "format": "double"
+          },
+          "PercentChange": {
+            "type": "number",
+            "format": "double"
+          },
+          "Bid": {
+            "type": "number",
+            "format": "double"
+          },
+          "BidDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "BidTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "BidSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "Ask": {
+            "type": "number",
+            "format": "double"
+          },
+          "AskDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "AskTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "AskSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "InTheMoney": {
+            "type": "boolean"
+          },
+          "Exchange": {
             "type": "string",
             "nullable": true
           }
