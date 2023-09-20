@@ -2,11 +2,11 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteMunicipalBondMaster",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "servers": [
     {
-      "url": "https://municipalbondmaster.xignite.com/"
+      "url": "https://municipalbondmaster.xignite.com"
     }
   ],
   "paths": {
