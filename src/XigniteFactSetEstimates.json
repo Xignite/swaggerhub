@@ -2,11 +2,11 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteFactSetEstimates",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
-      "url": "https://factsetestimates.xignite.com/"
+      "url": "https://factsetestimates.xignite.com"
     }
   ],
   "paths": {
@@ -1404,6 +1404,90 @@
           }
         }
       }
+    },
+    "/xFactSetEstimates/GetFiscalPeriod": {
+      "get": {
+        "tags": [
+          "XigniteFactSetEstimates"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ReportType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EstimateFiscalPeriod"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EstimateFiscalPeriod"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EstimateFiscalPeriod"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EstimateFiscalPeriod"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EstimateFiscalPeriod"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -2078,6 +2162,42 @@
           },
           "Identifier": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FiscalPeriodEndDate": {
+        "type": "object",
+        "properties": {
+          "FiscalPeriod": {
+            "type": "string",
+            "nullable": true
+          },
+          "PeriodEndDate": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EstimateFiscalPeriod": {
+        "type": "object",
+        "properties": {
+          "Company": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Company"
+              }
+            ],
+            "nullable": true
+          },
+          "FiscalPeriodEndDate": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FiscalPeriodEndDate"
+              }
+            ],
             "nullable": true
           }
         },
