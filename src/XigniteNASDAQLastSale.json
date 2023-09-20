@@ -2,11 +2,11 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteNASDAQLastSale",
-    "version": "1.0.7"
+    "version": "1.0.8"
   },
   "servers": [
     {
-      "url": "https://nasdaqlastsale.xignite.com/"
+      "url": "https://nasdaqlastsale.xignite.com"
     }
   ],
   "paths": {
