@@ -2,11 +2,11 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteBondMaster",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "servers": [
     {
-      "url": "https://bondmaster.xignite.com/"
+      "url": "https://bondmaster.xignite.com"
     }
   ],
   "paths": {
