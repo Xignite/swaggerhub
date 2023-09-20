@@ -2,11 +2,11 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalOptionsFile",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
-      "url": "https://cloudfiles.xignite.com/"
+      "url": "https://cloudfiles.xignite.com"
     }
   ],
   "paths": {
