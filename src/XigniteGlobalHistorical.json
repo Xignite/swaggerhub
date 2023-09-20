@@ -2,11 +2,11 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalHistorical",
-    "version": "3.0.3"
+    "version": "3.0.4"
   },
   "servers": [
     {
-      "url": "https://globalhistorical.xignite.com/"
+      "url": "https://globalhistorical.xignite.com"
     }
   ],
   "paths": {
