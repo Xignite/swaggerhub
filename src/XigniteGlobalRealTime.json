@@ -2,11 +2,11 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalRealTime",
-    "version": "3.0.6"
+    "version": "3.0.7"
   },
   "servers": [
     {
-      "url": "https://globalrealtime.xignite.com/"
+      "url": "https://globalrealtime.xignite.com"
     }
   ],
   "paths": {

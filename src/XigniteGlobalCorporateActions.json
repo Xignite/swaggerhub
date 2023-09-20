@@ -1,19 +1,19 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "XigniteGlobalHistorical",
-    "version": "3.0.4"
+    "title": "XigniteGlobalCorporateActions",
+    "version": "1.0.0"
   },
   "servers": [
     {
-      "url": "https://globalhistorical.xignite.com"
+      "url": "https://globalcorporateactions.xignite.com"
     }
   ],
   "paths": {
-    "/v3/xGlobalHistorical/ListExchanges": {
+    "/xGlobalCorporateActions/ListExchanges": {
       "get": {
         "tags": [
-          "XigniteGlobalHistorical"
+          "XigniteGlobalCorporateActions"
         ],
         "responses": {
           "200": {
@@ -49,10 +49,49 @@
         }
       }
     },
-    "/v3/xGlobalHistorical/ListSymbols": {
+    "/xGlobalCorporateActions/ListEventTypes": {
       "get": {
         "tags": [
-          "XigniteGlobalHistorical"
+          "XigniteGlobalCorporateActions"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventTypeList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventTypeList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventTypeList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventTypeList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventTypeList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCorporateActions/ListSymbols": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCorporateActions"
         ],
         "parameters": [
           {
@@ -111,10 +150,10 @@
         }
       }
     },
-    "/v3/xGlobalHistorical/ListSymbolChanges": {
+    "/xGlobalCorporateActions/ListSymbolChanges": {
       "get": {
         "tags": [
-          "XigniteGlobalHistorical"
+          "XigniteGlobalCorporateActions"
         ],
         "parameters": [
           {
@@ -166,228 +205,14 @@
         }
       }
     },
-    "/v3/xGlobalHistorical/ListSymbolsWithAdjustedFactors": {
+    "/xGlobalCorporateActions/ListIdentifierChanges": {
       "get": {
         "tags": [
-          "XigniteGlobalHistorical"
+          "XigniteGlobalCorporateActions"
         ],
         "parameters": [
           {
             "name": "Exchange",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "ChangesSince",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/SymbolsWithAdjustedFactorsList"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v3/xGlobalHistorical/GetCashDividendHistory": {
-      "get": {
-        "tags": [
-          "XigniteGlobalHistorical"
-        ],
-        "parameters": [
-          {
-            "name": "Identifier",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IdentifierType",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IdentifierAsOfDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "StartDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "EndDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "CorporateActionsAdjusted",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CashDividendHistory"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CashDividendHistory"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/CashDividendHistory"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/CashDividendHistory"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/CashDividendHistory"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v3/xGlobalHistorical/GetCashDividendsByExchange": {
-      "get": {
-        "tags": [
-          "XigniteGlobalHistorical"
-        ],
-        "parameters": [
-          {
-            "name": "Exchange",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "ExDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "CorporateActionsAdjusted",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ExchangeDividendsList"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ExchangeDividendsList"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ExchangeDividendsList"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ExchangeDividendsList"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/ExchangeDividendsList"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v3/xGlobalHistorical/GetSplitHistory": {
-      "get": {
-        "tags": [
-          "XigniteGlobalHistorical"
-        ],
-        "parameters": [
-          {
-            "name": "Identifier",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IdentifierType",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IdentifierAsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -414,27 +239,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SplitHistory"
+                  "$ref": "#/components/schemas/IdentifierChangeList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SplitHistory"
+                  "$ref": "#/components/schemas/IdentifierChangeList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/SplitHistory"
+                  "$ref": "#/components/schemas/IdentifierChangeList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/SplitHistory"
+                  "$ref": "#/components/schemas/IdentifierChangeList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/SplitHistory"
+                  "$ref": "#/components/schemas/IdentifierChangeList"
                 }
               }
             }
@@ -442,10 +267,167 @@
         }
       }
     },
-    "/v3/xGlobalHistorical/GetSplitsByExchange": {
+    "/xGlobalCorporateActions/ListListingChanges": {
       "get": {
         "tags": [
-          "XigniteGlobalHistorical"
+          "XigniteGlobalCorporateActions"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListingChangeList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListingChangeList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListingChangeList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListingChangeList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListingChangeList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCorporateActions/GetEventSummaries": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCorporateActions"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "IdentifierAsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IncludeEventNotes",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventSummaryList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventSummaryList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventSummaryList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventSummaryList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventSummaryList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCorporateActions/GetEventSummariesByExchange": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCorporateActions"
         ],
         "parameters": [
           {
@@ -461,6 +443,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "IncludeEventNotes",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
           }
         ],
         "responses": {
@@ -469,27 +459,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                  "$ref": "#/components/schemas/SecurityEventSummariesList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                  "$ref": "#/components/schemas/SecurityEventSummariesList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                  "$ref": "#/components/schemas/SecurityEventSummariesList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                  "$ref": "#/components/schemas/SecurityEventSummariesList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExchangeSplitsList"
+                  "$ref": "#/components/schemas/SecurityEventSummariesList"
                 }
               }
             }
@@ -497,14 +487,14 @@
         }
       }
     },
-    "/v3/xGlobalHistorical/GetGlobalHistoricalQuotes": {
+    "/xGlobalCorporateActions/GetDistributions": {
       "get": {
         "tags": [
-          "XigniteGlobalHistorical"
+          "XigniteGlobalCorporateActions"
         ],
         "parameters": [
           {
-            "name": "Identifiers",
+            "name": "identifier",
             "in": "query",
             "schema": {
               "type": "string"
@@ -514,7 +504,11 @@
             "name": "IdentifierType",
             "in": "query",
             "schema": {
-              "type": "string"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
             }
           },
           {
@@ -525,98 +519,7 @@
             }
           },
           {
-            "name": "AdjustmentMethod",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "AsOfDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
-                  }
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
-                  }
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
-                  }
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v3/xGlobalHistorical/GetGlobalHistoricalQuotesTrailing": {
-      "get": {
-        "tags": [
-          "XigniteGlobalHistorical"
-        ],
-        "parameters": [
-          {
-            "name": "Identifier",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IdentifierType",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IdentifierAsOfDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "AdjustmentMethod",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -630,17 +533,11 @@
             }
           },
           {
-            "name": "PeriodType",
+            "name": "IncludeOptionalPayments",
             "in": "query",
             "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Periods",
-            "in": "query",
-            "schema": {
-              "type": "string"
+              "type": "boolean",
+              "default": false
             }
           }
         ],
@@ -650,27 +547,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/DistributionsList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/DistributionsList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/DistributionsList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/DistributionsList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/DistributionsList"
                 }
               }
             }
@@ -678,10 +575,80 @@
         }
       }
     },
-    "/v3/xGlobalHistorical/GetGlobalHistoricalQuotesRange": {
+    "/xGlobalCorporateActions/GetDistributionsByExchange": {
       "get": {
         "tags": [
-          "XigniteGlobalHistorical"
+          "XigniteGlobalCorporateActions"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Date",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "DateType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IncludeOptionalPayments",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityDistributionsList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityDistributionsList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityDistributionsList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityDistributionsList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityDistributionsList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCorporateActions/GetSplits": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCorporateActions"
         ],
         "parameters": [
           {
@@ -695,18 +662,15 @@
             "name": "IdentifierType",
             "in": "query",
             "schema": {
-              "type": "string"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
             }
           },
           {
             "name": "IdentifierAsOfDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "AdjustmentMethod",
             "in": "query",
             "schema": {
               "type": "string"
@@ -733,27 +697,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/SplitList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/SplitList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/SplitList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/SplitList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/SplitList"
                 }
               }
             }
@@ -761,10 +725,65 @@
         }
       }
     },
-    "/v3/xGlobalHistorical/GetGlobalHistoricalWeeklyQuotesRange": {
+    "/xGlobalCorporateActions/GetSplitsByExchange": {
       "get": {
         "tags": [
-          "XigniteGlobalHistorical"
+          "XigniteGlobalCorporateActions"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ExDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeSplitList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeSplitList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeSplitList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeSplitList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeSplitList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCorporateActions/GetSpinoffs": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCorporateActions"
         ],
         "parameters": [
           {
@@ -778,18 +797,15 @@
             "name": "IdentifierType",
             "in": "query",
             "schema": {
-              "type": "string"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
             }
           },
           {
             "name": "IdentifierAsOfDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "AdjustmentMethod",
             "in": "query",
             "schema": {
               "type": "string"
@@ -816,27 +832,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/SpinoffList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/SpinoffList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/SpinoffList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/SpinoffList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/SpinoffList"
                 }
               }
             }
@@ -844,10 +860,10 @@
         }
       }
     },
-    "/v3/xGlobalHistorical/GetGlobalHistoricalMonthlyQuotesRange": {
+    "/xGlobalCorporateActions/GetMergers": {
       "get": {
         "tags": [
-          "XigniteGlobalHistorical"
+          "XigniteGlobalCorporateActions"
         ],
         "parameters": [
           {
@@ -861,18 +877,15 @@
             "name": "IdentifierType",
             "in": "query",
             "schema": {
-              "type": "string"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
             }
           },
           {
             "name": "IdentifierAsOfDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "AdjustmentMethod",
             "in": "query",
             "schema": {
               "type": "string"
@@ -899,27 +912,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/MergersList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/MergersList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/MergersList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/MergersList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/MergersList"
                 }
               }
             }
@@ -927,10 +940,10 @@
         }
       }
     },
-    "/v3/xGlobalHistorical/GetGlobalHistoricalQuarterlyQuotesRange": {
+    "/xGlobalCorporateActions/GetTakeovers": {
       "get": {
         "tags": [
-          "XigniteGlobalHistorical"
+          "XigniteGlobalCorporateActions"
         ],
         "parameters": [
           {
@@ -944,18 +957,15 @@
             "name": "IdentifierType",
             "in": "query",
             "schema": {
-              "type": "string"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
             }
           },
           {
             "name": "IdentifierAsOfDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "AdjustmentMethod",
             "in": "query",
             "schema": {
               "type": "string"
@@ -982,27 +992,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/TakeoversList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/TakeoversList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/TakeoversList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/TakeoversList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/TakeoversList"
                 }
               }
             }
@@ -1010,101 +1020,10 @@
         }
       }
     },
-    "/v3/xGlobalHistorical/GetGlobalHistoricalTrades": {
+    "/xGlobalCorporateActions/GetTenderOffers": {
       "get": {
         "tags": [
-          "XigniteGlobalHistorical"
-        ],
-        "parameters": [
-          {
-            "name": "Identifiers",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IdentifierType",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IdentifierAsOfDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "AdjustmentMethod",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "AsOfDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
-                  }
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
-                  }
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
-                  }
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GlobalHistoricalQuote"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v3/xGlobalHistorical/GetGlobalHistoricalTradesRange": {
-      "get": {
-        "tags": [
-          "XigniteGlobalHistorical"
+          "XigniteGlobalCorporateActions"
         ],
         "parameters": [
           {
@@ -1118,18 +1037,15 @@
             "name": "IdentifierType",
             "in": "query",
             "schema": {
-              "type": "string"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
             }
           },
           {
             "name": "IdentifierAsOfDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "AdjustmentMethod",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1156,27 +1072,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/TenderOffersList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/TenderOffersList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/TenderOffersList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/TenderOffersList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalQuotes"
+                  "$ref": "#/components/schemas/TenderOffersList"
                 }
               }
             }
@@ -1184,10 +1100,10 @@
         }
       }
     },
-    "/v3/xGlobalHistorical/GetAdjustmentFactors": {
+    "/xGlobalCorporateActions/GetRights": {
       "get": {
         "tags": [
-          "XigniteGlobalHistorical"
+          "XigniteGlobalCorporateActions"
         ],
         "parameters": [
           {
@@ -1199,6 +1115,17 @@
           },
           {
             "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "IdentifierAsOfDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1208,16 +1135,14 @@
             "name": "StartDate",
             "in": "query",
             "schema": {
-              "type": "string",
-              "default": "1900-01-01"
+              "type": "string"
             }
           },
           {
             "name": "EndDate",
             "in": "query",
             "schema": {
-              "type": "string",
-              "default": "2020-01-01"
+              "type": "string"
             }
           }
         ],
@@ -1227,27 +1152,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdjustmentFactors"
+                  "$ref": "#/components/schemas/RightsList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdjustmentFactors"
+                  "$ref": "#/components/schemas/RightsList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdjustmentFactors"
+                  "$ref": "#/components/schemas/RightsList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdjustmentFactors"
+                  "$ref": "#/components/schemas/RightsList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdjustmentFactors"
+                  "$ref": "#/components/schemas/RightsList"
                 }
               }
             }
@@ -1255,10 +1180,65 @@
         }
       }
     },
-    "/v3/xGlobalHistorical/GetGlobalHistoricalVWAP": {
+    "/xGlobalCorporateActions/GetRightsByExchange": {
       "get": {
         "tags": [
-          "XigniteGlobalHistorical"
+          "XigniteGlobalCorporateActions"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ExDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityRightsList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityRightsList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityRightsList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityRightsList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityRightsList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCorporateActions/GetSecuritySwap": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCorporateActions"
         ],
         "parameters": [
           {
@@ -1272,7 +1252,11 @@
             "name": "IdentifierType",
             "in": "query",
             "schema": {
-              "type": "string"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
             }
           },
           {
@@ -1283,28 +1267,14 @@
             }
           },
           {
-            "name": "HistoricalVWAPType",
+            "name": "StartDate",
             "in": "query",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "AdjustmentMethod",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "StartTime",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "EndTime",
+            "name": "EndDate",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1317,132 +1287,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
+                  "$ref": "#/components/schemas/SecuritySwapsList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
+                  "$ref": "#/components/schemas/SecuritySwapsList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
+                  "$ref": "#/components/schemas/SecuritySwapsList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
+                  "$ref": "#/components/schemas/SecuritySwapsList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/GlobalHistoricalVWAPs"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v3/xGlobalHistorical/GetChartBars": {
-      "get": {
-        "tags": [
-          "XigniteGlobalHistorical"
-        ],
-        "parameters": [
-          {
-            "name": "Identifier",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IdentifierType",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IdentifierAsOfDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "StartTime",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "EndTime",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Precision",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Period",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "AdjustmentMethod",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IncludeExtended",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ChartBarsSet"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ChartBarsSet"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ChartBarsSet"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/ChartBarsSet"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/ChartBarsSet"
+                  "$ref": "#/components/schemas/SecuritySwapsList"
                 }
               }
             }
@@ -1462,21 +1327,7 @@
         ],
         "type": "string"
       },
-      "ExchangeDescription": {
-        "type": "object",
-        "properties": {
-          "MarketIdentificationCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "Market": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ExchangeList": {
+      "Common": {
         "type": "object",
         "properties": {
           "Outcome": {
@@ -1497,11 +1348,72 @@
           "Delay": {
             "type": "number",
             "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExchangeDescription": {
+        "type": "object",
+        "properties": {
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
           },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExchangeList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
           "ExchangeDescriptions": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ExchangeDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CorporateActionsEventType": {
+        "type": "object",
+        "properties": {
+          "EventDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "EventType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EventTypeList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "EventTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CorporateActionsEventType"
             },
             "nullable": true
           }
@@ -1532,26 +1444,12 @@
       },
       "SymbolList": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Exchange": {
             "allOf": [
               {
@@ -1573,7 +1471,11 @@
       "SymbolChange": {
         "type": "object",
         "properties": {
-          "Symbol": {
+          "EffectiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Type": {
             "type": "string",
             "nullable": true
           },
@@ -1581,23 +1483,7 @@
             "type": "string",
             "nullable": true
           },
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "OldName": {
-            "type": "string",
-            "nullable": true
-          },
-          "Exchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "OldExchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "Currency": {
+          "NewSymbol": {
             "type": "string",
             "nullable": true
           },
@@ -1605,7 +1491,23 @@
             "type": "string",
             "nullable": true
           },
-          "Type": {
+          "NewCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "OldExchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "NewExchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "OldName": {
+            "type": "string",
+            "nullable": true
+          },
+          "NewName": {
             "type": "string",
             "nullable": true
           },
@@ -1618,30 +1520,12 @@
       },
       "SymbolChangeList": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
-          "DateTime": {
-            "type": "string",
-            "nullable": true
-          },
           "SymbolChanges": {
             "type": "array",
             "items": {
@@ -1652,62 +1536,49 @@
         },
         "additionalProperties": false
       },
-      "Common": {
+      "IdentifierChange": {
         "type": "object",
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
+          "EffectiveDate": {
             "type": "string",
             "nullable": true
           },
-          "Identity": {
+          "IdentifierType": {
             "type": "string",
             "nullable": true
           },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "EventSymbol": {
-        "type": "object",
-        "properties": {
-          "Symbol": {
+          "OldIdentifier": {
             "type": "string",
             "nullable": true
           },
-          "Name": {
+          "NewIdentifier": {
             "type": "string",
             "nullable": true
           },
-          "Exchange": {
+          "OldSecurityName": {
             "type": "string",
             "nullable": true
           },
-          "ExDate": {
+          "NewSecurityName": {
             "type": "string",
             "nullable": true
           },
-          "Event": {
+          "EventIdentifier": {
             "type": "string",
             "nullable": true
           },
-          "EventDescription": {
+          "ReferenceCompositeIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "ReferenceEventType": {
             "type": "string",
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "SymbolsWithAdjustedFactorsList": {
+      "IdentifierChangeList": {
         "type": "object",
         "allOf": [
           {
@@ -1715,44 +1586,24 @@
           }
         ],
         "properties": {
-          "EventSymbols": {
+          "IdentifierChanges": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/EventSymbol"
+              "$ref": "#/components/schemas/IdentifierChange"
             },
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "Security": {
+      "ListingChange": {
         "type": "object",
         "properties": {
-          "CIK": {
+          "EffectiveDate": {
             "type": "string",
             "nullable": true
           },
-          "CUSIP": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "ISIN": {
-            "type": "string",
-            "nullable": true
-          },
-          "Valoren": {
-            "type": "string",
-            "nullable": true
-          },
-          "SEDOL": {
-            "type": "string",
-            "nullable": true
-          },
-          "FIGI": {
+          "Type": {
             "type": "string",
             "nullable": true
           },
@@ -1760,10 +1611,370 @@
             "type": "string",
             "nullable": true
           },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "OldExchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "Exchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "EventIdentifier": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ListingChangeList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "ListingChanges": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListingChange"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IdentifierTypes": {
+        "enum": [
+          "Symbol",
+          "CIK",
+          "CUSIP",
+          "ISIN",
+          "Valoren",
+          "SEDOL",
+          "FIGI",
+          "CompositeFIGI",
+          "EventIdentifier",
+          "CompositeIdentifier"
+        ],
+        "type": "string"
+      },
+      "Security": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
           "InstrumentClass": {
             "type": "string",
             "nullable": true
           },
+          "Industry": {
+            "type": "string",
+            "nullable": true
+          },
+          "Sector": {
+            "type": "string",
+            "nullable": true
+          },
+          "FIGI": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompositeFIGI": {
+            "type": "string",
+            "nullable": true
+          },
+          "SEDOL": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "CIK": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EventSummary": {
+        "type": "object",
+        "properties": {
+          "EventType": {
+            "type": "string",
+            "nullable": true
+          },
+          "EffectiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompositeIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "EventIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "EventNotes": {
+            "type": "string",
+            "nullable": true
+          },
+          "Created": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastUpdated": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EventSummaryList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "EventSummaries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EventSummary"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SecurityEvent": {
+        "type": "object",
+        "properties": {
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "EventSummaries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EventSummary"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SecurityEventSummariesList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "SecurityEventSummaries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SecurityEvent"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Distribution": {
+        "type": "object",
+        "properties": {
+          "PaymentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "DividendType": {
+            "type": "string",
+            "nullable": true
+          },
+          "EventIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsDefaultOption": {
+            "type": "boolean"
+          },
+          "OptionElectionDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "PaymentFrequency": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "DeclaredDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "PayDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "RecordDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "GrossDividendAmount": {
+            "type": "string",
+            "nullable": true
+          },
+          "NetDividendAmount": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "DeclaredGrossAmount": {
+            "type": "string",
+            "nullable": true
+          },
+          "DeclaredCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "FXDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "TaxRate": {
+            "type": "string",
+            "nullable": true
+          },
+          "NumberOfInitialInstruments": {
+            "type": "string",
+            "nullable": true
+          },
+          "NumberOfNewInstruments": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsDistributedSecurityDifferent": {
+            "type": "boolean"
+          },
+          "DistributedSecurity": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DistributionsList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "Distributions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Distribution"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SecurityDistributions": {
+        "type": "object",
+        "properties": {
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "DistributionSet": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Distribution"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SecurityDistributionsList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
           "Market": {
             "type": "string",
             "nullable": true
@@ -1772,159 +1983,14 @@
             "type": "string",
             "nullable": true
           },
-          "Sector": {
-            "type": "string",
-            "nullable": true
-          },
-          "Industry": {
-            "type": "string",
-            "nullable": true
-          },
-          "CompositeFIGI": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CashDividend": {
-        "type": "object",
-        "properties": {
-          "Type": {
-            "type": "string",
-            "nullable": true
-          },
-          "PaymentFrequency": {
-            "type": "string",
-            "nullable": true
-          },
-          "DeclaredDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "RecordDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "PayDate": {
-            "type": "string",
-            "nullable": true
-          },
           "ExDate": {
             "type": "string",
             "nullable": true
           },
-          "DividendAmount": {
-            "type": "number",
-            "format": "double"
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CashDividendHistory": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "CorporateActionsAdjusted": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierAsOfDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
-          },
-          "StartDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "CumulativeCashDividend": {
-            "type": "number",
-            "format": "double"
-          },
-          "CashDividends": {
+          "ExchangeDistributions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CashDividend"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ExchangeDividend": {
-        "type": "object",
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
-          },
-          "CashDividend": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CashDividend"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ExchangeDividendsList": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Exchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "CorporateActionsAdjusted": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExchangeDividends": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExchangeDividend"
+              "$ref": "#/components/schemas/SecurityDistributions"
             },
             "nullable": true
           }
@@ -1933,17 +1999,8 @@
       },
       "Split": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
-          "ExDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Numerator": {
+          "SplitRatio": {
             "type": "number",
             "format": "double"
           },
@@ -1951,14 +2008,22 @@
             "type": "number",
             "format": "double"
           },
-          "SplitRatio": {
+          "Numerator": {
             "type": "number",
             "format": "double"
+          },
+          "ExDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EventIdentifier": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "SplitHistory": {
+      "SplitList": {
         "type": "object",
         "allOf": [
           {
@@ -1973,18 +2038,6 @@
               }
             ],
             "nullable": true
-          },
-          "StartDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "CumulativeSplitRatio": {
-            "type": "number",
-            "format": "double"
           },
           "Splits": {
             "type": "array",
@@ -2018,7 +2071,7 @@
         },
         "additionalProperties": false
       },
-      "ExchangeSplitsList": {
+      "ExchangeSplitList": {
         "type": "object",
         "allOf": [
           {
@@ -2036,274 +2089,80 @@
         },
         "additionalProperties": false
       },
-      "HistoricalQuote": {
+      "Spinoff": {
         "type": "object",
         "properties": {
-          "Date": {
+          "ExDate": {
             "type": "string",
             "nullable": true
           },
-          "Close": {
-            "type": "number",
-            "format": "double"
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "VWAP": {
-            "type": "number",
-            "format": "double"
-          },
-          "TWAP": {
-            "type": "number",
-            "format": "double"
-          },
-          "Volume": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousClose": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousCloseDate": {
+          "RecordDate": {
             "type": "string",
             "nullable": true
           },
-          "Change": {
-            "type": "number",
-            "format": "double"
-          },
-          "PercentChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "AdjustmentMethodUsed": {
+          "PayDate": {
             "type": "string",
             "nullable": true
           },
-          "CumulativeAdjustmentFactor": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "Currency": {
+          "WithdrawalFromDate": {
             "type": "string",
             "nullable": true
           },
-          "PriceNotation": {
+          "WithdrawalToDate": {
             "type": "string",
             "nullable": true
           },
-          "PriceAmount": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "GlobalHistoricalQuote": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Identifier": {
+          "WithdrawalRights": {
             "type": "string",
             "nullable": true
           },
-          "IdentifierType": {
+          "PayType": {
             "type": "string",
             "nullable": true
           },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
+          "IsDefaultOption": {
+            "type": "boolean"
           },
-          "HistoricalQuote": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/HistoricalQuote"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "GlobalHistoricalQuotes": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Identifier": {
+          "OptionElectionDate": {
             "type": "string",
             "nullable": true
           },
-          "IdentifierType": {
+          "EventIdentifier": {
             "type": "string",
             "nullable": true
           },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
-          },
-          "StartDate": {
+          "NumberOfInitialInstruments": {
             "type": "string",
             "nullable": true
           },
-          "EndDate": {
+          "NumberOfNewInstruments": {
             "type": "string",
             "nullable": true
-          },
-          "HistoricalQuotes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/HistoricalQuote"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "AdjustmentFactor": {
-        "type": "object",
-        "properties": {
-          "Event": {
-            "type": "string",
-            "nullable": true
-          },
-          "Exdate": {
-            "type": "string",
-            "nullable": true
-          },
-          "EventDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "Factor": {
-            "type": "number",
-            "format": "decimal"
-          },
-          "CumulativeAdjustmentFactor": {
-            "type": "number",
-            "format": "decimal"
-          }
-        },
-        "additionalProperties": false
-      },
-      "AdjustmentFactors": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
-          },
-          "ArrayOfAdjustmentFactor": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AdjustmentFactor"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "HistoricalVWAP": {
-        "type": "object",
-        "properties": {
-          "StartTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "VWAPType": {
-            "type": "string",
-            "nullable": true
-          },
-          "VWAP": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Volume": {
-            "type": "number",
-            "format": "double"
-          },
-          "Change": {
-            "type": "number",
-            "format": "double"
-          },
-          "PercentChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "TWAP": {
-            "type": "number",
-            "format": "double"
           },
           "Amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "Trades": {
-            "type": "number",
-            "format": "double"
+            "type": "string",
+            "nullable": true
           },
           "Currency": {
             "type": "string",
             "nullable": true
           },
-          "CumulativeAdjustmentFactor": {
-            "type": "number",
-            "format": "double",
+          "SpunOffRatio": {
+            "type": "string",
+            "nullable": true
+          },
+          "DistributedSecurity": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "GlobalHistoricalVWAPs": {
+      "SpinoffList": {
         "type": "object",
         "allOf": [
           {
@@ -2311,18 +2170,6 @@
           }
         ],
         "properties": {
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "AdjustmentMethodUsed": {
-            "type": "string",
-            "nullable": true
-          },
           "Security": {
             "allOf": [
               {
@@ -2331,75 +2178,102 @@
             ],
             "nullable": true
           },
-          "HistoricalVWAPs": {
+          "SpinoffOptions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/HistoricalVWAP"
+              "$ref": "#/components/schemas/Spinoff"
             },
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "ChartBar": {
+      "Merger": {
         "type": "object",
         "properties": {
-          "StartDateTime": {
+          "EffectiveDate": {
             "type": "string",
             "nullable": true
           },
-          "EndDateTime": {
+          "EventStatus": {
             "type": "string",
             "nullable": true
           },
-          "UTCOffset": {
-            "type": "number",
-            "format": "double"
+          "CompositeIdentifier": {
+            "type": "string",
+            "nullable": true
           },
-          "Open": {
-            "type": "number",
-            "format": "double"
+          "EventIdentifier": {
+            "type": "string",
+            "nullable": true
           },
-          "High": {
-            "type": "number",
-            "format": "double"
+          "RelatedCompositeIdentifier": {
+            "type": "string",
+            "nullable": true
           },
-          "Low": {
-            "type": "number",
-            "format": "double"
+          "RecordDate": {
+            "type": "string",
+            "nullable": true
           },
-          "Close": {
-            "type": "number",
-            "format": "double"
+          "AppointedDate": {
+            "type": "string",
+            "nullable": true
           },
-          "Volume": {
-            "type": "number",
-            "format": "double"
+          "PayDate": {
+            "type": "string",
+            "nullable": true
           },
-          "Trades": {
-            "type": "integer",
-            "format": "int32"
+          "OptionElectionDate": {
+            "type": "string",
+            "nullable": true
           },
-          "TWAP": {
-            "type": "number",
-            "format": "double"
+          "IsDefaultOption": {
+            "type": "boolean"
           },
-          "VWAP": {
-            "type": "number",
-            "format": "double"
+          "PayType": {
+            "type": "string",
+            "nullable": true
+          },
+          "NumberOfInitialInstruments": {
+            "type": "string",
+            "nullable": true
+          },
+          "NumberOfNewInstruments": {
+            "type": "string",
+            "nullable": true
+          },
+          "Amount": {
+            "type": "string",
+            "nullable": true
           },
           "Currency": {
             "type": "string",
             "nullable": true
           },
-          "CumulativeAdjustmentFactor": {
-            "type": "number",
-            "format": "double"
+          "WithdrawalFromDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "WithdrawalToDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "WithdrawalRights": {
+            "type": "string",
+            "nullable": true
+          },
+          "PaidSecurity": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "ChartBarsSet": {
+      "MergersList": {
         "type": "object",
         "allOf": [
           {
@@ -2415,18 +2289,525 @@
             ],
             "nullable": true
           },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "ChartBars": {
+          "MergerOptions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ChartBar"
+              "$ref": "#/components/schemas/Merger"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Takeover": {
+        "type": "object",
+        "properties": {
+          "EffectiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EventStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "EventIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "OpenDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "CloseDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "RecordDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "UnconditionalDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "RegistrationDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "OptionElectionDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "WithdrawalFromDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "WithdrawalToDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "WithdrawalRights": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsDefaultOption": {
+            "type": "boolean"
+          },
+          "PayType": {
+            "type": "string",
+            "nullable": true
+          },
+          "PayDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "NumberOfInitialInstruments": {
+            "type": "string",
+            "nullable": true
+          },
+          "NumberOfNewInstruments": {
+            "type": "string",
+            "nullable": true
+          },
+          "MinimumAmount": {
+            "type": "string",
+            "nullable": true
+          },
+          "MaximumAmount": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "OfferorCompanyIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "OfferorCompanyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsHostile": {
+            "type": "string",
+            "nullable": true
+          },
+          "TargetQuantity": {
+            "type": "string",
+            "nullable": true
+          },
+          "TargetPercent": {
+            "type": "string",
+            "nullable": true
+          },
+          "PreOfferQuantity": {
+            "type": "string",
+            "nullable": true
+          },
+          "PreOfferPercent": {
+            "type": "string",
+            "nullable": true
+          },
+          "DutchAuction": {
+            "type": "string",
+            "nullable": true
+          },
+          "PaidSecurity": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TakeoversList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "TakeoverOptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Takeover"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TenderOffer": {
+        "type": "object",
+        "properties": {
+          "EffectiveDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EventStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "EventIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "OpenDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "CloseDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "RecordDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "UnconditionalDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "RegistrationDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "OptionElectionDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "WithdrawalFromDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "WithdrawalToDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "WithdrawalRights": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsDefaultOption": {
+            "type": "boolean"
+          },
+          "PayType": {
+            "type": "string",
+            "nullable": true
+          },
+          "PayDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "NumberOfInitialInstruments": {
+            "type": "string",
+            "nullable": true
+          },
+          "NumberOfNewInstruments": {
+            "type": "string",
+            "nullable": true
+          },
+          "MinimumAmount": {
+            "type": "string",
+            "nullable": true
+          },
+          "MaximumAmount": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "OfferorCompanyIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "OfferorCompanyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsHostile": {
+            "type": "string",
+            "nullable": true
+          },
+          "TargetQuantity": {
+            "type": "string",
+            "nullable": true
+          },
+          "TargetPercent": {
+            "type": "string",
+            "nullable": true
+          },
+          "PreOfferQuantity": {
+            "type": "string",
+            "nullable": true
+          },
+          "PreOfferPercent": {
+            "type": "string",
+            "nullable": true
+          },
+          "DutchAuction": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsTakeover": {
+            "type": "boolean"
+          },
+          "PaidSecurity": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TenderOffersList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "TenderOfferOptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TenderOffer"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Rights": {
+        "type": "object",
+        "properties": {
+          "ExDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "RecordDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "PayDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "SubscriptionStartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "SubscriptionEndDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "TradeStartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "TradeEndDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "SplitDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "IssuePrice": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "NumberOfInitialInstruments": {
+            "type": "string",
+            "nullable": true
+          },
+          "NumberOfNewInstruments": {
+            "type": "string",
+            "nullable": true
+          },
+          "EventIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "DistributedSecurity": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RightsList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "SecurityRights": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Rights"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SecurityRights": {
+        "type": "object",
+        "properties": {
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "RightsSet": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Rights"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SecurityRightsList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExchangeRights": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SecurityRights"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SecuritySwap": {
+        "type": "object",
+        "properties": {
+          "ExDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "RecordDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "PayDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "NumberOfInitialInstruments": {
+            "type": "string",
+            "nullable": true
+          },
+          "NumberOfNewInstruments": {
+            "type": "string",
+            "nullable": true
+          },
+          "DistributedSecurity": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "EventIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsDefaultOption": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SecuritySwapsList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "SecuritySwaps": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SecuritySwap"
             },
             "nullable": true
           }

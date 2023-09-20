@@ -2,11 +2,11 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteEarningsCalendar",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
-      "url": "https://earningscalendar.xignite.com/"
+      "url": "https://earningscalendar.xignite.com"
     }
   ],
   "paths": {

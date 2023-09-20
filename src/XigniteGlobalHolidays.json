@@ -2,11 +2,11 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalHolidays",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
-      "url": "https://globalholidays.xignite.com/"
+      "url": "https://globalholidays.xignite.com"
     }
   ],
   "paths": {

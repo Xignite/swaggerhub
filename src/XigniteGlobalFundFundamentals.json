@@ -2,11 +2,11 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalFundFundamentals",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "servers": [
     {
-      "url": "https://globalfundfundamentals.xignite.com/"
+      "url": "https://globalfundfundamentals.xignite.com"
     }
   ],
   "paths": {
