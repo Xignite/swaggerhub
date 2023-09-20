@@ -2,11 +2,11 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalQuotes",
-    "version": "3.0.6"
+    "version": "3.0.7"
   },
   "servers": [
     {
-      "url": "https://globalquotes.xignite.com/"
+      "url": "https://globalquotes.xignite.com"
     }
   ],
   "paths": {
