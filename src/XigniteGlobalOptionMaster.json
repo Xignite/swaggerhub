@@ -2,11 +2,11 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalOptionMaster",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
-      "url": "https://globaloptionmaster.xignite.com/"
+      "url": "https://globaloptionmaster.xignite.com"
     }
   ],
   "paths": {
