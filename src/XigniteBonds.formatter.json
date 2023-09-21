@@ -1,0 +1,1180 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "XigniteBonds",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://bonds.xignite.com"
+    }
+  ],
+  "paths": {
+    "/xBonds/ListBonds.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteBonds"
+        ],
+        "parameters": [
+          {
+            "name": "PriceSource",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "BondType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListBondsResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListBondsResult"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListBondsResult"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListBondsResult"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListBondsResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xBonds/ListBondTypes.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteBonds"
+        ],
+        "parameters": [
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BondTypeList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BondTypeList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/BondTypeList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/BondTypeList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/BondTypeList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xBonds/GetLastSale.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteBonds"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "PriceSource",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/PriceSources"
+                }
+              ]
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LastSale"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LastSale"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LastSale"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LastSale"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/LastSale"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xBonds/GetLastSales.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteBonds"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "PriceSource",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/PriceSources"
+                }
+              ]
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LastSale"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LastSale"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LastSale"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LastSale"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LastSale"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xBonds/GetPriceComposite.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteBonds"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "PriceSource",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/PriceSources"
+                }
+              ]
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PriceComposite"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PriceComposite"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PriceComposite"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PriceComposite"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/PriceComposite"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xBonds/GetPriceComposites.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteBonds"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "PriceSource",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/PriceSources"
+                }
+              ]
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PriceComposite"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PriceComposite"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PriceComposite"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PriceComposite"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PriceComposite"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xBonds/GetDailyOpenHighLowClosePrice.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteBonds"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "PriceSource",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/PriceSources"
+                }
+              ]
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DailyOpenHighLowClosePrice"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DailyOpenHighLowClosePrice"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/DailyOpenHighLowClosePrice"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/DailyOpenHighLowClosePrice"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/DailyOpenHighLowClosePrice"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xBonds/GetDailyOpenHighLowClosePrices.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteBonds"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "PriceSource",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/PriceSources"
+                }
+              ]
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DailyOpenHighLowClosePrice"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DailyOpenHighLowClosePrice"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DailyOpenHighLowClosePrice"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DailyOpenHighLowClosePrice"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DailyOpenHighLowClosePrice"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BondResult": {
+        "type": "object",
+        "properties": {
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "FIGI": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "PriceSource": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ListBondsResult": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "BondType": {
+            "type": "string",
+            "nullable": true
+          },
+          "StartSymbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndSymbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Securities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BondResult"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BondType": {
+        "type": "object",
+        "properties": {
+          "Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BondTypeList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "BondTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BondType"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IdentifierTypes": {
+        "enum": [
+          "Symbol",
+          "CIK",
+          "CUSIP",
+          "ISIN",
+          "Valoren",
+          "SEDOL",
+          "FIGI",
+          "CompositeFIGI"
+        ],
+        "type": "string"
+      },
+      "PriceSources": {
+        "enum": [
+          "FINRA"
+        ],
+        "type": "string"
+      },
+      "InstrumentIdentifierBrief": {
+        "type": "object",
+        "properties": {
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BondLastSale": {
+        "type": "object",
+        "properties": {
+          "ShortName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "PriceSource": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastSale": {
+            "type": "number",
+            "format": "double"
+          },
+          "LastSaleSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "LastSaleDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastSaleTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "YieldToMaturity": {
+            "type": "number",
+            "format": "double"
+          },
+          "PriceUsedForCalculations": {
+            "type": "number",
+            "format": "double"
+          },
+          "PriceUsedForCalculationsDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "PriceUsedForCalculationsTime": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LastSale": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "InstrumentIdentifierBrief": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+              }
+            ],
+            "nullable": true
+          },
+          "BondLastSale": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BondLastSale"
+              }
+            ],
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TradedPrice": {
+        "type": "object",
+        "properties": {
+          "ShortName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "PriceSource": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastSale": {
+            "type": "number",
+            "format": "double"
+          },
+          "LastSaleDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastSaleTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastSaleSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "DailyOpen": {
+            "type": "number",
+            "format": "double"
+          },
+          "DailyOpenDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "DailyOpenTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "DailyHigh": {
+            "type": "number",
+            "format": "double"
+          },
+          "DailyHighDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "DailyHighTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "DailyLow": {
+            "type": "number",
+            "format": "double"
+          },
+          "DailyLowDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "DailyLowTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "YearlyHigh": {
+            "type": "number",
+            "format": "double"
+          },
+          "YearlyHighDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "YearlyLow": {
+            "type": "number",
+            "format": "double"
+          },
+          "YearlyLowDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastYearClose": {
+            "type": "number",
+            "format": "double"
+          },
+          "LastYearCloseDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "YieldToMaturity": {
+            "type": "number",
+            "format": "double"
+          },
+          "PriceUsedForCalculations": {
+            "type": "number",
+            "format": "double"
+          },
+          "PriceUsedForCalculationsDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "PriceUsedForCalculationsTime": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PriceComposite": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "InstrumentIdentifierBrief": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+              }
+            ],
+            "nullable": true
+          },
+          "TradedPrice": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TradedPrice"
+              }
+            ],
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DailyOpenHighLowClose": {
+        "type": "object",
+        "properties": {
+          "ShortName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "PriceSource": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "DailyOpen": {
+            "type": "number",
+            "format": "double"
+          },
+          "DailyOpenDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "DailyOpenTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "DailyHigh": {
+            "type": "number",
+            "format": "double"
+          },
+          "DailyHighDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "DailyHighTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "DailyLow": {
+            "type": "number",
+            "format": "double"
+          },
+          "DailyLowDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "DailyLowTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "DailyClose": {
+            "type": "number",
+            "format": "double"
+          },
+          "DailyCloseDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "DailyCloseTime": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DailyOpenHighLowClosePrice": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "InstrumentIdentifierBrief": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+              }
+            ],
+            "nullable": true
+          },
+          "DailyOpenHighLowClose": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/DailyOpenHighLowClose"
+              }
+            ],
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "apiKey",
+        "description": "Token for your account.",
+        "name": "_token",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
