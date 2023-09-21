@@ -1,0 +1,1155 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "XigniteBATSRealTimeV3",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://batsrealtime.xignite.com"
+    }
+  ],
+  "paths": {
+    "/v3/xBatsRealTime/GetExtendedQuote.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteBATSRealTimeV3"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalExtendedQuote"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalExtendedQuote"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalExtendedQuote"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalExtendedQuote"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalExtendedQuote"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v3/xBatsRealTime/GetExtendedQuotes.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteBATSRealTimeV3"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalExtendedQuote"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalExtendedQuote"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalExtendedQuote"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalExtendedQuote"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalExtendedQuote"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v3/xBatsRealTime/ListTradedSymbols.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteBATSRealTimeV3"
+        ],
+        "parameters": [
+          {
+            "name": "NumberOfDays",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "StartSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v3/xBatsRealTime/GetChartBars.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteBATSRealTimeV3"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "StartTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Precision",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Period",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "AdjustmentMethod",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IncludeExtended",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EquityChartBars"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EquityChartBars"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/EquityChartBars"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/EquityChartBars"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/EquityChartBars"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v3/xBatsRealTime/GetBars.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteBATSRealTimeV3"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "StartTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Precision",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/TickPrecisions"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Period",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBars"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBars"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBars"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBars"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBars"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v3/xBatsRealTime/GetBar.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteBATSRealTimeV3"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IdentifierTypes"
+                }
+              ]
+            }
+          },
+          {
+            "name": "EndTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Precision",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/TickPrecisions"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Period",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBar"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBar"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBar"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBar"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalBar"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "IdentifierTypes": {
+        "enum": [
+          "Symbol",
+          "CIK",
+          "CUSIP",
+          "ISIN",
+          "Valoren",
+          "SEDOL",
+          "FIGI",
+          "CompositeFIGI"
+        ],
+        "type": "string"
+      },
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Security": {
+        "type": "object",
+        "properties": {
+          "CIK": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "MostLiquidExchange": {
+            "type": "boolean"
+          },
+          "CategoryOrIndustry": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuoteWithSecurity": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlobalQuote": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/QuoteWithSecurity"
+          }
+        ],
+        "properties": {
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "Time": {
+            "type": "string",
+            "nullable": true
+          },
+          "UTCOffset": {
+            "type": "number",
+            "format": "double"
+          },
+          "Open": {
+            "type": "number",
+            "format": "double"
+          },
+          "Close": {
+            "type": "number",
+            "format": "double"
+          },
+          "High": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Last": {
+            "type": "number",
+            "format": "double"
+          },
+          "LastSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "Volume": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousClose": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousCloseDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ChangeFromPreviousClose": {
+            "type": "number",
+            "format": "double"
+          },
+          "PercentChangeFromPreviousClose": {
+            "type": "number",
+            "format": "double"
+          },
+          "Bid": {
+            "type": "number",
+            "format": "double"
+          },
+          "BidSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "BidDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "BidTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "Ask": {
+            "type": "number",
+            "format": "double"
+          },
+          "AskSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "AskDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "AskTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "High52Weeks": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low52Weeks": {
+            "type": "number",
+            "format": "double"
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "TradingHalted": {
+            "type": "boolean"
+          },
+          "BidMarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "AskMarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastMarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlobalExtendedQuote": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GlobalQuote"
+          }
+        ],
+        "properties": {
+          "VolumeDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursType": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExtendedHoursPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "ExtendedHoursChange": {
+            "type": "number",
+            "format": "double"
+          },
+          "ExtendedHoursPercentChange": {
+            "type": "number",
+            "format": "double"
+          },
+          "LimitDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "LimitTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "LimitDown": {
+            "type": "number",
+            "format": "double"
+          },
+          "LimitUp": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExchangeDescription": {
+        "type": "object",
+        "properties": {
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SecurityDescription": {
+        "type": "object",
+        "properties": {
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SymbolList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Exchange": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExchangeDescription"
+              }
+            ],
+            "nullable": true
+          },
+          "SecurityDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SecurityDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChartBar": {
+        "type": "object",
+        "properties": {
+          "StartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "StartTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "UTCOffset": {
+            "type": "number",
+            "format": "double"
+          },
+          "Open": {
+            "type": "number",
+            "format": "double"
+          },
+          "High": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Close": {
+            "type": "number",
+            "format": "double"
+          },
+          "Volume": {
+            "type": "number",
+            "format": "double"
+          },
+          "Trades": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TWAP": {
+            "type": "number",
+            "format": "double"
+          },
+          "VWAP": {
+            "type": "number",
+            "format": "double"
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Session": {
+            "type": "string",
+            "nullable": true
+          },
+          "AdjustmentRatio": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EquityChartBars": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "ChartBars": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChartBar"
+            },
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Timing": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TickPrecisions": {
+        "enum": [
+          "Seconds",
+          "Minutes",
+          "Hours"
+        ],
+        "type": "string"
+      },
+      "Bar": {
+        "type": "object",
+        "properties": {
+          "StartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "StartTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "UTCOffset": {
+            "type": "number",
+            "format": "double"
+          },
+          "Open": {
+            "type": "number",
+            "format": "double"
+          },
+          "High": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Close": {
+            "type": "number",
+            "format": "double"
+          },
+          "Volume": {
+            "type": "number",
+            "format": "double"
+          },
+          "Trades": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TWAP": {
+            "type": "number",
+            "format": "double"
+          },
+          "VWAP": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlobalBars": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Bars": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Bar"
+            },
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlobalBar": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Bar": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Bar"
+              }
+            ],
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "apiKey",
+        "description": "Token for your account.",
+        "name": "_token",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
