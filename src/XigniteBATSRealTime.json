@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteBATSRealTime",
-    "version": "1.0.8"
+    "version": "1.0.9"
   },
   "servers": [
     {
