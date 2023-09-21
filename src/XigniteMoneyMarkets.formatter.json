@@ -1,0 +1,2767 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "XigniteMoneyMarkets",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://moneymarkets.xignite.com"
+    }
+  ],
+  "paths": {
+    "/xMoneyMarkets/ListRates.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RateDescription"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RateDescription"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RateDescription"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RateDescription"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RateDescription"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/ListSwapRates.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "SwapType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateDescription"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateDescription"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateDescription"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateDescription"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateDescription"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/SearchRates.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "Pattern",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RateDescription"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RateDescription"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RateDescription"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RateDescription"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RateDescription"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/GetSwapRate.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "Type",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRate"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRate"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRate"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRate"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRate"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/GetSwapRateExtended.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "SwapType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Tenor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FloatingReferenceRate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRateExtended"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRateExtended"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRateExtended"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRateExtended"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRateExtended"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/GetSwapRateFamily.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRate"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRate"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRate"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRate"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRate"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/GetSwapRateFamilyExtended.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "SwapType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FloatingReferenceRate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateExtended"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateExtended"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateExtended"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateExtended"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateExtended"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/GetHistoricalSwapRate.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "Type",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRate"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRate"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRate"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRate"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRate"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/GetHistoricalSwapRateExtended.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "SwapType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Tenor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FloatingReferenceRate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRateExtended"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRateExtended"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRateExtended"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRateExtended"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/SwapRateExtended"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/GetHistoricalSwapRateRange.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "Type",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRate"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRate"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRate"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRate"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRate"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/GetHistoricalSwapRateExtendedRange.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "SwapType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Tenor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FloatingReferenceRate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateExtended"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateExtended"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateExtended"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateExtended"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SwapRateExtended"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/GetTreasuryRate.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "Type",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterestRate"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterestRate"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterestRate"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterestRate"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/InterestRate"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/GetTreasuryRateFamily.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InterestRate"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InterestRate"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InterestRate"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InterestRate"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InterestRate"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/GetHistoricalSwaption.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "FirstType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SecondType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Swaption"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Swaption"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Swaption"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Swaption"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/Swaption"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/GetHistoricalSwaptionFamily.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Swaption"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Swaption"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Swaption"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Swaption"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Swaption"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/GetSwaption.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "FirstType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SecondType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Swaption"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Swaption"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Swaption"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Swaption"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/Swaption"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/GetSwaptionFamily.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Swaption"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Swaption"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Swaption"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Swaption"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Swaption"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMoneyMarkets/GetForwardRateAgreement.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMoneyMarkets"
+        ],
+        "parameters": [
+          {
+            "name": "FirstType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SecondType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Currency",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRateAgreement"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRateAgreement"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRateAgreement"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRateAgreement"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRateAgreement"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MaturityUnitTypes": {
+        "enum": [
+          "Week",
+          "Month",
+          "Year",
+          "Day"
+        ],
+        "type": "string"
+      },
+      "RateDescription": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Maturity": {
+            "type": "string",
+            "nullable": true
+          },
+          "MaturityUnit": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/MaturityUnitTypes"
+              }
+            ]
+          },
+          "MaturityCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "SeasonallyAdjusted": {
+            "type": "boolean"
+          },
+          "Availability": {
+            "type": "string",
+            "nullable": true
+          },
+          "Source": {
+            "type": "string",
+            "nullable": true
+          },
+          "Discontinued": {
+            "type": "boolean"
+          },
+          "Service": {
+            "type": "string",
+            "nullable": true
+          },
+          "Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "Factor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Precision": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SwapRateDescription": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "SwapType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Tenor": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "FloatingReferenceRate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SwapRateTypes": {
+        "enum": [
+          "TwelveYear",
+          "Overnight",
+          "OneWeek",
+          "TwoWeek",
+          "ThirtyFiveYear",
+          "EightMonth",
+          "NineMonth",
+          "TenMonth",
+          "ElevenMonth",
+          "FifteenMonth",
+          "EighteenMonth",
+          "TwentyOneMonth",
+          "ElevenYear",
+          "TwoMonth",
+          "FourMonth",
+          "FiveMonth",
+          "SevenMonth",
+          "SixMonth",
+          "ThreeMonth",
+          "OneMonth",
+          "OneYear",
+          "TwoYear",
+          "ThreeYear",
+          "FourYear",
+          "FiveYear",
+          "SevenYear",
+          "TenYear",
+          "TwentyYear",
+          "ThirtyYear",
+          "SixYear",
+          "ThirteenYear",
+          "FourteenYear",
+          "FifteenYear",
+          "TwentyFiveYear",
+          "FortyYear",
+          "FortyFiveYear",
+          "FiftyYear",
+          "EightYear",
+          "NineYear"
+        ],
+        "type": "string"
+      },
+      "SwapCurrencyTypes": {
+        "enum": [
+          "USD",
+          "EUR",
+          "GBP",
+          "CHF",
+          "JPY",
+          "AUD",
+          "CAD",
+          "DKK",
+          "NZD",
+          "NOK",
+          "ISK",
+          "SGD",
+          "PLN",
+          "SEK",
+          "CZK",
+          "HUF",
+          "SAR",
+          "THB",
+          "TWD",
+          "ZAR",
+          "MXN",
+          "KRW",
+          "SKK",
+          "TRY",
+          "HKD",
+          "IDR",
+          "INR",
+          "MYR",
+          "PHP",
+          "CNY",
+          "RMB"
+        ],
+        "type": "string"
+      },
+      "SwapRate": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SwapRateTypes"
+              }
+            ]
+          },
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SwapCurrencyTypes"
+              }
+            ]
+          },
+          "Bid": {
+            "type": "number",
+            "format": "double"
+          },
+          "Ask": {
+            "type": "number",
+            "format": "double"
+          },
+          "Mid": {
+            "type": "number",
+            "format": "double"
+          },
+          "Spread": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SwapRateExtended": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "DateTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "SwapType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Tenor": {
+            "type": "string",
+            "nullable": true
+          },
+          "Bid": {
+            "type": "number",
+            "format": "double"
+          },
+          "Ask": {
+            "type": "number",
+            "format": "double"
+          },
+          "Mid": {
+            "type": "number",
+            "format": "double"
+          },
+          "Spread": {
+            "type": "number",
+            "format": "double"
+          },
+          "FloatingReferenceRate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RateTypes": {
+        "enum": [
+          "FederalFunds",
+          "Libor1Month",
+          "Libor2Month",
+          "Libor3Month",
+          "Libor4Month",
+          "Libor5Month",
+          "Libor6Month",
+          "Libor7Month",
+          "Libor8Month",
+          "Libor9Month",
+          "Libor10Month",
+          "Libor11Month",
+          "Libor1Year",
+          "Libor2Week",
+          "Libor1Week",
+          "LiborOvernite",
+          "FederalFundsTargetRate",
+          "CommercialPaperNonFinancial1Month",
+          "CommercialPaperNonFinancial2Month",
+          "CommercialPaperNonFinancial3Month",
+          "HistoricalCommercialPaperNonFinancial1Month",
+          "HistoricalCommercialPaperNonFinancial3Month",
+          "HistoricalCommercialPaperNonFinancial6Month",
+          "BankersAcceptance3Month",
+          "BankersAcceptance6Month",
+          "CD1Month",
+          "CD3Month",
+          "CD6Month",
+          "EuroDollarDeposits1Month",
+          "EuroDollarDeposits3Month",
+          "EuroDollarDeposits6Month",
+          "Prime",
+          "DiscountWindowBorrowing",
+          "DiscountWindowPrimaryCredit",
+          "TBillAuctionAverage3Month",
+          "TBillAuctionAverage6Month",
+          "TBillAuctionAverage1Year",
+          "TBillAuctionAverage4Week",
+          "TBillAuctionAverage13Week",
+          "TBillAuctionAverage26Week",
+          "TBillAuctionAverage52Week",
+          "TBillSecondaryMarket3Month",
+          "TBillSecondaryMarket6Month",
+          "TBillSecondaryMarket1Year",
+          "TBillSecondaryMarket4Week",
+          "TreasuryConstant1Month",
+          "TreasuryConstant3Month",
+          "TreasuryConstant6Month",
+          "TreasuryConstant1Year",
+          "TreasuryConstant2Year",
+          "TreasuryConstant3Year",
+          "TreasuryConstant5Year",
+          "TreasuryConstant7Year",
+          "TreasuryConstant10Year",
+          "TreasuryConstant20Year",
+          "TreasuryConstant20YearHistorical",
+          "TreasuryConstant30Year",
+          "TreasuryConstant10YearComposite",
+          "CommercialPaperFinancial1Month",
+          "CommercialPaperFinancial2Month",
+          "CommercialPaperFinancial3Month",
+          "HistoricalCommercialPaperFinancial1Month",
+          "HistoricalCommercialPaperFinancial3Month",
+          "HistoricalCommercialPaperFinancial6Month",
+          "CommercialPaperFinancial15Day",
+          "CorporateBondsMoodysSeasonedAaa",
+          "CorporateBondsMoodysSeasonedBaa",
+          "CorporateBondsAUtility",
+          "InterestRateSwapsOvernight",
+          "InterestRateSwaps1Week",
+          "InterestRateSwaps2Week",
+          "StateAndLocalBonds",
+          "ConventionalMortgages",
+          "InterestRateSwaps8Month",
+          "InterestRateSwaps9Month",
+          "InterestRateSwaps10Month",
+          "InterestRateSwaps11Month",
+          "TreasuryLongTermAverageAverage",
+          "TreasuryLongTermAverageInflationIndexed",
+          "TreasuryLongTermComposite",
+          "InterestRateSwaps2Month",
+          "InterestRateSwaps4Month",
+          "InterestRateSwaps5Month",
+          "InterestRateSwaps7Month",
+          "InterestRateSwaps6Month",
+          "InterestRateSwaps3Month",
+          "InterestRateSwaps1Month",
+          "InterestRateSwaps1Year",
+          "InterestRateSwaps2Year",
+          "InterestRateSwaps3Year",
+          "InterestRateSwaps4Year",
+          "InterestRateSwaps5Year",
+          "InterestRateSwaps7Year",
+          "InterestRateSwaps10Year",
+          "InterestRateSwaps20Year",
+          "InterestRateSwaps30Year",
+          "InterestRateSwaps6Year",
+          "TreasuryInflationProtectedSecuritiesYield5Year",
+          "TreasuryInflationProtectedSecuritiesYield7Year",
+          "TreasuryInflationProtectedSecuritiesYield10Year",
+          "TreasuryInflationProtectedSecuritiesYield20Year",
+          "TreasuryInflationProtectedSecuritiesYield30Year",
+          "InterestRateSwapSpread2Year",
+          "InterestRateSwapSpread3Year",
+          "InterestRateSwapSpread5Year",
+          "InterestRateSwapSpread10Year",
+          "InterestRateSwapSpread30Year",
+          "InterestRateSwapSpread1Year",
+          "InterestRateSwapSpread7Year",
+          "REIBOROvernight",
+          "REIBOR1Week",
+          "REIBOR2Week",
+          "REIBOR1Month",
+          "REIBOR2Month",
+          "REIBOR3Month",
+          "REIBOR6Month",
+          "REIBOR9Month",
+          "REIBOR1Year",
+          "REIBIDOvernight",
+          "OIBORTomorrowNext",
+          "OIBOR1Week",
+          "OIBOR2Week",
+          "OIBOR1Month",
+          "OIBOR2Month",
+          "OIBOR3Month",
+          "OIBOR4Month",
+          "OIBOR5Month",
+          "OIBOR6Month",
+          "OIBOR9Month",
+          "OIBOR1Year",
+          "OIBORSpotNext",
+          "REIBID1Week",
+          "REIBID2Week",
+          "REIBID1Month",
+          "REIBID2Month",
+          "REIBID3Month",
+          "REIBID6Month",
+          "REIBID9Month",
+          "REIBID1Year",
+          "STIBOR1Week",
+          "STIBOR1Month",
+          "STIBOR2Month",
+          "STIBOR3Month",
+          "STIBOR6Month",
+          "STIBOR9Month",
+          "STIBOR1Year",
+          "STIBORTomorrowNext",
+          "AIDIBOR1Month",
+          "AIDIBOR3Month",
+          "AIDIBOR6Month",
+          "AIDIBOR1Year",
+          "AIDIBOR1Week",
+          "AIDIBOR2Month",
+          "AIDIBOROvernight",
+          "SOFR",
+          "SIBORTomorrowNext",
+          "SIBOR1Week",
+          "SIBOR1Month",
+          "SIBOR2Month",
+          "SIBOR3Month",
+          "SIBOR6Month",
+          "SIBOR9Month",
+          "SIBOR1Year",
+          "SIBOROvernight",
+          "SIBORSORA",
+          "SIBOROvernightRepo",
+          "RIGIBOROvernight",
+          "RIGIBOR1Month",
+          "RIGIBOR3Month",
+          "RIGIBOR6Month",
+          "RIGIBOR1Year",
+          "RIGIBIDOvernight",
+          "WIBOROvernight",
+          "WIBOR1Week",
+          "WIBOR2Week",
+          "WIBOR1Month",
+          "WIBOR3Month",
+          "WIBOR4Month",
+          "WIBOR6Month",
+          "WIBOR9Month",
+          "WIBOR1Year",
+          "WIBORTomorrowNext",
+          "CIBOR1Month",
+          "CIBOR2Month",
+          "CIBOR3Month",
+          "CIBOR4Month",
+          "CIBOR5Month",
+          "CIBOR6Month",
+          "CIBOR9Month",
+          "CIBOR1Year",
+          "CIBOR7Month",
+          "CIBOR8Month",
+          "CIBOR10Month",
+          "CIBOR11Month",
+          "CIBOR1Week",
+          "CIBOR2Week",
+          "EURIBOR1Week",
+          "EURIBOR2Week",
+          "EURIBOR3Week",
+          "EURIBOR1Month",
+          "EURIBOR2Month",
+          "EURIBOR3Month",
+          "EURIBOR4Month",
+          "EURIBOR5Month",
+          "EURIBOR6Month",
+          "EURIBOR7Month",
+          "EURIBOR8Month",
+          "EURIBOR9Month",
+          "EURIBOR10Month",
+          "EURIBOR11Month",
+          "EURIBOR1Year",
+          "EleventhDistrictCOFI",
+          "FNMA30YearRequiredNetYield10Days",
+          "FNMA30YearRequiredNetYield30Days",
+          "FNMA30YearRequiredNetYield60Days",
+          "FNMA30YearRequiredNetYield90Days",
+          "FNMA15YearRequiredNetYield10Days",
+          "FNMA15YearRequiredNetYield30Days",
+          "FNMA15YearRequiredNetYield60Days",
+          "FNMA15YearRequiredNetYield90Days",
+          "FNMA7YearRequiredNetYield10Days",
+          "FNMA7YearRequiredNetYield30Days",
+          "FNMA7YearRequiredNetYield60Days",
+          "FNMA7YearRequiredNetYield90Days",
+          "FNMA5YearRequiredNetYield10Days",
+          "FHLMC1YearARM",
+          "FNMA5YearRequiredNetYield30Days",
+          "FNMA5YearRequiredNetYield60Days",
+          "FNMA5YearRequiredNetYield90Days",
+          "FNMA20YearRequiredNetYield10Days",
+          "CETES28",
+          "CETES91",
+          "TIIE28",
+          "TIIE91",
+          "BPA",
+          "WIFR",
+          "FNMA20YearRequiredNetYield30Days",
+          "FNMA20YearRequiredNetYield60Days",
+          "FNMA20YearRequiredNetYield90Days",
+          "TEDSpread",
+          "CanadianOvernightTargetRate",
+          "CanadianOvernightRate",
+          "CanadianBankRate",
+          "CanadianOvernightRepoRate",
+          "CanadianOperatingBandHigh",
+          "CanadianOperatingBandLow",
+          "CanadianLVTSSettlementBalancesTarget",
+          "CanadianLVTSSettlementBalancesActual",
+          "CanadianBankersAcceptances1Month",
+          "CanadianBankersAcceptances3Month",
+          "CanadianPrimeCorporatePaperRate1Month",
+          "CanadianPrimeCorporatePaperRate2Month",
+          "CanadianPrimeCorporatePaperRate3Month",
+          "CanadianPrimeBusiness",
+          "CanadianConventionalMortgage1Year",
+          "CanadianConventionalMortgage3Year",
+          "CanadianConventionalMortgage5Year",
+          "CanadianGuaranteedInvestmentCertificates1Year",
+          "CanadianGuaranteedInvestmentCertificates3Year",
+          "CanadianGuaranteedInvestmentCertificates5Year",
+          "Canadian5YearPersonalFixedTerm",
+          "Canadian1MonthTreasuryBill",
+          "Canadian3MonthTreasuryBill",
+          "Canadian6MonthTreasuryBill",
+          "Canadian1YearTreasuryBill",
+          "Canadian2YearBenchmarkBondYield",
+          "Canadian3YearBenchmarkBondYield",
+          "Canadian5YearBenchmarkBondYield",
+          "Canadian7YearBenchmarkBondYield",
+          "Canadian10YearBenchmarkBondYield",
+          "Canadian30YearBenchmarkBondYield",
+          "IRCSection7520InterestRate",
+          "ESTR1WeekAverage",
+          "ESTR1MonthAverage",
+          "ESTR3MonthAverage",
+          "ESTR6MonthAverage",
+          "ESTR12MonthAverage",
+          "SELIC",
+          "RBCRoyalBankUSBase",
+          "RBCRoyalBankPrime",
+          "TennesseeFormulaRate",
+          "TennesseeEffectiveRate",
+          "KansasUsuryRate",
+          "KansasCodeMortgageRate",
+          "MissouriMarketRate",
+          "ConnecticutDepositRateIndex",
+          "TBills6MonthInEffect6MonthsPriorToTheTransaction",
+          "TennesseeMaximumEffectiveRateOfInterest",
+          "MOSPRIMEOvernight",
+          "MOSPRIME1Week",
+          "MOSPRIME2Week",
+          "MOSPRIME1Month",
+          "MOSPRIME2Month",
+          "MOSPRIME3Month",
+          "MOSPRIME6Month",
+          "SARON1WeekAverage",
+          "SARON1MonthAverage",
+          "SARON2MonthAverage",
+          "SARON3MonthAverage",
+          "SARON6MonthAverage",
+          "SARON9MonthAverage",
+          "SARON12MonthAverage",
+          "SWESTR",
+          "SORA",
+          "HONIA",
+          "APOR1Year",
+          "APOR3Year",
+          "APOR5Year",
+          "APOR7Year",
+          "APOR10Year",
+          "APOR15Year",
+          "APOR20Year",
+          "APOR25Year",
+          "APOR30Year",
+          "SOFRTerm1Month",
+          "SOFRTerm3Month",
+          "SOFRTerm6Month",
+          "SOFRTerm12Month",
+          "FederalDiscountPrimaryBoston",
+          "FederalDiscountPrimaryNewYork",
+          "FederalDiscountPrimaryPhiladelphia",
+          "FederalDiscountPrimaryCleveland",
+          "FederalDiscountPrimaryRichmond",
+          "FederalDiscountPrimaryAtlanta",
+          "FederalDiscountPrimaryChicago",
+          "FederalDiscountPrimaryStLouis",
+          "FederalDiscountPrimaryMinneapolis",
+          "FederalDiscountPrimaryKansasCity",
+          "FederalDiscountPrimaryDallas",
+          "FederalDiscountPrimarySanFrancisco",
+          "FederalDiscountSecondaryBoston",
+          "FederalDiscountSecondaryNewYork",
+          "FederalDiscountSecondaryPhiladelphia",
+          "FederalDiscountSecondaryCleveland",
+          "FederalDiscountSecondaryRichmond",
+          "FederalDiscountSecondaryAtlanta",
+          "FederalDiscountSecondaryChicago",
+          "FederalDiscountSecondaryStLouis",
+          "FederalDiscountSecondaryMinneapolis",
+          "FederalDiscountSecondaryKansasCity",
+          "FederalDiscountSecondaryDallas",
+          "FederalDiscountSecondarySanFrancisco",
+          "MuniComposite2YearA",
+          "MuniComposite2YearAA",
+          "MuniComposite2YearAAA",
+          "MuniComposite5YearA",
+          "MuniComposite5YearAA",
+          "MuniComposite5YearAAA",
+          "MuniComposite10YearA",
+          "MuniComposite10YearAA",
+          "MuniComposite10YearAAA",
+          "MuniComposite20YearA",
+          "MuniComposite20YearAA",
+          "MuniComposite20YearAAA",
+          "TreasuryComposite3Month",
+          "TreasuryComposite6Month",
+          "TreasuryComposite2Year",
+          "TreasuryComposite3Year",
+          "TreasuryComposite5Year",
+          "TreasuryComposite10Year",
+          "TreasuryComposite30Year",
+          "NationalAverageContractMortgageRate",
+          "FreddieMacSurvey30YearFixed",
+          "FreddieMacSurvey15YearFixed",
+          "FreddieMacSurvey5YearARM",
+          "FreddieMacSurvey1YearARM",
+          "FreddieMacSurvey30YearFixedPoints",
+          "FreddieMacSurvey15YearFixedPoints",
+          "FreddieMacSurvey5YearARMPoints",
+          "FreddieMacSurvey1YearARMPoints",
+          "LIBORSwaps2Year",
+          "LIBORSwaps3Year",
+          "LIBORSwaps5Year",
+          "LIBORSwaps10Year",
+          "LIBORSwaps20Year",
+          "LIBORSwaps30Year",
+          "BankOfEnglandBaseRate",
+          "EuropeanCentralBankLending",
+          "EuropeanCentralBankRefinancing",
+          "EuropeanCentralBankDeposit",
+          "EuroOverNightIndexAverage",
+          "CorporateBondCompositeMoodys5YearBBB",
+          "NorwegianOvernightWeightedAverage",
+          "HIBOROvernight",
+          "HIBOR1Week",
+          "HIBOR2Week",
+          "HIBOR1Month",
+          "HIBOR2Month",
+          "HIBOR3Month",
+          "HIBOR4Month",
+          "HIBOR5Month",
+          "HIBOR6Month",
+          "HIBOR7Month",
+          "HIBOR8Month",
+          "HIBOR9Month",
+          "HIBOR10Month",
+          "HIBOR11Month",
+          "HIBOR1Year",
+          "SOFIBOROvernight",
+          "SOFIBOR1Week",
+          "SOFIBOR1Month",
+          "SOFIBOR2Month",
+          "SOFIBOR3Month",
+          "CDOR1Month",
+          "CDOR2Month",
+          "CDOR3Month",
+          "CDOR6Month",
+          "CDOR12Month",
+          "BUBOROvernight",
+          "BUBOR1Week",
+          "BUBOR2Week",
+          "BUBOR1Month",
+          "BUBOR2Month",
+          "BUBOR3Month",
+          "BUBOR4Month",
+          "BUBOR5Month",
+          "BUBOR6Month",
+          "BUBOR7Month",
+          "BUBOR8Month",
+          "BUBOR9Month",
+          "BUBOR10Month",
+          "BUBOR11Month",
+          "BUBOR1Year",
+          "BKBM1Month",
+          "BKBM2Month",
+          "BKBM3Month",
+          "BKBM4Month",
+          "BKBM5Month",
+          "BKBM6Month",
+          "MIBOROvernight",
+          "MIBOR2Week",
+          "MIBOR1Month",
+          "MIBOR3Month",
+          "MIBIDOvernight",
+          "MIBID2Week",
+          "MIBID1Month",
+          "MIBID3Month",
+          "KORIBOR1Week",
+          "KORIBOR2Week",
+          "KORIBOR1Month",
+          "KORIBOR2Month",
+          "KORIBOR3Month",
+          "KORIBOR4Month",
+          "KORIBOR5Month",
+          "KORIBOR6Month",
+          "KORIBOR9Month",
+          "KORIBOR1Year",
+          "PRIBOROvernight",
+          "PRIBOR1Week",
+          "PRIBOR2Week",
+          "PRIBOR1Month",
+          "PRIBOR2Month",
+          "PRIBOR3Month",
+          "PRIBOR6Month",
+          "PRIBOR9Month",
+          "PRIBOR1Year",
+          "SABOROvernight",
+          "TAIBOROvernight",
+          "TURKIBOROvernight",
+          "CHILIBOROvernight",
+          "MEXIBOR1Month",
+          "MEXIBOR3Month",
+          "MEXIBOR6Month",
+          "MEXIBOR9Month",
+          "MEXIBOR1Year",
+          "TELBOR1Month",
+          "TELBOR2Month",
+          "TELBOR3Month",
+          "TELBOR6Month",
+          "TELBOR9Month",
+          "TELBOR1Year",
+          "TELBOROvernight",
+          "TELBOR1Week",
+          "CHIBOROvernight",
+          "CHIBOR1Week",
+          "CHIBOR2Week",
+          "CHIBOR1Month",
+          "CHIBOR2Month",
+          "CHIBOR3Month",
+          "CHIBOR3Week",
+          "CHIBOR4Month",
+          "CHIBOR6Month",
+          "CHIBOR9Month",
+          "SHIBOROvernight",
+          "SHIBOR1Week",
+          "SHIBOR2Week",
+          "SHIBOR1Month",
+          "SHIBOR3Month",
+          "SHIBOR6Month",
+          "SHIBOR9Month",
+          "SHIBOR1Year",
+          "CHIBOR1Year",
+          "JIBOR1Month",
+          "JIBOR3Month",
+          "JIBOR6Month",
+          "JIBOROvernight",
+          "JIBOR1Week",
+          "JIBOR1Year",
+          "KLIBOR1Month",
+          "KLIBOR2Month",
+          "KLIBOR3Month",
+          "KLIBOR6Month",
+          "KLIBOR9Month",
+          "KLIBOR1Year",
+          "KLIBOROvernight",
+          "KLIBOR1Week",
+          "TIBOR1Week",
+          "TIBOR1Month",
+          "TIBOR2Month",
+          "TIBOR3Month",
+          "TIBOR6Month",
+          "TIBOR9Month",
+          "TIBOR1Year",
+          "TONAR",
+          "ESTR",
+          "SARON",
+          "PHIBOROvernight",
+          "PHIBOR1Month",
+          "PHIBOR2Month",
+          "PHIBOR3Month",
+          "PHIBOR6Month",
+          "PHIBOR1Year",
+          "BKIBOR1Month",
+          "BKIBOR2Month",
+          "BKIBOR3Month",
+          "BKIBOR6Month",
+          "BKIBOR9Month",
+          "BKIBOR1Year",
+          "BKIBOROvernight",
+          "BKIBOR1Week",
+          "VNIBOROvernight",
+          "VNIBOR1Month",
+          "VNIBOR1Week",
+          "VNIBOR2Week",
+          "VNIBOR2Month",
+          "VNIBOR3Month",
+          "VNIBOR6Month",
+          "VNIBOR1Year",
+          "PRIBIDOvernight",
+          "PRIBID1Week",
+          "PRIBID2Week",
+          "PRIBID1Month",
+          "PRIBID2Month",
+          "PRIBID3Month",
+          "PRIBID6Month",
+          "PRIBID9Month",
+          "PRIBID1Year",
+          "KAIBOR1Week",
+          "KAIBOR2Week",
+          "KAIBOR1Month",
+          "KAIBOR2Month",
+          "KAIBOR3Month",
+          "KAIBID1Week",
+          "KAIBID2Week",
+          "KAIBID1Month",
+          "KAIBID2Month",
+          "KAIBID3Month",
+          "KIBOR1Week",
+          "KIBOR2Week",
+          "KIBOR1Month",
+          "KIBOR3Month",
+          "KIBOR6Month",
+          "KIBOR9Month",
+          "KIBOR1Year",
+          "KIBOR2Year",
+          "KIBOR3Year",
+          "KIBID1Week",
+          "KIBID2Week",
+          "KIBID1Month",
+          "KIBID3Month",
+          "KIBID6Month",
+          "KIBID9Month",
+          "KIBID1Year",
+          "KIBID2Year",
+          "KIBID3Year",
+          "MOSIBOROvernight",
+          "MOSIBOR1Week",
+          "MOSIBOR1Month",
+          "MOSIBOR3Month",
+          "MOSIBOR6Month",
+          "MOSIBOR1Year",
+          "TALIBIDOvernight",
+          "TALIBID1Week",
+          "TALIBID1Month",
+          "TALIBID2Month",
+          "MOSIBIDOvernight",
+          "MOSIBID1Week",
+          "MOSIBID1Month",
+          "MOSIBID3Month",
+          "MOSIBID6Month",
+          "MOSIBID1Year",
+          "TALIBID3Month",
+          "TALIBID6Month",
+          "TALIBID9Month",
+          "TALIBID1Year",
+          "BRAZIBOROvernight",
+          "BRAZIBOR1Year",
+          "TALIBOROvernight",
+          "TALIBOR1Week",
+          "TALIBOR1Month",
+          "TALIBOR2Month",
+          "TALIBOR3Month",
+          "TALIBOR6Month",
+          "TALIBOR9Month",
+          "TALIBOR1Year",
+          "TRLIBOROvernight",
+          "TRLIBOR1Week",
+          "TRLIBOR1Month",
+          "TRLIBOR2Month",
+          "TRLIBOR3Month",
+          "TRLIBOR6Month",
+          "TRLIBOR9Month",
+          "TRLIBOR1Year",
+          "AONIA",
+          "SOFR1MonthAverage",
+          "TRLIBIDOvernight",
+          "TRLIBID1Week",
+          "TRLIBID1Month",
+          "TRLIBID2Month",
+          "TRLIBID3Month",
+          "TRLIBID6Month",
+          "TRLIBID9Month",
+          "TRLIBID1Year",
+          "SOFR3MonthAverage",
+          "SOFR6MonthAverage",
+          "JIBAR1Month",
+          "JIBAR3Month",
+          "JIBAR6Month",
+          "JIBAR9Month",
+          "JIBAR1Year",
+          "TONAR1MonthAverage",
+          "TONAR3MonthAverage",
+          "TONAR6MonthAverage",
+          "TAIBOR1Week",
+          "TAIBOR2Week",
+          "TAIBOR1Month",
+          "TAIBOR2Month",
+          "TAIBOR3Month",
+          "TAIBOR6Month",
+          "TAIBOR9Month",
+          "TAIBOR1Year",
+          "BRIBOROvernight",
+          "BRIBOR1Week",
+          "BRIBOR2Week",
+          "BRIBOR1Month",
+          "BRIBOR2Month",
+          "BRIBOR3Month",
+          "BRIBOR6Month",
+          "BRIBOR9Month",
+          "BRIBOR1Year",
+          "BRIBIDOvernight",
+          "BRIBID1Week",
+          "BRIBID2Week",
+          "BRIBID1Month",
+          "BRIBID2Month",
+          "BRIBID3Month",
+          "BRIBID6Month",
+          "BRIBID9Month",
+          "BRIBID1Year",
+          "SONIA",
+          "AustralianBankBills1Month",
+          "AustralianBankBills2Month",
+          "AustralianBankBills3Month",
+          "AustralianBankBills4Month",
+          "AustralianBankBills5Month",
+          "AustralianBankBills6Month",
+          "AustralianBankBills9Month",
+          "AustralianBankBills1Year",
+          "BBSW1Month",
+          "BBSW2Month",
+          "NationalOvernightAverage30YearFixed",
+          "NationalOvernightAverage15YearFixed",
+          "NationalOvernightAverage5YearAdjustable",
+          "BBSW3Month",
+          "BBSW4Month",
+          "BBSW5Month",
+          "BBSW6Month",
+          "COLIBOR6Month",
+          "BAIBOROvernight",
+          "BAIBOR1Week",
+          "BAIBOR1Month",
+          "BAIBOR3Month",
+          "BAIBOR6Month",
+          "BAIBOR9Month",
+          "BAIBOR1Year",
+          "BAIBOR18Month",
+          "COLIBOROvernight",
+          "COLIBOR1Month",
+          "VILIBOROvernight",
+          "VILIBOR1Week",
+          "VILIBOR2Week",
+          "VILIBOR1Month",
+          "VILIBOR3Month",
+          "VILIBOR6Month",
+          "VILIBOR1Year",
+          "COLIBOR3Month",
+          "Invalid",
+          "Dummy",
+          "CommercialPaperNonFinancial1MonthAverage",
+          "TBillSecondaryMarket3MonthAverage",
+          "TreasuryConstant1YearAverage",
+          "TreasuryConstant2YearAverage",
+          "TreasuryConstant3YearAverage",
+          "TreasuryConstant5YearAverage",
+          "CommercialPaperFinancial1MonthAverage"
+        ],
+        "type": "string"
+      },
+      "InterestRate": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/RateTypes"
+              }
+            ]
+          },
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "Value": {
+            "type": "number",
+            "format": "double"
+          },
+          "Price": {
+            "type": "string",
+            "nullable": true
+          },
+          "Spread": {
+            "type": "number",
+            "format": "double"
+          },
+          "Change": {
+            "type": "number",
+            "format": "double"
+          },
+          "Text": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/RateDescription"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SwaptionTypes": {
+        "enum": [
+          "EightMonth",
+          "NineMonth",
+          "TenMonth",
+          "ElevenMonth",
+          "EighteenMonth",
+          "TwoMonth",
+          "FourMonth",
+          "FiveMonth",
+          "SevenMonth",
+          "SixMonth",
+          "ThreeMonth",
+          "OneMonth",
+          "OneYear",
+          "TwoYear",
+          "ThreeYear",
+          "FourYear",
+          "FiveYear",
+          "SevenYear",
+          "TenYear",
+          "TwentyYear",
+          "ThirtyYear",
+          "SixYear",
+          "TwelveYear",
+          "FifteenYear",
+          "TwentyFiveYear",
+          "EightYear",
+          "NineYear"
+        ],
+        "type": "string"
+      },
+      "Swaption": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "FirstType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SwaptionTypes"
+              }
+            ]
+          },
+          "SecondType": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SwaptionTypes"
+              }
+            ]
+          },
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SwapCurrencyTypes"
+              }
+            ]
+          },
+          "Last": {
+            "type": "number",
+            "format": "double"
+          },
+          "Open": {
+            "type": "number",
+            "format": "double"
+          },
+          "High": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Close": {
+            "type": "number",
+            "format": "double"
+          },
+          "Bid": {
+            "type": "number",
+            "format": "double"
+          },
+          "Ask": {
+            "type": "number",
+            "format": "double"
+          },
+          "Change": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LIBORTypes": {
+        "enum": [
+          "OneMonth",
+          "TwoMonths",
+          "ThreeMonths",
+          "FourMonths",
+          "FiveMonths",
+          "SixMonths",
+          "SevenMonths",
+          "EightMonths",
+          "NineMonths",
+          "TenMonths",
+          "ElevenMonths",
+          "OneYear",
+          "TwoWeeks",
+          "OneWeek",
+          "Overnite"
+        ],
+        "type": "string"
+      },
+      "LIBORCurrencyTypes": {
+        "enum": [
+          "USD",
+          "EUR",
+          "GBP",
+          "CHF",
+          "JPY",
+          "AUD",
+          "CAD",
+          "DKK",
+          "NZD",
+          "NOK",
+          "ISK",
+          "SGD",
+          "PLN",
+          "SEK",
+          "HKD",
+          "BGN",
+          "HUF",
+          "CLP",
+          "INR",
+          "CZK",
+          "KRW",
+          "TRL",
+          "MXN",
+          "ILS",
+          "CNY",
+          "MYR",
+          "PHP",
+          "THB",
+          "VND",
+          "IDR",
+          "TWD",
+          "ZAR",
+          "TRY",
+          "KZT",
+          "PKR",
+          "RUB",
+          "BRL",
+          "SKK",
+          "ARS",
+          "LVL",
+          "COP",
+          "AED",
+          "JOD",
+          "EEK",
+          "LTL"
+        ],
+        "type": "string"
+      },
+      "LIBORRate": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LIBORTypes"
+              }
+            ]
+          },
+          "Currency": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LIBORCurrencyTypes"
+              }
+            ]
+          },
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "Value": {
+            "type": "number",
+            "format": "double"
+          },
+          "Text": {
+            "type": "string",
+            "nullable": true
+          },
+          "Source": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/RateDescription"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ForwardRateAgreement": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "FirstRate": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LIBORRate"
+              }
+            ],
+            "nullable": true
+          },
+          "SecondRate": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LIBORRate"
+              }
+            ],
+            "nullable": true
+          },
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "SpotDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "FirstFixingDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "SecondFixingDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Value": {
+            "type": "number",
+            "format": "double"
+          },
+          "Text": {
+            "type": "string",
+            "nullable": true
+          },
+          "Source": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/RateDescription"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "apiKey",
+        "description": "Token for your account.",
+        "name": "_token",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
