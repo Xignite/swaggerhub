@@ -1,0 +1,648 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "XigniteMunicipalBondMaster",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://municipalbondmaster.xignite.com"
+    }
+  ],
+  "paths": {
+    "/xMunicipalBondMaster/GetBondDescription.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMunicipalBondMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BondDescription"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BondDescription"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BondDescription"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BondDescription"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BondDescription"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMunicipalBondMaster/GetBondDataPoints.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMunicipalBondMaster"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "DataPointTypes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GenericDataPoints"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GenericDataPoints"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GenericDataPoints"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GenericDataPoints"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GenericDataPoints"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMunicipalBondMaster/ListBondDataPoints.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMunicipalBondMaster"
+        ],
+        "parameters": [
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataPointsList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataPointsList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataPointsList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataPointsList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataPointsList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xMunicipalBondMaster/ListIssues.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteMunicipalBondMaster"
+        ],
+        "parameters": [
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "NextPage",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": 0
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IssueList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IssueList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IssueList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IssueList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/IssueList"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BondDescription": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "IssueIdentifier": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "IssueDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "IssuerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "IssuerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "CouponRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "MaturityDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "MaturityAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "DatedDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Denomination": {
+            "type": "number",
+            "format": "double"
+          },
+          "OfferingPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "Series": {
+            "type": "string",
+            "nullable": true
+          },
+          "State": {
+            "type": "string",
+            "nullable": true
+          },
+          "DebtType": {
+            "type": "string",
+            "nullable": true
+          },
+          "BondType": {
+            "type": "string",
+            "nullable": true
+          },
+          "CouponType": {
+            "type": "string",
+            "nullable": true
+          },
+          "SecurityCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "FederalTaxStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "StateTaxStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "BondInsurer": {
+            "type": "string",
+            "nullable": true
+          },
+          "UpdatedDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsActive": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InstrumentIdentifierBrief": {
+        "type": "object",
+        "properties": {
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InstrumentIdentifier": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+          }
+        ],
+        "properties": {
+          "CompanyIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "ShortName": {
+            "type": "string",
+            "nullable": true
+          },
+          "IssuerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "IssuerDomicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "CFICode": {
+            "type": "string",
+            "nullable": true
+          },
+          "OriginalIssuerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "OriginalCompanyIdentifier": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DataValue": {
+        "type": "object",
+        "properties": {
+          "OutCome": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "DataPoint": {
+            "type": "string",
+            "nullable": true
+          },
+          "Value": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastUpdated": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DataSets": {
+        "type": "object",
+        "properties": {
+          "DataValues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataValue"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GenericDataPoints": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "InstrumentIdentifier": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/InstrumentIdentifier"
+              }
+            ],
+            "nullable": true
+          },
+          "DataSets": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/DataSets"
+              }
+            ],
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DataPoint": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DataPointsList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "DataPoints": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataPoint"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IssueDescription": {
+        "type": "object",
+        "properties": {
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "IssuerName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IssueList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IssueDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IssueDescription"
+            },
+            "nullable": true
+          },
+          "NextPage": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "apiKey",
+        "description": "Token for your account.",
+        "name": "_token",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
