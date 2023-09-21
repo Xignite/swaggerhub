@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalMetals",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "servers": [
     {
