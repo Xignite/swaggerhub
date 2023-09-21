@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteMunicipalBondMaster",
-    "version": "1.0.6"
+    "version": "1.0.7"
   },
   "servers": [
     {
