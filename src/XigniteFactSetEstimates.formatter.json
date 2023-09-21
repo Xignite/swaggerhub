@@ -1,0 +1,456 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "XigniteFactSetEstimates",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://factsetestimates.xignite.com"
+    }
+  ],
+  "paths": {
+    "/xFactSetEstimates/ListExchanges.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteFactSetEstimates"
+        ],
+        "parameters": [
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xFactSetEstimates/ListActuals.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteFactSetEstimates"
+        ],
+        "parameters": [
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActualsDescriptionList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActualsDescriptionList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActualsDescriptionList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActualsDescriptionList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActualsDescriptionList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xFactSetEstimates/ListEstimates.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteFactSetEstimates"
+        ],
+        "parameters": [
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstimateDescriptionList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstimateDescriptionList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstimateDescriptionList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstimateDescriptionList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstimateDescriptionList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xFactSetEstimates/ListCompanies.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteFactSetEstimates"
+        ],
+        "parameters": [
+          {
+            "name": "MarketIdentificationCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndSymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompanyList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompanyList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompanyList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompanyList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompanyList"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ExchangeDescription": {
+        "type": "object",
+        "properties": {
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "Region": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExchangeList": {
+        "type": "object",
+        "properties": {
+          "ExchangeDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExchangeDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ActualsDescription": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "ValueType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Unit": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "Source": {
+            "type": "string",
+            "nullable": true
+          },
+          "DataGroup": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ActualsDescriptionList": {
+        "type": "object",
+        "properties": {
+          "ActualsDescription": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ActualsDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EstimateDescription": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "ValueType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Unit": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "Source": {
+            "type": "string",
+            "nullable": true
+          },
+          "DataGroup": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EstimateDescriptionList": {
+        "type": "object",
+        "properties": {
+          "EstimateDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EstimateDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Company": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "CIK": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "SEDOL": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "FactSetSecurityID": {
+            "type": "string",
+            "nullable": true
+          },
+          "FactSetIssuerID": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "PrimaryMarket": {
+            "type": "string",
+            "nullable": true
+          },
+          "PrimaryMarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Sector": {
+            "type": "string",
+            "nullable": true
+          },
+          "Industry": {
+            "type": "string",
+            "nullable": true
+          },
+          "StatementTemplate": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CompanyList": {
+        "type": "object",
+        "properties": {
+          "Companies": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Company"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "apiKey",
+        "description": "Token for your account.",
+        "name": "_token",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
