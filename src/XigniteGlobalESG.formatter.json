@@ -1,0 +1,2126 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "XigniteGlobalESG",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://globalesg.xignite.com"
+    }
+  ],
+  "paths": {
+    "/xGlobalESG/ListExchanges.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalESG"
+        ],
+        "parameters": [
+          {
+            "name": "Region",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalESG/ListSymbols.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalESG"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "DataPackage",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/SymbolList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalESG/ListCategories.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalESG"
+        ],
+        "parameters": [
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoryList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoryList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoryList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoryList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoryList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalESG/ListInvolvements.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalESG"
+        ],
+        "parameters": [
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvolvementList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvolvementList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvolvementList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvolvementList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvolvementList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalESG/GetESGScores.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalESG"
+        ],
+        "parameters": [
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierAsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ESGScores"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ESGScores"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ESGScores"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ESGScores"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ESGScores"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalESG/GetHistoricalESGScoresRange.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalESG"
+        ],
+        "parameters": [
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierAsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalESGScoresRange"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalESGScoresRange"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalESGScoresRange"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalESGScoresRange"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalESGScoresRange"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalESG/GetESGCategories.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalESG"
+        ],
+        "parameters": [
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierAsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ESGCategories"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ESGCategories"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ESGCategories"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ESGCategories"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ESGCategories"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalESG/GetHistoricalESGCategoriesRange.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalESG"
+        ],
+        "parameters": [
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierAsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalESGCategoriesRange"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalESGCategoriesRange"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalESGCategoriesRange"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalESGCategoriesRange"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalESGCategoriesRange"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalESG/GetTemperatureScores.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalESG"
+        ],
+        "parameters": [
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierAsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TemperatureScores"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TemperatureScores"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TemperatureScores"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TemperatureScores"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TemperatureScores"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalESG/GetEmissions.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalESG"
+        ],
+        "parameters": [
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierAsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Emissions"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Emissions"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Emissions"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Emissions"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Emissions"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalESG/GetGlobalCompactScores.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalESG"
+        ],
+        "parameters": [
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierAsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalCompactScores"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalCompactScores"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalCompactScores"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalCompactScores"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalCompactScores"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalESG/GetHistoricalGlobalCompactScoresRange.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalESG"
+        ],
+        "parameters": [
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierAsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Version",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalGlobalCompactScoresRange"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalGlobalCompactScoresRange"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalGlobalCompactScoresRange"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalGlobalCompactScoresRange"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalGlobalCompactScoresRange"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalESG/GetInvolvements.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalESG"
+        ],
+        "parameters": [
+          {
+            "name": "IdentifierType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdentifierAsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "InvolvementTypes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PercentThreshold",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Involvements"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Involvements"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Involvements"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Involvements"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Involvements"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalESG/ScreenByInvolvements.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalESG"
+        ],
+        "parameters": [
+          {
+            "name": "InvolvementTypes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Sector",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Industry",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Region",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PercentThreshold",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Involvement",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScreenByInvolvementsResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScreenByInvolvementsResult"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScreenByInvolvementsResult"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScreenByInvolvementsResult"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScreenByInvolvementsResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExchangeDescription": {
+        "type": "object",
+        "properties": {
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExchangeList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Region": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExchangeDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExchangeDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SymbolDescription": {
+        "type": "object",
+        "properties": {
+          "CompanyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompanyIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompanyDomicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompanyRegion": {
+            "type": "string",
+            "nullable": true
+          },
+          "SecurityName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SymbolList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "DataPackage": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "SymbolDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SymbolDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CategoryDescription": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "Subscore": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CategoryList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "CategoryDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CategoryDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvolvementDescription": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvolvementList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "InvolvementDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvolvementDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Security": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "InstrumentClass": {
+            "type": "string",
+            "nullable": true
+          },
+          "Industry": {
+            "type": "string",
+            "nullable": true
+          },
+          "Sector": {
+            "type": "string",
+            "nullable": true
+          },
+          "FIGI": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompositeFIGI": {
+            "type": "string",
+            "nullable": true
+          },
+          "SEDOL": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "string",
+            "nullable": true
+          },
+          "ISIN": {
+            "type": "string",
+            "nullable": true
+          },
+          "CUSIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "CIK": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ESGScore": {
+        "type": "object",
+        "properties": {
+          "AsOfDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "ESG": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Environmental": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Social": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Governance": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Version": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ESGScores": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "ESGScore": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ESGScore"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HistoricalESGScoresRange": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "ESGScores": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ESGScore"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Categories": {
+        "type": "object",
+        "properties": {
+          "AsOfDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Emissions": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "EnvironmentalStewardship": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "ResourceUse": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "EnvironmentalSolutions": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Waste": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Water": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "EnvironmentalManagement": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Diversity": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "OccupationalHealthAndSafety": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "TrainingAndDevelopment": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "ProductAccess": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "CommunityRelations": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "ProductQualityAndSafety": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "HumanRights": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "LabourRights": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Compensation": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "EmploymentQuality": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "BusinessEthics": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "CorporateGovernance": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Transparency": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "ForensicAccounting": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "CapitalStructure": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Version": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ESGCategories": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "Categories": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Categories"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HistoricalESGCategoriesRange": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "ESGCategories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Categories"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TemperatureScore": {
+        "type": "object",
+        "properties": {
+          "AsOfDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "NearTerm": {
+            "type": "string",
+            "nullable": true
+          },
+          "LongTerm": {
+            "type": "string",
+            "nullable": true
+          },
+          "Trend": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "Target": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "Scope3Reporting": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "InternationalEnergyAgencySector": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TemperatureScores": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "TemperatureScore": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TemperatureScore"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CompanyEmissions": {
+        "type": "object",
+        "properties": {
+          "AsOfDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Scope1Emissions": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Scope2Emissions": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Scope3Emissions": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "ReportDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "InternationalEnergyAgencySector": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Emissions": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "CompanyEmissions": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CompanyEmissions"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlobalCompactScore": {
+        "type": "object",
+        "properties": {
+          "AsOfDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "GlobalCompact": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "HumanRights": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "LabourRights": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Environment": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "AntiCorruption": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Version": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GlobalCompactScores": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "GlobalCompactScore": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/GlobalCompactScore"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HistoricalGlobalCompactScoresRange": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "GlobalCompactScores": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GlobalCompactScore"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Involved": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "Value": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "PercentThreshold": {
+            "type": "string",
+            "nullable": true
+          },
+          "AsOfDate": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Involvements": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IdentifierType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          },
+          "Involvement": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Involved"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CompanyDescription": {
+        "type": "object",
+        "properties": {
+          "CompanyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompanyIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompanyDomicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "CompanyRegion": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ScreenByInvolvementsResult": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Sector": {
+            "type": "string",
+            "nullable": true
+          },
+          "Industry": {
+            "type": "string",
+            "nullable": true
+          },
+          "Exchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "Region": {
+            "type": "string",
+            "nullable": true
+          },
+          "PercentThreshold": {
+            "type": "string",
+            "nullable": true
+          },
+          "Involvement": {
+            "type": "string",
+            "nullable": true
+          },
+          "Companies": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CompanyDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "apiKey",
+        "description": "Token for your account.",
+        "name": "_token",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
