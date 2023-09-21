@@ -1,0 +1,2981 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "XigniteGlobalCurrencies",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://globalcurrencies.xignite.com"
+    }
+  ],
+  "paths": {
+    "/xGlobalCurrencies/ListCurrencies.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Currencies"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Currencies"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Currencies"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Currencies"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/Currencies"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/ListActiveCurrencies.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Currencies"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Currencies"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Currencies"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Currencies"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/Currencies"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/ConvertRealTimeValue.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "From",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "To",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Amount",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateConversion"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateConversion"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateConversion"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateConversion"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateConversion"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/ConvertHistoricalValue.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "From",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "To",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Amount",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FixingTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateConversion"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateConversion"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateConversion"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateConversion"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateConversion"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetRealTimeRate.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rate"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rate"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rate"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rate"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rate"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetRealTimeRates.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Symbols",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Rate"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Rate"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Rate"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Rate"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Rate"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetAllRealTimeRates.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Symbols",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Rate"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Rate"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Rate"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Rate"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Rate"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetRealTimeRateTable.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Symbols",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PriceType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateTable"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateTable"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateTable"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateTable"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateTable"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/ListOfficialRates.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OfficialRates"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OfficialRates"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/OfficialRates"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/OfficialRates"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/OfficialRates"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetHistoricalRate.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FixingTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PriceType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternalHistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                    }
+                  ]
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternalHistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                    }
+                  ]
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternalHistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                    }
+                  ]
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternalHistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                    }
+                  ]
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternalHistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetLatestHistoricalRate.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FixingTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PriceType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternalHistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                    }
+                  ]
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternalHistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                    }
+                  ]
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternalHistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                    }
+                  ]
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternalHistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                    }
+                  ]
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternalHistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetHistoricalRates.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Symbols",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FixingTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PriceType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetLatestHistoricalRates.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Symbols",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FixingTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PriceType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetHistoricalRatesRange.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FixingTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PeriodType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PriceType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetHistoricalRatesRanges.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Symbols",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FixingTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PeriodType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PriceType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetBar.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PriceType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bar"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bar"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bar"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bar"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bar"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetBars.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PriceType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "TickPrecision",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "TickPeriods",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Bar"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Bar"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Bar"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Bar"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Bar"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetChartBars.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndTime",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PriceType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Precision",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Period",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyChartBars"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyChartBars"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyChartBars"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyChartBars"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyChartBars"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetOfficialHistoricalRate.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Country",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternalHistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                    }
+                  ]
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternalHistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                    }
+                  ]
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternalHistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                    }
+                  ]
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternalHistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                    }
+                  ]
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/HistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternalHistoricalRate"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetOfficialRate.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Country",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetOfficialRates.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Country",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Symbols",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetOfficialHistoricalRates.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Country",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Symbols",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AsOfDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetLondonHistoricalRatesRange.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/HistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternalHistoricalRate"
+                      },
+                      {
+                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalCurrencies/GetForwardRate.{formatter}": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "parameters": [
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRate"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRate"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRate"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRate"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRate"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Country": {
+        "type": "object",
+        "properties": {
+          "Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Currency": {
+        "type": "object",
+        "properties": {
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Plural": {
+            "type": "string",
+            "nullable": true
+          },
+          "Active": {
+            "type": "boolean"
+          },
+          "Digital": {
+            "type": "boolean"
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Countries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Country"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Currencies": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "CurrencyList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Currency"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RateConversion": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "FromCurrencySymbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "FromCurrencyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ToCurrencySymbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "ToCurrencyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "Time": {
+            "type": "string",
+            "nullable": true
+          },
+          "Amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "Result": {
+            "type": "number",
+            "format": "double"
+          },
+          "Rate": {
+            "type": "number",
+            "format": "double"
+          },
+          "Source": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Rate": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "BaseCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "QuoteCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "Time": {
+            "type": "string",
+            "nullable": true
+          },
+          "QuoteType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Bid": {
+            "type": "number",
+            "format": "double"
+          },
+          "Mid": {
+            "type": "number",
+            "format": "double"
+          },
+          "Ask": {
+            "type": "number",
+            "format": "double"
+          },
+          "Spread": {
+            "type": "number",
+            "format": "double"
+          },
+          "Text": {
+            "type": "string",
+            "nullable": true
+          },
+          "Source": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuoteCurrencyItem": {
+        "type": "object",
+        "properties": {
+          "QuoteCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Rate": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RateTableLine": {
+        "type": "object",
+        "properties": {
+          "BaseCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Columns": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QuoteCurrencyItem"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RateTable": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Lines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RateTableLine"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OfficialCurrency": {
+        "type": "object",
+        "properties": {
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Active": {
+            "type": "boolean"
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OfficialCountry": {
+        "type": "object",
+        "properties": {
+          "Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "OfficialCurrencies": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OfficialCurrency"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OfficialRates": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "CountryList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OfficialCountry"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HistoricalRate": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "BaseCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "QuoteCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "StartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "StartTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "Open": {
+            "type": "number",
+            "format": "double"
+          },
+          "High": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Close": {
+            "type": "number",
+            "format": "double"
+          },
+          "Average": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InternalHistoricalRate": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/HistoricalRate"
+          }
+        ],
+        "additionalProperties": false
+      },
+      "HistoricalRateBidAsk": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/HistoricalRate"
+          }
+        ],
+        "properties": {
+          "Bid": {
+            "type": "number",
+            "format": "double"
+          },
+          "Ask": {
+            "type": "number",
+            "format": "double"
+          },
+          "Source": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Bar": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "StartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "StartTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "Open": {
+            "type": "number",
+            "format": "double"
+          },
+          "High": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Close": {
+            "type": "number",
+            "format": "double"
+          },
+          "Average": {
+            "type": "number",
+            "format": "double"
+          },
+          "Volume": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CurrencyDescription": {
+        "type": "object",
+        "properties": {
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "BaseCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "QuoteCurrency": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChartBar": {
+        "type": "object",
+        "properties": {
+          "StartDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "StartTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EndTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "UTCOffset": {
+            "type": "number",
+            "format": "double"
+          },
+          "Open": {
+            "type": "number",
+            "format": "double"
+          },
+          "High": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Close": {
+            "type": "number",
+            "format": "double"
+          },
+          "Volume": {
+            "type": "number",
+            "format": "double"
+          },
+          "Trades": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TWAP": {
+            "type": "number",
+            "format": "double"
+          },
+          "VWAP": {
+            "type": "number",
+            "format": "double"
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Session": {
+            "type": "string",
+            "nullable": true
+          },
+          "AdjustmentRatio": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CurrencyChartBars": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Timing": {
+            "type": "string",
+            "nullable": true
+          },
+          "PriceType": {
+            "type": "string",
+            "nullable": true
+          },
+          "CurrencyDescription": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CurrencyDescription"
+              }
+            ],
+            "nullable": true
+          },
+          "ChartBars": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChartBar"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ForwardContract": {
+        "type": "object",
+        "properties": {
+          "Expiration": {
+            "type": "string",
+            "nullable": true
+          },
+          "Bid": {
+            "type": "number",
+            "format": "double"
+          },
+          "Mid": {
+            "type": "number",
+            "format": "double"
+          },
+          "Ask": {
+            "type": "number",
+            "format": "double"
+          },
+          "SpotRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "Points": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ForwardRate": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "BaseCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "QuoteCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "QuoteType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "Time": {
+            "type": "string",
+            "nullable": true
+          },
+          "ForwardRates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ForwardContract"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "apiKey",
+        "description": "Token for your account.",
+        "name": "_token",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
