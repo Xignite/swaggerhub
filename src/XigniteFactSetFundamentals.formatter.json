@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteFactSetFundamentals",
-    "version": "1.0.2"
+    "version": "1.0.0"
   },
   "servers": [
     {
@@ -10,7 +10,7 @@
     }
   ],
   "paths": {
-    "/xFactSetFundamentals/ListCompanies": {
+    "/xFactSetFundamentals.{formatter}/ListCompanies": {
       "get": {
         "tags": [
           "XigniteFactSetFundamentals"
@@ -36,6 +36,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -72,11 +80,21 @@
         }
       }
     },
-    "/xFactSetFundamentals/ListExchanges": {
+    "/xFactSetFundamentals.{formatter}/ListExchanges": {
       "get": {
         "tags": [
           "XigniteFactSetFundamentals"
         ],
+        "parameters": [
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success",
@@ -111,7 +129,7 @@
         }
       }
     },
-    "/xFactSetFundamentals/ListExchangesByRegion": {
+    "/xFactSetFundamentals.{formatter}/ListExchangesByRegion": {
       "get": {
         "tags": [
           "XigniteFactSetFundamentals"
@@ -123,6 +141,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -159,11 +185,21 @@
         }
       }
     },
-    "/xFactSetFundamentals/ListFundamentals": {
+    "/xFactSetFundamentals.{formatter}/ListFundamentals": {
       "get": {
         "tags": [
           "XigniteFactSetFundamentals"
         ],
+        "parameters": [
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success",
@@ -198,7 +234,7 @@
         }
       }
     },
-    "/xFactSetFundamentals/ListFundamentalsByDataGroup": {
+    "/xFactSetFundamentals.{formatter}/ListFundamentalsByDataGroup": {
       "get": {
         "tags": [
           "XigniteFactSetFundamentals"
@@ -210,90 +246,11 @@
             "schema": {
               "type": "string"
             }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/FundamentalDescriptionList"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/FundamentalDescriptionList"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/FundamentalDescriptionList"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/FundamentalDescriptionList"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/FundamentalDescriptionList"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/xFactSetFundamentals/ListSectorsAndIndustries": {
-      "get": {
-        "tags": [
-          "XigniteFactSetFundamentals"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SectorList"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SectorList"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/SectorList"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/SectorList"
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "$ref": "#/components/schemas/SectorList"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/xFactSetFundamentals/SearchFundamentals": {
-      "get": {
-        "tags": [
-          "XigniteFactSetFundamentals"
-        ],
-        "parameters": [
+          },
           {
-            "name": "Pattern",
-            "in": "query",
+            "name": "formatter",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "string"
             }
@@ -333,7 +290,112 @@
         }
       }
     },
-    "/xFactSetFundamentals/GetLatestFundamentals": {
+    "/xFactSetFundamentals.{formatter}/ListSectorsAndIndustries": {
+      "get": {
+        "tags": [
+          "XigniteFactSetFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectorList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectorList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectorList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectorList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectorList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xFactSetFundamentals.{formatter}/SearchFundamentals": {
+      "get": {
+        "tags": [
+          "XigniteFactSetFundamentals"
+        ],
+        "parameters": [
+          {
+            "name": "Pattern",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundamentalDescriptionList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundamentalDescriptionList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundamentalDescriptionList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundamentalDescriptionList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundamentalDescriptionList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xFactSetFundamentals.{formatter}/GetLatestFundamentals": {
       "get": {
         "tags": [
           "XigniteFactSetFundamentals"
@@ -366,6 +428,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -417,7 +487,7 @@
         }
       }
     },
-    "/xFactSetFundamentals/GetFundamentals": {
+    "/xFactSetFundamentals.{formatter}/GetFundamentals": {
       "get": {
         "tags": [
           "XigniteFactSetFundamentals"
@@ -471,6 +541,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -522,7 +600,7 @@
         }
       }
     },
-    "/xFactSetFundamentals/GetFundamentalsFiscalRange": {
+    "/xFactSetFundamentals.{formatter}/GetFundamentalsFiscalRange": {
       "get": {
         "tags": [
           "XigniteFactSetFundamentals"
@@ -583,6 +661,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -634,7 +720,7 @@
         }
       }
     },
-    "/xFactSetFundamentals/GetFundamentalsDailyRange": {
+    "/xFactSetFundamentals.{formatter}/GetFundamentalsDailyRange": {
       "get": {
         "tags": [
           "XigniteFactSetFundamentals"
@@ -695,6 +781,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -746,7 +840,7 @@
         }
       }
     },
-    "/xFactSetFundamentals/GetFinancialStatements": {
+    "/xFactSetFundamentals.{formatter}/GetFinancialStatements": {
       "get": {
         "tags": [
           "XigniteFactSetFundamentals"
@@ -793,6 +887,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -844,7 +946,7 @@
         }
       }
     },
-    "/xFactSetFundamentals/GetBalanceSheets": {
+    "/xFactSetFundamentals.{formatter}/GetBalanceSheets": {
       "get": {
         "tags": [
           "XigniteFactSetFundamentals"
@@ -888,6 +990,14 @@
           {
             "name": "UpdatedSince",
             "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "string"
             }
@@ -942,7 +1052,7 @@
         }
       }
     },
-    "/xFactSetFundamentals/GetCashFlowStatements": {
+    "/xFactSetFundamentals.{formatter}/GetCashFlowStatements": {
       "get": {
         "tags": [
           "XigniteFactSetFundamentals"
@@ -986,6 +1096,14 @@
           {
             "name": "UpdatedSince",
             "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "string"
             }
@@ -1040,7 +1158,7 @@
         }
       }
     },
-    "/xFactSetFundamentals/GetIncomeStatements": {
+    "/xFactSetFundamentals.{formatter}/GetIncomeStatements": {
       "get": {
         "tags": [
           "XigniteFactSetFundamentals"
@@ -1084,6 +1202,14 @@
           {
             "name": "UpdatedSince",
             "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "formatter",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "string"
             }

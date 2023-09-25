@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteFactSetEstimates",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "servers": [
     {
@@ -1404,90 +1404,6 @@
           }
         }
       }
-    },
-    "/xFactSetEstimates/GetFiscalPeriod": {
-      "get": {
-        "tags": [
-          "XigniteFactSetEstimates"
-        ],
-        "parameters": [
-          {
-            "name": "Identifiers",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IdentifierType",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "ReportType",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "AsOfDate",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/EstimateFiscalPeriod"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/EstimateFiscalPeriod"
-                  }
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/EstimateFiscalPeriod"
-                  }
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/EstimateFiscalPeriod"
-                  }
-                }
-              },
-              "text/csv": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/EstimateFiscalPeriod"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
@@ -1700,15 +1616,6 @@
         },
         "additionalProperties": false
       },
-      "OutcomeTypes": {
-        "enum": [
-          "Success",
-          "SystemError",
-          "RequestError",
-          "RegistrationError"
-        ],
-        "type": "string"
-      },
       "Actual": {
         "type": "object",
         "properties": {
@@ -1754,25 +1661,6 @@
       "CompanyActuals": {
         "type": "object",
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Company": {
             "allOf": [
               {
@@ -1897,25 +1785,6 @@
       "EstimatesSet": {
         "type": "object",
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "EstimateType": {
             "type": "string",
             "nullable": true
@@ -1942,10 +1811,6 @@
               "$ref": "#/components/schemas/Estimate"
             },
             "nullable": true
-          },
-          "Unit": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1953,25 +1818,6 @@
       "CompanyEstimates": {
         "type": "object",
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Company": {
             "allOf": [
               {
@@ -1993,7 +1839,7 @@
       "RecommendationSummary": {
         "type": "object",
         "properties": {
-          "AdjustmentDate": {
+          "Date": {
             "type": "string",
             "nullable": true
           },
@@ -2051,25 +1897,6 @@
       "CompanyRecommendationSummary": {
         "type": "object",
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Company": {
             "allOf": [
               {
@@ -2162,42 +1989,6 @@
           },
           "Identifier": {
             "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "FiscalPeriodEndDate": {
-        "type": "object",
-        "properties": {
-          "FiscalPeriod": {
-            "type": "string",
-            "nullable": true
-          },
-          "PeriodEndDate": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "EstimateFiscalPeriod": {
-        "type": "object",
-        "properties": {
-          "Company": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Company"
-              }
-            ],
-            "nullable": true
-          },
-          "FiscalPeriodEndDate": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/FiscalPeriodEndDate"
-              }
-            ],
             "nullable": true
           }
         },
