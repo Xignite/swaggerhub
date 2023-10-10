@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteFactSetEstimates",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -1616,6 +1616,15 @@
         },
         "additionalProperties": false
       },
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
       "Actual": {
         "type": "object",
         "properties": {
@@ -1661,6 +1670,25 @@
       "CompanyActuals": {
         "type": "object",
         "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
           "Company": {
             "allOf": [
               {
@@ -1785,6 +1813,25 @@
       "EstimatesSet": {
         "type": "object",
         "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
           "EstimateType": {
             "type": "string",
             "nullable": true
@@ -1811,6 +1858,10 @@
               "$ref": "#/components/schemas/Estimate"
             },
             "nullable": true
+          },
+          "Unit": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1818,6 +1869,25 @@
       "CompanyEstimates": {
         "type": "object",
         "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
           "Company": {
             "allOf": [
               {
@@ -1839,7 +1909,7 @@
       "RecommendationSummary": {
         "type": "object",
         "properties": {
-          "Date": {
+          "AdjustmentDate": {
             "type": "string",
             "nullable": true
           },
@@ -1897,6 +1967,25 @@
       "CompanyRecommendationSummary": {
         "type": "object",
         "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
           "Company": {
             "allOf": [
               {
