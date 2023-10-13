@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalFundFundamentals",
-    "version": "1.0.4"
+    "version": "1.0.5"
   },
   "servers": [
     {
@@ -1842,40 +1842,6 @@
   },
   "components": {
     "schemas": {
-      "OutcomeTypes": {
-        "enum": [
-          "Success",
-          "SystemError",
-          "RequestError",
-          "RegistrationError"
-        ],
-        "type": "string"
-      },
-      "Common": {
-        "type": "object",
-        "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
       "FundType": {
         "type": "object",
         "properties": {
@@ -1925,11 +1891,6 @@
       },
       "CountryList": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
           "CountryDescriptions": {
             "type": "array",
@@ -2022,11 +1983,6 @@
       },
       "FundList": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
           "FundDescriptions": {
             "type": "array",
@@ -2040,11 +1996,6 @@
       },
       "FundTypeList": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
           "FundTypes": {
             "type": "array",
@@ -2088,11 +2039,6 @@
       },
       "FundFundamentalDescriptionList": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
           "FundFundamentalDescriptions": {
             "type": "array",
@@ -2170,15 +2116,6 @@
         },
         "additionalProperties": false
       },
-      "FundWithName": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Fund"
-          }
-        ],
-        "additionalProperties": false
-      },
       "Fundamental": {
         "type": "object",
         "properties": {
@@ -2236,19 +2173,11 @@
       },
       "FundFundamentals": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
           "Fund": {
-            "oneOf": [
+            "allOf": [
               {
                 "$ref": "#/components/schemas/Fund"
-              },
-              {
-                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -2389,19 +2318,11 @@
       },
       "FundProfiles": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
           "Fund": {
-            "oneOf": [
+            "allOf": [
               {
                 "$ref": "#/components/schemas/Fund"
-              },
-              {
-                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -2416,25 +2337,14 @@
         },
         "additionalProperties": false
       },
-      "RecordBreakDownBase": {
-        "type": "object",
-        "properties": {
-          "RecordNumber": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "FeeSchedule": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/RecordBreakDownBase"
-          }
-        ],
         "properties": {
           "FeeValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "RecordNumber": {
             "type": "string",
             "nullable": true
           },
@@ -2506,19 +2416,11 @@
       },
       "FundFeeSchedules": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
           "Fund": {
-            "oneOf": [
+            "allOf": [
               {
                 "$ref": "#/components/schemas/Fund"
-              },
-              {
-                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -2535,13 +2437,12 @@
       },
       "HoldingsBreakdown": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/RecordBreakDownBase"
-          }
-        ],
         "properties": {
           "HoldingSecurityName": {
+            "type": "string",
+            "nullable": true
+          },
+          "RecordNumber": {
             "type": "string",
             "nullable": true
           },
@@ -2635,19 +2536,11 @@
       },
       "FundHoldings": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
           "Fund": {
-            "oneOf": [
+            "allOf": [
               {
                 "$ref": "#/components/schemas/Fund"
-              },
-              {
-                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -2664,13 +2557,12 @@
       },
       "ManagerBreakdown": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/RecordBreakDownBase"
-          }
-        ],
         "properties": {
           "ManagerFirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "RecordNumber": {
             "type": "string",
             "nullable": true
           },
@@ -2716,19 +2608,11 @@
       },
       "FundManagers": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
           "Fund": {
-            "oneOf": [
+            "allOf": [
               {
                 "$ref": "#/components/schemas/Fund"
-              },
-              {
-                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -2895,19 +2779,11 @@
       },
       "FundMonthEndTrailingReturns": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
           "Fund": {
-            "oneOf": [
+            "allOf": [
               {
                 "$ref": "#/components/schemas/Fund"
-              },
-              {
-                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -3074,19 +2950,11 @@
       },
       "FundQuarterEndTrailingReturns": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
           "Fund": {
-            "oneOf": [
+            "allOf": [
               {
                 "$ref": "#/components/schemas/Fund"
-              },
-              {
-                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -3103,11 +2971,6 @@
       },
       "FundNAV": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
           "Identifier": {
             "type": "string",
@@ -3118,12 +2981,9 @@
             "nullable": true
           },
           "Fund": {
-            "oneOf": [
+            "allOf": [
               {
                 "$ref": "#/components/schemas/Fund"
-              },
-              {
-                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -3211,11 +3071,6 @@
       },
       "FundNAVHistory": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
           "Identifier": {
             "type": "string",
@@ -3230,12 +3085,9 @@
             "nullable": true
           },
           "Fund": {
-            "oneOf": [
+            "allOf": [
               {
                 "$ref": "#/components/schemas/Fund"
-              },
-              {
-                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -3298,11 +3150,6 @@
       },
       "FundDividendHistory": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
           "Identifier": {
             "type": "string",
@@ -3313,12 +3160,9 @@
             "nullable": true
           },
           "Fund": {
-            "oneOf": [
+            "allOf": [
               {
                 "$ref": "#/components/schemas/Fund"
-              },
-              {
-                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
@@ -3332,6 +3176,15 @@
           }
         },
         "additionalProperties": false
+      },
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
       },
       "BreakdownRecord": {
         "type": "object",
@@ -3387,19 +3240,30 @@
       },
       "FundBreakdowns": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
         "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
           "Fund": {
-            "oneOf": [
+            "allOf": [
               {
                 "$ref": "#/components/schemas/Fund"
-              },
-              {
-                "$ref": "#/components/schemas/FundWithName"
               }
             ],
             "nullable": true
