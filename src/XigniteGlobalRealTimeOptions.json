@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalRealTimeOptions",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "servers": [
     {
@@ -1409,6 +1409,54 @@
         }
       }
     },
+    "/xGlobalRealTimeOptions/ListUnderlyingSymbols": {
+      "get": {
+        "tags": [
+          "XigniteGlobalRealTimeOptions"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnderlyingSymbolList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnderlyingSymbolList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnderlyingSymbolList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnderlyingSymbolList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnderlyingSymbolList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/xGlobalRealTimeOptions/GetChartBars": {
       "get": {
         "tags": [
@@ -2607,6 +2655,68 @@
                 "$ref": "#/components/schemas/Security"
               }
             ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExchangeDescription": {
+        "type": "object",
+        "properties": {
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnderlyingSecurity": {
+        "type": "object",
+        "properties": {
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Exchange": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnderlyingSymbolList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Exchange": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ExchangeDescription"
+              }
+            ],
+            "nullable": true
+          },
+          "UnderlyingSecurityDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnderlyingSecurity"
+            },
             "nullable": true
           }
         },
