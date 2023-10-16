@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteFactSetEstimates",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -1408,6 +1408,40 @@
   },
   "components": {
     "schemas": {
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
       "ExchangeDescription": {
         "type": "object",
         "properties": {
@@ -1428,6 +1462,11 @@
       },
       "ExchangeList": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "ExchangeDescriptions": {
             "type": "array",
@@ -1475,6 +1514,11 @@
       },
       "ActualsDescriptionList": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "ActualsDescription": {
             "type": "array",
@@ -1522,6 +1566,11 @@
       },
       "EstimateDescriptionList": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "EstimateDescriptions": {
             "type": "array",
@@ -1605,6 +1654,11 @@
       },
       "CompanyList": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "Companies": {
             "type": "array",
@@ -1660,6 +1714,11 @@
       },
       "CompanyActuals": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "Company": {
             "allOf": [
@@ -1697,6 +1756,11 @@
       },
       "TrailingActuals": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "Company": {
             "allOf": [
@@ -1784,6 +1848,11 @@
       },
       "EstimatesSet": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "EstimateType": {
             "type": "string",
@@ -1811,12 +1880,21 @@
               "$ref": "#/components/schemas/Estimate"
             },
             "nullable": true
+          },
+          "Unit": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
       "CompanyEstimates": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "Company": {
             "allOf": [
@@ -1896,6 +1974,11 @@
       },
       "CompanyRecommendationSummary": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "Company": {
             "allOf": [
@@ -1967,6 +2050,11 @@
       },
       "TargetPriceSummaries": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "Company": {
             "allOf": [
