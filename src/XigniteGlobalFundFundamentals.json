@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalFundFundamentals",
-    "version": "1.0.4"
+    "version": "1.0.5"
   },
   "servers": [
     {
@@ -2416,25 +2416,14 @@
         },
         "additionalProperties": false
       },
-      "RecordBreakDownBase": {
-        "type": "object",
-        "properties": {
-          "RecordNumber": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "FeeSchedule": {
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/RecordBreakDownBase"
-          }
-        ],
         "properties": {
           "FeeValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "RecordNumber": {
             "type": "string",
             "nullable": true
           },
@@ -2528,6 +2517,16 @@
             "items": {
               "$ref": "#/components/schemas/FeeSchedulesSet"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecordBreakDownBase": {
+        "type": "object",
+        "properties": {
+          "RecordNumber": {
+            "type": "string",
             "nullable": true
           }
         },
