@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalOptions",
-    "version": "1.0.7"
+    "version": "1.0.8"
   },
   "servers": [
     {
@@ -2320,7 +2320,7 @@
         },
         "additionalProperties": false
       },
-      "Expiration": {
+      "ExpirationBaseOfOption": {
         "type": "object",
         "allOf": [
           {
@@ -2369,6 +2369,15 @@
             "nullable": true
           }
         },
+        "additionalProperties": false
+      },
+      "Expiration": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ExpirationBaseOfOption"
+          }
+        ],
         "additionalProperties": false
       },
       "OptionsBaseOfExpirationOption": {
@@ -2414,7 +2423,7 @@
         ],
         "additionalProperties": false
       },
-      "ExtendedExpiration": {
+      "ExpirationBaseOfExtendedOption": {
         "type": "object",
         "allOf": [
           {
@@ -2449,6 +2458,15 @@
             "nullable": true
           }
         },
+        "additionalProperties": false
+      },
+      "ExtendedExpiration": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ExpirationBaseOfExtendedOption"
+          }
+        ],
         "additionalProperties": false
       },
       "OptionsBaseOfExtendedExpirationExtendedOption": {
