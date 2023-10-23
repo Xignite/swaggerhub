@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalOptions",
-    "version": "1.0.6"
+    "version": "1.0.7"
   },
   "servers": [
     {
@@ -571,27 +571,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Option"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Option"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedOption"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Option"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Option"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedOption"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/Option"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Option"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedOption"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/Option"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Option"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedOption"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/Option"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Option"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedOption"
+                    }
+                  ]
                 }
               }
             }
@@ -626,27 +661,62 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Option"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Option"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedOption"
+                    }
+                  ]
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Option"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Option"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedOption"
+                    }
+                  ]
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/Option"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Option"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedOption"
+                    }
+                  ]
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/Option"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Option"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedOption"
+                    }
+                  ]
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/Option"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Option"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ExtendedOption"
+                    }
+                  ]
                 }
               }
             }
@@ -683,7 +753,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Option"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Option"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ExtendedOption"
+                      }
+                    ]
                   }
                 }
               },
@@ -691,7 +768,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Option"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Option"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ExtendedOption"
+                      }
+                    ]
                   }
                 }
               },
@@ -699,7 +783,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Option"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Option"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ExtendedOption"
+                      }
+                    ]
                   }
                 }
               },
@@ -707,7 +798,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Option"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Option"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ExtendedOption"
+                      }
+                    ]
                   }
                 }
               },
@@ -715,7 +813,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Option"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Option"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ExtendedOption"
+                      }
+                    ]
                   }
                 }
               }
@@ -1714,26 +1819,12 @@
       },
       "Security": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "CIK": {
             "type": "string",
             "nullable": true
@@ -2022,82 +2113,11 @@
         },
         "additionalProperties": false
       },
-      "Expiration": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ExpirationDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Month": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Year": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Calls": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Option"
-            },
-            "nullable": true
-          },
-          "Puts": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Option"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Options": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Quote": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/QuickQuote"
-              }
-            ],
-            "nullable": true
-          },
-          "Expirations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Expiration"
-            },
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "ExtendedOption": {
         "type": "object",
         "allOf": [
           {
-            "$ref": "#/components/schemas/Common"
+            "$ref": "#/components/schemas/Option"
           }
         ],
         "properties": {
@@ -2296,26 +2316,18 @@
           "PreviousDayMidStyle": {
             "type": "string",
             "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "SymbologyType": {
-            "type": "string",
-            "nullable": true
-          },
-          "BaseSymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "Type": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionTypes"
-              }
-            ]
-          },
+          }
+        },
+        "additionalProperties": false
+      },
+      "Expiration": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
           "ExpirationDate": {
             "type": "string",
             "nullable": true
@@ -2328,114 +2340,78 @@
             "type": "integer",
             "format": "int32"
           },
-          "StrikePrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "Currency": {
-            "type": "string",
+          "Calls": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Option"
+                },
+                {
+                  "$ref": "#/components/schemas/ExtendedOption"
+                }
+              ]
+            },
             "nullable": true
           },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "Last": {
-            "type": "number",
-            "format": "double"
-          },
-          "LastSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "Close": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Volume": {
-            "type": "number",
-            "format": "double"
-          },
-          "OpenInterest": {
-            "type": "number",
-            "format": "double"
-          },
-          "OpenInterestDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousClose": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousCloseDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Change": {
-            "type": "number",
-            "format": "double"
-          },
-          "PercentChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "Bid": {
-            "type": "number",
-            "format": "double"
-          },
-          "BidDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "BidTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "BidSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "Ask": {
-            "type": "number",
-            "format": "double"
-          },
-          "AskDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "AskTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "AskSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "InTheMoney": {
-            "type": "boolean"
-          },
-          "Exchange": {
-            "type": "string",
+          "Puts": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Option"
+                },
+                {
+                  "$ref": "#/components/schemas/ExtendedOption"
+                }
+              ]
+            },
             "nullable": true
           }
         },
+        "additionalProperties": false
+      },
+      "OptionsBaseOfExpirationOption": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Quote": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/QuickQuote"
+              }
+            ],
+            "nullable": true
+          },
+          "Expirations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Expiration"
+            },
+            "nullable": true
+          },
+          "Security": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Security"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Options": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/OptionsBaseOfExpirationOption"
+          }
+        ],
         "additionalProperties": false
       },
       "ExtendedExpiration": {
@@ -2475,7 +2451,7 @@
         },
         "additionalProperties": false
       },
-      "ExtendedOptions": {
+      "OptionsBaseOfExtendedExpirationExtendedOption": {
         "type": "object",
         "allOf": [
           {
@@ -2507,6 +2483,15 @@
             "nullable": true
           }
         },
+        "additionalProperties": false
+      },
+      "ExtendedOptions": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/OptionsBaseOfExtendedExpirationExtendedOption"
+          }
+        ],
         "additionalProperties": false
       },
       "NumericResult": {
@@ -2638,14 +2623,28 @@
           "Calls": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Option"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Option"
+                },
+                {
+                  "$ref": "#/components/schemas/ExtendedOption"
+                }
+              ]
             },
             "nullable": true
           },
           "Puts": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Option"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Option"
+                },
+                {
+                  "$ref": "#/components/schemas/ExtendedOption"
+                }
+              ]
             },
             "nullable": true
           },
