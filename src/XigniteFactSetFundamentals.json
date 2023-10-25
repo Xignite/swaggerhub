@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteFactSetFundamentals",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "servers": [
     {
@@ -1141,6 +1141,40 @@
   },
   "components": {
     "schemas": {
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
       "Company": {
         "type": "object",
         "properties": {
@@ -1213,6 +1247,11 @@
       },
       "CompanyList": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "Companies": {
             "type": "array",
@@ -1220,40 +1259,6 @@
               "$ref": "#/components/schemas/Company"
             },
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "OutcomeTypes": {
-        "enum": [
-          "Success",
-          "SystemError",
-          "RequestError",
-          "RegistrationError"
-        ],
-        "type": "string"
-      },
-      "Common": {
-        "type": "object",
-        "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1330,6 +1335,11 @@
       },
       "FundamentalDescriptionList": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "FundamentalDescriptions": {
             "type": "array",
@@ -1378,6 +1388,11 @@
       },
       "SectorList": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "Sectors": {
             "type": "array",
@@ -1453,6 +1468,11 @@
       },
       "CompanyFundamentals": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "Company": {
             "allOf": [
@@ -1559,6 +1579,11 @@
       },
       "CompanyFinancialStatements": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "Company": {
             "allOf": [
@@ -1580,6 +1605,11 @@
       },
       "CompanyBalanceSheet": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "Company": {
             "allOf": [
@@ -1602,6 +1632,11 @@
       },
       "CompanyCashFlowStatement": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "Company": {
             "allOf": [
@@ -1624,6 +1659,11 @@
       },
       "CompanyIncomeStatement": {
         "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
         "properties": {
           "Company": {
             "allOf": [
