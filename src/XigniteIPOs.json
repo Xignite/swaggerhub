@@ -1,0 +1,954 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "XigniteIPOs",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://ipos.xignite.com"
+    }
+  ],
+  "paths": {
+    "/xIPOs/ListExchanges": {
+      "get": {
+        "tags": [
+          "XigniteIPOs"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExchangeList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xIPOs/SearchIPOByName": {
+      "get": {
+        "tags": [
+          "XigniteIPOs"
+        ],
+        "parameters": [
+          {
+            "name": "Name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IPODetails"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IPODetails"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IPODetails"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IPODetails"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IPODetails"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xIPOs/SearchIPOBySymbol": {
+      "get": {
+        "tags": [
+          "XigniteIPOs"
+        ],
+        "parameters": [
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IPODetails"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IPODetails"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IPODetails"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IPODetails"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IPODetails"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xIPOs/GetIPO": {
+      "get": {
+        "tags": [
+          "XigniteIPOs"
+        ],
+        "parameters": [
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPO"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPO"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPO"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xIPOs/GetIPOByStatus": {
+      "get": {
+        "tags": [
+          "XigniteIPOs"
+        ],
+        "parameters": [
+          {
+            "name": "Status",
+            "in": "query",
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IPOStatus"
+                }
+              ]
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOByStatus"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOByStatus"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOByStatus"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOByStatus"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOByStatus"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xIPOs/GetIPOCalendar": {
+      "get": {
+        "tags": [
+          "XigniteIPOs"
+        ],
+        "parameters": [
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOCalendar"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOCalendar"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOCalendar"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOCalendar"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOCalendar"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xIPOs/GetIPOCalendarByExchange": {
+      "get": {
+        "tags": [
+          "XigniteIPOs"
+        ],
+        "parameters": [
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOCalendar"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOCalendar"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOCalendar"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOCalendar"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOCalendar"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xIPOs/GetIPODetails": {
+      "get": {
+        "tags": [
+          "XigniteIPOs"
+        ],
+        "parameters": [
+          {
+            "name": "Symbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPODetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPODetails"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPODetails"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPODetails"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPODetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xIPOs/GetIPOList": {
+      "get": {
+        "tags": [
+          "XigniteIPOs"
+        ],
+        "parameters": [
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xIPOs/GetIPOPerformance": {
+      "get": {
+        "tags": [
+          "XigniteIPOs"
+        ],
+        "parameters": [
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOsPerformance"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOsPerformance"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOsPerformance"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOsPerformance"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/IPOsPerformance"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
+      "ExchangeDescription": {
+        "type": "object",
+        "properties": {
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExchangeList": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "ExchangeDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExchangeDescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IPODescription": {
+        "type": "object",
+        "properties": {
+          "IPOIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Market": {
+            "type": "string",
+            "nullable": true
+          },
+          "MarketIdentificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Status": {
+            "type": "string",
+            "nullable": true
+          },
+          "FilingDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "TradeDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "EstimatedOfferDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "OfferDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "OfferLowPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "OfferHighPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "OfferSize": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "OfferPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "OfferAmount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "SmallMarketCap": {
+            "type": "boolean"
+          },
+          "SpecialPurposeAcquisitionCompany": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IPOUnderwriter": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Role": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IPODetails": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IPODescription": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/IPODescription"
+              }
+            ],
+            "nullable": true
+          },
+          "IPOUnderwriters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IPOUnderwriter"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IPO": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IPODescription": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/IPODescription"
+              }
+            ],
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IPOStatus": {
+        "enum": [
+          "Unknown",
+          "Active",
+          "Priced",
+          "Withdrawn",
+          "Postponed",
+          "Acquired",
+          "Removed"
+        ],
+        "type": "string"
+      },
+      "IPOByStatus": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IPODescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IPODescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IPOCalendar": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IPODescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IPODescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IPOList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IPODescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IPODescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IPOPerformance": {
+        "type": "object",
+        "properties": {
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "OfferPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "OfferDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "TradeDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "ClosePrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "ClosePriceDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "PercentChange": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IPOsPerformance": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IPOPerformances": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IPOPerformance"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "apiKey",
+        "description": "Token for your account.",
+        "name": "_token",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
