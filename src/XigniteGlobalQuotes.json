@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalQuotes",
-    "version": "3.0.7"
+    "version": "3.0.8"
   },
   "servers": [
     {
@@ -256,62 +256,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/GlobalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/GlobalExtendedQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/GlobalQuote"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/GlobalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/GlobalExtendedQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/GlobalQuote"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/GlobalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/GlobalExtendedQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/GlobalQuote"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/GlobalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/GlobalExtendedQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/GlobalQuote"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/GlobalQuote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/GlobalExtendedQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/GlobalQuote"
                 }
               }
             }
@@ -426,14 +391,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/GlobalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/GlobalExtendedQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/GlobalQuote"
                   }
                 }
               },
@@ -441,14 +399,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/GlobalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/GlobalExtendedQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/GlobalQuote"
                   }
                 }
               },
@@ -456,14 +407,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/GlobalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/GlobalExtendedQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/GlobalQuote"
                   }
                 }
               },
@@ -471,14 +415,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/GlobalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/GlobalExtendedQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/GlobalQuote"
                   }
                 }
               },
@@ -486,14 +423,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/GlobalQuote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/GlobalExtendedQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/GlobalQuote"
                   }
                 }
               }
