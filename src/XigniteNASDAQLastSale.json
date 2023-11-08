@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteNASDAQLastSale",
-    "version": "1.0.8"
+    "version": "1.0.9"
   },
   "servers": [
     {
@@ -418,62 +418,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Quote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/ExtendedQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/Quote"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Quote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/ExtendedQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/Quote"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Quote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/ExtendedQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/Quote"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Quote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/ExtendedQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/Quote"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/Quote"
-                    },
-                    {
-                      "$ref": "#/components/schemas/ExtendedQuote"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/Quote"
                 }
               }
             }
@@ -514,14 +479,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Quote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/ExtendedQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Quote"
                   }
                 }
               },
@@ -529,14 +487,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Quote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/ExtendedQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Quote"
                   }
                 }
               },
@@ -544,14 +495,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Quote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/ExtendedQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Quote"
                   }
                 }
               },
@@ -559,14 +503,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Quote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/ExtendedQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Quote"
                   }
                 }
               },
@@ -574,14 +511,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Quote"
-                      },
-                      {
-                        "$ref": "#/components/schemas/ExtendedQuote"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Quote"
                   }
                 }
               }
