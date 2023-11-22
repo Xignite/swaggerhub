@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalIndicesHistorical",
-    "version": "1.0.4"
+    "version": "1.0.5"
   },
   "servers": [
     {
@@ -1367,25 +1367,6 @@
         },
         "additionalProperties": false
       },
-      "Weeks.IndexQuote": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/IndexQuote"
-          }
-        ],
-        "properties": {
-          "High52Weeks": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low52Weeks": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
       "IndexValue": {
         "type": "object",
         "allOf": [
@@ -1411,12 +1392,9 @@
             "nullable": true
           },
           "Value": {
-            "oneOf": [
+            "allOf": [
               {
                 "$ref": "#/components/schemas/IndexQuote"
-              },
-              {
-                "$ref": "#/components/schemas/Weeks.IndexQuote"
               }
             ],
             "nullable": true
@@ -1459,14 +1437,7 @@
           "Values": {
             "type": "array",
             "items": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/IndexQuote"
-                },
-                {
-                  "$ref": "#/components/schemas/Weeks.IndexQuote"
-                }
-              ]
+              "$ref": "#/components/schemas/IndexQuote"
             },
             "nullable": true
           }
