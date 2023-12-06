@@ -1,0 +1,1875 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "XigniteGlobalFuturesV1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://globalfutures.xignite.com"
+    }
+  ],
+  "paths": {
+    "/xGlobalFutures/ListBaseFutures": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/ListFutureChain": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Basesymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/ListFutureExchanges": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureExchange"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureExchange"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureExchange"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureExchange"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureExchange"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/ListOptionChain": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Futuresymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Style",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOption"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOption"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOption"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOption"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOption"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetFrontMonthFuture": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Future"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Future"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Future"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Future"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/Future"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetFuture": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Future"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Future"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Future"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Future"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/Future"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/SearchFutures": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetAllFutureQuotes": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Count",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetAllOptionQuotes": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "TradedOnly",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOptionQuote"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOptionQuote"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOptionQuote"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOptionQuote"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOptionQuote"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetSpotFutureQuote": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetLatestFrontMonthFutureQuotes": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetLatestFutureOptionQuote": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureOptionQuote"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureOptionQuote"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureOptionQuote"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureOptionQuote"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureOptionQuote"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetLatestFutureOptionQuotes": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOptionQuote"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOptionQuote"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOptionQuote"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOptionQuote"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOptionQuote"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetLatestFutureQuote": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetLatestFutureQuotes": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetFutureOptionQuote": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureOptionQuote"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureOptionQuote"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureOptionQuote"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureOptionQuote"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureOptionQuote"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetFutureOptionQuotes": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOptionQuote"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOptionQuote"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOptionQuote"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOptionQuote"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureOptionQuote"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetFutureQuote": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetFutureQuotes": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifiers",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetSwapQuote": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/FutureQuote"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetHistoricalSwapQuotes": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalFutures/GetHistoricalFutureQuotesRange": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "Identifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Exchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FutureQuote"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
+      "Common": {
+        "type": "object",
+        "properties": {
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FutureTypes": {
+        "enum": [
+          "Commodities",
+          "Indices",
+          "Currencies",
+          "Swap",
+          "Future"
+        ],
+        "type": "string"
+      },
+      "Future": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Month": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Exchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "BaseSymbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExchangeSymbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Expiration": {
+            "type": "string",
+            "nullable": true
+          },
+          "Type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FutureTypes"
+              }
+            ]
+          },
+          "ContractSize": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FutureExchange": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "MIC": {
+            "type": "string",
+            "nullable": true
+          },
+          "Group": {
+            "type": "string",
+            "nullable": true
+          },
+          "Realtime": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OptionTypes": {
+        "enum": [
+          "Call",
+          "Put"
+        ],
+        "type": "string"
+      },
+      "FutureOption": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Valoren": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Month": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Exchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "BaseSymbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "StrikeDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "StrikePrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "Type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OptionTypes"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "FutureQuote": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "Future": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Future"
+              }
+            ],
+            "nullable": true
+          },
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "Time": {
+            "type": "string",
+            "nullable": true
+          },
+          "UTCDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "UTCTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "Open": {
+            "type": "number",
+            "format": "double"
+          },
+          "High": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Last": {
+            "type": "number",
+            "format": "double"
+          },
+          "Bid": {
+            "type": "number",
+            "format": "double"
+          },
+          "Ask": {
+            "type": "number",
+            "format": "double"
+          },
+          "BidDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "BidTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "AskDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "AskTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "Settle": {
+            "type": "number",
+            "format": "double"
+          },
+          "SettleDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "SettleTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "Volume": {
+            "type": "number",
+            "format": "double"
+          },
+          "OpenInterest": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousClose": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousCloseDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "PreviousSettle": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousSettleDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Change": {
+            "type": "number",
+            "format": "double"
+          },
+          "PercentChange": {
+            "type": "number",
+            "format": "double"
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identifier": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FutureOptionQuote": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "FutureOption": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FutureOption"
+              }
+            ],
+            "nullable": true
+          },
+          "Date": {
+            "type": "string",
+            "nullable": true
+          },
+          "Time": {
+            "type": "string",
+            "nullable": true
+          },
+          "UTCDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "UTCTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "Open": {
+            "type": "number",
+            "format": "double"
+          },
+          "Close": {
+            "type": "number",
+            "format": "double"
+          },
+          "High": {
+            "type": "number",
+            "format": "double"
+          },
+          "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Last": {
+            "type": "number",
+            "format": "double"
+          },
+          "Bid": {
+            "type": "number",
+            "format": "double"
+          },
+          "Ask": {
+            "type": "number",
+            "format": "double"
+          },
+          "BidDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "BidTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "AskDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "AskTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "Settle": {
+            "type": "number",
+            "format": "double"
+          },
+          "SettleDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "SettleTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "Volume": {
+            "type": "number",
+            "format": "double"
+          },
+          "OpenInterest": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousClose": {
+            "type": "number",
+            "format": "double"
+          },
+          "PreviousCloseDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "Change": {
+            "type": "number",
+            "format": "double"
+          },
+          "PercentChange": {
+            "type": "number",
+            "format": "double"
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "basic": {
+        "type": "apiKey",
+        "description": "Token for your account.",
+        "name": "_token",
+        "in": "query"
+      }
+    }
+  },
+  "security": [
+    {
+      "basic": [ ]
+    }
+  ]
+}
