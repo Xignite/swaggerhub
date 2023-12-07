@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalFuturesV1",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -1414,6 +1414,61 @@
           }
         }
       }
+    },
+    "/xGlobalFutures/MapLegacyBaseSymbol": {
+      "get": {
+        "tags": [
+          "XigniteGlobalFuturesV1"
+        ],
+        "parameters": [
+          {
+            "name": "LegacyIdentifier",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "LegacyExchange",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseFuture"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseFuture"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseFuture"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseFuture"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseFuture"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1853,6 +1908,41 @@
           "Currency": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BaseFuture": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "LegacyExchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "LegacySymbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "NewExchange": {
+            "type": "string",
+            "nullable": true
+          },
+          "NewSymbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "V1Root": {
+            "type": "string",
+            "nullable": true
+          },
+          "PriceMultiplier": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
