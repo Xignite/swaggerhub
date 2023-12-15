@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "CloudSearch",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -91,25 +91,7 @@
         ],
         "type": "string"
       },
-      "Result": {
-        "type": "object",
-        "properties": {
-          "Value": {
-            "type": "string",
-            "nullable": true
-          },
-          "Description": {
-            "type": "string",
-            "nullable": true
-          },
-          "Tag": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "SearchResults": {
+      "Common": {
         "type": "object",
         "properties": {
           "Outcome": {
@@ -130,7 +112,36 @@
           "Delay": {
             "type": "number",
             "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Result": {
+        "type": "object",
+        "properties": {
+          "Value": {
+            "type": "string",
+            "nullable": true
           },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "Tag": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SearchResults": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
           "SearchTerm": {
             "type": "string",
             "nullable": true
