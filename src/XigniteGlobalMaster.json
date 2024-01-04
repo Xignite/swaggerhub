@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalMaster",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -715,14 +715,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Instrument"
-                      },
-                      {
-                        "$ref": "#/components/schemas/IndexInstrument"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Instrument"
                   }
                 }
               },
@@ -730,14 +723,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Instrument"
-                      },
-                      {
-                        "$ref": "#/components/schemas/IndexInstrument"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Instrument"
                   }
                 }
               },
@@ -745,14 +731,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Instrument"
-                      },
-                      {
-                        "$ref": "#/components/schemas/IndexInstrument"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Instrument"
                   }
                 }
               },
@@ -760,14 +739,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Instrument"
-                      },
-                      {
-                        "$ref": "#/components/schemas/IndexInstrument"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Instrument"
                   }
                 }
               },
@@ -775,14 +747,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Instrument"
-                      },
-                      {
-                        "$ref": "#/components/schemas/IndexInstrument"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Instrument"
                   }
                 }
               }
@@ -842,14 +807,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Instrument"
-                      },
-                      {
-                        "$ref": "#/components/schemas/IndexInstrument"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Instrument"
                   }
                 }
               },
@@ -857,14 +815,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Instrument"
-                      },
-                      {
-                        "$ref": "#/components/schemas/IndexInstrument"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Instrument"
                   }
                 }
               },
@@ -872,14 +823,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Instrument"
-                      },
-                      {
-                        "$ref": "#/components/schemas/IndexInstrument"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Instrument"
                   }
                 }
               },
@@ -887,14 +831,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Instrument"
-                      },
-                      {
-                        "$ref": "#/components/schemas/IndexInstrument"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Instrument"
                   }
                 }
               },
@@ -902,14 +839,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/Instrument"
-                      },
-                      {
-                        "$ref": "#/components/schemas/IndexInstrument"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/Instrument"
                   }
                 }
               }
@@ -3636,489 +3566,6 @@
         },
         "additionalProperties": false
       },
-      "OptionalBoolean": {
-        "enum": [
-          "Unknown",
-          "True",
-          "False"
-        ],
-        "type": "string"
-      },
-      "InstrumentProperty": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/AbstractPublicWebServiceObj"
-          }
-        ],
-        "properties": {
-          "CallableByDebtor": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "CallableByCreditor": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "Amortization": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "PartlyPaidIssue": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "ExtensionByDebtor": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "ExtensionByCreditor": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "ConversionByDebtor": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "ConversionByCreditor": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "RepaymentsInOtherCurrencies": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "StockingUp": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "NominalReduction": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "PaymentsKnownOnIssue": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "Jurisdiction": {
-            "type": "string",
-            "nullable": true
-          },
-          "CoveredWarrant": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "VoteCarrying": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "DueDateAtEndOfMonth": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "DistributionsInOtherCurrencies": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "WithoutPhysicalCoupon": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "LastDeductedCoupon": {
-            "type": "string",
-            "nullable": true
-          },
-          "ICMARegulated": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "CombinedInstrument": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "CallableOnlyForTaxReasons": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "Class": {
-            "type": "string",
-            "nullable": true
-          },
-          "Series": {
-            "type": "string",
-            "nullable": true
-          },
-          "Tranche": {
-            "type": "string",
-            "nullable": true
-          },
-          "PoolNumber": {
-            "type": "string",
-            "nullable": true
-          },
-          "Trust": {
-            "type": "string",
-            "nullable": true
-          },
-          "Program": {
-            "type": "string",
-            "nullable": true
-          },
-          "Underlying": {
-            "type": "string",
-            "nullable": true
-          },
-          "DividendReinvestmentPlan": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "NotionalAmount": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionalBoolean"
-              }
-            ]
-          },
-          "EquityType": {
-            "type": "string",
-            "nullable": true
-          },
-          "ParValueType": {
-            "type": "string",
-            "nullable": true
-          },
-          "NumberOfVotingRights": {
-            "type": "number",
-            "format": "double"
-          },
-          "DateOfFinalMaturity": {
-            "type": "string",
-            "nullable": true
-          },
-          "DateOfFinalMaturityCapitalPaymentDelay": {
-            "type": "string",
-            "nullable": true
-          },
-          "DateOfLegalMaturity": {
-            "type": "string",
-            "nullable": true
-          },
-          "DateOfLegalMaturityCapitalPaymentDelay": {
-            "type": "string",
-            "nullable": true
-          },
-          "IndexStartDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "IndexStartingValue": {
-            "type": "number",
-            "format": "double"
-          },
-          "IndexType": {
-            "type": "string",
-            "nullable": true
-          },
-          "IndexWeightingType": {
-            "type": "string",
-            "nullable": true
-          },
-          "CapitalisationType": {
-            "type": "string",
-            "nullable": true
-          },
-          "IndexDivisor": {
-            "type": "number",
-            "format": "double"
-          },
-          "IndexDivisorDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "InterestRate": {
-            "type": "number",
-            "format": "double"
-          },
-          "InterestType": {
-            "type": "string",
-            "nullable": true
-          },
-          "DateOfInterestBegin": {
-            "type": "string",
-            "nullable": true
-          },
-          "LiquidationRight": {
-            "type": "string",
-            "nullable": true
-          },
-          "IncomeDistributionType": {
-            "type": "string",
-            "nullable": true
-          },
-          "DomicileOfApplicableLaw": {
-            "type": "string",
-            "nullable": true
-          },
-          "DayCountConvention": {
-            "type": "string",
-            "nullable": true
-          },
-          "DistributionFrequency": {
-            "type": "number",
-            "format": "double"
-          },
-          "DistributionFrequencyUnit": {
-            "type": "string",
-            "nullable": true
-          },
-          "Denomination": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "InstrumentCapitalStructure": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/AbstractPublicWebServiceObj"
-          }
-        ],
-        "properties": {
-          "OutstandingCapitalNumberOfInstruments": {
-            "type": "number",
-            "format": "double"
-          },
-          "OutstandingCapitalCapitalAmount": {
-            "type": "number",
-            "format": "double"
-          },
-          "OutstandingCapitalEffectiveDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "OutstandingCapitalInputGrade": {
-            "type": "string",
-            "nullable": true
-          },
-          "OutstandingCapitalDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "IssuedCapitalNumberOfInstruments": {
-            "type": "number",
-            "format": "double"
-          },
-          "IssuedCapitalCapitalAmount": {
-            "type": "number",
-            "format": "double"
-          },
-          "IssuedCapitalEffectiveDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "IssuedCapitalInputGrade": {
-            "type": "string",
-            "nullable": true
-          },
-          "IssuedCapitalDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "ContingentCapitalNumberOfInstruments": {
-            "type": "number",
-            "format": "double"
-          },
-          "ContingentCapitalCapitalAmount": {
-            "type": "number",
-            "format": "double"
-          },
-          "ContingentCapitalEffectiveDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "ContingentCapitalInputGrade": {
-            "type": "string",
-            "nullable": true
-          },
-          "ContingentCapitalDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "TreasuryStockNumberOfInstruments": {
-            "type": "number",
-            "format": "double"
-          },
-          "TreasuryStockCapitalAmount": {
-            "type": "number",
-            "format": "double"
-          },
-          "TreasuryStockEffectiveDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "TreasuryStockInputGrade": {
-            "type": "string",
-            "nullable": true
-          },
-          "TreasuryStockDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "AuthorizedButUnissuedCapitalNumberOfInstruments": {
-            "type": "number",
-            "format": "double"
-          },
-          "AuthorizedButUnissuedCapitalCapitalAmount": {
-            "type": "number",
-            "format": "double"
-          },
-          "AuthorizedButUnissuedCapitalEffectiveDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "AuthorizedButUnissuedCapitalInputGrade": {
-            "type": "string",
-            "nullable": true
-          },
-          "AuthorizedButUnissuedCapitalDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "VotingRightsNumberOfVotingRights": {
-            "type": "number",
-            "format": "double"
-          },
-          "VotingRightsCapitalAmount": {
-            "type": "number",
-            "format": "double"
-          },
-          "VotingRightsEffectiveDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "VotingRightsInputGrade": {
-            "type": "string",
-            "nullable": true
-          },
-          "VotingRightsDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "FreeFloatNumberOfInstruments": {
-            "type": "number",
-            "format": "double"
-          },
-          "FreeFloatCapitalAmount": {
-            "type": "number",
-            "format": "double"
-          },
-          "FreeFloatEffectiveDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "FreeFloatInputGrade": {
-            "type": "string",
-            "nullable": true
-          },
-          "FreeFloatDescription": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "IndexInstrument": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Instrument"
-          }
-        ],
-        "properties": {
-          "InstrumentProperty": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/InstrumentProperty"
-              }
-            ],
-            "nullable": true
-          },
-          "InstrumentCapitalStructure": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/InstrumentCapitalStructure"
-              }
-            ],
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "IssuerRelatedTypes": {
         "enum": [
           "None",
@@ -4207,14 +3654,7 @@
           "Instruments": {
             "type": "array",
             "items": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/Instrument"
-                },
-                {
-                  "$ref": "#/components/schemas/IndexInstrument"
-                }
-              ]
+              "$ref": "#/components/schemas/Instrument"
             },
             "nullable": true
           },
