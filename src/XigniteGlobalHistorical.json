@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalHistorical",
-    "version": "3.0.5"
+    "version": "3.0.6"
   },
   "servers": [
     {
@@ -2070,6 +2070,14 @@
             "format": "double"
           },
           "Low": {
+            "type": "number",
+            "format": "double"
+          },
+          "Bid": {
+            "type": "number",
+            "format": "double"
+          },
+          "Ask": {
             "type": "number",
             "format": "double"
           },
