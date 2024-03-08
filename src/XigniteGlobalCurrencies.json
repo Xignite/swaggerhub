@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalCurrencies",
-    "version": "1.0.4"
+    "version": "1.0.5"
   },
   "servers": [
     {
@@ -537,77 +537,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalRate"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalRate"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalRate"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalRate"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalRate"
                 }
               }
             }
@@ -656,77 +606,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalRate"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalRate"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalRate"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalRate"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalRate"
                 }
               }
             }
@@ -777,17 +677,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -795,17 +685,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -813,17 +693,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -831,17 +701,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -849,17 +709,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               }
@@ -911,17 +761,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -929,17 +769,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -947,17 +777,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -965,17 +785,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -983,17 +793,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               }
@@ -1059,17 +859,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -1077,17 +867,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -1095,17 +875,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -1113,17 +883,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -1131,17 +891,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               }
@@ -1207,17 +957,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -1225,17 +965,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -1243,17 +973,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -1261,17 +981,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -1279,17 +989,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               }
@@ -1591,77 +1291,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalRate"
                 }
               },
               "text/json": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalRate"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalRate"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalRate"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/HistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/InternalHistoricalRate"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HistoricalRate"
                 }
               }
             }
@@ -1844,17 +1494,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -1862,17 +1502,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -1880,17 +1510,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -1898,17 +1518,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -1916,17 +1526,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               }
@@ -1971,17 +1571,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -1989,17 +1579,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -2007,17 +1587,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -2025,17 +1595,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               },
@@ -2043,17 +1603,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "$ref": "#/components/schemas/HistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/InternalHistoricalRate"
-                      },
-                      {
-                        "$ref": "#/components/schemas/HistoricalRateBidAsk"
-                      }
-                    ]
+                    "$ref": "#/components/schemas/HistoricalRate"
                   }
                 }
               }
@@ -2484,38 +2034,6 @@
         },
         "additionalProperties": false
       },
-      "InternalHistoricalRate": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/HistoricalRate"
-          }
-        ],
-        "additionalProperties": false
-      },
-      "HistoricalRateBidAsk": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/HistoricalRate"
-          }
-        ],
-        "properties": {
-          "Bid": {
-            "type": "number",
-            "format": "double"
-          },
-          "Ask": {
-            "type": "number",
-            "format": "double"
-          },
-          "Source": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "Bar": {
         "type": "object",
         "allOf": [
@@ -2688,6 +2206,29 @@
             "items": {
               "$ref": "#/components/schemas/ChartBar"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HistoricalRateBidAsk": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/HistoricalRate"
+          }
+        ],
+        "properties": {
+          "Bid": {
+            "type": "number",
+            "format": "double"
+          },
+          "Ask": {
+            "type": "number",
+            "format": "double"
+          },
+          "Source": {
+            "type": "string",
             "nullable": true
           }
         },
