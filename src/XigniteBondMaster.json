@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteBondMaster",
-    "version": "1.0.4"
+    "version": "1.0.5"
   },
   "servers": [
     {
@@ -1084,14 +1084,7 @@
           "BondResults": {
             "type": "array",
             "items": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/BondResult"
-                },
-                {
-                  "$ref": "#/components/schemas/BondResult"
-                }
-              ]
+              "$ref": "#/components/schemas/BondResult"
             },
             "nullable": true
           }
@@ -1133,14 +1126,7 @@
           "Securities": {
             "type": "array",
             "items": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/BondResult"
-                },
-                {
-                  "$ref": "#/components/schemas/BondResult"
-                }
-              ]
+              "$ref": "#/components/schemas/BondResult"
             },
             "nullable": true
           }
@@ -1184,12 +1170,9 @@
         ],
         "properties": {
           "InstrumentIdentifierBrief": {
-            "oneOf": [
+            "allOf": [
               {
                 "$ref": "#/components/schemas/InstrumentIdentifierBrief"
-              },
-              {
-                "$ref": "#/components/schemas/InstrumentIdentifier"
               }
             ],
             "nullable": true
