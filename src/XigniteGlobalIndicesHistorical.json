@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalIndicesHistorical",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "servers": [
     {
@@ -57,6 +57,68 @@
                   "items": {
                     "$ref": "#/components/schemas/IndexGroup"
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/xGlobalIndicesHistorical/ListIndices": {
+      "get": {
+        "tags": [
+          "XigniteGlobalIndicesHistorical"
+        ],
+        "parameters": [
+          {
+            "name": "IndexGroup",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NextPage",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexDescriptionList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexDescriptionList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexDescriptionList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexDescriptionList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexDescriptionList"
                 }
               }
             }
@@ -1233,6 +1295,28 @@
             "format": "int32"
           },
           "Currency": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IndexDescriptionList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IndexDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IndexDescription"
+            },
+            "nullable": true
+          },
+          "NextPage": {
             "type": "string",
             "nullable": true
           }
