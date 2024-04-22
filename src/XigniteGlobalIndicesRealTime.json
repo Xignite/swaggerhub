@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalIndicesRealTime",
-    "version": "1.0.4"
+    "version": "1.0.5"
   },
   "servers": [
     {
@@ -99,27 +99,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexDescriptionList"
+                  "$ref": "#/components/schemas/IndexSummaryList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexDescriptionList"
+                  "$ref": "#/components/schemas/IndexSummaryList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexDescriptionList"
+                  "$ref": "#/components/schemas/IndexSummaryList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexDescriptionList"
+                  "$ref": "#/components/schemas/IndexSummaryList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexDescriptionList"
+                  "$ref": "#/components/schemas/IndexSummaryList"
                 }
               }
             }
@@ -832,6 +832,55 @@
         },
         "additionalProperties": false
       },
+      "IndexSummary": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IndexName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "IndexGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "Currency": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IndexSummaryList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "IndexSummaries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IndexSummary"
+            },
+            "nullable": true
+          },
+          "NextPage": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "IndexDescription": {
         "type": "object",
         "allOf": [
@@ -857,28 +906,6 @@
             "format": "int32"
           },
           "Currency": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "IndexDescriptionList": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IndexDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/IndexDescription"
-            },
-            "nullable": true
-          },
-          "NextPage": {
             "type": "string",
             "nullable": true
           }
