@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalCurrencies",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "servers": [
     {
@@ -1659,6 +1659,45 @@
           }
         }
       }
+    },
+    "/xGlobalCurrencies/ListForwardRates": {
+      "get": {
+        "tags": [
+          "XigniteGlobalCurrencies"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRateList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRateList"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRateList"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRateList"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForwardRateList"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -2300,6 +2339,49 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ForwardContract"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ForwardRateDescription": {
+        "type": "object",
+        "properties": {
+          "BaseCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "QuoteCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "Symbol": {
+            "type": "string",
+            "nullable": true
+          },
+          "Expirations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ForwardRateList": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          }
+        ],
+        "properties": {
+          "ForwardRateDescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ForwardRateDescription"
             },
             "nullable": true
           }
