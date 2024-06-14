@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteMoneyMarkets",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "servers": [
     {
@@ -1458,7 +1458,9 @@
           "PHP",
           "CNY",
           "RMB",
-          "AED"
+          "AED",
+          "ILS",
+          "KWD"
         ],
         "type": "string"
       },
