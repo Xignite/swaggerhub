@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalNews",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "servers": [
     {
@@ -1447,25 +1447,6 @@
         },
         "additionalProperties": false
       },
-      "MarketHeadlineSummary": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/MarketHeadline"
-          }
-        ],
-        "properties": {
-          "Summary": {
-            "type": "string",
-            "nullable": true
-          },
-          "PaywallType": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "MarketHeadlines": {
         "type": "object",
         "allOf": [
@@ -1477,14 +1458,7 @@
           "Headlines": {
             "type": "array",
             "items": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/MarketHeadline"
-                },
-                {
-                  "$ref": "#/components/schemas/MarketHeadlineSummary"
-                }
-              ]
+              "$ref": "#/components/schemas/MarketHeadline"
             },
             "nullable": true
           }
@@ -1543,25 +1517,6 @@
         },
         "additionalProperties": false
       },
-      "SecurityHeadlineSummary": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/SecurityHeadline"
-          }
-        ],
-        "properties": {
-          "Summary": {
-            "type": "string",
-            "nullable": true
-          },
-          "PaywallType": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "SecurityHeadlines": {
         "type": "object",
         "allOf": [
@@ -1581,14 +1536,7 @@
           "Headlines": {
             "type": "array",
             "items": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/SecurityHeadline"
-                },
-                {
-                  "$ref": "#/components/schemas/SecurityHeadlineSummary"
-                }
-              ]
+              "$ref": "#/components/schemas/SecurityHeadline"
             },
             "nullable": true
           }
@@ -1655,6 +1603,25 @@
         },
         "additionalProperties": false
       },
+      "SecurityHeadlineSummary": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/SecurityHeadline"
+          }
+        ],
+        "properties": {
+          "Summary": {
+            "type": "string",
+            "nullable": true
+          },
+          "PaywallType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "SecurityHeadlineSummaries": {
         "type": "object",
         "allOf": [
@@ -1676,6 +1643,25 @@
             "items": {
               "$ref": "#/components/schemas/SecurityHeadlineSummary"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MarketHeadlineSummary": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/MarketHeadline"
+          }
+        ],
+        "properties": {
+          "Summary": {
+            "type": "string",
+            "nullable": true
+          },
+          "PaywallType": {
+            "type": "string",
             "nullable": true
           }
         },
