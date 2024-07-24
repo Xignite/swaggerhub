@@ -1699,6 +1699,10 @@
               "$ref": "#/components/schemas/Item"
             },
             "nullable": true
+          },
+          "FilingStatus": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
