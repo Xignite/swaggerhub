@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteFactSetFundamentals",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "servers": [
     {
@@ -1572,10 +1572,6 @@
             "items": {
               "$ref": "#/components/schemas/Item"
             },
-            "nullable": true
-          },
-          "FilingStatus": {
-            "type": "string",
             "nullable": true
           }
         },
