@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteFactSetFundamentals",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "servers": [
     {
@@ -40,7 +40,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -79,7 +79,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -127,7 +127,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -166,7 +166,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -214,7 +214,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -253,7 +253,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -301,7 +301,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -370,7 +370,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -475,7 +475,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -587,7 +587,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -699,7 +699,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -797,7 +797,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -895,7 +895,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -993,7 +993,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1091,7 +1091,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1246,22 +1246,24 @@
         "additionalProperties": false
       },
       "CompanyList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Companies": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Company"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Companies": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Company"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExchangeDescription": {
         "type": "object",
@@ -1282,22 +1284,24 @@
         "additionalProperties": false
       },
       "ExchangeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ExchangeDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExchangeDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ExchangeDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ExchangeDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "FundamentalDescription": {
         "type": "object",
@@ -1334,22 +1338,24 @@
         "additionalProperties": false
       },
       "FundamentalDescriptionList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "FundamentalDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/FundamentalDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "FundamentalDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/FundamentalDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Industry": {
         "type": "object",
@@ -1387,22 +1393,24 @@
         "additionalProperties": false
       },
       "SectorList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Sectors": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Sector"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Sectors": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Sector"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Fundamental": {
         "type": "object",
@@ -1467,30 +1475,32 @@
         "additionalProperties": false
       },
       "CompanyFundamentals": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Company": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Company"
-              }
-            ],
-            "nullable": true
           },
-          "FundamentalsSets": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/FundamentalsSet"
+          {
+            "type": "object",
+            "properties": {
+              "Company": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Company"
+                  }
+                ],
+                "nullable": true
+              },
+              "FundamentalsSets": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/FundamentalsSet"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "StatementTypes": {
         "enum": [
@@ -1582,111 +1592,119 @@
         "additionalProperties": false
       },
       "CompanyFinancialStatements": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Company": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Company"
-              }
-            ],
-            "nullable": true
           },
-          "FinancialStatements": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/FinancialStatement"
+          {
+            "type": "object",
+            "properties": {
+              "Company": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Company"
+                  }
+                ],
+                "nullable": true
+              },
+              "FinancialStatements": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/FinancialStatement"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "CompanyBalanceSheet": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Company": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Company"
-              }
-            ],
-            "nullable": true
           },
-          "BalanceSheet": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/FinancialStatement"
+          {
+            "type": "object",
+            "properties": {
+              "Company": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Company"
+                  }
+                ],
+                "nullable": true
+              },
+              "BalanceSheet": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/FinancialStatement"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "CompanyCashFlowStatement": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Company": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Company"
-              }
-            ],
-            "nullable": true
           },
-          "CashFlowStatement": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/FinancialStatement"
+          {
+            "type": "object",
+            "properties": {
+              "Company": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Company"
+                  }
+                ],
+                "nullable": true
+              },
+              "CashFlowStatement": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/FinancialStatement"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "CompanyIncomeStatement": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Company": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Company"
-              }
-            ],
-            "nullable": true
           },
-          "IncomeStatement": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/FinancialStatement"
+          {
+            "type": "object",
+            "properties": {
+              "Company": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Company"
+                  }
+                ],
+                "nullable": true
+              },
+              "IncomeStatement": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/FinancialStatement"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
