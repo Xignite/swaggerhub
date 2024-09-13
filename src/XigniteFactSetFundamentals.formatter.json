@@ -430,6 +430,13 @@
             }
           },
           {
+            "name": "ReportType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "formatter",
             "in": "path",
             "required": true,

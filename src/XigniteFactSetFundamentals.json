@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteFactSetFundamentals",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "servers": [
     {
@@ -362,6 +362,13 @@
           },
           {
             "name": "UpdatedSince",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ReportType",
             "in": "query",
             "schema": {
               "type": "string"
