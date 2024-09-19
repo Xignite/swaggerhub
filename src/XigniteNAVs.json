@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteNAVs",
-    "version": "2.0.5"
+    "version": "2.0.6"
   },
   "servers": [
     {
@@ -1125,16 +1125,14 @@
             "name": "StartDate",
             "in": "query",
             "schema": {
-              "type": "string",
-              "default": "1900-01-01"
+              "type": "string"
             }
           },
           {
             "name": "EndDate",
             "in": "query",
             "schema": {
-              "type": "string",
-              "default": "2020-01-01"
+              "type": "string"
             }
           }
         ],
