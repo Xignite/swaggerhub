@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalOptions",
-    "version": "1.0.9"
+    "version": "1.0.10"
   },
   "servers": [
     {
@@ -2114,6 +2114,10 @@
             "nullable": true
           },
           "ContractSize": {
+            "type": "number",
+            "format": "double"
+          },
+          "Multiplier": {
             "type": "number",
             "format": "double"
           },
