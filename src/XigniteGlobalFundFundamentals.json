@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "XigniteGlobalFundFundamentals",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "servers": [
     {
@@ -3172,6 +3172,10 @@
           "Currency": {
             "type": "string",
             "nullable": true
+          },
+          "CumulativeAdjustmentFactor": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
