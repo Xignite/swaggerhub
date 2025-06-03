@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Overnight",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -33,6 +33,13 @@
                 }
               ]
             }
+          },
+          {
+            "name": "Source",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -43,7 +50,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/OvernightQuote"
+                    "$ref": "#/components/schemas/Quote"
                   }
                 }
               },
@@ -51,7 +58,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/OvernightQuote"
+                    "$ref": "#/components/schemas/Quote"
                   }
                 }
               },
@@ -59,7 +66,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/OvernightQuote"
+                    "$ref": "#/components/schemas/Quote"
                   }
                 }
               },
@@ -67,7 +74,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/OvernightQuote"
+                    "$ref": "#/components/schemas/Quote"
                   }
                 }
               },
@@ -75,7 +82,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/OvernightQuote"
+                    "$ref": "#/components/schemas/Quote"
                   }
                 }
               }
@@ -107,6 +114,13 @@
                 }
               ]
             }
+          },
+          {
+            "name": "Source",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -115,27 +129,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OvernightQuote"
+                  "$ref": "#/components/schemas/Quote"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OvernightQuote"
+                  "$ref": "#/components/schemas/Quote"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/OvernightQuote"
+                  "$ref": "#/components/schemas/Quote"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/OvernightQuote"
+                  "$ref": "#/components/schemas/Quote"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/OvernightQuote"
+                  "$ref": "#/components/schemas/Quote"
                 }
               }
             }
@@ -366,7 +380,7 @@
         },
         "additionalProperties": false
       },
-      "OvernightQuote": {
+      "Quote": {
         "type": "object",
         "allOf": [
           {
