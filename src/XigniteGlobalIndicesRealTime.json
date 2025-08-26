@@ -1,8 +1,8 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalIndicesRealTime",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "servers": [
     {
@@ -17,7 +17,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -95,7 +95,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -143,7 +143,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -206,7 +206,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -254,7 +254,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -317,7 +317,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -391,7 +391,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -450,7 +450,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -814,103 +814,111 @@
         "additionalProperties": false
       },
       "IndexGroup": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Name": {
-            "type": "string",
-            "nullable": true
           },
-          "Description": {
-            "type": "string",
-            "nullable": true
+          {
+            "type": "object",
+            "properties": {
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "Description": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IndexSummary": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "IndexName": {
+                "type": "string",
+                "nullable": true
+              },
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "IndexGroup": {
+                "type": "string",
+                "nullable": true
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "IndexName": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "IndexGroup": {
-            "type": "string",
-            "nullable": true
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "IndexSummaryList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IndexSummaries": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/IndexSummary"
-            },
-            "nullable": true
           },
-          "NextPage": {
-            "type": "string",
-            "nullable": true
+          {
+            "type": "object",
+            "properties": {
+              "IndexSummaries": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/IndexSummary"
+                },
+                "nullable": true
+              },
+              "NextPage": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IndexDescription": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "IndexName": {
+                "type": "string",
+                "nullable": true
+              },
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "IndexGroup": {
+                "type": "string",
+                "nullable": true
+              },
+              "Valoren": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "IndexName": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "IndexGroup": {
-            "type": "string",
-            "nullable": true
-          },
-          "Valoren": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "IndexDescriptionDto": {
         "type": "object",
@@ -939,27 +947,29 @@
         "additionalProperties": false
       },
       "IndexSymbolMapping": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Index": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/IndexDescriptionDto"
-              }
-            ],
-            "nullable": true
           },
-          "OldSymbol": {
-            "type": "string",
-            "nullable": true
+          {
+            "type": "object",
+            "properties": {
+              "Index": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/IndexDescriptionDto"
+                  }
+                ],
+                "nullable": true
+              },
+              "OldSymbol": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IdentifierTypes": {
         "enum": [
@@ -1041,58 +1051,62 @@
         "additionalProperties": false
       },
       "Weeks.IndexQuote": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/IndexQuote"
-          }
-        ],
-        "properties": {
-          "High52Weeks": {
-            "type": "number",
-            "format": "double"
           },
-          "Low52Weeks": {
-            "type": "number",
-            "format": "double"
+          {
+            "type": "object",
+            "properties": {
+              "High52Weeks": {
+                "type": "number",
+                "format": "double"
+              },
+              "Low52Weeks": {
+                "type": "number",
+                "format": "double"
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Weeks.IndexValue": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Identifier": {
-            "type": "string",
-            "nullable": true
           },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Index": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/IndexDescriptionDto"
+          {
+            "type": "object",
+            "properties": {
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Index": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/IndexDescriptionDto"
+                  }
+                ],
+                "nullable": true
+              },
+              "Value": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Weeks.IndexQuote"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Value": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Weeks.IndexQuote"
-              }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "BarPrecision": {
         "enum": [
