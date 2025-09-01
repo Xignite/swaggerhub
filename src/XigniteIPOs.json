@@ -1,8 +1,8 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
     "title": "XigniteIPOs",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
