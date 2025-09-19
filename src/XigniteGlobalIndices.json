@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalIndices",
-    "version": "1.0.6"
+    "version": "1.0.7"
   },
   "servers": [
     {
@@ -550,7 +550,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -642,7 +642,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -744,7 +744,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1162,57 +1162,61 @@
         "additionalProperties": false
       },
       "IndexBar": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Index": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/IndexDescriptionDto"
-              }
-            ],
-            "nullable": true
           },
-          "Bar": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Bar"
+          {
+            "type": "object",
+            "properties": {
+              "Index": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/IndexDescriptionDto"
+                  }
+                ],
+                "nullable": true
+              },
+              "Bar": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Bar"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IndexBars": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Index": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/IndexDescriptionDto"
-              }
-            ],
-            "nullable": true
           },
-          "Bars": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Bar"
+          {
+            "type": "object",
+            "properties": {
+              "Index": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/IndexDescriptionDto"
+                  }
+                ],
+                "nullable": true
+              },
+              "Bars": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Bar"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ChartBar": {
         "type": "object",
@@ -1285,34 +1289,36 @@
         "additionalProperties": false
       },
       "IndexChartBars": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Timing": {
-            "type": "string",
-            "nullable": true
           },
-          "Index": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/IndexDescriptionDto"
+          {
+            "type": "object",
+            "properties": {
+              "Timing": {
+                "type": "string",
+                "nullable": true
+              },
+              "Index": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/IndexDescriptionDto"
+                  }
+                ],
+                "nullable": true
+              },
+              "ChartBars": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ChartBar"
+                },
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "ChartBars": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ChartBar"
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
