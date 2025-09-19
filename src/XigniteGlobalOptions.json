@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalOptions",
-    "version": "1.0.11"
+    "version": "1.0.12"
   },
   "servers": [
     {
@@ -1516,7 +1516,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2681,69 +2681,71 @@
         "additionalProperties": false
       },
       "OptionChartBars": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
           },
-          "SymbologyType": {
-            "type": "string",
-            "nullable": true
-          },
-          "BaseSymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "Type": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionTypes"
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "SymbologyType": {
+                "type": "string",
+                "nullable": true
+              },
+              "BaseSymbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Type": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/OptionTypes"
+                  }
+                ]
+              },
+              "ExpirationDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "StrikePrice": {
+                "type": "number",
+                "format": "double"
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "ContractSize": {
+                "type": "number",
+                "format": "double"
+              },
+              "CFI": {
+                "type": "string",
+                "nullable": true
+              },
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "Timing": {
+                "type": "string",
+                "nullable": true
+              },
+              "ChartBars": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ChartBar"
+                },
+                "nullable": true
               }
-            ]
-          },
-          "ExpirationDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "StrikePrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "ContractSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "CFI": {
-            "type": "string",
-            "nullable": true
-          },
-          "Exchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "Timing": {
-            "type": "string",
-            "nullable": true
-          },
-          "ChartBars": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ChartBar"
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
