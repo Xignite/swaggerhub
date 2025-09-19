@@ -1,8 +1,8 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
     "title": "XigniteBondMaster",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "servers": [
     {
@@ -37,7 +37,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -162,7 +162,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -254,7 +254,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -313,7 +313,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -387,7 +387,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -441,7 +441,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -480,7 +480,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -542,7 +542,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -596,7 +596,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -635,7 +635,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -695,24 +695,24 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -736,43 +736,45 @@
         "additionalProperties": false
       },
       "InstrumentIdentifier": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "CompanyIdentifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "ShortName": {
+                "type": "string",
+                "nullable": true
+              },
+              "IssuerName": {
+                "type": "string",
+                "nullable": true
+              },
+              "IssuerDomicile": {
+                "type": "string",
+                "nullable": true
+              },
+              "CFICode": {
+                "type": "string",
+                "nullable": true
+              },
+              "OriginalIssuerName": {
+                "type": "string",
+                "nullable": true
+              },
+              "OriginalCompanyIdentifier": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "CompanyIdentifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "ShortName": {
-            "type": "string",
-            "nullable": true
-          },
-          "IssuerName": {
-            "type": "string",
-            "nullable": true
-          },
-          "IssuerDomicile": {
-            "type": "string",
-            "nullable": true
-          },
-          "CFICode": {
-            "type": "string",
-            "nullable": true
-          },
-          "OriginalIssuerName": {
-            "type": "string",
-            "nullable": true
-          },
-          "OriginalCompanyIdentifier": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "Issuer": {
         "type": "object",
@@ -863,142 +865,146 @@
         "additionalProperties": false
       },
       "BondInstrument": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/BondInstrumentBrief"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ProductName": {
+                "type": "string",
+                "nullable": true
+              },
+              "BondType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Domicile": {
+                "type": "string",
+                "nullable": true
+              },
+              "DistributionFrequency": {
+                "type": "string",
+                "nullable": true
+              },
+              "DistributionFrequencyUnit": {
+                "type": "string",
+                "nullable": true
+              },
+              "DayCountConvention": {
+                "type": "string",
+                "nullable": true
+              },
+              "PaysAtMonthEnd": {
+                "type": "string",
+                "nullable": true
+              },
+              "WithoutPhysicalCoupon": {
+                "type": "string",
+                "nullable": true
+              },
+              "OriginalIssuePrice": {
+                "type": "string",
+                "nullable": true
+              },
+              "IssueDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "IssueTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "InstrumentForm": {
+                "type": "string",
+                "nullable": true
+              },
+              "TradesWithAllIncluded": {
+                "type": "string",
+                "nullable": true
+              },
+              "DatedDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Senior": {
+                "type": "string",
+                "nullable": true
+              },
+              "LiquidationRight": {
+                "type": "string",
+                "nullable": true
+              },
+              "DistributionType": {
+                "type": "string",
+                "nullable": true
+              },
+              "IssueStatus": {
+                "type": "string",
+                "nullable": true
+              },
+              "Amortization": {
+                "type": "string",
+                "nullable": true
+              },
+              "Guarantor": {
+                "type": "string",
+                "nullable": true
+              },
+              "GuaranteeType": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "ProductName": {
-            "type": "string",
-            "nullable": true
-          },
-          "BondType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Domicile": {
-            "type": "string",
-            "nullable": true
-          },
-          "DistributionFrequency": {
-            "type": "string",
-            "nullable": true
-          },
-          "DistributionFrequencyUnit": {
-            "type": "string",
-            "nullable": true
-          },
-          "DayCountConvention": {
-            "type": "string",
-            "nullable": true
-          },
-          "PaysAtMonthEnd": {
-            "type": "string",
-            "nullable": true
-          },
-          "WithoutPhysicalCoupon": {
-            "type": "string",
-            "nullable": true
-          },
-          "OriginalIssuePrice": {
-            "type": "string",
-            "nullable": true
-          },
-          "IssueDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "IssueTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "InstrumentForm": {
-            "type": "string",
-            "nullable": true
-          },
-          "TradesWithAllIncluded": {
-            "type": "string",
-            "nullable": true
-          },
-          "DatedDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Senior": {
-            "type": "string",
-            "nullable": true
-          },
-          "LiquidationRight": {
-            "type": "string",
-            "nullable": true
-          },
-          "DistributionType": {
-            "type": "string",
-            "nullable": true
-          },
-          "IssueStatus": {
-            "type": "string",
-            "nullable": true
-          },
-          "Amortization": {
-            "type": "string",
-            "nullable": true
-          },
-          "Guarantor": {
-            "type": "string",
-            "nullable": true
-          },
-          "GuaranteeType": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "BondDescription": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "InstrumentIdentifier": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/InstrumentIdentifier"
+                  }
+                ],
+                "nullable": true
+              },
+              "Issuer": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Issuer"
+                  }
+                ],
+                "nullable": true
+              },
+              "BondInstrument": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/BondInstrument"
+                  }
+                ],
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "InstrumentIdentifier": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/InstrumentIdentifier"
-              }
-            ],
-            "nullable": true
-          },
-          "Issuer": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Issuer"
-              }
-            ],
-            "nullable": true
-          },
-          "BondInstrument": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/BondInstrument"
-              }
-            ],
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "BondResult": {
         "type": "object",
@@ -1027,111 +1033,115 @@
         "additionalProperties": false
       },
       "ScreenBondsResult": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Domicile": {
-            "type": "string",
-            "nullable": true
           },
-          "IssuerType": {
-            "type": "string",
-            "nullable": true
-          },
-          "BondType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Callable": {
-            "type": "string",
-            "nullable": true
-          },
-          "Convertible": {
-            "type": "string",
-            "nullable": true
-          },
-          "StartMaturityDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndMaturityDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "MinCouponRate": {
-            "type": "string",
-            "nullable": true
-          },
-          "MaxCouponRate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Issuer": {
-            "type": "string",
-            "nullable": true
-          },
-          "IncludeNonActive": {
-            "type": "boolean"
-          },
-          "MaxResultCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "BondResults": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BondResult"
+          {
+            "type": "object",
+            "properties": {
+              "Domicile": {
+                "type": "string",
+                "nullable": true
+              },
+              "IssuerType": {
+                "type": "string",
+                "nullable": true
+              },
+              "BondType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Callable": {
+                "type": "string",
+                "nullable": true
+              },
+              "Convertible": {
+                "type": "string",
+                "nullable": true
+              },
+              "StartMaturityDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndMaturityDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "MinCouponRate": {
+                "type": "string",
+                "nullable": true
+              },
+              "MaxCouponRate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Issuer": {
+                "type": "string",
+                "nullable": true
+              },
+              "IncludeNonActive": {
+                "type": "boolean"
+              },
+              "MaxResultCount": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "BondResults": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BondResult"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ListBondsResult": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Domicile": {
-            "type": "string",
-            "nullable": true
           },
-          "IssuerType": {
-            "type": "string",
-            "nullable": true
-          },
-          "BondType": {
-            "type": "string",
-            "nullable": true
-          },
-          "StartSymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndSymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "NextPage": {
-            "type": "string",
-            "nullable": true
-          },
-          "Securities": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BondResult"
+          {
+            "type": "object",
+            "properties": {
+              "Domicile": {
+                "type": "string",
+                "nullable": true
+              },
+              "IssuerType": {
+                "type": "string",
+                "nullable": true
+              },
+              "BondType": {
+                "type": "string",
+                "nullable": true
+              },
+              "StartSymbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndSymbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "NextPage": {
+                "type": "string",
+                "nullable": true
+              },
+              "Securities": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BondResult"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "EarlyRedemptionSchedule": {
         "type": "object",
@@ -1162,38 +1172,40 @@
         "additionalProperties": false
       },
       "EarlyRedemptionScheduleComposite": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "InstrumentIdentifierBrief": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "InstrumentIdentifierBrief": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+                  }
+                ],
+                "nullable": true
+              },
+              "EarlyRedemptionSchedules": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EarlyRedemptionSchedule"
+                },
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "EarlyRedemptionSchedules": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/EarlyRedemptionSchedule"
             },
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Domicile": {
         "type": "object",
@@ -1210,22 +1222,24 @@
         "additionalProperties": false
       },
       "DomicileList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Domiciles": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Domicile"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Domiciles": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Domicile"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "DataPoint": {
         "type": "object",
@@ -1254,22 +1268,24 @@
         "additionalProperties": false
       },
       "DataPointsList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "DataPoints": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/DataPoint"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "DataPoints": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/DataPoint"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "DataValue": {
         "type": "object",
@@ -1311,39 +1327,41 @@
         "additionalProperties": false
       },
       "GenericDataPoints": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "InstrumentIdentifier": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/InstrumentIdentifier"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "InstrumentIdentifier": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/InstrumentIdentifier"
+                  }
+                ],
+                "nullable": true
+              },
+              "DataSets": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/DataSets"
+                  }
+                ],
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "DataSets": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/DataSets"
-              }
-            ],
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "BondType": {
         "type": "object",
@@ -1364,22 +1382,24 @@
         "additionalProperties": false
       },
       "BondTypeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "BondTypes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BondType"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "BondTypes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BondType"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IssuerType": {
         "type": "object",
@@ -1396,22 +1416,24 @@
         "additionalProperties": false
       },
       "IssuerTypeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IssuerTypes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/IssuerType"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "IssuerTypes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/IssuerType"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
