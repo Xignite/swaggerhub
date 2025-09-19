@@ -1,8 +1,8 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalETFs",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "servers": [
     {
@@ -17,7 +17,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -65,7 +65,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -104,7 +104,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -180,7 +180,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -278,7 +278,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -347,7 +347,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -438,7 +438,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -514,7 +514,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -612,7 +612,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -695,7 +695,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -779,7 +779,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -856,7 +856,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -932,7 +932,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -979,24 +979,24 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1016,22 +1016,24 @@
         "additionalProperties": false
       },
       "ExchangeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ExchangeDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExchangeDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ExchangeDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ExchangeDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ETFDescription": {
         "type": "object",
@@ -1056,22 +1058,24 @@
         "additionalProperties": false
       },
       "ETFList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ETFDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ETFDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ETFDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ETFDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "CharacteristicDescription": {
         "type": "object",
@@ -1092,22 +1096,24 @@
         "additionalProperties": false
       },
       "CharacteristicList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "CharacteristicDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CharacteristicDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "CharacteristicDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CharacteristicDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Security": {
         "type": "object",
@@ -1202,38 +1208,40 @@
         "additionalProperties": false
       },
       "ETFCharacteristics": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "Characteristics": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Characteristic"
+                },
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Characteristics": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Characteristic"
             },
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Holding": {
         "type": "object",
@@ -1296,51 +1304,53 @@
         "additionalProperties": false
       },
       "Holdings": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "ETFHoldings": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Holding"
+                },
+                "nullable": true
+              },
+              "TotalHoldings": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "NextPage": {
+                "type": "string",
+                "nullable": true
+              },
+              "AsOfDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "ETFHoldings": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Holding"
             },
-            "nullable": true
-          },
-          "TotalHoldings": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "NextPage": {
-            "type": "string",
-            "nullable": true
-          },
-          "AsOfDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Flows": {
         "type": "object",
@@ -1398,73 +1408,77 @@
         "additionalProperties": false
       },
       "FundFlows": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "Flows": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Flows"
+                  }
+                ],
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Flows": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Flows"
-              }
-            ],
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "FundFlowsRange": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "FundFlows": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Flows"
+                },
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "FundFlows": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Flows"
             },
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "NAV": {
         "type": "object",
@@ -1511,73 +1525,77 @@
         "additionalProperties": false
       },
       "NAVs": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "NAV": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/NAV"
+                  }
+                ],
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "NAV": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/NAV"
-              }
-            ],
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "HistoricalNAVs": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "NAVs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NAV"
+                },
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "NAVs": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/NAV"
             },
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Returns": {
         "type": "object",
@@ -1639,39 +1657,41 @@
         "additionalProperties": false
       },
       "TrailingReturns": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "Returns": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Returns"
+                  }
+                ],
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Returns": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Returns"
-              }
-            ],
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Volatility": {
         "type": "object",
@@ -1718,65 +1738,69 @@
         "additionalProperties": false
       },
       "VolatilityStatistics": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "Volatility": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Volatility"
+                  }
+                ],
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Volatility": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Volatility"
-              }
-            ],
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "SearchETFResult": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "SearchValue": {
-            "type": "string",
-            "nullable": true
           },
-          "Region": {
-            "type": "string",
-            "nullable": true
-          },
-          "ETFs": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "SearchValue": {
+                "type": "string",
+                "nullable": true
+              },
+              "Region": {
+                "type": "string",
+                "nullable": true
+              },
+              "ETFs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Security"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ETFWithWeight": {
         "type": "object",
@@ -1798,33 +1822,35 @@
         "additionalProperties": false
       },
       "SearchETFBySecurityExposureResult": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Region": {
-            "type": "string",
-            "nullable": true
           },
-          "Security": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "Region": {
+                "type": "string",
+                "nullable": true
+              },
+              "Security": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Security"
+                },
+                "nullable": true
+              },
+              "ETFs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ETFWithWeight"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
-          },
-          "ETFs": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ETFWithWeight"
-            },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
