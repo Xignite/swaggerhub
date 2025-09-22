@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteLogos",
-    "version": "1.0.4"
+    "version": "1.0.5"
   },
   "servers": [
     {
@@ -47,7 +47,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -131,7 +131,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -170,7 +170,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -218,7 +218,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -265,24 +265,24 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -414,57 +414,61 @@
         "additionalProperties": false
       },
       "LogosResult": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
           },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "Logo": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Logo"
+          {
+            "type": "object",
+            "properties": {
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "Logo": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Logo"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "LogosByExchange": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "NextPage": {
-            "type": "string",
-            "nullable": true
           },
-          "TotalLogosByExchange": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Logos": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Logo"
+          {
+            "type": "object",
+            "properties": {
+              "NextPage": {
+                "type": "string",
+                "nullable": true
+              },
+              "TotalLogosByExchange": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "Logos": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Logo"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExchangeDescription": {
         "type": "object",
@@ -481,22 +485,24 @@
         "additionalProperties": false
       },
       "ExchangeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ExchangeDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExchangeDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ExchangeDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ExchangeDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "SymbolDescription": {
         "type": "object",
@@ -529,30 +535,32 @@
         "additionalProperties": false
       },
       "SymbolList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Market": {
-            "type": "string",
-            "nullable": true
           },
-          "MarketIdentificationCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "SymbolDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SymbolDescription"
+          {
+            "type": "object",
+            "properties": {
+              "Market": {
+                "type": "string",
+                "nullable": true
+              },
+              "MarketIdentificationCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "SymbolDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SymbolDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
