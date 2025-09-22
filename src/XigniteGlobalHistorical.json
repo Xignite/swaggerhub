@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalHistorical",
-    "version": "3.0.9"
+    "version": "3.0.10"
   },
   "servers": [
     {
@@ -17,7 +17,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -79,7 +79,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -134,7 +134,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -189,7 +189,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -272,7 +272,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -334,7 +334,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -410,7 +410,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -465,7 +465,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -548,7 +548,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -653,7 +653,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -736,7 +736,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -819,7 +819,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -902,7 +902,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -985,7 +985,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1068,7 +1068,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1166,7 +1166,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1235,7 +1235,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1325,7 +1325,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1465,15 +1465,6 @@
   },
   "components": {
     "schemas": {
-      "OutcomeTypes": {
-        "enum": [
-          "Success",
-          "SystemError",
-          "RequestError",
-          "RegistrationError"
-        ],
-        "type": "string"
-      },
       "ExchangeDescription": {
         "type": "object",
         "properties": {
@@ -1491,25 +1482,6 @@
       "ExchangeList": {
         "type": "object",
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "ExchangeDescriptions": {
             "type": "array",
             "items": {
@@ -1545,25 +1517,6 @@
       "SymbolList": {
         "type": "object",
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "Exchange": {
             "allOf": [
               {
@@ -1631,25 +1584,6 @@
       "SymbolChangeList": {
         "type": "object",
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "DateTime": {
             "type": "string",
             "nullable": true
@@ -1664,27 +1598,36 @@
         },
         "additionalProperties": false
       },
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1720,22 +1663,24 @@
         "additionalProperties": false
       },
       "SymbolsWithAdjustedFactorsList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "EventSymbols": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/EventSymbol"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "EventSymbols": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EventSymbol"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Security": {
         "type": "object",
@@ -1838,58 +1783,60 @@
         "additionalProperties": false
       },
       "CashDividendHistory": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "CorporateActionsAdjusted": {
-            "type": "string",
-            "nullable": true
           },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierAsOfDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "CorporateActionsAdjusted": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierAsOfDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "StartDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "CumulativeCashDividend": {
+                "type": "number",
+                "format": "double"
+              },
+              "CashDividends": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CashDividend"
+                },
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "StartDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "CumulativeCashDividend": {
-            "type": "number",
-            "format": "double"
-          },
-          "CashDividends": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CashDividend"
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExchangeDividend": {
         "type": "object",
@@ -1914,99 +1861,105 @@
         "additionalProperties": false
       },
       "ExchangeDividendsList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Exchange": {
-            "type": "string",
-            "nullable": true
           },
-          "ExDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "CorporateActionsAdjusted": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExchangeDividends": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExchangeDividend"
+          {
+            "type": "object",
+            "properties": {
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "ExDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "CorporateActionsAdjusted": {
+                "type": "string",
+                "nullable": true
+              },
+              "ExchangeDividends": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ExchangeDividend"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Split": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ExDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Numerator": {
+                "type": "number",
+                "format": "double"
+              },
+              "Denominator": {
+                "type": "number",
+                "format": "double"
+              },
+              "SplitRatio": {
+                "type": "number",
+                "format": "double"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "ExDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Numerator": {
-            "type": "number",
-            "format": "double"
-          },
-          "Denominator": {
-            "type": "number",
-            "format": "double"
-          },
-          "SplitRatio": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "SplitHistory": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "StartDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "CumulativeSplitRatio": {
+                "type": "number",
+                "format": "double"
+              },
+              "Splits": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Split"
+                },
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "StartDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "CumulativeSplitRatio": {
-            "type": "number",
-            "format": "double"
-          },
-          "Splits": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Split"
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExchangeSplit": {
         "type": "object",
@@ -2031,22 +1984,24 @@
         "additionalProperties": false
       },
       "ExchangeSplitsList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ExchangeSplits": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExchangeSplit"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ExchangeSplits": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ExchangeSplit"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "HistoricalQuote": {
         "type": "object",
@@ -2132,133 +2087,117 @@
         "additionalProperties": false
       },
       "GlobalHistoricalQuote": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Identifier": {
-            "type": "string",
-            "nullable": true
           },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "HistoricalQuote": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/HistoricalQuote"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "HistoricalQuote": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/HistoricalQuote"
-              }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "GlobalHistoricalQuotes": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Identifier": {
-            "type": "string",
-            "nullable": true
           },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "StartDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "HistoricalQuotes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/HistoricalQuote"
+                },
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "StartDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "HistoricalQuotes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/HistoricalQuote"
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "AdjustmentFactor": {
         "type": "object",
-        "properties": {
-          "Event": {
-            "type": "string",
-            "nullable": true
-          },
-          "Exdate": {
-            "type": "string",
-            "nullable": true
-          },
-          "EventDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "Factor": {
-            "type": "number",
-            "format": "decimal"
-          },
-          "CumulativeAdjustmentFactor": {
-            "type": "number",
-            "format": "decimal"
-          }
-        },
         "additionalProperties": false
       },
       "AdjustmentFactors": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
           },
-          "ArrayOfAdjustmentFactor": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AdjustmentFactor"
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "ArrayOfAdjustmentFactor": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AdjustmentFactor"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "HistoricalVWAP": {
         "type": "object",
@@ -2324,42 +2263,44 @@
         "additionalProperties": false
       },
       "GlobalHistoricalVWAPs": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Identifier": {
-            "type": "string",
-            "nullable": true
           },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "AdjustmentMethodUsed": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "AdjustmentMethodUsed": {
+                "type": "string",
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "HistoricalVWAPs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/HistoricalVWAP"
+                },
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "HistoricalVWAPs": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/HistoricalVWAP"
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ChartBar": {
         "type": "object",
