@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteBonds",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -47,7 +47,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -86,7 +86,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -156,7 +156,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -226,7 +226,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,7 +311,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -381,7 +381,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -466,7 +466,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -536,7 +536,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -598,24 +598,24 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -651,34 +651,36 @@
         "additionalProperties": false
       },
       "ListBondsResult": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "BondType": {
-            "type": "string",
-            "nullable": true
           },
-          "StartSymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndSymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "Securities": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BondResult"
+          {
+            "type": "object",
+            "properties": {
+              "BondType": {
+                "type": "string",
+                "nullable": true
+              },
+              "StartSymbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndSymbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Securities": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BondResult"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "BondType": {
         "type": "object",
@@ -699,22 +701,24 @@
         "additionalProperties": false
       },
       "BondTypeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "BondTypes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BondType"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "BondTypes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BondType"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IdentifierTypes": {
         "enum": [
@@ -808,39 +812,41 @@
         "additionalProperties": false
       },
       "LastSale": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "InstrumentIdentifierBrief": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "InstrumentIdentifierBrief": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+                  }
+                ],
+                "nullable": true
+              },
+              "BondLastSale": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/BondLastSale"
+                  }
+                ],
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "BondLastSale": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/BondLastSale"
-              }
-            ],
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "TradedPrice": {
         "type": "object",
@@ -957,39 +963,41 @@
         "additionalProperties": false
       },
       "PriceComposite": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "InstrumentIdentifierBrief": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "InstrumentIdentifierBrief": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+                  }
+                ],
+                "nullable": true
+              },
+              "TradedPrice": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/TradedPrice"
+                  }
+                ],
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "TradedPrice": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/TradedPrice"
-              }
-            ],
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "DailyOpenHighLowClose": {
         "type": "object",
@@ -1062,39 +1070,41 @@
         "additionalProperties": false
       },
       "DailyOpenHighLowClosePrice": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "InstrumentIdentifierBrief": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "InstrumentIdentifierBrief": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/InstrumentIdentifierBrief"
+                  }
+                ],
+                "nullable": true
+              },
+              "DailyOpenHighLowClose": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/DailyOpenHighLowClose"
+                  }
+                ],
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "DailyOpenHighLowClose": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/DailyOpenHighLowClose"
-              }
-            ],
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
