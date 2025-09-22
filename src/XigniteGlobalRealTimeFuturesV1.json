@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalRealTimeFuturesV1",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -33,7 +33,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -81,7 +81,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -136,7 +136,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -191,7 +191,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -254,7 +254,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -317,7 +317,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -395,7 +395,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -465,7 +465,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -527,7 +527,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -597,7 +597,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -660,7 +660,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -708,7 +708,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -778,7 +778,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -817,7 +817,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -880,7 +880,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -950,7 +950,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1027,7 +1027,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1090,7 +1090,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1152,24 +1152,24 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1185,189 +1185,193 @@
         "type": "string"
       },
       "Future": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
           },
-          "Valoren": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "Month": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Year": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Exchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "BaseSymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExchangeSymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "Expiration": {
-            "type": "string",
-            "nullable": true
-          },
-          "Type": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/FutureTypes"
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Valoren": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "Month": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "Year": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "BaseSymbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "ExchangeSymbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Expiration": {
+                "type": "string",
+                "nullable": true
+              },
+              "Type": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/FutureTypes"
+                  }
+                ]
+              },
+              "ContractSize": {
+                "type": "number",
+                "format": "double"
               }
-            ]
-          },
-          "ContractSize": {
-            "type": "number",
-            "format": "double"
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "FutureQuote": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Future": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Future"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Future": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Future"
+                  }
+                ],
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Time": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "Open": {
+                "type": "number",
+                "format": "double"
+              },
+              "High": {
+                "type": "number",
+                "format": "double"
+              },
+              "Low": {
+                "type": "number",
+                "format": "double"
+              },
+              "Last": {
+                "type": "number",
+                "format": "double"
+              },
+              "Bid": {
+                "type": "number",
+                "format": "double"
+              },
+              "Ask": {
+                "type": "number",
+                "format": "double"
+              },
+              "BidDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "BidTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "AskDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "AskTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "Settle": {
+                "type": "number",
+                "format": "double"
+              },
+              "SettleDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "SettleTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "Volume": {
+                "type": "number",
+                "format": "double"
+              },
+              "OpenInterest": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousClose": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousCloseDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousSettle": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousSettleDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Change": {
+                "type": "number",
+                "format": "double"
+              },
+              "PercentChange": {
+                "type": "number",
+                "format": "double"
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Last": {
-            "type": "number",
-            "format": "double"
-          },
-          "Bid": {
-            "type": "number",
-            "format": "double"
-          },
-          "Ask": {
-            "type": "number",
-            "format": "double"
-          },
-          "BidDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "BidTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "AskDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "AskTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "Settle": {
-            "type": "number",
-            "format": "double"
-          },
-          "SettleDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "SettleTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "Volume": {
-            "type": "number",
-            "format": "double"
-          },
-          "OpenInterest": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousClose": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousCloseDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousSettle": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousSettleDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Change": {
-            "type": "number",
-            "format": "double"
-          },
-          "PercentChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "OptionTypes": {
         "enum": [
@@ -1377,207 +1381,213 @@
         "type": "string"
       },
       "FutureOption": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
           },
-          "Valoren": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "Month": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Year": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Exchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "BaseSymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "StrikeDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "StrikePrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "Type": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionTypes"
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Valoren": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "Month": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "Year": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "BaseSymbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "StrikeDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "StrikePrice": {
+                "type": "number",
+                "format": "double"
+              },
+              "Type": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/OptionTypes"
+                  }
+                ]
               }
-            ]
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "FutureOptionQuote": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "FutureOption": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/FutureOption"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "FutureOption": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/FutureOption"
+                  }
+                ],
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Time": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "Open": {
+                "type": "number",
+                "format": "double"
+              },
+              "Close": {
+                "type": "number",
+                "format": "double"
+              },
+              "High": {
+                "type": "number",
+                "format": "double"
+              },
+              "Low": {
+                "type": "number",
+                "format": "double"
+              },
+              "Last": {
+                "type": "number",
+                "format": "double"
+              },
+              "Bid": {
+                "type": "number",
+                "format": "double"
+              },
+              "Ask": {
+                "type": "number",
+                "format": "double"
+              },
+              "BidDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "BidTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "AskDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "AskTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "Settle": {
+                "type": "number",
+                "format": "double"
+              },
+              "SettleDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "SettleTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "Volume": {
+                "type": "number",
+                "format": "double"
+              },
+              "OpenInterest": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousClose": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousCloseDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Change": {
+                "type": "number",
+                "format": "double"
+              },
+              "PercentChange": {
+                "type": "number",
+                "format": "double"
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "Close": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Last": {
-            "type": "number",
-            "format": "double"
-          },
-          "Bid": {
-            "type": "number",
-            "format": "double"
-          },
-          "Ask": {
-            "type": "number",
-            "format": "double"
-          },
-          "BidDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "BidTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "AskDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "AskTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "Settle": {
-            "type": "number",
-            "format": "double"
-          },
-          "SettleDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "SettleTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "Volume": {
-            "type": "number",
-            "format": "double"
-          },
-          "OpenInterest": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousClose": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousCloseDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Change": {
-            "type": "number",
-            "format": "double"
-          },
-          "PercentChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "FutureExchange": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "Description": {
+                "type": "string",
+                "nullable": true
+              },
+              "MIC": {
+                "type": "string",
+                "nullable": true
+              },
+              "Group": {
+                "type": "string",
+                "nullable": true
+              },
+              "Realtime": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "Description": {
-            "type": "string",
-            "nullable": true
-          },
-          "MIC": {
-            "type": "string",
-            "nullable": true
-          },
-          "Group": {
-            "type": "string",
-            "nullable": true
-          },
-          "Realtime": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
