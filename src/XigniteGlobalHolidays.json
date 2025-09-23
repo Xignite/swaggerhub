@@ -1,8 +1,8 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalHolidays",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "servers": [
     {
@@ -17,7 +17,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -71,7 +71,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -125,7 +125,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -209,7 +209,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -287,7 +287,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -364,7 +364,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -426,7 +426,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -543,7 +543,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -605,7 +605,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -674,7 +674,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -737,7 +737,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -807,7 +807,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -862,7 +862,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -917,7 +917,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -979,7 +979,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1049,264 +1049,286 @@
         "additionalProperties": false
       },
       "Exchange": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
           },
-          "Name": {
-            "type": "string",
-            "nullable": true
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Name": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Currency": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "CurrencyCode": {
-            "type": "string",
-            "nullable": true
           },
-          "CountryCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "RelatedFinancialCentre": {
-            "type": "string",
-            "nullable": true
+          {
+            "type": "object",
+            "properties": {
+              "CurrencyCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "CountryCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "RelatedFinancialCentre": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "FinancialCenter": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "FinancialCenterCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "CurrencyCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "CountryCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "FinancialCenterName": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "FinancialCenterCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "CurrencyCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "CountryCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "FinancialCenterName": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "Holiday": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Location": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "FullHoliday": {
+                "type": "boolean"
+              },
+              "EarlyClose": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Location": {
-            "type": "string",
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "FullHoliday": {
-            "type": "boolean"
-          },
-          "EarlyClose": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "StringResult": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Value": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Value": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "IntegerResult": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Value": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Value": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExchangeDateTime": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Time": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCOffset": {
+                "type": "number",
+                "format": "double"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Exchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCOffset": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExchangeHours": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "IsOpen": {
+                "type": "boolean"
+              },
+              "OpenTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "CloseTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCOffset": {
+                "type": "number",
+                "format": "double"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Exchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "IsOpen": {
-            "type": "boolean"
-          },
-          "OpenTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "CloseTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCOffset": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExchangeStatus": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
           },
-          "Open": {
-            "type": "boolean"
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Open": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExchangeSchedule": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Open": {
+                "type": "boolean"
+              },
+              "OpenTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "CloseTime": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Open": {
-            "type": "boolean"
-          },
-          "OpenTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "CloseTime": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "SettlementSchedule": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
           },
-          "TradeDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "SettlementDate": {
-            "type": "string",
-            "nullable": true
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "TradeDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "SettlementDate": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Phase": {
         "type": "object",
@@ -1331,45 +1353,47 @@
         "additionalProperties": false
       },
       "ExchangePhases": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Exchange": {
-            "type": "string",
-            "nullable": true
           },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCOffset": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "IsOpen": {
-            "type": "boolean"
-          },
-          "Day": {
-            "type": "string",
-            "nullable": true
-          },
-          "DayType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Phases": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Phase"
+          {
+            "type": "object",
+            "properties": {
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCOffset": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "IsOpen": {
+                "type": "boolean"
+              },
+              "Day": {
+                "type": "string",
+                "nullable": true
+              },
+              "DayType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Phases": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Phase"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
