@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalFundFundamentals",
-    "version": "1.0.7"
+    "version": "1.0.8"
   },
   "servers": [
     {
@@ -17,7 +17,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -86,7 +86,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -125,7 +125,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -164,7 +164,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -240,7 +240,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -338,7 +338,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -422,7 +422,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -513,7 +513,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -597,7 +597,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -688,7 +688,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -772,7 +772,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -863,7 +863,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -947,7 +947,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1038,7 +1038,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1122,7 +1122,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1213,7 +1213,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1283,7 +1283,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1374,7 +1374,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1443,7 +1443,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1519,7 +1519,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1617,7 +1617,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1701,7 +1701,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1792,7 +1792,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1854,24 +1854,24 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1924,22 +1924,24 @@
         "additionalProperties": false
       },
       "CountryList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "CountryDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CountryDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "CountryDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CountryDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExchangeDescription": {
         "type": "object",
@@ -2021,40 +2023,44 @@
         "additionalProperties": false
       },
       "FundList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "FundDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/FundDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "FundDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/FundDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "FundTypeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "FundTypes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/FundType"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "FundTypes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/FundType"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "FundFundamentalDescription": {
         "type": "object",
@@ -2087,22 +2093,24 @@
         "additionalProperties": false
       },
       "FundFundamentalDescriptionList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "FundFundamentalDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/FundFundamentalDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "FundFundamentalDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/FundFundamentalDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Fund": {
         "type": "object",
@@ -2226,30 +2234,32 @@
         "additionalProperties": false
       },
       "FundFundamentals": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Fund": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Fund"
-              }
-            ],
-            "nullable": true
           },
-          "FundamentalsSets": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/FundamentalsSet"
+          {
+            "type": "object",
+            "properties": {
+              "Fund": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Fund"
+                  }
+                ],
+                "nullable": true
+              },
+              "FundamentalsSets": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/FundamentalsSet"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ProfileBreakdown": {
         "type": "object",
@@ -2376,30 +2386,32 @@
         "additionalProperties": false
       },
       "FundProfiles": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Fund": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Fund"
-              }
-            ],
-            "nullable": true
           },
-          "ProfilesSets": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProfilesSet"
+          {
+            "type": "object",
+            "properties": {
+              "Fund": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Fund"
+                  }
+                ],
+                "nullable": true
+              },
+              "ProfilesSets": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ProfilesSet"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "RecordBreakDownBase": {
         "type": "object",
@@ -2412,35 +2424,37 @@
         "additionalProperties": false
       },
       "FeeSchedule": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/RecordBreakDownBase"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "FeeValue": {
+                "type": "string",
+                "nullable": true
+              },
+              "FeeUnit": {
+                "type": "string",
+                "nullable": true
+              },
+              "LowBreakpoint": {
+                "type": "string",
+                "nullable": true
+              },
+              "HighBreakpoint": {
+                "type": "string",
+                "nullable": true
+              },
+              "BreakpointUnit": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "FeeValue": {
-            "type": "string",
-            "nullable": true
-          },
-          "FeeUnit": {
-            "type": "string",
-            "nullable": true
-          },
-          "LowBreakpoint": {
-            "type": "string",
-            "nullable": true
-          },
-          "HighBreakpoint": {
-            "type": "string",
-            "nullable": true
-          },
-          "BreakpointUnit": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "FeeSchedules": {
         "type": "object",
@@ -2490,113 +2504,117 @@
         "additionalProperties": false
       },
       "FundFeeSchedules": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Fund": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Fund"
-              }
-            ],
-            "nullable": true
           },
-          "FeeSchedulesSets": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/FeeSchedulesSet"
+          {
+            "type": "object",
+            "properties": {
+              "Fund": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Fund"
+                  }
+                ],
+                "nullable": true
+              },
+              "FeeSchedulesSets": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/FeeSchedulesSet"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "HoldingsBreakdown": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/RecordBreakDownBase"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "HoldingSecurityName": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingDetailTypeId": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingSymbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingISIN": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingCUSIP": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingSEDOL": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingCountryCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingCurrencyCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingVendorIndustry": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingWeighting": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingNumberOfShare": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingSharePercentage": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingMarketValue": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingCostBasis": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingMaturityDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingCoupon": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingCreditQuality": {
+                "type": "string",
+                "nullable": true
+              },
+              "HoldingDuration": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "HoldingSecurityName": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingDetailTypeId": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingSymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingISIN": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingCUSIP": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingSEDOL": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingCountryCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingCurrencyCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingVendorIndustry": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingWeighting": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingNumberOfShare": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingSharePercentage": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingMarketValue": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingCostBasis": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingMaturityDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingCoupon": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingCreditQuality": {
-            "type": "string",
-            "nullable": true
-          },
-          "HoldingDuration": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "HoldingsSet": {
         "type": "object",
@@ -2616,65 +2634,69 @@
         "additionalProperties": false
       },
       "FundHoldings": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Fund": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Fund"
-              }
-            ],
-            "nullable": true
           },
-          "HoldingsSets": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/HoldingsSet"
+          {
+            "type": "object",
+            "properties": {
+              "Fund": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Fund"
+                  }
+                ],
+                "nullable": true
+              },
+              "HoldingsSets": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/HoldingsSet"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ManagerBreakdown": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/RecordBreakDownBase"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ManagerFirstName": {
+                "type": "string",
+                "nullable": true
+              },
+              "ManagerMiddleName": {
+                "type": "string",
+                "nullable": true
+              },
+              "ManagerLastName": {
+                "type": "string",
+                "nullable": true
+              },
+              "ManagerStartDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "ManagerTenure": {
+                "type": "string",
+                "nullable": true
+              },
+              "ManagerBiography": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "ManagerFirstName": {
-            "type": "string",
-            "nullable": true
-          },
-          "ManagerMiddleName": {
-            "type": "string",
-            "nullable": true
-          },
-          "ManagerLastName": {
-            "type": "string",
-            "nullable": true
-          },
-          "ManagerStartDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "ManagerTenure": {
-            "type": "string",
-            "nullable": true
-          },
-          "ManagerBiography": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "ManagersSet": {
         "type": "object",
@@ -2694,30 +2716,32 @@
         "additionalProperties": false
       },
       "FundManagers": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Fund": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Fund"
-              }
-            ],
-            "nullable": true
           },
-          "ManagersSets": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ManagersSet"
+          {
+            "type": "object",
+            "properties": {
+              "Fund": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Fund"
+                  }
+                ],
+                "nullable": true
+              },
+              "ManagersSets": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ManagersSet"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "TrailingReturns": {
         "type": "object",
@@ -2726,61 +2750,106 @@
             "type": "number",
             "format": "double"
           },
+          "TrailingReturnYTDSpecified": {
+            "type": "boolean"
+          },
           "TrailingReturnM1": {
             "type": "number",
             "format": "double"
+          },
+          "TrailingReturnM1Specified": {
+            "type": "boolean"
           },
           "TrailingReturnM2": {
             "type": "number",
             "format": "double"
           },
+          "TrailingReturnM2Specified": {
+            "type": "boolean"
+          },
           "TrailingReturnM3": {
             "type": "number",
             "format": "double"
+          },
+          "TrailingReturnM3Specified": {
+            "type": "boolean"
           },
           "TrailingReturnM6": {
             "type": "number",
             "format": "double"
           },
+          "TrailingReturnM6Specified": {
+            "type": "boolean"
+          },
           "TrailingReturnM9": {
             "type": "number",
             "format": "double"
+          },
+          "TrailingReturnM9Specified": {
+            "type": "boolean"
           },
           "TrailingReturnY1": {
             "type": "number",
             "format": "double"
           },
+          "TrailingReturnY1Specified": {
+            "type": "boolean"
+          },
           "TrailingReturnY2": {
             "type": "number",
             "format": "double"
+          },
+          "TrailingReturnY2Specified": {
+            "type": "boolean"
           },
           "TrailingReturnY3": {
             "type": "number",
             "format": "double"
           },
+          "TrailingReturnY3Specified": {
+            "type": "boolean"
+          },
           "TrailingReturnY4": {
             "type": "number",
             "format": "double"
+          },
+          "TrailingReturnY4Specified": {
+            "type": "boolean"
           },
           "TrailingReturnY5": {
             "type": "number",
             "format": "double"
           },
+          "TrailingReturnY5Specified": {
+            "type": "boolean"
+          },
           "TrailingReturnY10": {
             "type": "number",
             "format": "double"
+          },
+          "TrailingReturnY10Specified": {
+            "type": "boolean"
           },
           "TrailingReturnY15": {
             "type": "number",
             "format": "double"
           },
+          "TrailingReturnY15Specified": {
+            "type": "boolean"
+          },
           "TrailingReturnY20": {
             "type": "number",
             "format": "double"
           },
+          "TrailingReturnY20Specified": {
+            "type": "boolean"
+          },
           "TrailingReturnSinceInception": {
             "type": "number",
             "format": "double"
+          },
+          "TrailingReturnSinceInceptionSpecified": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -2792,53 +2861,92 @@
             "type": "number",
             "format": "double"
           },
+          "LoadAdjustedTrailingReturnYTDSpecified": {
+            "type": "boolean"
+          },
           "LoadAdjustedTrailingReturnM1": {
             "type": "number",
             "format": "double"
+          },
+          "LoadAdjustedTrailingReturnM1Specified": {
+            "type": "boolean"
           },
           "LoadAdjustedTrailingReturnM3": {
             "type": "number",
             "format": "double"
           },
+          "LoadAdjustedTrailingReturnM3Specified": {
+            "type": "boolean"
+          },
           "LoadAdjustedTrailingReturnM6": {
             "type": "number",
             "format": "double"
+          },
+          "LoadAdjustedTrailingReturnM6Specified": {
+            "type": "boolean"
           },
           "LoadAdjustedTrailingReturnY1": {
             "type": "number",
             "format": "double"
           },
+          "LoadAdjustedTrailingReturnY1Specified": {
+            "type": "boolean"
+          },
           "LoadAdjustedTrailingReturnY2": {
             "type": "number",
             "format": "double"
+          },
+          "LoadAdjustedTrailingReturnY2Specified": {
+            "type": "boolean"
           },
           "LoadAdjustedTrailingReturnY3": {
             "type": "number",
             "format": "double"
           },
+          "LoadAdjustedTrailingReturnY3Specified": {
+            "type": "boolean"
+          },
           "LoadAdjustedTrailingReturnY4": {
             "type": "number",
             "format": "double"
+          },
+          "LoadAdjustedTrailingReturnY4Specified": {
+            "type": "boolean"
           },
           "LoadAdjustedTrailingReturnY5": {
             "type": "number",
             "format": "double"
           },
+          "LoadAdjustedTrailingReturnY5Specified": {
+            "type": "boolean"
+          },
           "LoadAdjustedTrailingReturnY10": {
             "type": "number",
             "format": "double"
+          },
+          "LoadAdjustedTrailingReturnY10Specified": {
+            "type": "boolean"
           },
           "LoadAdjustedTrailingReturnY15": {
             "type": "number",
             "format": "double"
           },
+          "LoadAdjustedTrailingReturnY15Specified": {
+            "type": "boolean"
+          },
           "LoadAdjustedTrailingReturnY20": {
             "type": "number",
             "format": "double"
           },
+          "LoadAdjustedTrailingReturnY20Specified": {
+            "type": "boolean"
+          },
           "LoadAdjustedTrailingReturnSinceInception": {
             "type": "number",
             "format": "double"
+          },
+          "LoadAdjustedTrailingReturnSinceInceptionSpecified": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -2870,30 +2978,32 @@
         "additionalProperties": false
       },
       "FundMonthEndTrailingReturns": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Fund": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Fund"
-              }
-            ],
-            "nullable": true
           },
-          "MonthEndTrailingReturnsSets": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/MonthEndTrailingReturnsSet"
+          {
+            "type": "object",
+            "properties": {
+              "Fund": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Fund"
+                  }
+                ],
+                "nullable": true
+              },
+              "MonthEndTrailingReturnsSets": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/MonthEndTrailingReturnsSet"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "QuarterEndTrailingReturns": {
         "type": "object",
@@ -2902,61 +3012,106 @@
             "type": "number",
             "format": "double"
           },
+          "QuarterEndTrailingReturnYTDSpecified": {
+            "type": "boolean"
+          },
           "QuarterEndTrailingReturnM1": {
             "type": "number",
             "format": "double"
+          },
+          "QuarterEndTrailingReturnM1Specified": {
+            "type": "boolean"
           },
           "QuarterEndTrailingReturnM2": {
             "type": "number",
             "format": "double"
           },
+          "QuarterEndTrailingReturnM2Specified": {
+            "type": "boolean"
+          },
           "QuarterEndTrailingReturnM3": {
             "type": "number",
             "format": "double"
+          },
+          "QuarterEndTrailingReturnM3Specified": {
+            "type": "boolean"
           },
           "QuarterEndTrailingReturnM6": {
             "type": "number",
             "format": "double"
           },
+          "QuarterEndTrailingReturnM6Specified": {
+            "type": "boolean"
+          },
           "QuarterEndTrailingReturnM9": {
             "type": "number",
             "format": "double"
+          },
+          "QuarterEndTrailingReturnM9Specified": {
+            "type": "boolean"
           },
           "QuarterEndTrailingReturnY1": {
             "type": "number",
             "format": "double"
           },
+          "QuarterEndTrailingReturnY1Specified": {
+            "type": "boolean"
+          },
           "QuarterEndTrailingReturnY2": {
             "type": "number",
             "format": "double"
+          },
+          "QuarterEndTrailingReturnY2Specified": {
+            "type": "boolean"
           },
           "QuarterEndTrailingReturnY3": {
             "type": "number",
             "format": "double"
           },
+          "QuarterEndTrailingReturnY3Specified": {
+            "type": "boolean"
+          },
           "QuarterEndTrailingReturnY4": {
             "type": "number",
             "format": "double"
+          },
+          "QuarterEndTrailingReturnY4Specified": {
+            "type": "boolean"
           },
           "QuarterEndTrailingReturnY5": {
             "type": "number",
             "format": "double"
           },
+          "QuarterEndTrailingReturnY5Specified": {
+            "type": "boolean"
+          },
           "QuarterEndTrailingReturnY10": {
             "type": "number",
             "format": "double"
+          },
+          "QuarterEndTrailingReturnY10Specified": {
+            "type": "boolean"
           },
           "QuarterEndTrailingReturnY15": {
             "type": "number",
             "format": "double"
           },
+          "QuarterEndTrailingReturnY15Specified": {
+            "type": "boolean"
+          },
           "QuarterEndTrailingReturnY20": {
             "type": "number",
             "format": "double"
           },
+          "QuarterEndTrailingReturnY20Specified": {
+            "type": "boolean"
+          },
           "QuarterEndTrailingReturnSinceInception": {
             "type": "number",
             "format": "double"
+          },
+          "QuarterEndTrailingReturnSinceInceptionSpecified": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -2968,53 +3123,92 @@
             "type": "number",
             "format": "double"
           },
+          "QuarterEndLoadAdjustedTrailingReturnYTDSpecified": {
+            "type": "boolean"
+          },
           "QuarterEndLoadAdjustedTrailingReturnM1": {
             "type": "number",
             "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnM1Specified": {
+            "type": "boolean"
           },
           "QuarterEndLoadAdjustedTrailingReturnM3": {
             "type": "number",
             "format": "double"
           },
+          "QuarterEndLoadAdjustedTrailingReturnM3Specified": {
+            "type": "boolean"
+          },
           "QuarterEndLoadAdjustedTrailingReturnM6": {
             "type": "number",
             "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnM6Specified": {
+            "type": "boolean"
           },
           "QuarterEndLoadAdjustedTrailingReturnY1": {
             "type": "number",
             "format": "double"
           },
+          "QuarterEndLoadAdjustedTrailingReturnY1Specified": {
+            "type": "boolean"
+          },
           "QuarterEndLoadAdjustedTrailingReturnY2": {
             "type": "number",
             "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnY2Specified": {
+            "type": "boolean"
           },
           "QuarterEndLoadAdjustedTrailingReturnY3": {
             "type": "number",
             "format": "double"
           },
+          "QuarterEndLoadAdjustedTrailingReturnY3Specified": {
+            "type": "boolean"
+          },
           "QuarterEndLoadAdjustedTrailingReturnY4": {
             "type": "number",
             "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnY4Specified": {
+            "type": "boolean"
           },
           "QuarterEndLoadAdjustedTrailingReturnY5": {
             "type": "number",
             "format": "double"
           },
+          "QuarterEndLoadAdjustedTrailingReturnY5Specified": {
+            "type": "boolean"
+          },
           "QuarterEndLoadAdjustedTrailingReturnY10": {
             "type": "number",
             "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnY10Specified": {
+            "type": "boolean"
           },
           "QuarterEndLoadAdjustedTrailingReturnY15": {
             "type": "number",
             "format": "double"
           },
+          "QuarterEndLoadAdjustedTrailingReturnY15Specified": {
+            "type": "boolean"
+          },
           "QuarterEndLoadAdjustedTrailingReturnY20": {
             "type": "number",
             "format": "double"
           },
+          "QuarterEndLoadAdjustedTrailingReturnY20Specified": {
+            "type": "boolean"
+          },
           "QuarterEndLoadAdjustedTrailingReturnSinceInception": {
             "type": "number",
             "format": "double"
+          },
+          "QuarterEndLoadAdjustedTrailingReturnSinceInceptionSpecified": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -3046,97 +3240,109 @@
         "additionalProperties": false
       },
       "FundQuarterEndTrailingReturns": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Fund": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Fund"
-              }
-            ],
-            "nullable": true
           },
-          "QuarterEndTrailingReturnsSets": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/QuarterEndTrailingReturnsSet"
+          {
+            "type": "object",
+            "properties": {
+              "Fund": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Fund"
+                  }
+                ],
+                "nullable": true
+              },
+              "QuarterEndTrailingReturnsSets": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/QuarterEndTrailingReturnsSet"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "FundNAV": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Identifier": {
-            "type": "string",
-            "nullable": true
           },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Fund": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Fund"
+          {
+            "type": "object",
+            "properties": {
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Fund": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Fund"
+                  }
+                ],
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "NAV": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousNAV": {
+                "type": "number",
+                "format": "double"
+              },
+              "Change": {
+                "type": "number",
+                "format": "double"
+              },
+              "PercentChange": {
+                "type": "number",
+                "format": "double"
+              },
+              "SevenDayYield": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousSevenDayYield": {
+                "type": "number",
+                "format": "double"
+              },
+              "PremiumDiscount": {
+                "type": "number",
+                "format": "double"
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "NAV": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousNAV": {
-            "type": "number",
-            "format": "double"
-          },
-          "Change": {
-            "type": "number",
-            "format": "double"
-          },
-          "PercentChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "SevenDayYield": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousSevenDayYield": {
-            "type": "number",
-            "format": "double"
-          },
-          "PremiumDiscount": {
-            "type": "number",
-            "format": "double"
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "NAVs": {
         "type": "object",
         "properties": {
+          "CumulativeAdjustmentFactor": {
+            "type": "number",
+            "format": "double"
+          },
+          "UTCOffset": {
+            "type": "number",
+            "format": "double"
+          },
           "Date": {
             "type": "string",
             "nullable": true
@@ -3172,59 +3378,57 @@
           "Currency": {
             "type": "string",
             "nullable": true
-          },
-          "CumulativeAdjustmentFactor": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
       },
       "FundNAVHistory": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Identifier": {
-            "type": "string",
-            "nullable": true
           },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "AdjustmentMethod": {
-            "type": "string",
-            "nullable": true
-          },
-          "Fund": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Fund"
+          {
+            "type": "object",
+            "properties": {
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "AdjustmentMethod": {
+                "type": "string",
+                "nullable": true
+              },
+              "Fund": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Fund"
+                  }
+                ],
+                "nullable": true
+              },
+              "StartDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "NAVs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NAVs"
+                },
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "StartDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "NAVs": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/NAVs"
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Dividend": {
         "type": "object",
@@ -3265,38 +3469,40 @@
         "additionalProperties": false
       },
       "FundDividendHistory": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Identifier": {
-            "type": "string",
-            "nullable": true
           },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Fund": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Fund"
+          {
+            "type": "object",
+            "properties": {
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Fund": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Fund"
+                  }
+                ],
+                "nullable": true
+              },
+              "Dividends": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Dividend"
+                },
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Dividends": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Dividend"
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "BreakdownRecord": {
         "type": "object",
@@ -3351,30 +3557,32 @@
         "additionalProperties": false
       },
       "FundBreakdowns": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Fund": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Fund"
-              }
-            ],
-            "nullable": true
           },
-          "Breakdowns": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Breakdown"
+          {
+            "type": "object",
+            "properties": {
+              "Fund": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Fund"
+                  }
+                ],
+                "nullable": true
+              },
+              "Breakdowns": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Breakdown"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
