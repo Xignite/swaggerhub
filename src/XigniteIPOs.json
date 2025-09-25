@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteIPOs",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "servers": [
     {
@@ -17,7 +17,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -79,7 +79,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -156,7 +156,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -219,7 +219,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -285,7 +285,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -340,7 +340,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -402,7 +402,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -450,7 +450,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -505,7 +505,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -560,7 +560,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -595,15 +595,6 @@
   },
   "components": {
     "schemas": {
-      "OutcomeTypes": {
-        "enum": [
-          "Success",
-          "SystemError",
-          "RequestError",
-          "RegistrationError"
-        ],
-        "type": "string"
-      },
       "ExchangeDescription": {
         "type": "object",
         "properties": {
@@ -621,25 +612,6 @@
       "ExchangeList": {
         "type": "object",
         "properties": {
-          "Outcome": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OutcomeTypes"
-              }
-            ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
-          },
           "ExchangeDescriptions": {
             "type": "array",
             "items": {
@@ -650,27 +622,36 @@
         },
         "additionalProperties": false
       },
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
+      },
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -722,21 +703,36 @@
             "type": "number",
             "format": "double"
           },
+          "OfferLowPriceSpecified": {
+            "type": "boolean"
+          },
           "OfferHighPrice": {
             "type": "number",
             "format": "double"
+          },
+          "OfferHighPriceSpecified": {
+            "type": "boolean"
           },
           "OfferSize": {
             "type": "integer",
             "format": "int64"
           },
+          "OfferSizeSpecified": {
+            "type": "boolean"
+          },
           "OfferPrice": {
             "type": "number",
             "format": "double"
           },
+          "OfferPriceSpecified": {
+            "type": "boolean"
+          },
           "OfferAmount": {
             "type": "integer",
             "format": "int64"
+          },
+          "OfferAmountSpecified": {
+            "type": "boolean"
           },
           "Currency": {
             "type": "string",
@@ -745,7 +741,13 @@
           "SmallMarketCap": {
             "type": "boolean"
           },
+          "SmallMarketCapSpecified": {
+            "type": "boolean"
+          },
           "SpecialPurposeAcquisitionCompany": {
+            "type": "boolean"
+          },
+          "SpecialPurposeAcquisitionCompanySpecified": {
             "type": "boolean"
           }
         },
@@ -766,49 +768,53 @@
         "additionalProperties": false
       },
       "IPODetails": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IPODescription": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/IPODescription"
-              }
-            ],
-            "nullable": true
           },
-          "IPOUnderwriters": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/IPOUnderwriter"
+          {
+            "type": "object",
+            "properties": {
+              "IPODescription": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/IPODescription"
+                  }
+                ],
+                "nullable": true
+              },
+              "IPOUnderwriters": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/IPOUnderwriter"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IPO": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IPODescription": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/IPODescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "IPODescription": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/IPODescription"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IPOStatus": {
         "enum": [
@@ -823,58 +829,64 @@
         "type": "string"
       },
       "IPOByStatus": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IPODescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/IPODescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "IPODescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/IPODescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IPOCalendar": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IPODescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/IPODescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "IPODescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/IPODescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IPOList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IPODescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/IPODescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "IPODescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/IPODescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IPOPerformance": {
         "type": "object",
@@ -919,22 +931,24 @@
         "additionalProperties": false
       },
       "IPOsPerformance": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IPOPerformances": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/IPOPerformance"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "IPOPerformances": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/IPOPerformance"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
