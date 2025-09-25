@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteFactSetEstimates",
-    "version": "1.0.4"
+    "version": "1.0.5"
   },
   "servers": [
     {
@@ -17,7 +17,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -56,7 +56,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -95,7 +95,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -157,7 +157,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -233,7 +233,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -317,7 +317,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -409,7 +409,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -500,7 +500,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -591,7 +591,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -682,7 +682,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -787,7 +787,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -899,7 +899,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -961,7 +961,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1052,7 +1052,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1121,7 +1121,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1198,7 +1198,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1282,7 +1282,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1373,7 +1373,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1420,24 +1420,24 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1461,22 +1461,24 @@
         "additionalProperties": false
       },
       "ExchangeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ExchangeDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExchangeDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ExchangeDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ExchangeDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ActualsDescription": {
         "type": "object",
@@ -1513,22 +1515,24 @@
         "additionalProperties": false
       },
       "ActualsDescriptionList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ActualsDescription": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ActualsDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ActualsDescription": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ActualsDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "EstimateDescription": {
         "type": "object",
@@ -1565,22 +1569,24 @@
         "additionalProperties": false
       },
       "EstimateDescriptionList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "EstimateDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/EstimateDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "EstimateDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EstimateDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Company": {
         "type": "object",
@@ -1653,22 +1659,24 @@
         "additionalProperties": false
       },
       "CompanyList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Companies": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Company"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Companies": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Company"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Actual": {
         "type": "object",
@@ -1713,88 +1721,92 @@
         "additionalProperties": false
       },
       "CompanyActuals": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Company": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Company"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Company": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Company"
+                  }
+                ],
+                "nullable": true
+              },
+              "Actuals": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Actual"
+                },
+                "nullable": true
+              },
+              "ReportType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Actuals": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Actual"
             },
-            "nullable": true
-          },
-          "ReportType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "TrailingActuals": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Company": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Company"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Company": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Company"
+                  }
+                ],
+                "nullable": true
+              },
+              "ReportType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Actuals": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Actual"
+                },
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "ReportType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Actuals": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Actual"
             },
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Estimate": {
         "type": "object",
@@ -1847,72 +1859,76 @@
         "additionalProperties": false
       },
       "EstimatesSet": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "EstimateType": {
-            "type": "string",
-            "nullable": true
           },
-          "ReportType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "EstimateFiscalPeriod": {
-            "type": "string",
-            "nullable": true
-          },
-          "EstimateFiscalPeriodEndDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Estimates": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Estimate"
+          {
+            "type": "object",
+            "properties": {
+              "EstimateType": {
+                "type": "string",
+                "nullable": true
+              },
+              "ReportType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "EstimateFiscalPeriod": {
+                "type": "string",
+                "nullable": true
+              },
+              "EstimateFiscalPeriodEndDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Estimates": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Estimate"
+                },
+                "nullable": true
+              },
+              "Unit": {
+                "type": "string",
+                "nullable": true
+              }
             },
-            "nullable": true
-          },
-          "Unit": {
-            "type": "string",
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "CompanyEstimates": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Company": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Company"
-              }
-            ],
-            "nullable": true
           },
-          "EstimatesSets": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/EstimatesSet"
+          {
+            "type": "object",
+            "properties": {
+              "Company": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Company"
+                  }
+                ],
+                "nullable": true
+              },
+              "EstimatesSets": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EstimatesSet"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "RecommendationSummary": {
         "type": "object",
@@ -1973,30 +1989,32 @@
         "additionalProperties": false
       },
       "CompanyRecommendationSummary": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Company": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Company"
-              }
-            ],
-            "nullable": true
           },
-          "RecommendationSummarySet": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RecommendationSummary"
+          {
+            "type": "object",
+            "properties": {
+              "Company": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Company"
+                  }
+                ],
+                "nullable": true
+              },
+              "RecommendationSummarySet": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RecommendationSummary"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "TargetPriceSummary": {
         "type": "object",
@@ -2049,38 +2067,40 @@
         "additionalProperties": false
       },
       "TargetPriceSummaries": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Company": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Company"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Company": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Company"
+                  }
+                ],
+                "nullable": true
+              },
+              "TargetPriceSummary": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/TargetPriceSummary"
+                },
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "TargetPriceSummary": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TargetPriceSummary"
             },
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
