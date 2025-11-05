@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteCrypto",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "servers": [
     {
@@ -61,7 +61,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -144,7 +144,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -228,7 +228,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -298,7 +298,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -375,7 +375,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -459,7 +459,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -535,7 +535,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -583,7 +583,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -622,7 +622,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -661,7 +661,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -700,7 +700,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -739,7 +739,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -823,7 +823,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -878,7 +878,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -949,7 +949,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -996,100 +996,104 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
       },
       "HistoricalQuote": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "StartDateTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndDateTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "Open": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "High": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "Low": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "Close": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "Volume": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "Change": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "PercentChange": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "StartDateTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndDateTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "Open": {
-            "type": "number",
-            "format": "decimal"
-          },
-          "High": {
-            "type": "number",
-            "format": "decimal"
-          },
-          "Low": {
-            "type": "number",
-            "format": "decimal"
-          },
-          "Close": {
-            "type": "number",
-            "format": "decimal"
-          },
-          "Volume": {
-            "type": "number",
-            "format": "decimal"
-          },
-          "Change": {
-            "type": "number",
-            "format": "decimal"
-          },
-          "PercentChange": {
-            "type": "number",
-            "format": "decimal"
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "CryptoHistoricalQuoteRange": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "CryptoHistoricalQuotes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/HistoricalQuote"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "CryptoHistoricalQuotes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/HistoricalQuote"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExchangeHistoricalQuote": {
         "type": "object",
@@ -1160,42 +1164,46 @@
         "additionalProperties": false
       },
       "CryptoExchangeHistoricalQuote": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ExchangeHistoricalQuote": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ExchangeHistoricalQuote"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ExchangeHistoricalQuote": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ExchangeHistoricalQuote"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "CryptoHistoricalQuote": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "HistoricalQuote": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/HistoricalQuote"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "HistoricalQuote": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/HistoricalQuote"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Quote": {
         "type": "object",
@@ -1264,72 +1272,78 @@
         "additionalProperties": false
       },
       "CryptoQuote": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Quote": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Quote"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Quote": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Quote"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ReferenceData": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "AsOfDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Type": {
+                "type": "string",
+                "nullable": true
+              },
+              "Value": {
+                "type": "string",
+                "nullable": true
+              },
+              "LastUpdated": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "AsOfDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Type": {
-            "type": "string",
-            "nullable": true
-          },
-          "Value": {
-            "type": "string",
-            "nullable": true
-          },
-          "LastUpdated": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "CryptoReferenceData": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
           },
-          "ReferenceDataSet": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ReferenceData"
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "ReferenceDataSet": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ReferenceData"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "NewsSource": {
         "type": "object",
@@ -1402,40 +1416,44 @@
         "additionalProperties": false
       },
       "TopCryptoHeadlines": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "NewsHeadlines": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/NewsHeadline"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "NewsHeadlines": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NewsHeadline"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "TopMarketHeadlines": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "NewsHeadlines": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/NewsHeadline"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "NewsHeadlines": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NewsHeadline"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Crypto": {
         "type": "object",
@@ -1452,22 +1470,24 @@
         "additionalProperties": false
       },
       "CryptoList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Cryptos": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Crypto"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Cryptos": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Crypto"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Exchange": {
         "type": "object",
@@ -1492,75 +1512,68 @@
         "additionalProperties": false
       },
       "ExchangeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Exchanges": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Exchange"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Exchanges": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Exchange"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "NewsCategory": {
         "type": "object",
-        "properties": {
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "Keywords": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          }
-        },
         "additionalProperties": false
       },
       "NewsCategoryList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "NewsCategories": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/NewsCategory"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "NewsCategories": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NewsCategory"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "NewsSourceList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "NewsSources": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/NewsSource"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "NewsSources": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/NewsSource"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ReferenceDescription": {
         "type": "object",
@@ -1581,22 +1594,24 @@
         "additionalProperties": false
       },
       "ReferenceDataList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ReferenceDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ReferenceDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ReferenceDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ReferenceDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ChartBar": {
         "type": "object",
@@ -1645,34 +1660,36 @@
         "additionalProperties": false
       },
       "CryptoChartBars": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
           },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Exchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "ChartBars": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ChartBar"
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "ChartBars": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ChartBar"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExchangeQuote": {
         "type": "object",
@@ -1765,23 +1782,25 @@
         "additionalProperties": false
       },
       "CryptoExchangeQuote": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ExchangeQuote": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ExchangeQuote"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ExchangeQuote": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ExchangeQuote"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "TopCoin": {
         "type": "object",
@@ -1810,22 +1829,24 @@
         "additionalProperties": false
       },
       "TopCoinList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "TopCoins": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TopCoin"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "TopCoins": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/TopCoin"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
