@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteSuperQuotes",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "servers": [
     {
@@ -37,7 +37,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -96,7 +96,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -273,169 +273,171 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
       },
       "Quote": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "SourceAPI": {
+                "type": "string",
+                "nullable": true
+              },
+              "InstrumentType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Market": {
+                "type": "string",
+                "nullable": true
+              },
+              "MarketIdentificationCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "DateTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCOffset": {
+                "type": "number",
+                "format": "double"
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Open": {
+                "type": "number",
+                "format": "double"
+              },
+              "High": {
+                "type": "number",
+                "format": "double"
+              },
+              "Low": {
+                "type": "number",
+                "format": "double"
+              },
+              "Last": {
+                "type": "number",
+                "format": "double"
+              },
+              "LastSize": {
+                "type": "number",
+                "format": "double"
+              },
+              "Volume": {
+                "type": "number",
+                "format": "double"
+              },
+              "VolumeDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousClose": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousCloseDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Change": {
+                "type": "number",
+                "format": "double"
+              },
+              "PercentChange": {
+                "type": "number",
+                "format": "double"
+              },
+              "ExtendedHoursType": {
+                "type": "string",
+                "nullable": true
+              },
+              "ExtendedHoursDateTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "ExtendedHoursPrice": {
+                "type": "number",
+                "format": "double"
+              },
+              "ExtendedHoursChange": {
+                "type": "number",
+                "format": "double"
+              },
+              "ExtendedHoursPercentChange": {
+                "type": "number",
+                "format": "double"
+              },
+              "Bid": {
+                "type": "number",
+                "format": "double"
+              },
+              "BidSize": {
+                "type": "number",
+                "format": "double"
+              },
+              "BidDateTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "Ask": {
+                "type": "number",
+                "format": "double"
+              },
+              "AskSize": {
+                "type": "number",
+                "format": "double"
+              },
+              "AskDateTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "TradingHalted": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "SourceAPI": {
-            "type": "string",
-            "nullable": true
-          },
-          "InstrumentType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Market": {
-            "type": "string",
-            "nullable": true
-          },
-          "MarketIdentificationCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "DateTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCOffset": {
-            "type": "number",
-            "format": "double"
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Last": {
-            "type": "number",
-            "format": "double"
-          },
-          "LastSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "Volume": {
-            "type": "number",
-            "format": "double"
-          },
-          "VolumeDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousClose": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousCloseDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Change": {
-            "type": "number",
-            "format": "double"
-          },
-          "PercentChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "ExtendedHoursType": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExtendedHoursDateTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExtendedHoursPrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "ExtendedHoursChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "ExtendedHoursPercentChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "Bid": {
-            "type": "number",
-            "format": "double"
-          },
-          "BidSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "BidDateTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "Ask": {
-            "type": "number",
-            "format": "double"
-          },
-          "AskSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "AskDateTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "TradingHalted": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "Security": {
         "type": "object",
