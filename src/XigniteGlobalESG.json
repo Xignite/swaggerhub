@@ -1,8 +1,8 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalESG",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "servers": [
     {
@@ -26,7 +26,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -81,7 +81,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -120,7 +120,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -159,7 +159,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -228,7 +228,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -326,7 +326,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -395,7 +395,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -493,7 +493,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -562,7 +562,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -646,7 +646,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -730,7 +730,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -828,7 +828,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -911,7 +911,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1016,7 +1016,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1063,24 +1063,24 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1100,26 +1100,28 @@
         "additionalProperties": false
       },
       "ExchangeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Region": {
-            "type": "string",
-            "nullable": true
           },
-          "ExchangeDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExchangeDescription"
+          {
+            "type": "object",
+            "properties": {
+              "Region": {
+                "type": "string",
+                "nullable": true
+              },
+              "ExchangeDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ExchangeDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "SymbolDescription": {
         "type": "object",
@@ -1152,34 +1154,36 @@
         "additionalProperties": false
       },
       "SymbolList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "DataPackage": {
-            "type": "string",
-            "nullable": true
           },
-          "Market": {
-            "type": "string",
-            "nullable": true
-          },
-          "MarketIdentificationCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "SymbolDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SymbolDescription"
+          {
+            "type": "object",
+            "properties": {
+              "DataPackage": {
+                "type": "string",
+                "nullable": true
+              },
+              "Market": {
+                "type": "string",
+                "nullable": true
+              },
+              "MarketIdentificationCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "SymbolDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SymbolDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "CategoryDescription": {
         "type": "object",
@@ -1200,22 +1204,24 @@
         "additionalProperties": false
       },
       "CategoryList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "CategoryDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CategoryDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "CategoryDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CategoryDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "InvolvementDescription": {
         "type": "object",
@@ -1236,22 +1242,24 @@
         "additionalProperties": false
       },
       "InvolvementList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "InvolvementDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/InvolvementDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "InvolvementDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/InvolvementDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Security": {
         "type": "object",
@@ -1350,73 +1358,77 @@
         "additionalProperties": false
       },
       "ESGScores": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
           },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "ESGScore": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ESGScore"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "ESGScore": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ESGScore"
-              }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "HistoricalESGScoresRange": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
           },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "ESGScores": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ESGScore"
+                },
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "ESGScores": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ESGScore"
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Categories": {
         "type": "object",
@@ -1543,73 +1555,77 @@
         "additionalProperties": false
       },
       "ESGCategories": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
           },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "Categories": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Categories"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Categories": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Categories"
-              }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "HistoricalESGCategoriesRange": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
           },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "ESGCategories": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Categories"
+                },
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "ESGCategories": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Categories"
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "TemperatureScore": {
         "type": "object",
@@ -1646,39 +1662,41 @@
         "additionalProperties": false
       },
       "TemperatureScores": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
           },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "TemperatureScore": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/TemperatureScore"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "TemperatureScore": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/TemperatureScore"
-              }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "CompanyEmissions": {
         "type": "object",
@@ -1714,39 +1732,41 @@
         "additionalProperties": false
       },
       "Emissions": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
           },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "CompanyEmissions": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CompanyEmissions"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "CompanyEmissions": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CompanyEmissions"
-              }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "GlobalCompactScore": {
         "type": "object",
@@ -1788,73 +1808,77 @@
         "additionalProperties": false
       },
       "GlobalCompactScores": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
           },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "GlobalCompactScore": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/GlobalCompactScore"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "GlobalCompactScore": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/GlobalCompactScore"
-              }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "HistoricalGlobalCompactScoresRange": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
           },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "GlobalCompactScores": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/GlobalCompactScore"
+                },
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "GlobalCompactScores": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GlobalCompactScore"
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Involved": {
         "type": "object",
@@ -1887,38 +1911,40 @@
         "additionalProperties": false
       },
       "Involvements": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
           },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "Involvement": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Involved"
+                },
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Involvement": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Involved"
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "CompanyDescription": {
         "type": "object",
@@ -1951,46 +1977,48 @@
         "additionalProperties": false
       },
       "ScreenByInvolvementsResult": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Sector": {
-            "type": "string",
-            "nullable": true
           },
-          "Industry": {
-            "type": "string",
-            "nullable": true
-          },
-          "Exchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "Region": {
-            "type": "string",
-            "nullable": true
-          },
-          "PercentThreshold": {
-            "type": "string",
-            "nullable": true
-          },
-          "Involvement": {
-            "type": "string",
-            "nullable": true
-          },
-          "Companies": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CompanyDescription"
+          {
+            "type": "object",
+            "properties": {
+              "Sector": {
+                "type": "string",
+                "nullable": true
+              },
+              "Industry": {
+                "type": "string",
+                "nullable": true
+              },
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "Region": {
+                "type": "string",
+                "nullable": true
+              },
+              "PercentThreshold": {
+                "type": "string",
+                "nullable": true
+              },
+              "Involvement": {
+                "type": "string",
+                "nullable": true
+              },
+              "Companies": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CompanyDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
