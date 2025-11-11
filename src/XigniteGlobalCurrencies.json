@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalCurrencies",
-    "version": "1.0.7"
+    "version": "1.0.8"
   },
   "servers": [
     {
@@ -17,7 +17,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -56,7 +56,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -119,7 +119,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -196,7 +196,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -292,7 +292,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -355,7 +355,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -425,7 +425,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -464,7 +464,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -533,7 +533,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -602,7 +602,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -671,7 +671,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -755,7 +755,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -853,7 +853,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -951,7 +951,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1035,7 +1035,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1126,7 +1126,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1225,7 +1225,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1287,7 +1287,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1349,7 +1349,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1411,7 +1411,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1488,7 +1488,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1565,7 +1565,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1628,7 +1628,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1667,7 +1667,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1714,24 +1714,24 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1786,132 +1786,138 @@
         "additionalProperties": false
       },
       "Currencies": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "CurrencyList": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Currency"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "CurrencyList": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Currency"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "RateConversion": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "FromCurrencySymbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "FromCurrencyName": {
+                "type": "string",
+                "nullable": true
+              },
+              "ToCurrencySymbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "ToCurrencyName": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Time": {
+                "type": "string",
+                "nullable": true
+              },
+              "Amount": {
+                "type": "number",
+                "format": "double"
+              },
+              "Result": {
+                "type": "number",
+                "format": "double"
+              },
+              "Rate": {
+                "type": "number",
+                "format": "double"
+              },
+              "Source": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "FromCurrencySymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "FromCurrencyName": {
-            "type": "string",
-            "nullable": true
-          },
-          "ToCurrencySymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "ToCurrencyName": {
-            "type": "string",
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "Amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "Result": {
-            "type": "number",
-            "format": "double"
-          },
-          "Rate": {
-            "type": "number",
-            "format": "double"
-          },
-          "Source": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "Rate": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "BaseCurrency": {
+                "type": "string",
+                "nullable": true
+              },
+              "QuoteCurrency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Time": {
+                "type": "string",
+                "nullable": true
+              },
+              "QuoteType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Bid": {
+                "type": "number",
+                "format": "double"
+              },
+              "Mid": {
+                "type": "number",
+                "format": "double"
+              },
+              "Ask": {
+                "type": "number",
+                "format": "double"
+              },
+              "Spread": {
+                "type": "number",
+                "format": "double"
+              },
+              "Text": {
+                "type": "string",
+                "nullable": true
+              },
+              "Source": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "BaseCurrency": {
-            "type": "string",
-            "nullable": true
-          },
-          "QuoteCurrency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "QuoteType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Bid": {
-            "type": "number",
-            "format": "double"
-          },
-          "Mid": {
-            "type": "number",
-            "format": "double"
-          },
-          "Ask": {
-            "type": "number",
-            "format": "double"
-          },
-          "Spread": {
-            "type": "number",
-            "format": "double"
-          },
-          "Text": {
-            "type": "string",
-            "nullable": true
-          },
-          "Source": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "QuoteCurrencyItem": {
         "type": "object",
@@ -1945,22 +1951,24 @@
         "additionalProperties": false
       },
       "RateTable": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Lines": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RateTableLine"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Lines": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RateTableLine"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "OfficialCurrency": {
         "type": "object",
@@ -1997,136 +2005,142 @@
         "additionalProperties": false
       },
       "OfficialRates": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "CountryList": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/OfficialCountry"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "CountryList": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/OfficialCountry"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "HistoricalRate": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "BaseCurrency": {
+                "type": "string",
+                "nullable": true
+              },
+              "QuoteCurrency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "StartDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "StartTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "Open": {
+                "type": "number",
+                "format": "double"
+              },
+              "High": {
+                "type": "number",
+                "format": "double"
+              },
+              "Low": {
+                "type": "number",
+                "format": "double"
+              },
+              "Close": {
+                "type": "number",
+                "format": "double"
+              },
+              "Average": {
+                "type": "number",
+                "format": "double"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "BaseCurrency": {
-            "type": "string",
-            "nullable": true
-          },
-          "QuoteCurrency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "StartDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "StartTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Close": {
-            "type": "number",
-            "format": "double"
-          },
-          "Average": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "Bar": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "StartDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "StartTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "Open": {
+                "type": "number",
+                "format": "double"
+              },
+              "High": {
+                "type": "number",
+                "format": "double"
+              },
+              "Low": {
+                "type": "number",
+                "format": "double"
+              },
+              "Close": {
+                "type": "number",
+                "format": "double"
+              },
+              "Average": {
+                "type": "number",
+                "format": "double"
+              },
+              "Volume": {
+                "type": "number",
+                "format": "double"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "StartDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "StartTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Close": {
-            "type": "number",
-            "format": "double"
-          },
-          "Average": {
-            "type": "number",
-            "format": "double"
-          },
-          "Volume": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "CurrencyDescription": {
         "type": "object",
@@ -2217,69 +2231,69 @@
         "additionalProperties": false
       },
       "CurrencyChartBars": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Timing": {
-            "type": "string",
-            "nullable": true
           },
-          "PriceType": {
-            "type": "string",
-            "nullable": true
-          },
-          "CurrencyDescription": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CurrencyDescription"
+          {
+            "type": "object",
+            "properties": {
+              "Timing": {
+                "type": "string",
+                "nullable": true
+              },
+              "PriceType": {
+                "type": "string",
+                "nullable": true
+              },
+              "CurrencyDescription": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CurrencyDescription"
+                  }
+                ],
+                "nullable": true
+              },
+              "ChartBars": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ChartBar"
+                },
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "ChartBars": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ChartBar"
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "HistoricalRateBidAsk": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/HistoricalRate"
-          }
-        ],
-        "properties": {
-          "Bid": {
-            "type": "number",
-            "format": "double"
           },
-          "Ask": {
-            "type": "number",
-            "format": "double"
-          },
-          "Source": {
-            "type": "string",
-            "nullable": true
+          {
+            "type": "object",
+            "properties": {
+              "Bid": {
+                "type": "number",
+                "format": "double"
+              },
+              "Ask": {
+                "type": "number",
+                "format": "double"
+              },
+              "Source": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ForwardContract": {
         "type": "object",
         "properties": {
-          "Expiration": {
-            "type": "string",
-            "nullable": true
-          },
           "Bid": {
             "type": "number",
             "format": "double"
@@ -2304,46 +2318,48 @@
         "additionalProperties": false
       },
       "ForwardRate": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "BaseCurrency": {
-            "type": "string",
-            "nullable": true
           },
-          "QuoteCurrency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "QuoteType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "ForwardRates": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ForwardContract"
+          {
+            "type": "object",
+            "properties": {
+              "BaseCurrency": {
+                "type": "string",
+                "nullable": true
+              },
+              "QuoteCurrency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "QuoteType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Time": {
+                "type": "string",
+                "nullable": true
+              },
+              "ForwardRates": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ForwardContract"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ForwardRateDescription": {
         "type": "object",
@@ -2371,22 +2387,24 @@
         "additionalProperties": false
       },
       "ForwardRateList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ForwardRateDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ForwardRateDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ForwardRateDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ForwardRateDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
