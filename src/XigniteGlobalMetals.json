@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalMetals",
-    "version": "1.0.4"
+    "version": "1.0.5"
   },
   "servers": [
     {
@@ -17,7 +17,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -72,7 +72,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -127,7 +127,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -197,7 +197,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -273,7 +273,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -349,7 +349,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -447,7 +447,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -510,7 +510,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -601,7 +601,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -677,7 +677,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -768,7 +768,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -873,7 +873,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -964,7 +964,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1040,7 +1040,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1110,7 +1110,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1179,7 +1179,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1243,7 +1243,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1305,24 +1305,24 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1353,333 +1353,345 @@
         "additionalProperties": false
       },
       "Metals": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "MetalList": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Metal"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "MetalList": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Metal"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "MetalQuote": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Unit": {
+                "type": "string",
+                "nullable": true
+              },
+              "QuoteType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Time": {
+                "type": "string",
+                "nullable": true
+              },
+              "Bid": {
+                "type": "number",
+                "format": "double"
+              },
+              "Mid": {
+                "type": "number",
+                "format": "double"
+              },
+              "Ask": {
+                "type": "number",
+                "format": "double"
+              },
+              "Spread": {
+                "type": "number",
+                "format": "double"
+              },
+              "Source": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "Unit": {
-            "type": "string",
-            "nullable": true
-          },
-          "QuoteType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "Bid": {
-            "type": "number",
-            "format": "double"
-          },
-          "Mid": {
-            "type": "number",
-            "format": "double"
-          },
-          "Ask": {
-            "type": "number",
-            "format": "double"
-          },
-          "Spread": {
-            "type": "number",
-            "format": "double"
-          },
-          "Source": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExtendedMetalQuote": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Unit": {
+                "type": "string",
+                "nullable": true
+              },
+              "QuoteType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Time": {
+                "type": "string",
+                "nullable": true
+              },
+              "Bid": {
+                "type": "number",
+                "format": "double"
+              },
+              "Ask": {
+                "type": "number",
+                "format": "double"
+              },
+              "Spread": {
+                "type": "number",
+                "format": "double"
+              },
+              "Open": {
+                "type": "number",
+                "format": "double"
+              },
+              "High": {
+                "type": "number",
+                "format": "double"
+              },
+              "Low": {
+                "type": "number",
+                "format": "double"
+              },
+              "Close": {
+                "type": "number",
+                "format": "double"
+              },
+              "Average": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousClose": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousCloseDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Change": {
+                "type": "number",
+                "format": "double"
+              },
+              "PercentChange": {
+                "type": "number",
+                "format": "double"
+              },
+              "Source": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "Unit": {
-            "type": "string",
-            "nullable": true
-          },
-          "QuoteType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "Bid": {
-            "type": "number",
-            "format": "double"
-          },
-          "Ask": {
-            "type": "number",
-            "format": "double"
-          },
-          "Spread": {
-            "type": "number",
-            "format": "double"
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Close": {
-            "type": "number",
-            "format": "double"
-          },
-          "Average": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousClose": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousCloseDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Change": {
-            "type": "number",
-            "format": "double"
-          },
-          "PercentChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "Source": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "HistoricalMetalQuote": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "QuoteType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "StartDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "StartTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "Open": {
+                "type": "number",
+                "format": "double"
+              },
+              "High": {
+                "type": "number",
+                "format": "double"
+              },
+              "Low": {
+                "type": "number",
+                "format": "double"
+              },
+              "Close": {
+                "type": "number",
+                "format": "double"
+              },
+              "Average": {
+                "type": "number",
+                "format": "double"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "QuoteType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "StartDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "StartTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Close": {
-            "type": "number",
-            "format": "double"
-          },
-          "Average": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "Bar": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "StartDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "StartTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "Open": {
+                "type": "number",
+                "format": "double"
+              },
+              "High": {
+                "type": "number",
+                "format": "double"
+              },
+              "Low": {
+                "type": "number",
+                "format": "double"
+              },
+              "Close": {
+                "type": "number",
+                "format": "double"
+              },
+              "Average": {
+                "type": "number",
+                "format": "double"
+              },
+              "Volume": {
+                "type": "number",
+                "format": "double"
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "StartDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "StartTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Close": {
-            "type": "number",
-            "format": "double"
-          },
-          "Average": {
-            "type": "number",
-            "format": "double"
-          },
-          "Volume": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "BaseMetalPrice": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Time": {
+                "type": "string",
+                "nullable": true
+              },
+              "Price": {
+                "type": "number",
+                "format": "double"
+              },
+              "Unit": {
+                "type": "string",
+                "nullable": true
+              },
+              "Source": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "Price": {
-            "type": "number",
-            "format": "double"
-          },
-          "Unit": {
-            "type": "string",
-            "nullable": true
-          },
-          "Source": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "MetalDescription": {
         "type": "object",
@@ -1778,120 +1790,126 @@
         "additionalProperties": false
       },
       "MetalChartBars": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Timing": {
-            "type": "string",
-            "nullable": true
           },
-          "PriceType": {
-            "type": "string",
-            "nullable": true
-          },
-          "MetalDescription": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/MetalDescription"
+          {
+            "type": "object",
+            "properties": {
+              "Timing": {
+                "type": "string",
+                "nullable": true
+              },
+              "PriceType": {
+                "type": "string",
+                "nullable": true
+              },
+              "MetalDescription": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/MetalDescription"
+                  }
+                ],
+                "nullable": true
+              },
+              "ChartBars": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ChartBar"
+                },
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "ChartBars": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ChartBar"
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "LondonFixing": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "QuoteType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Time": {
+                "type": "string",
+                "nullable": true
+              },
+              "Fixing": {
+                "type": "string",
+                "nullable": true
+              },
+              "Price": {
+                "type": "number",
+                "format": "double"
+              },
+              "Unit": {
+                "type": "string",
+                "nullable": true
+              },
+              "Source": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "QuoteType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "Fixing": {
-            "type": "string",
-            "nullable": true
-          },
-          "Price": {
-            "type": "number",
-            "format": "double"
-          },
-          "Unit": {
-            "type": "string",
-            "nullable": true
-          },
-          "Source": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "MarketNews": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Headline": {
+                "type": "string",
+                "nullable": true
+              },
+              "Source": {
+                "type": "string",
+                "nullable": true
+              },
+              "Summary": {
+                "type": "string",
+                "nullable": true
+              },
+              "Time": {
+                "type": "string",
+                "nullable": true
+              },
+              "Url": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Headline": {
-            "type": "string",
-            "nullable": true
-          },
-          "Source": {
-            "type": "string",
-            "nullable": true
-          },
-          "Summary": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "Url": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
