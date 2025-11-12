@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalHolidays",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -1026,24 +1026,24 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1161,12 +1161,6 @@
           },
           {
             "type": "object",
-            "properties": {
-              "Value": {
-                "type": "string",
-                "nullable": true
-              }
-            },
             "additionalProperties": false
           }
         ]
@@ -1178,12 +1172,6 @@
           },
           {
             "type": "object",
-            "properties": {
-              "Value": {
-                "type": "integer",
-                "format": "int32"
-              }
-            },
             "additionalProperties": false
           }
         ]
