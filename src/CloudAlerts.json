@@ -75,7 +75,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -123,7 +123,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -186,7 +186,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -248,82 +248,84 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
       },
       "Alert": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "AlertIdentifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "Status": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "API": {
+                "type": "string",
+                "nullable": true
+              },
+              "Condition": {
+                "type": "string",
+                "nullable": true
+              },
+              "Reset": {
+                "type": "string",
+                "nullable": true
+              },
+              "CallbackURL": {
+                "type": "string",
+                "nullable": true
+              },
+              "StartDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "LastTriggered": {
+                "type": "string",
+                "nullable": true
+              },
+              "EndDate": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "AlertIdentifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "Status": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "API": {
-            "type": "string",
-            "nullable": true
-          },
-          "Condition": {
-            "type": "string",
-            "nullable": true
-          },
-          "Reset": {
-            "type": "string",
-            "nullable": true
-          },
-          "CallbackURL": {
-            "type": "string",
-            "nullable": true
-          },
-          "StartDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "LastTriggered": {
-            "type": "string",
-            "nullable": true
-          },
-          "EndDate": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
