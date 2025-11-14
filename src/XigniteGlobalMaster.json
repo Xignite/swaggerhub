@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalMaster",
-    "version": "1.0.4"
+    "version": "1.0.5"
   },
   "servers": [
     {
@@ -17,7 +17,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -56,7 +56,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -95,7 +95,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -134,7 +134,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -173,7 +173,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -212,7 +212,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -251,7 +251,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -305,7 +305,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -375,7 +375,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -456,7 +456,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -529,7 +529,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -610,7 +610,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -709,7 +709,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -801,7 +801,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -900,7 +900,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -992,7 +992,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1066,7 +1066,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1139,7 +1139,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1220,7 +1220,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1290,7 +1290,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1374,7 +1374,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1480,7 +1480,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1590,7 +1590,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1700,7 +1700,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1798,7 +1798,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1896,7 +1896,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1995,7 +1995,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2042,24 +2042,24 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -2076,22 +2076,24 @@
         "type": "string"
       },
       "AbstractPublicWebServiceObj": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "DataProvider": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/DataProviders"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "DataProvider": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/DataProviders"
+                  }
+                ]
               }
-            ]
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "PossibleValue": {
         "type": "object",
@@ -2112,48 +2114,39 @@
         "additionalProperties": false
       },
       "PossibleValues": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/AbstractPublicWebServiceObj"
-          }
-        ],
-        "properties": {
-          "PossibleValuesOf": {
-            "type": "string",
-            "nullable": true
           },
-          "Values": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PossibleValue"
+          {
+            "type": "object",
+            "properties": {
+              "PossibleValuesOf": {
+                "type": "string",
+                "nullable": true
+              },
+              "Values": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PossibleValue"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "LegacyExchangeMapping": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "MIC": {
-            "type": "string",
-            "nullable": true
           },
-          "LegacyValues": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
+          {
+            "type": "object",
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "SymbolChange": {
         "type": "object",
@@ -2202,26 +2195,28 @@
         "additionalProperties": false
       },
       "SymbolChangeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "DateTime": {
-            "type": "string",
-            "nullable": true
           },
-          "SymbolChanges": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SymbolChange"
+          {
+            "type": "object",
+            "properties": {
+              "DateTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "SymbolChanges": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SymbolChange"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Exchanges": {
         "enum": [
@@ -3304,38 +3299,40 @@
         "additionalProperties": false
       },
       "IdentifiersByExchange": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
           },
-          "Exchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "InstrumentClass": {
-            "type": "string",
-            "nullable": true
-          },
-          "Count": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "ArrayOfIdentifierRecords": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/IdentifierRecord"
+          {
+            "type": "object",
+            "properties": {
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "InstrumentClass": {
+                "type": "string",
+                "nullable": true
+              },
+              "Count": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "ArrayOfIdentifierRecords": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/IdentifierRecord"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "AlternateIdentifierTypes": {
         "enum": [
@@ -3395,86 +3392,88 @@
         "additionalProperties": false
       },
       "Security": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
           },
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "SEDOL": {
-            "type": "string",
-            "nullable": true
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Exchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "ActiveDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "InactiveDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "HomeTradingPlace": {
-            "type": "boolean"
-          },
-          "FIGI": {
-            "type": "string",
-            "nullable": true
-          },
-          "CompositeFIGI": {
-            "type": "string",
-            "nullable": true
-          },
-          "Active": {
-            "type": "boolean"
-          },
-          "AlternateSecurityIdentifiers": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AlternateSecurityIdentifier"
-            },
-            "nullable": true
-          },
-          "CustomAttributes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CustomAttribute"
-            },
-            "nullable": true
-          },
-          "DataProvider": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/DataProviders"
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "SEDOL": {
+                "type": "string",
+                "nullable": true
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "ActiveDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "InactiveDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "HomeTradingPlace": {
+                "type": "boolean"
+              },
+              "FIGI": {
+                "type": "string",
+                "nullable": true
+              },
+              "CompositeFIGI": {
+                "type": "string",
+                "nullable": true
+              },
+              "Active": {
+                "type": "boolean"
+              },
+              "AlternateSecurityIdentifiers": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AlternateSecurityIdentifier"
+                },
+                "nullable": true
+              },
+              "CustomAttributes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CustomAttribute"
+                },
+                "nullable": true
+              },
+              "DataProvider": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/DataProviders"
+                  }
+                ]
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
               }
-            ]
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "InstrumentRelatedTypes": {
         "enum": [
@@ -3484,87 +3483,89 @@
         "type": "string"
       },
       "Instrument": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "InstrumentClass": {
-            "type": "string",
-            "nullable": true
           },
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "CUSIP": {
-            "type": "string",
-            "nullable": true
-          },
-          "ISIN": {
-            "type": "string",
-            "nullable": true
-          },
-          "Valoren": {
-            "type": "string",
-            "nullable": true
-          },
-          "ActiveDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "InactiveDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "MostLiquidExchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          },
-          "CFICode": {
-            "type": "string",
-            "nullable": true
-          },
-          "Description": {
-            "type": "string",
-            "nullable": true
-          },
-          "Active": {
-            "type": "boolean"
-          },
-          "CustomAttributes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CustomAttribute"
-            },
-            "nullable": true
-          },
-          "Securities": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Security"
-            },
-            "nullable": true
-          },
-          "DataProvider": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/DataProviders"
+          {
+            "type": "object",
+            "properties": {
+              "InstrumentClass": {
+                "type": "string",
+                "nullable": true
+              },
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "CUSIP": {
+                "type": "string",
+                "nullable": true
+              },
+              "ISIN": {
+                "type": "string",
+                "nullable": true
+              },
+              "Valoren": {
+                "type": "string",
+                "nullable": true
+              },
+              "ActiveDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "InactiveDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "MostLiquidExchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              },
+              "CFICode": {
+                "type": "string",
+                "nullable": true
+              },
+              "Description": {
+                "type": "string",
+                "nullable": true
+              },
+              "Active": {
+                "type": "boolean"
+              },
+              "CustomAttributes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CustomAttribute"
+                },
+                "nullable": true
+              },
+              "Securities": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Security"
+                },
+                "nullable": true
+              },
+              "DataProvider": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/DataProviders"
+                  }
+                ]
               }
-            ]
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IssuerRelatedTypes": {
         "enum": [
@@ -3575,211 +3576,217 @@
         "type": "string"
       },
       "Classification": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Industry": {
+                "type": "string",
+                "nullable": true
+              },
+              "Sector": {
+                "type": "string",
+                "nullable": true
+              },
+              "Scheme": {
+                "type": "string",
+                "nullable": true
+              },
+              "ClassificationCode": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Industry": {
-            "type": "string",
-            "nullable": true
-          },
-          "Sector": {
-            "type": "string",
-            "nullable": true
-          },
-          "Scheme": {
-            "type": "string",
-            "nullable": true
-          },
-          "ClassificationCode": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "Issuer": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Name": {
-            "type": "string",
-            "nullable": true
           },
-          "CIK": {
-            "type": "string",
-            "nullable": true
-          },
-          "Industry": {
-            "type": "string",
-            "nullable": true
-          },
-          "Sector": {
-            "type": "string",
-            "nullable": true
-          },
-          "ActiveDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "InactiveDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "CompanyIdentifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "Domicile": {
-            "type": "string",
-            "nullable": true
-          },
-          "Active": {
-            "type": "boolean"
-          },
-          "CustomAttributes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CustomAttribute"
-            },
-            "nullable": true
-          },
-          "Instruments": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Instrument"
-            },
-            "nullable": true
-          },
-          "DataProvider": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/DataProviders"
+          {
+            "type": "object",
+            "properties": {
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "CIK": {
+                "type": "string",
+                "nullable": true
+              },
+              "Industry": {
+                "type": "string",
+                "nullable": true
+              },
+              "Sector": {
+                "type": "string",
+                "nullable": true
+              },
+              "ActiveDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "InactiveDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "CompanyIdentifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "Domicile": {
+                "type": "string",
+                "nullable": true
+              },
+              "Active": {
+                "type": "boolean"
+              },
+              "CustomAttributes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CustomAttribute"
+                },
+                "nullable": true
+              },
+              "Instruments": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Instrument"
+                },
+                "nullable": true
+              },
+              "DataProvider": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/DataProviders"
+                  }
+                ]
+              },
+              "Classifications": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Classification"
+                },
+                "nullable": true
+              },
+              "FactSetEntityId": {
+                "type": "string",
+                "nullable": true
               }
-            ]
-          },
-          "Classifications": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Classification"
             },
-            "nullable": true
-          },
-          "FactSetEntityId": {
-            "type": "string",
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Record": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "CUSIP": {
+                "type": "string",
+                "nullable": true
+              },
+              "CIK": {
+                "type": "string",
+                "nullable": true
+              },
+              "Valoren": {
+                "type": "string",
+                "nullable": true
+              },
+              "ISIN": {
+                "type": "string",
+                "nullable": true
+              },
+              "SEDOL": {
+                "type": "string",
+                "nullable": true
+              },
+              "CFICode": {
+                "type": "string",
+                "nullable": true
+              },
+              "InstrumentClass": {
+                "type": "string",
+                "nullable": true
+              },
+              "ExchangeName": {
+                "type": "string",
+                "nullable": true
+              },
+              "Sector": {
+                "type": "string",
+                "nullable": true
+              },
+              "Industry": {
+                "type": "string",
+                "nullable": true
+              },
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "ActiveDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "InactiveDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "LastUpdateDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "HomeTradingPlace": {
+                "type": "boolean"
+              },
+              "CompanyIdentifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "FIGI": {
+                "type": "string",
+                "nullable": true
+              },
+              "CompositeFIGI": {
+                "type": "string",
+                "nullable": true
+              },
+              "Identifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "IdentifierType": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "CUSIP": {
-            "type": "string",
-            "nullable": true
-          },
-          "CIK": {
-            "type": "string",
-            "nullable": true
-          },
-          "Valoren": {
-            "type": "string",
-            "nullable": true
-          },
-          "ISIN": {
-            "type": "string",
-            "nullable": true
-          },
-          "SEDOL": {
-            "type": "string",
-            "nullable": true
-          },
-          "CFICode": {
-            "type": "string",
-            "nullable": true
-          },
-          "InstrumentClass": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExchangeName": {
-            "type": "string",
-            "nullable": true
-          },
-          "Sector": {
-            "type": "string",
-            "nullable": true
-          },
-          "Industry": {
-            "type": "string",
-            "nullable": true
-          },
-          "Exchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "ActiveDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "InactiveDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "LastUpdateDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "HomeTradingPlace": {
-            "type": "boolean"
-          },
-          "CompanyIdentifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "FIGI": {
-            "type": "string",
-            "nullable": true
-          },
-          "CompositeFIGI": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "IdentifierType": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "LookUpSecurity": {
         "type": "object",
@@ -3857,26 +3864,28 @@
         "additionalProperties": false
       },
       "LookupItems": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Name": {
-            "type": "string",
-            "nullable": true
           },
-          "Securities": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LookUpSecurity"
+          {
+            "type": "object",
+            "properties": {
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "Securities": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LookUpSecurity"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Sectors": {
         "enum": [
@@ -4115,23 +4124,25 @@
         "type": "string"
       },
       "Statistics": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Count": {
-            "type": "integer",
-            "format": "int64"
           },
-          "Exchange": {
-            "type": "string",
-            "nullable": true
+          {
+            "type": "object",
+            "properties": {
+              "Count": {
+                "type": "integer",
+                "format": "int64"
+              },
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
