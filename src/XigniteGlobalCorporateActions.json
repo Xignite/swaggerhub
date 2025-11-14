@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalCorporateActions",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -17,7 +17,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -56,7 +56,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -118,7 +118,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -173,7 +173,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -235,7 +235,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -304,7 +304,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -392,7 +392,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -462,7 +462,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -550,7 +550,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -620,7 +620,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -700,7 +700,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -755,7 +755,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -835,7 +835,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -915,7 +915,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -995,7 +995,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1075,7 +1075,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1155,7 +1155,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1210,7 +1210,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1290,7 +1290,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1337,24 +1337,24 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1374,22 +1374,24 @@
         "additionalProperties": false
       },
       "ExchangeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ExchangeDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExchangeDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ExchangeDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ExchangeDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "CorporateActionsEventType": {
         "type": "object",
@@ -1410,22 +1412,24 @@
         "additionalProperties": false
       },
       "EventTypeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "EventTypes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CorporateActionsEventType"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "EventTypes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CorporateActionsEventType"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "SecurityDescription": {
         "type": "object",
@@ -1450,30 +1454,32 @@
         "additionalProperties": false
       },
       "SymbolList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Exchange": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ExchangeDescription"
-              }
-            ],
-            "nullable": true
           },
-          "SecurityDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SecurityDescription"
+          {
+            "type": "object",
+            "properties": {
+              "Exchange": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ExchangeDescription"
+                  }
+                ],
+                "nullable": true
+              },
+              "SecurityDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SecurityDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "SymbolChange": {
         "type": "object",
@@ -1526,22 +1532,24 @@
         "additionalProperties": false
       },
       "SymbolChangeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "SymbolChanges": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SymbolChange"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "SymbolChanges": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SymbolChange"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IdentifierChange": {
         "type": "object",
@@ -1586,22 +1594,24 @@
         "additionalProperties": false
       },
       "IdentifierChangeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "IdentifierChanges": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/IdentifierChange"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "IdentifierChanges": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/IdentifierChange"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ListingChange": {
         "type": "object",
@@ -1642,22 +1652,24 @@
         "additionalProperties": false
       },
       "ListingChangeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ListingChanges": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ListingChange"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ListingChanges": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ListingChange"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IdentifierTypes": {
         "enum": [
@@ -1771,30 +1783,32 @@
         "additionalProperties": false
       },
       "EventSummaryList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
           },
-          "EventSummaries": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/EventSummary"
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "EventSummaries": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EventSummary"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "SecurityEvent": {
         "type": "object",
@@ -1818,22 +1832,24 @@
         "additionalProperties": false
       },
       "SecurityEventSummariesList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "SecurityEventSummaries": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SecurityEvent"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "SecurityEventSummaries": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SecurityEvent"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Distribution": {
         "type": "object",
@@ -1928,30 +1944,32 @@
         "additionalProperties": false
       },
       "DistributionsList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
           },
-          "Distributions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Distribution"
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "Distributions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Distribution"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "SecurityDistributions": {
         "type": "object",
@@ -1975,34 +1993,36 @@
         "additionalProperties": false
       },
       "SecurityDistributionsList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Market": {
-            "type": "string",
-            "nullable": true
           },
-          "MarketIdentificationCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExchangeDistributions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SecurityDistributions"
+          {
+            "type": "object",
+            "properties": {
+              "Market": {
+                "type": "string",
+                "nullable": true
+              },
+              "MarketIdentificationCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "ExDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "ExchangeDistributions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SecurityDistributions"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Split": {
         "type": "object",
@@ -2031,30 +2051,32 @@
         "additionalProperties": false
       },
       "SplitList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
           },
-          "Splits": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Split"
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "Splits": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Split"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExchangeSplit": {
         "type": "object",
@@ -2079,22 +2101,24 @@
         "additionalProperties": false
       },
       "ExchangeSplitList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ExchangeSplits": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExchangeSplit"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ExchangeSplits": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ExchangeSplit"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Spinoff": {
         "type": "object",
@@ -2170,30 +2194,32 @@
         "additionalProperties": false
       },
       "SpinoffList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
           },
-          "SpinoffOptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Spinoff"
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "SpinoffOptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Spinoff"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Merger": {
         "type": "object",
@@ -2281,30 +2307,32 @@
         "additionalProperties": false
       },
       "MergersList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
           },
-          "MergerOptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Merger"
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "MergerOptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Merger"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Takeover": {
         "type": "object",
@@ -2432,30 +2460,32 @@
         "additionalProperties": false
       },
       "TakeoversList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
           },
-          "TakeoverOptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Takeover"
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "TakeoverOptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Takeover"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "TenderOffer": {
         "type": "object",
@@ -2586,30 +2616,32 @@
         "additionalProperties": false
       },
       "TenderOffersList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
           },
-          "TenderOfferOptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TenderOffer"
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "TenderOfferOptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/TenderOffer"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "Rights": {
         "type": "object",
@@ -2678,30 +2710,32 @@
         "additionalProperties": false
       },
       "RightsList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
           },
-          "SecurityRights": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Rights"
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "SecurityRights": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Rights"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "SecurityRights": {
         "type": "object",
@@ -2725,34 +2759,36 @@
         "additionalProperties": false
       },
       "SecurityRightsList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Market": {
-            "type": "string",
-            "nullable": true
           },
-          "MarketIdentificationCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExchangeRights": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SecurityRights"
+          {
+            "type": "object",
+            "properties": {
+              "Market": {
+                "type": "string",
+                "nullable": true
+              },
+              "MarketIdentificationCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "ExDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "ExchangeRights": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SecurityRights"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "SecuritySwap": {
         "type": "object",
@@ -2796,30 +2832,32 @@
         "additionalProperties": false
       },
       "SecuritySwapsList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
           },
-          "SecuritySwaps": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SecuritySwap"
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "SecuritySwaps": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SecuritySwap"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
