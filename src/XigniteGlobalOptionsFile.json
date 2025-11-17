@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalOptionsFile",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -44,7 +44,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -98,69 +98,73 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
       },
       "FileDownload": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Name": {
-            "type": "string",
-            "nullable": true
           },
-          "Url": {
-            "type": "string",
-            "nullable": true
+          {
+            "type": "object",
+            "properties": {
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "Url": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "GlobalOptionsFile": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/FileDownload"
-          }
-        ],
-        "properties": {
-          "Exchange": {
-            "type": "string",
-            "nullable": true
           },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Type": {
-            "type": "string",
-            "nullable": true
+          {
+            "type": "object",
+            "properties": {
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Type": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
