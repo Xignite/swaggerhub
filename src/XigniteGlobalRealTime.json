@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalRealTime",
-    "version": "3.0.11"
+    "version": "3.0.12"
   },
   "servers": [
     {
@@ -1437,6 +1437,10 @@
               "LimitUp": {
                 "type": "number",
                 "format": "double"
+              },
+              "TradeConditions": {
+                "type": "string",
+                "nullable": true
               }
             },
             "additionalProperties": false
