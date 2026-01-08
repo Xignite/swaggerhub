@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalRealTimeOptions",
-    "version": "1.0.10"
+    "version": "1.0.11"
   },
   "servers": [
     {
@@ -40,7 +40,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -145,7 +145,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -221,7 +221,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -294,7 +294,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -367,7 +367,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -459,7 +459,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -567,7 +567,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -622,7 +622,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -677,7 +677,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -781,7 +781,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -889,7 +889,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -997,7 +997,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1052,7 +1052,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1107,7 +1107,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1211,7 +1211,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1294,7 +1294,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1377,7 +1377,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1425,7 +1425,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1563,24 +1563,24 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1646,47 +1646,45 @@
         "additionalProperties": false
       },
       "OptionGreeks": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "CalculationType": {
-            "type": "string",
-            "nullable": true
           },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "Exchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "SymbologyType": {
-            "type": "string",
-            "nullable": true
-          },
-          "OptionSummary": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionSummary"
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "SymbologyType": {
+                "type": "string",
+                "nullable": true
+              },
+              "OptionSummary": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/OptionSummary"
+                  }
+                ],
+                "nullable": true
+              },
+              "Greeks": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Greeks"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Greeks": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Greeks"
-              }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "GreeksByExpiration": {
         "type": "object",
@@ -1713,80 +1711,84 @@
         "additionalProperties": false
       },
       "Security": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "CIK": {
+                "type": "string",
+                "nullable": true
+              },
+              "CUSIP": {
+                "type": "string",
+                "nullable": true
+              },
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "ISIN": {
+                "type": "string",
+                "nullable": true
+              },
+              "Valoren": {
+                "type": "string",
+                "nullable": true
+              },
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "Market": {
+                "type": "string",
+                "nullable": true
+              },
+              "MarketIdentificationCode": {
+                "type": "string",
+                "nullable": true
+              },
+              "MostLiquidExchange": {
+                "type": "boolean"
+              },
+              "CategoryOrIndustry": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "CIK": {
-            "type": "string",
-            "nullable": true
-          },
-          "CUSIP": {
-            "type": "string",
-            "nullable": true
-          },
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "ISIN": {
-            "type": "string",
-            "nullable": true
-          },
-          "Valoren": {
-            "type": "string",
-            "nullable": true
-          },
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "Market": {
-            "type": "string",
-            "nullable": true
-          },
-          "MarketIdentificationCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "MostLiquidExchange": {
-            "type": "boolean"
-          },
-          "CategoryOrIndustry": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "OptionGreeksByChain": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "GreeksByExpirations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GreeksByExpiration"
-            },
-            "nullable": true
           },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
+          {
+            "type": "object",
+            "properties": {
+              "GreeksByExpirations": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/GreeksByExpiration"
+                },
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IdentifierTypes": {
         "enum": [
@@ -1801,56 +1803,69 @@
         ],
         "type": "string"
       },
-      "QuickQuote": {
-        "type": "object",
+      "OptionsBaseOfExpirationOption": {
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
+        ]
+      },
+      "Options": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/OptionsBaseOfExpirationOption"
           },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "Last": {
-            "type": "number",
-            "format": "double"
-          },
-          "Volume": {
-            "type": "number",
-            "format": "double"
-          },
-          "Change": {
-            "type": "number",
-            "format": "double"
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Exchange": {
-            "type": "string",
-            "nullable": true
+          {
+            "type": "object",
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
+      },
+      "OptionsBaseOfExtendedExpirationExtendedOption": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ExtendedOptions": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/OptionsBaseOfExtendedExpirationExtendedOption"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
       },
       "OptionTypes": {
         "enum": [
@@ -1859,694 +1874,581 @@
         ],
         "type": "string"
       },
+      "NumericResult": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Value": {
+                "type": "number",
+                "format": "double"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
       "Option": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
           },
-          "SymbologyType": {
-            "type": "string",
-            "nullable": true
-          },
-          "BaseSymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "Type": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionTypes"
+          {
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "SymbologyType": {
+                "type": "string",
+                "nullable": true
+              },
+              "BaseSymbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Type": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/OptionTypes"
+                  }
+                ]
+              },
+              "ExpirationDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Month": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "Year": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "StrikePrice": {
+                "type": "number",
+                "format": "double"
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Time": {
+                "type": "string",
+                "nullable": true
+              },
+              "Last": {
+                "type": "number",
+                "format": "double"
+              },
+              "LastSize": {
+                "type": "number",
+                "format": "double"
+              },
+              "Open": {
+                "type": "number",
+                "format": "double"
+              },
+              "Close": {
+                "type": "number",
+                "format": "double"
+              },
+              "High": {
+                "type": "number",
+                "format": "double"
+              },
+              "Low": {
+                "type": "number",
+                "format": "double"
+              },
+              "Volume": {
+                "type": "number",
+                "format": "double"
+              },
+              "OpenInterest": {
+                "type": "number",
+                "format": "double"
+              },
+              "OpenInterestDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousClose": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousCloseDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Change": {
+                "type": "number",
+                "format": "double"
+              },
+              "PercentChange": {
+                "type": "number",
+                "format": "double"
+              },
+              "Bid": {
+                "type": "number",
+                "format": "double"
+              },
+              "BidDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "BidTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "BidSize": {
+                "type": "number",
+                "format": "double"
+              },
+              "Ask": {
+                "type": "number",
+                "format": "double"
+              },
+              "AskDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "AskTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "AskSize": {
+                "type": "number",
+                "format": "double"
+              },
+              "InTheMoney": {
+                "type": "boolean"
+              },
+              "Exchange": {
+                "type": "string",
+                "nullable": true
               }
-            ]
-          },
-          "ExpirationDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Month": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Year": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "StrikePrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Date": {
-            "type": "string",
-            "nullable": true
-          },
-          "Time": {
-            "type": "string",
-            "nullable": true
-          },
-          "Last": {
-            "type": "number",
-            "format": "double"
-          },
-          "LastSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "Open": {
-            "type": "number",
-            "format": "double"
-          },
-          "Close": {
-            "type": "number",
-            "format": "double"
-          },
-          "High": {
-            "type": "number",
-            "format": "double"
-          },
-          "Low": {
-            "type": "number",
-            "format": "double"
-          },
-          "Volume": {
-            "type": "number",
-            "format": "double"
-          },
-          "OpenInterest": {
-            "type": "number",
-            "format": "double"
-          },
-          "OpenInterestDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousClose": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousCloseDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Change": {
-            "type": "number",
-            "format": "double"
-          },
-          "PercentChange": {
-            "type": "number",
-            "format": "double"
-          },
-          "Bid": {
-            "type": "number",
-            "format": "double"
-          },
-          "BidDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "BidTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "BidSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "Ask": {
-            "type": "number",
-            "format": "double"
-          },
-          "AskDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "AskTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "AskSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "InTheMoney": {
-            "type": "boolean"
-          },
-          "Exchange": {
-            "type": "string",
-            "nullable": true
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
-      "ExpirationBaseOfOption": {
-        "type": "object",
+      "OptionSymbol": {
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ExpirationDate": {
-            "type": "string",
-            "nullable": true
           },
-          "Month": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Year": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Calls": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Option"
-            },
-            "nullable": true
-          },
-          "Puts": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Option"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Expiration": {
-        "type": "object",
-        "allOf": [
           {
-            "$ref": "#/components/schemas/ExpirationBaseOfOption"
-          }
-        ],
-        "additionalProperties": false
-      },
-      "OptionsBaseOfExpirationOption": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Quote": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/QuickQuote"
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "SymbologyType": {
+                "type": "string",
+                "nullable": true
+              },
+              "BaseSymbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Type": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/OptionTypes"
+                  }
+                ]
+              },
+              "ExpirationDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Month": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "Year": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "StrikePrice": {
+                "type": "number",
+                "format": "double"
               }
-            ],
-            "nullable": true
-          },
-          "Expirations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Expiration"
             },
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
-      },
-      "Options": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/OptionsBaseOfExpirationOption"
-          }
-        ],
-        "additionalProperties": false
+        ]
       },
       "ExtendedOption": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Option"
-          }
-        ],
-        "properties": {
-          "CFI": {
-            "type": "string",
-            "nullable": true
           },
-          "QuoteType": {
-            "type": "string",
-            "nullable": true
-          },
-          "ContractSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "Multiplier": {
-            "type": "number",
-            "format": "double"
-          },
-          "DelayedMinutes": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "UTCLastDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCLastTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCBidDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCBidTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCAskDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "UTCAskTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "LastPriceStyle": {
-            "type": "string",
-            "nullable": true
-          },
-          "OpenStyle": {
-            "type": "string",
-            "nullable": true
-          },
-          "CloseStyle": {
-            "type": "string",
-            "nullable": true
-          },
-          "HighStyle": {
-            "type": "string",
-            "nullable": true
-          },
-          "LowStyle": {
-            "type": "string",
-            "nullable": true
-          },
-          "VolumeStyle": {
-            "type": "string",
-            "nullable": true
-          },
-          "AskStyle": {
-            "type": "string",
-            "nullable": true
-          },
-          "BidStyle": {
-            "type": "string",
-            "nullable": true
-          },
-          "Mid": {
-            "type": "number",
-            "format": "double"
-          },
-          "MidDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "MidTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "MidStyle": {
-            "type": "string",
-            "nullable": true
-          },
-          "Valuation": {
-            "type": "number",
-            "format": "double"
-          },
-          "ValuationDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "ValuationTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "ValuationType": {
-            "type": "string",
-            "nullable": true
-          },
-          "ValuationStyle": {
-            "type": "string",
-            "nullable": true
-          },
-          "UnderlyingSpot": {
-            "type": "number",
-            "format": "double"
-          },
-          "UnderlyingSpotDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousDayLast": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousDayLastDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousDayLastTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousDayLastPriceStyle": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousDayLastSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousDayValuation": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousDayValuationDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousDayValuationTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousDayValuationStyle": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousDayAsk": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousDayAskDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousDayAskTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousDayAskStyle": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousDayBid": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousDayBidDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousDayBidTime": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousDayBidStyle": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousDayMid": {
-            "type": "number",
-            "format": "double"
-          },
-          "PreviousDayMidDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "PreviousDayMidStyle": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ExpirationBaseOfExtendedOption": {
-        "type": "object",
-        "allOf": [
           {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ExpirationDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Month": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Year": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Calls": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExtendedOption"
-            },
-            "nullable": true
-          },
-          "Puts": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExtendedOption"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ExtendedExpiration": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/ExpirationBaseOfExtendedOption"
-          }
-        ],
-        "additionalProperties": false
-      },
-      "OptionsBaseOfExtendedExpirationExtendedOption": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Quote": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/QuickQuote"
+            "type": "object",
+            "properties": {
+              "CFI": {
+                "type": "string",
+                "nullable": true
+              },
+              "QuoteType": {
+                "type": "string",
+                "nullable": true
+              },
+              "ContractSize": {
+                "type": "number",
+                "format": "double"
+              },
+              "Multiplier": {
+                "type": "number",
+                "format": "double"
+              },
+              "DelayedMinutes": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "UTCLastDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCLastTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCBidDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCBidTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCAskDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCAskTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "LastPriceStyle": {
+                "type": "string",
+                "nullable": true
+              },
+              "OpenStyle": {
+                "type": "string",
+                "nullable": true
+              },
+              "CloseStyle": {
+                "type": "string",
+                "nullable": true
+              },
+              "HighStyle": {
+                "type": "string",
+                "nullable": true
+              },
+              "LowStyle": {
+                "type": "string",
+                "nullable": true
+              },
+              "VolumeStyle": {
+                "type": "string",
+                "nullable": true
+              },
+              "AskStyle": {
+                "type": "string",
+                "nullable": true
+              },
+              "BidStyle": {
+                "type": "string",
+                "nullable": true
+              },
+              "Mid": {
+                "type": "number",
+                "format": "double"
+              },
+              "MidDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "MidTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "MidStyle": {
+                "type": "string",
+                "nullable": true
+              },
+              "Valuation": {
+                "type": "number",
+                "format": "double"
+              },
+              "ValuationDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "ValuationTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "ValuationType": {
+                "type": "string",
+                "nullable": true
+              },
+              "ValuationStyle": {
+                "type": "string",
+                "nullable": true
+              },
+              "UnderlyingSpot": {
+                "type": "number",
+                "format": "double"
+              },
+              "UnderlyingSpotDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousDayLast": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousDayLastDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousDayLastTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousDayLastPriceStyle": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousDayLastSize": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousDayValuation": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousDayValuationDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousDayValuationTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousDayValuationStyle": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousDayAsk": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousDayAskDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousDayAskTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousDayAskStyle": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousDayBid": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousDayBidDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousDayBidTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousDayBidStyle": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousDayMid": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousDayMidDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "PreviousDayMidStyle": {
+                "type": "string",
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Expirations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExtendedExpiration"
             },
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
-      "ExtendedOptions": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/OptionsBaseOfExtendedExpirationExtendedOption"
-          }
-        ],
-        "additionalProperties": false
-      },
-      "NumericResult": {
-        "type": "object",
+      "QuickQuote": {
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Value": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "OptionSymbol": {
-        "type": "object",
-        "allOf": [
+          },
           {
-            "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Symbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "SymbologyType": {
-            "type": "string",
-            "nullable": true
-          },
-          "BaseSymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "Type": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionTypes"
+            "type": "object",
+            "properties": {
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Time": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "Last": {
+                "type": "number",
+                "format": "double"
+              },
+              "Volume": {
+                "type": "number",
+                "format": "double"
+              },
+              "Change": {
+                "type": "number",
+                "format": "double"
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Exchange": {
+                "type": "string",
+                "nullable": true
               }
-            ]
-          },
-          "ExpirationDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Month": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Year": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "StrikePrice": {
-            "type": "number",
-            "format": "double"
+            },
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExtendedOptionChain": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ExpirationDate": {
-            "type": "string",
-            "nullable": true
           },
-          "Quote": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/QuickQuote"
+          {
+            "type": "object",
+            "properties": {
+              "ExpirationDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Quote": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/QuickQuote"
+                  }
+                ],
+                "nullable": true
+              },
+              "Calls": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ExtendedOption"
+                },
+                "nullable": true
+              },
+              "Puts": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ExtendedOption"
+                },
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Calls": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExtendedOption"
             },
-            "nullable": true
-          },
-          "Puts": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExtendedOption"
-            },
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "OptionChain": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ExpirationDate": {
-            "type": "string",
-            "nullable": true
           },
-          "Quote": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/QuickQuote"
+          {
+            "type": "object",
+            "properties": {
+              "ExpirationDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Quote": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/QuickQuote"
+                  }
+                ],
+                "nullable": true
+              },
+              "Calls": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Option"
+                },
+                "nullable": true
+              },
+              "Puts": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Option"
+                },
+                "nullable": true
+              },
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Calls": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Option"
             },
-            "nullable": true
-          },
-          "Puts": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Option"
-            },
-            "nullable": true
-          },
-          "Security": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/Security"
-              }
-            ],
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExchangeDescription": {
         "type": "object",
@@ -2585,30 +2487,32 @@
         "additionalProperties": false
       },
       "UnderlyingSymbolList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Exchange": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ExchangeDescription"
-              }
-            ],
-            "nullable": true
           },
-          "UnderlyingSecurityDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/UnderlyingSecurity"
+          {
+            "type": "object",
+            "properties": {
+              "Exchange": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ExchangeDescription"
+                  }
+                ],
+                "nullable": true
+              },
+              "UnderlyingSecurityDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/UnderlyingSecurity"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ChartBar": {
         "type": "object",
