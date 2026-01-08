@@ -1,8 +1,8 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalOptionMaster",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -40,7 +40,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -117,7 +117,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -219,7 +219,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -258,7 +258,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -305,78 +305,80 @@
       "Common": {
         "type": "object",
         "properties": {
+          "Delay": {
+            "type": "number",
+            "format": "double"
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
           "Outcome": {
             "allOf": [
               {
                 "$ref": "#/components/schemas/OutcomeTypes"
               }
             ]
-          },
-          "Message": {
-            "type": "string",
-            "nullable": true
-          },
-          "Identity": {
-            "type": "string",
-            "nullable": true
-          },
-          "Delay": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
       },
       "InstrumentBrief": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Name": {
+                "type": "string",
+                "nullable": true
+              },
+              "Valoren": {
+                "type": "string",
+                "nullable": true
+              },
+              "ISIN": {
+                "type": "string",
+                "nullable": true
+              },
+              "CUSIP": {
+                "type": "string",
+                "nullable": true
+              },
+              "CompanyIdentifier": {
+                "type": "string",
+                "nullable": true
+              },
+              "Domicile": {
+                "type": "string",
+                "nullable": true
+              },
+              "CIK": {
+                "type": "string",
+                "nullable": true
+              },
+              "PrimarySEDOL": {
+                "type": "string",
+                "nullable": true
+              },
+              "PrimarySymbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "PrimaryExchange": {
+                "type": "string",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
           }
-        ],
-        "properties": {
-          "Name": {
-            "type": "string",
-            "nullable": true
-          },
-          "Valoren": {
-            "type": "string",
-            "nullable": true
-          },
-          "ISIN": {
-            "type": "string",
-            "nullable": true
-          },
-          "CUSIP": {
-            "type": "string",
-            "nullable": true
-          },
-          "CompanyIdentifier": {
-            "type": "string",
-            "nullable": true
-          },
-          "Domicile": {
-            "type": "string",
-            "nullable": true
-          },
-          "CIK": {
-            "type": "string",
-            "nullable": true
-          },
-          "PrimarySEDOL": {
-            "type": "string",
-            "nullable": true
-          },
-          "PrimarySymbol": {
-            "type": "string",
-            "nullable": true
-          },
-          "PrimaryExchange": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
+        ]
       },
       "OptionTypes": {
         "enum": [
@@ -401,95 +403,97 @@
         "additionalProperties": false
       },
       "OptionDescription": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Underlying": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/InstrumentBrief"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Underlying": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/InstrumentBrief"
+                  }
+                ],
+                "nullable": true
+              },
+              "Description": {
+                "type": "string",
+                "nullable": true
+              },
+              "Valoren": {
+                "type": "string",
+                "nullable": true
+              },
+              "Type": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/OptionTypes"
+                  }
+                ]
+              },
+              "ExpirationDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Month": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "Year": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "StrikePrice": {
+                "type": "number",
+                "format": "double"
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "ExerciseStyle": {
+                "type": "string",
+                "nullable": true
+              },
+              "ContractSize": {
+                "type": "number",
+                "format": "double"
+              },
+              "ContractSizeUnit": {
+                "type": "string",
+                "nullable": true
+              },
+              "PriceUnit": {
+                "type": "string",
+                "nullable": true
+              },
+              "VolumeUnit": {
+                "type": "string",
+                "nullable": true
+              },
+              "IsActive": {
+                "type": "boolean"
+              },
+              "IsAdjustedOption": {
+                "type": "boolean"
+              },
+              "OptionSymbols": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/OptionSymbol"
+                },
+                "nullable": true
               }
-            ],
-            "nullable": true
-          },
-          "Description": {
-            "type": "string",
-            "nullable": true
-          },
-          "Valoren": {
-            "type": "string",
-            "nullable": true
-          },
-          "Type": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/OptionTypes"
-              }
-            ]
-          },
-          "ExpirationDate": {
-            "type": "string",
-            "nullable": true
-          },
-          "Month": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Year": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "StrikePrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "Currency": {
-            "type": "string",
-            "nullable": true
-          },
-          "Exchange": {
-            "type": "string",
-            "nullable": true
-          },
-          "ExerciseStyle": {
-            "type": "string",
-            "nullable": true
-          },
-          "ContractSize": {
-            "type": "number",
-            "format": "double"
-          },
-          "ContractSizeUnit": {
-            "type": "string",
-            "nullable": true
-          },
-          "PriceUnit": {
-            "type": "string",
-            "nullable": true
-          },
-          "VolumeUnit": {
-            "type": "string",
-            "nullable": true
-          },
-          "IsActive": {
-            "type": "boolean"
-          },
-          "IsAdjustedOption": {
-            "type": "boolean"
-          },
-          "OptionSymbols": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/OptionSymbol"
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "IdentifierTypes": {
         "enum": [
@@ -537,30 +541,32 @@
         "additionalProperties": false
       },
       "OptionChain": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "Underlying": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/InstrumentBrief"
-              }
-            ],
-            "nullable": true
           },
-          "Expirations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Expiration"
+          {
+            "type": "object",
+            "properties": {
+              "Underlying": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/InstrumentBrief"
+                  }
+                ],
+                "nullable": true
+              },
+              "Expirations": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Expiration"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       },
       "ExchangeDescription": {
         "type": "object",
@@ -577,22 +583,24 @@
         "additionalProperties": false
       },
       "ExchangeList": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
-          }
-        ],
-        "properties": {
-          "ExchangeDescriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ExchangeDescription"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ExchangeDescriptions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ExchangeDescription"
+                },
+                "nullable": true
+              }
             },
-            "nullable": true
+            "additionalProperties": false
           }
-        },
-        "additionalProperties": false
+        ]
       }
     },
     "securitySchemes": {
