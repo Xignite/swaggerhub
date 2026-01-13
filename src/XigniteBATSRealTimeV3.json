@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteBATSRealTimeV3",
-    "version": "3.0.11"
+    "version": "3.0.12"
   },
   "servers": [
     {
@@ -772,6 +772,10 @@
               "ExtendedHoursPercentChange": {
                 "type": "number",
                 "format": "double"
+              },
+              "ExtendedHoursTradeConditions": {
+                "type": "string",
+                "nullable": true
               },
               "LimitDate": {
                 "type": "string",
