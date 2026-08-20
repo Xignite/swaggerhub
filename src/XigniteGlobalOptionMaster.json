@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalOptionMaster",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "servers": [
     {
@@ -324,8 +324,7 @@
               }
             ]
           }
-        },
-        "additionalProperties": false
+        }
       },
       "InstrumentBrief": {
         "allOf": [
@@ -375,8 +374,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -399,8 +397,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "OptionDescription": {
         "allOf": [
@@ -490,8 +487,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -537,8 +533,7 @@
             },
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "OptionChain": {
         "allOf": [
@@ -563,8 +558,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -579,8 +573,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "ExchangeList": {
         "allOf": [
@@ -597,8 +590,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       }

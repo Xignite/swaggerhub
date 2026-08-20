@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalRealTimeOptions",
-    "version": "1.0.11"
+    "version": "1.0.12"
   },
   "servers": [
     {
@@ -1582,8 +1582,7 @@
               }
             ]
           }
-        },
-        "additionalProperties": false
+        }
       },
       "OptionSummary": {
         "type": "object",
@@ -1604,8 +1603,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "Greeks": {
         "type": "object",
@@ -1642,8 +1640,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "OptionGreeks": {
         "allOf": [
@@ -1680,9 +1677,12 @@
                   }
                 ],
                 "nullable": true
+              },
+              "CalculationType": {
+                "type": "string",
+                "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1707,8 +1707,7 @@
             },
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "Security": {
         "allOf": [
@@ -1757,8 +1756,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1785,8 +1783,7 @@
                 ],
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1803,7 +1800,7 @@
         ],
         "type": "string"
       },
-      "OptionsBaseOfExpirationOption": {
+      "QuickQuote": {
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
@@ -1811,59 +1808,47 @@
           {
             "type": "object",
             "properties": {
-              "Security": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/Security"
-                  }
-                ],
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Time": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "UTCTime": {
+                "type": "string",
+                "nullable": true
+              },
+              "Last": {
+                "type": "number",
+                "format": "double"
+              },
+              "Volume": {
+                "type": "number",
+                "format": "double"
+              },
+              "Change": {
+                "type": "number",
+                "format": "double"
+              },
+              "Currency": {
+                "type": "string",
+                "nullable": true
+              },
+              "Exchange": {
+                "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
-          }
-        ]
-      },
-      "Options": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/OptionsBaseOfExpirationOption"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false
-          }
-        ]
-      },
-      "OptionsBaseOfExtendedExpirationExtendedOption": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "Security": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/Security"
-                  }
-                ],
-                "nullable": true
-              }
-            },
-            "additionalProperties": false
-          }
-        ]
-      },
-      "ExtendedOptions": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/OptionsBaseOfExtendedExpirationExtendedOption"
-          },
-          {
-            "type": "object",
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1873,23 +1858,6 @@
           "Put"
         ],
         "type": "string"
-      },
-      "NumericResult": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Common"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "Value": {
-                "type": "number",
-                "format": "double"
-              }
-            },
-            "additionalProperties": false
-          }
-        ]
       },
       "Option": {
         "allOf": [
@@ -2037,12 +2005,11 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
-      "OptionSymbol": {
+      "ExpirationBaseOfOption": {
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
@@ -2050,25 +2017,6 @@
           {
             "type": "object",
             "properties": {
-              "Symbol": {
-                "type": "string",
-                "nullable": true
-              },
-              "SymbologyType": {
-                "type": "string",
-                "nullable": true
-              },
-              "BaseSymbol": {
-                "type": "string",
-                "nullable": true
-              },
-              "Type": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/OptionTypes"
-                  }
-                ]
-              },
               "ExpirationDate": {
                 "type": "string",
                 "nullable": true
@@ -2081,12 +2029,76 @@
                 "type": "integer",
                 "format": "int32"
               },
-              "StrikePrice": {
-                "type": "number",
-                "format": "double"
+              "Calls": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Option"
+                },
+                "nullable": true
+              },
+              "Puts": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Option"
+                },
+                "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
+          }
+        ]
+      },
+      "Expiration": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ExpirationBaseOfOption"
+          },
+          {
+            "type": "object"
+          }
+        ]
+      },
+      "OptionsBaseOfExpirationOption": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "Quote": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/QuickQuote"
+                  }
+                ],
+                "nullable": true
+              },
+              "Expirations": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Expiration"
+                },
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "Options": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/OptionsBaseOfExpirationOption"
+          },
+          {
+            "type": "object"
           }
         ]
       },
@@ -2298,12 +2310,120 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
-      "QuickQuote": {
+      "ExpirationBaseOfExtendedOption": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "ExpirationDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Month": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "Year": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "Calls": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ExtendedOption"
+                },
+                "nullable": true
+              },
+              "Puts": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ExtendedOption"
+                },
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "ExtendedExpiration": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ExpirationBaseOfExtendedOption"
+          },
+          {
+            "type": "object"
+          }
+        ]
+      },
+      "OptionsBaseOfExtendedExpirationExtendedOption": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Security": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Security"
+                  }
+                ],
+                "nullable": true
+              },
+              "Quote": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/QuickQuote"
+                  }
+                ],
+                "nullable": true
+              },
+              "Expirations": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ExtendedExpiration"
+                },
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "ExtendedOptions": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/OptionsBaseOfExtendedExpirationExtendedOption"
+          },
+          {
+            "type": "object"
+          }
+        ]
+      },
+      "NumericResult": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Common"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Value": {
+                "type": "number",
+                "format": "double"
+              }
+            }
+          }
+        ]
+      },
+      "OptionSymbol": {
         "allOf": [
           {
             "$ref": "#/components/schemas/Common"
@@ -2315,44 +2435,38 @@
                 "type": "string",
                 "nullable": true
               },
-              "Date": {
+              "SymbologyType": {
                 "type": "string",
                 "nullable": true
               },
-              "Time": {
+              "BaseSymbol": {
                 "type": "string",
                 "nullable": true
               },
-              "UTCDate": {
+              "Type": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/OptionTypes"
+                  }
+                ]
+              },
+              "ExpirationDate": {
                 "type": "string",
                 "nullable": true
               },
-              "UTCTime": {
-                "type": "string",
-                "nullable": true
+              "Month": {
+                "type": "integer",
+                "format": "int32"
               },
-              "Last": {
+              "Year": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "StrikePrice": {
                 "type": "number",
                 "format": "double"
-              },
-              "Volume": {
-                "type": "number",
-                "format": "double"
-              },
-              "Change": {
-                "type": "number",
-                "format": "double"
-              },
-              "Currency": {
-                "type": "string",
-                "nullable": true
-              },
-              "Exchange": {
-                "type": "string",
-                "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2398,8 +2512,7 @@
                 ],
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2445,8 +2558,7 @@
                 ],
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2461,8 +2573,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "UnderlyingSecurity": {
         "type": "object",
@@ -2483,8 +2594,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "UnderlyingSymbolList": {
         "allOf": [
@@ -2509,8 +2619,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2581,8 +2690,7 @@
             "type": "number",
             "format": "double"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "OptionChartBars": {
         "allOf": [
