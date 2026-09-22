@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteBondMaster",
-    "version": "1.0.6"
+    "version": "1.0.7"
   },
   "servers": [
     {
@@ -249,6 +249,14 @@
             "in": "query",
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "IncludeInactive",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
             }
           }
         ],
@@ -1126,6 +1134,9 @@
               "EndSymbol": {
                 "type": "string",
                 "nullable": true
+              },
+              "IncludeInactive": {
+                "type": "boolean"
               },
               "NextPage": {
                 "type": "string",
