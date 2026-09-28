@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalMaster",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "servers": [
     {
@@ -21,27 +21,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               }
             }
@@ -60,27 +60,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               }
             }
@@ -99,27 +99,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               }
             }
@@ -138,27 +138,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               }
             }
@@ -177,27 +177,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               }
             }
@@ -216,27 +216,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/PossibleValues"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValues"
                 }
               }
             }
@@ -257,7 +257,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LegacyExchangeMapping"
                   }
                 }
               },
@@ -265,7 +265,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LegacyExchangeMapping"
                   }
                 }
               },
@@ -273,7 +273,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LegacyExchangeMapping"
                   }
                 }
               },
@@ -281,7 +281,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LegacyExchangeMapping"
                   }
                 }
               },
@@ -289,7 +289,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LegacyExchangeMapping"
                   }
                 }
               }
@@ -311,7 +311,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LegacyExchangeMapping"
                   }
                 }
               },
@@ -319,7 +319,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LegacyExchangeMapping"
                   }
                 }
               },
@@ -327,7 +327,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LegacyExchangeMapping"
                   }
                 }
               },
@@ -335,7 +335,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LegacyExchangeMapping"
                   }
                 }
               },
@@ -343,7 +343,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LegacyExchangeMapping"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LegacyExchangeMapping"
                   }
                 }
               }
@@ -379,27 +379,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolChangeList"
+                  "$ref": "#/components/schemas/HotPot_Shared_Security_SymbolChangeList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolChangeList"
+                  "$ref": "#/components/schemas/HotPot_Shared_Security_SymbolChangeList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolChangeList"
+                  "$ref": "#/components/schemas/HotPot_Shared_Security_SymbolChangeList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolChangeList"
+                  "$ref": "#/components/schemas/HotPot_Shared_Security_SymbolChangeList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/SymbolChangeList"
+                  "$ref": "#/components/schemas/HotPot_Shared_Security_SymbolChangeList"
                 }
               }
             }
@@ -419,7 +419,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/Exchanges"
+                  "$ref": "#/components/schemas/SecurityMaster_API_Exchanges"
                 }
               ]
             }
@@ -430,7 +430,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/IdentifierTypes"
+                  "$ref": "#/components/schemas/Stratus_CommonLib_IdentifierTypes"
                 }
               ]
             }
@@ -441,7 +441,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/InstrumentClasses"
+                  "$ref": "#/components/schemas/SecurityMaster_API_InstrumentClasses"
                 }
               ]
             }
@@ -460,27 +460,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/IdentifiersByExchange"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_IdentifiersByExchange"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/IdentifiersByExchange"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_IdentifiersByExchange"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/IdentifiersByExchange"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_IdentifiersByExchange"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/IdentifiersByExchange"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_IdentifiersByExchange"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/IdentifiersByExchange"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_IdentifiersByExchange"
                 }
               }
             }
@@ -507,7 +507,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/IdentifierTypes"
+                  "$ref": "#/components/schemas/Stratus_CommonLib_IdentifierTypes"
                 }
               ]
             }
@@ -535,7 +535,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Security"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Security"
                   }
                 }
               },
@@ -543,7 +543,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Security"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Security"
                   }
                 }
               },
@@ -551,7 +551,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Security"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Security"
                   }
                 }
               },
@@ -559,7 +559,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Security"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Security"
                   }
                 }
               },
@@ -567,7 +567,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Security"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Security"
                   }
                 }
               }
@@ -595,7 +595,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/IdentifierTypes"
+                  "$ref": "#/components/schemas/Stratus_CommonLib_IdentifierTypes"
                 }
               ]
             }
@@ -616,7 +616,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Security"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Security"
                   }
                 }
               },
@@ -624,7 +624,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Security"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Security"
                   }
                 }
               },
@@ -632,7 +632,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Security"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Security"
                   }
                 }
               },
@@ -640,7 +640,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Security"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Security"
                   }
                 }
               },
@@ -648,7 +648,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Security"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Security"
                   }
                 }
               }
@@ -669,7 +669,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/InstrumentRelatedTypes"
+                  "$ref": "#/components/schemas/SecurityMaster_API_InstrumentRelatedTypes"
                 }
               ]
             }
@@ -687,7 +687,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/IdentifierTypes"
+                  "$ref": "#/components/schemas/Stratus_CommonLib_IdentifierTypes"
                 }
               ]
             }
@@ -715,7 +715,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Instrument"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Instrument"
                   }
                 }
               },
@@ -723,7 +723,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Instrument"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Instrument"
                   }
                 }
               },
@@ -731,7 +731,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Instrument"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Instrument"
                   }
                 }
               },
@@ -739,7 +739,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Instrument"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Instrument"
                   }
                 }
               },
@@ -747,7 +747,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Instrument"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Instrument"
                   }
                 }
               }
@@ -768,7 +768,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/InstrumentRelatedTypes"
+                  "$ref": "#/components/schemas/SecurityMaster_API_InstrumentRelatedTypes"
                 }
               ]
             }
@@ -786,7 +786,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/IdentifierTypes"
+                  "$ref": "#/components/schemas/Stratus_CommonLib_IdentifierTypes"
                 }
               ]
             }
@@ -807,7 +807,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Instrument"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Instrument"
                   }
                 }
               },
@@ -815,7 +815,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Instrument"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Instrument"
                   }
                 }
               },
@@ -823,7 +823,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Instrument"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Instrument"
                   }
                 }
               },
@@ -831,7 +831,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Instrument"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Instrument"
                   }
                 }
               },
@@ -839,7 +839,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Instrument"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Instrument"
                   }
                 }
               }
@@ -860,7 +860,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/IssuerRelatedTypes"
+                  "$ref": "#/components/schemas/SecurityMaster_API_IssuerRelatedTypes"
                 }
               ]
             }
@@ -878,7 +878,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/IdentifierTypes"
+                  "$ref": "#/components/schemas/Stratus_CommonLib_IdentifierTypes"
                 }
               ]
             }
@@ -906,7 +906,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Issuer"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Issuer"
                   }
                 }
               },
@@ -914,7 +914,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Issuer"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Issuer"
                   }
                 }
               },
@@ -922,7 +922,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Issuer"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Issuer"
                   }
                 }
               },
@@ -930,7 +930,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Issuer"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Issuer"
                   }
                 }
               },
@@ -938,7 +938,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Issuer"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Issuer"
                   }
                 }
               }
@@ -959,7 +959,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/IssuerRelatedTypes"
+                  "$ref": "#/components/schemas/SecurityMaster_API_IssuerRelatedTypes"
                 }
               ]
             }
@@ -977,7 +977,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/IdentifierTypes"
+                  "$ref": "#/components/schemas/Stratus_CommonLib_IdentifierTypes"
                 }
               ]
             }
@@ -998,7 +998,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Issuer"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Issuer"
                   }
                 }
               },
@@ -1006,7 +1006,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Issuer"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Issuer"
                   }
                 }
               },
@@ -1014,7 +1014,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Issuer"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Issuer"
                   }
                 }
               },
@@ -1022,7 +1022,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Issuer"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Issuer"
                   }
                 }
               },
@@ -1030,7 +1030,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Issuer"
+                    "$ref": "#/components/schemas/SecurityMaster_API_Issuer"
                   }
                 }
               }
@@ -1051,7 +1051,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/IssuerRelatedTypes"
+                  "$ref": "#/components/schemas/SecurityMaster_API_IssuerRelatedTypes"
                 }
               ]
             }
@@ -1070,27 +1070,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Issuer"
+                  "$ref": "#/components/schemas/SecurityMaster_API_Issuer"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Issuer"
+                  "$ref": "#/components/schemas/SecurityMaster_API_Issuer"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/Issuer"
+                  "$ref": "#/components/schemas/SecurityMaster_API_Issuer"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/Issuer"
+                  "$ref": "#/components/schemas/SecurityMaster_API_Issuer"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/Issuer"
+                  "$ref": "#/components/schemas/SecurityMaster_API_Issuer"
                 }
               }
             }
@@ -1117,7 +1117,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/IdentifierTypes"
+                  "$ref": "#/components/schemas/Stratus_CommonLib_IdentifierTypes"
                 }
               ]
             }
@@ -1145,7 +1145,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1153,7 +1153,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1161,7 +1161,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1169,7 +1169,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1177,7 +1177,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               }
@@ -1205,7 +1205,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/IdentifierTypes"
+                  "$ref": "#/components/schemas/Stratus_CommonLib_IdentifierTypes"
                 }
               ]
             }
@@ -1226,7 +1226,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1234,7 +1234,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1242,7 +1242,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1250,7 +1250,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1258,7 +1258,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               }
@@ -1294,27 +1294,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LookupItems"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LookupItems"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LookupItems"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LookupItems"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/LookupItems"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LookupItems"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/LookupItems"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LookupItems"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/LookupItems"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LookupItems"
                 }
               }
             }
@@ -1334,7 +1334,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/Exchanges"
+                  "$ref": "#/components/schemas/SecurityMaster_API_Exchanges"
                 }
               ]
             }
@@ -1359,7 +1359,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/InstrumentClasses"
+                  "$ref": "#/components/schemas/SecurityMaster_API_InstrumentClasses"
                 }
               ]
             }
@@ -1380,7 +1380,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1388,7 +1388,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1396,7 +1396,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1404,7 +1404,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1412,7 +1412,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               }
@@ -1433,7 +1433,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/Exchanges"
+                  "$ref": "#/components/schemas/SecurityMaster_API_Exchanges"
                 }
               ]
             }
@@ -1458,7 +1458,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/InstrumentClasses"
+                  "$ref": "#/components/schemas/SecurityMaster_API_InstrumentClasses"
                 }
               ]
             }
@@ -1486,7 +1486,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1494,7 +1494,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1502,7 +1502,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1510,7 +1510,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1518,7 +1518,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               }
@@ -1539,7 +1539,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/Exchanges"
+                  "$ref": "#/components/schemas/SecurityMaster_API_Exchanges"
                 }
               ]
             }
@@ -1550,7 +1550,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/Sectors"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Sectors"
                 }
               ]
             }
@@ -1575,7 +1575,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/InstrumentClasses"
+                  "$ref": "#/components/schemas/SecurityMaster_API_InstrumentClasses"
                 }
               ]
             }
@@ -1596,7 +1596,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1604,7 +1604,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1612,7 +1612,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1620,7 +1620,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1628,7 +1628,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               }
@@ -1649,7 +1649,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/Exchanges"
+                  "$ref": "#/components/schemas/SecurityMaster_API_Exchanges"
                 }
               ]
             }
@@ -1660,7 +1660,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/Industries"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Industries"
                 }
               ]
             }
@@ -1685,7 +1685,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/InstrumentClasses"
+                  "$ref": "#/components/schemas/SecurityMaster_API_InstrumentClasses"
                 }
               ]
             }
@@ -1706,7 +1706,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1714,7 +1714,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1722,7 +1722,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1730,7 +1730,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1738,7 +1738,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               }
@@ -1804,7 +1804,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1812,7 +1812,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1820,7 +1820,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1828,7 +1828,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1836,7 +1836,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               }
@@ -1902,7 +1902,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1910,7 +1910,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1918,7 +1918,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1926,7 +1926,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               },
@@ -1934,7 +1934,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Record"
+                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Record"
                   }
                 }
               }
@@ -1955,7 +1955,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/Exchanges"
+                  "$ref": "#/components/schemas/SecurityMaster_API_Exchanges"
                 }
               ]
             }
@@ -1980,7 +1980,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/InstrumentClasses"
+                  "$ref": "#/components/schemas/SecurityMaster_API_InstrumentClasses"
                 }
               ]
             }
@@ -1999,27 +1999,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Statistics"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Statistics"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Statistics"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Statistics"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/Statistics"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Statistics"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/Statistics"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Statistics"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/Statistics"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_Statistics"
                 }
               }
             }
@@ -2039,7 +2039,7 @@
         ],
         "type": "string"
       },
-      "Common": {
+      "Stratus_CommonLib_Objects_Common": {
         "type": "object",
         "properties": {
           "Delay": {
@@ -2061,10 +2061,9 @@
               }
             ]
           }
-        },
-        "additionalProperties": false
+        }
       },
-      "DataProviders": {
+      "SecurityMaster_API_DataProviders": {
         "enum": [
           "XigniteComposite",
           "Telekurs",
@@ -2075,10 +2074,10 @@
         ],
         "type": "string"
       },
-      "AbstractPublicWebServiceObj": {
+      "SecurityMaster_API_AbstractPublicWebServiceObj": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Common"
+            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
           },
           {
             "type": "object",
@@ -2086,16 +2085,15 @@
               "DataProvider": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/DataProviders"
+                    "$ref": "#/components/schemas/SecurityMaster_API_DataProviders"
                   }
                 ]
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
-      "PossibleValue": {
+      "SecurityMaster_API_PossibleValue": {
         "type": "object",
         "properties": {
           "ProviderValue": {
@@ -2110,13 +2108,12 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
-      "PossibleValues": {
+      "SecurityMaster_API_PossibleValues": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/AbstractPublicWebServiceObj"
+            "$ref": "#/components/schemas/SecurityMaster_API_AbstractPublicWebServiceObj"
           },
           {
             "type": "object",
@@ -2128,27 +2125,38 @@
               "Values": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/PossibleValue"
+                  "$ref": "#/components/schemas/SecurityMaster_API_PossibleValue"
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
-      "LegacyExchangeMapping": {
+      "HotPot_Geoduck_Dtos_LegacyExchangeMapping": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Common"
+            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
           },
           {
             "type": "object",
-            "additionalProperties": false
+            "properties": {
+              "MIC": {
+                "type": "string",
+                "nullable": true
+              },
+              "LegacyValues": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            }
           }
         ]
       },
-      "SymbolChange": {
+      "HotPot_Shared_Security_SymbolChange": {
         "type": "object",
         "properties": {
           "Symbol": {
@@ -2191,13 +2199,12 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
-      "SymbolChangeList": {
+      "HotPot_Shared_Security_SymbolChangeList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Common"
+            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
           },
           {
             "type": "object",
@@ -2209,16 +2216,15 @@
               "SymbolChanges": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/SymbolChange"
+                  "$ref": "#/components/schemas/HotPot_Shared_Security_SymbolChange"
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
-      "Exchanges": {
+      "SecurityMaster_API_Exchanges": {
         "enum": [
           "XALG",
           "BCFS",
@@ -3245,7 +3251,7 @@
         ],
         "type": "string"
       },
-      "IdentifierTypes": {
+      "Stratus_CommonLib_IdentifierTypes": {
         "enum": [
           "Symbol",
           "CIK",
@@ -3258,7 +3264,7 @@
         ],
         "type": "string"
       },
-      "InstrumentClasses": {
+      "SecurityMaster_API_InstrumentClasses": {
         "enum": [
           "Bond",
           "Indices",
@@ -3284,7 +3290,7 @@
         ],
         "type": "string"
       },
-      "IdentifierRecord": {
+      "HotPot_Geoduck_Dtos_IdentifierRecord": {
         "type": "object",
         "properties": {
           "Name": {
@@ -3295,13 +3301,12 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
-      "IdentifiersByExchange": {
+      "HotPot_Geoduck_Dtos_IdentifiersByExchange": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Common"
+            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
           },
           {
             "type": "object",
@@ -3325,16 +3330,15 @@
               "ArrayOfIdentifierRecords": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/IdentifierRecord"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_IdentifierRecord"
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
-      "AlternateIdentifierTypes": {
+      "SecurityMaster_API_AlternateIdentifierTypes": {
         "enum": [
           "Unknown",
           "Symbol",
@@ -3348,7 +3352,7 @@
         ],
         "type": "string"
       },
-      "AlternateSecurityIdentifier": {
+      "SecurityMaster_API_AlternateSecurityIdentifier": {
         "type": "object",
         "properties": {
           "AlternateIdentifier": {
@@ -3358,7 +3362,7 @@
           "IdentifierType": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/AlternateIdentifierTypes"
+                "$ref": "#/components/schemas/SecurityMaster_API_AlternateIdentifierTypes"
               }
             ]
           },
@@ -3370,10 +3374,9 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
-      "CustomAttribute": {
+      "SecurityMaster_API_CustomAttribute": {
         "type": "object",
         "properties": {
           "Name": {
@@ -3388,13 +3391,12 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
-      "Security": {
+      "SecurityMaster_API_Security": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Common"
+            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
           },
           {
             "type": "object",
@@ -3444,21 +3446,21 @@
               "AlternateSecurityIdentifiers": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/AlternateSecurityIdentifier"
+                  "$ref": "#/components/schemas/SecurityMaster_API_AlternateSecurityIdentifier"
                 },
                 "nullable": true
               },
               "CustomAttributes": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/CustomAttribute"
+                  "$ref": "#/components/schemas/SecurityMaster_API_CustomAttribute"
                 },
                 "nullable": true
               },
               "DataProvider": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/DataProviders"
+                    "$ref": "#/components/schemas/SecurityMaster_API_DataProviders"
                   }
                 ]
               },
@@ -3470,22 +3472,21 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
-      "InstrumentRelatedTypes": {
+      "SecurityMaster_API_InstrumentRelatedTypes": {
         "enum": [
           "None",
           "Securities"
         ],
         "type": "string"
       },
-      "Instrument": {
+      "SecurityMaster_API_Instrument": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Common"
+            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
           },
           {
             "type": "object",
@@ -3544,30 +3545,29 @@
               "CustomAttributes": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/CustomAttribute"
+                  "$ref": "#/components/schemas/SecurityMaster_API_CustomAttribute"
                 },
                 "nullable": true
               },
               "Securities": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/Security"
+                  "$ref": "#/components/schemas/SecurityMaster_API_Security"
                 },
                 "nullable": true
               },
               "DataProvider": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/DataProviders"
+                    "$ref": "#/components/schemas/SecurityMaster_API_DataProviders"
                   }
                 ]
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
-      "IssuerRelatedTypes": {
+      "SecurityMaster_API_IssuerRelatedTypes": {
         "enum": [
           "None",
           "Instruments",
@@ -3575,10 +3575,10 @@
         ],
         "type": "string"
       },
-      "Classification": {
+      "SecurityMaster_API_Classification": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Common"
+            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
           },
           {
             "type": "object",
@@ -3599,15 +3599,14 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
-      "Issuer": {
+      "SecurityMaster_API_Issuer": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Common"
+            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
           },
           {
             "type": "object",
@@ -3650,28 +3649,28 @@
               "CustomAttributes": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/CustomAttribute"
+                  "$ref": "#/components/schemas/SecurityMaster_API_CustomAttribute"
                 },
                 "nullable": true
               },
               "Instruments": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/Instrument"
+                  "$ref": "#/components/schemas/SecurityMaster_API_Instrument"
                 },
                 "nullable": true
               },
               "DataProvider": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/DataProviders"
+                    "$ref": "#/components/schemas/SecurityMaster_API_DataProviders"
                   }
                 ]
               },
               "Classifications": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/Classification"
+                  "$ref": "#/components/schemas/SecurityMaster_API_Classification"
                 },
                 "nullable": true
               },
@@ -3679,15 +3678,14 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
-      "Record": {
+      "HotPot_Geoduck_Dtos_Record": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Common"
+            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
           },
           {
             "type": "object",
@@ -3783,12 +3781,11 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
-      "LookUpSecurity": {
+      "HotPot_Geoduck_Dtos_LookUpSecurity": {
         "type": "object",
         "properties": {
           "CIK": {
@@ -3860,13 +3857,12 @@
           "MostLiquidExchange": {
             "type": "boolean"
           }
-        },
-        "additionalProperties": false
+        }
       },
-      "LookupItems": {
+      "HotPot_Geoduck_Dtos_LookupItems": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Common"
+            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
           },
           {
             "type": "object",
@@ -3878,16 +3874,15 @@
               "Securities": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/LookUpSecurity"
+                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_LookUpSecurity"
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
-      "Sectors": {
+      "HotPot_Geoduck_Dtos_Sectors": {
         "enum": [
           "Unknown",
           "BasicMaterials",
@@ -3902,7 +3897,7 @@
         ],
         "type": "string"
       },
-      "Industries": {
+      "HotPot_Geoduck_Dtos_Industries": {
         "enum": [
           "Unknown",
           "Chemicals_MajorDiversified",
@@ -4123,10 +4118,10 @@
         ],
         "type": "string"
       },
-      "Statistics": {
+      "HotPot_Geoduck_Dtos_Statistics": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Common"
+            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
           },
           {
             "type": "object",
@@ -4139,8 +4134,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       }
