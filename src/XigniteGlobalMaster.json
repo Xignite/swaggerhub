@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalMaster",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "servers": [
     {
@@ -3222,6 +3222,7 @@
           "XZRH",
           "XBSL",
           "XGVA",
+          "TXSE",
           "_CBOMSCI",
           "_CBOM",
           "_CBOF",
