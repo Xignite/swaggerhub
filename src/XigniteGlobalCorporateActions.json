@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalCorporateActions",
-    "version": "1.0.4"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -21,27 +21,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Exchange_ExchangeList"
+                  "$ref": "#/components/schemas/ExchangeList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Exchange_ExchangeList"
+                  "$ref": "#/components/schemas/ExchangeList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Exchange_ExchangeList"
+                  "$ref": "#/components/schemas/ExchangeList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Exchange_ExchangeList"
+                  "$ref": "#/components/schemas/ExchangeList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Exchange_ExchangeList"
+                  "$ref": "#/components/schemas/ExchangeList"
                 }
               }
             }
@@ -60,27 +60,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_EventTypeList"
+                  "$ref": "#/components/schemas/EventTypeList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_EventTypeList"
+                  "$ref": "#/components/schemas/EventTypeList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_EventTypeList"
+                  "$ref": "#/components/schemas/EventTypeList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_EventTypeList"
+                  "$ref": "#/components/schemas/EventTypeList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_EventTypeList"
+                  "$ref": "#/components/schemas/EventTypeList"
                 }
               }
             }
@@ -122,27 +122,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Security_SymbolList"
+                  "$ref": "#/components/schemas/SymbolList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Security_SymbolList"
+                  "$ref": "#/components/schemas/SymbolList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Security_SymbolList"
+                  "$ref": "#/components/schemas/SymbolList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Security_SymbolList"
+                  "$ref": "#/components/schemas/SymbolList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Security_SymbolList"
+                  "$ref": "#/components/schemas/SymbolList"
                 }
               }
             }
@@ -177,27 +177,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SymbolChangeList"
+                  "$ref": "#/components/schemas/SymbolChangeList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SymbolChangeList"
+                  "$ref": "#/components/schemas/SymbolChangeList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SymbolChangeList"
+                  "$ref": "#/components/schemas/SymbolChangeList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SymbolChangeList"
+                  "$ref": "#/components/schemas/SymbolChangeList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SymbolChangeList"
+                  "$ref": "#/components/schemas/SymbolChangeList"
                 }
               }
             }
@@ -239,27 +239,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_IdentifierChangeList"
+                  "$ref": "#/components/schemas/IdentifierChangeList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_IdentifierChangeList"
+                  "$ref": "#/components/schemas/IdentifierChangeList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_IdentifierChangeList"
+                  "$ref": "#/components/schemas/IdentifierChangeList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_IdentifierChangeList"
+                  "$ref": "#/components/schemas/IdentifierChangeList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_IdentifierChangeList"
+                  "$ref": "#/components/schemas/IdentifierChangeList"
                 }
               }
             }
@@ -308,27 +308,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_ListingChangeList"
+                  "$ref": "#/components/schemas/ListingChangeList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_ListingChangeList"
+                  "$ref": "#/components/schemas/ListingChangeList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_ListingChangeList"
+                  "$ref": "#/components/schemas/ListingChangeList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_ListingChangeList"
+                  "$ref": "#/components/schemas/ListingChangeList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_ListingChangeList"
+                  "$ref": "#/components/schemas/ListingChangeList"
                 }
               }
             }
@@ -355,7 +355,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_IdentifierTypes"
+                  "$ref": "#/components/schemas/IdentifierTypes"
                 }
               ]
             }
@@ -396,27 +396,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_EventSummaryList"
+                  "$ref": "#/components/schemas/EventSummaryList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_EventSummaryList"
+                  "$ref": "#/components/schemas/EventSummaryList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_EventSummaryList"
+                  "$ref": "#/components/schemas/EventSummaryList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_EventSummaryList"
+                  "$ref": "#/components/schemas/EventSummaryList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_EventSummaryList"
+                  "$ref": "#/components/schemas/EventSummaryList"
                 }
               }
             }
@@ -466,27 +466,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityEventSummariesList"
+                  "$ref": "#/components/schemas/SecurityEventSummariesList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityEventSummariesList"
+                  "$ref": "#/components/schemas/SecurityEventSummariesList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityEventSummariesList"
+                  "$ref": "#/components/schemas/SecurityEventSummariesList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityEventSummariesList"
+                  "$ref": "#/components/schemas/SecurityEventSummariesList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityEventSummariesList"
+                  "$ref": "#/components/schemas/SecurityEventSummariesList"
                 }
               }
             }
@@ -513,7 +513,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_IdentifierTypes"
+                  "$ref": "#/components/schemas/IdentifierTypes"
                 }
               ]
             }
@@ -554,27 +554,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_DistributionsList"
+                  "$ref": "#/components/schemas/DistributionsList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_DistributionsList"
+                  "$ref": "#/components/schemas/DistributionsList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_DistributionsList"
+                  "$ref": "#/components/schemas/DistributionsList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_DistributionsList"
+                  "$ref": "#/components/schemas/DistributionsList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_DistributionsList"
+                  "$ref": "#/components/schemas/DistributionsList"
                 }
               }
             }
@@ -624,27 +624,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityDistributionsList"
+                  "$ref": "#/components/schemas/SecurityDistributionsList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityDistributionsList"
+                  "$ref": "#/components/schemas/SecurityDistributionsList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityDistributionsList"
+                  "$ref": "#/components/schemas/SecurityDistributionsList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityDistributionsList"
+                  "$ref": "#/components/schemas/SecurityDistributionsList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityDistributionsList"
+                  "$ref": "#/components/schemas/SecurityDistributionsList"
                 }
               }
             }
@@ -671,7 +671,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_IdentifierTypes"
+                  "$ref": "#/components/schemas/IdentifierTypes"
                 }
               ]
             }
@@ -704,27 +704,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SplitList"
+                  "$ref": "#/components/schemas/SplitList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SplitList"
+                  "$ref": "#/components/schemas/SplitList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SplitList"
+                  "$ref": "#/components/schemas/SplitList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SplitList"
+                  "$ref": "#/components/schemas/SplitList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SplitList"
+                  "$ref": "#/components/schemas/SplitList"
                 }
               }
             }
@@ -759,27 +759,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_ExchangeSplitList"
+                  "$ref": "#/components/schemas/ExchangeSplitList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_ExchangeSplitList"
+                  "$ref": "#/components/schemas/ExchangeSplitList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_ExchangeSplitList"
+                  "$ref": "#/components/schemas/ExchangeSplitList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_ExchangeSplitList"
+                  "$ref": "#/components/schemas/ExchangeSplitList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_ExchangeSplitList"
+                  "$ref": "#/components/schemas/ExchangeSplitList"
                 }
               }
             }
@@ -806,7 +806,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_IdentifierTypes"
+                  "$ref": "#/components/schemas/IdentifierTypes"
                 }
               ]
             }
@@ -839,27 +839,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SpinoffList"
+                  "$ref": "#/components/schemas/SpinoffList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SpinoffList"
+                  "$ref": "#/components/schemas/SpinoffList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SpinoffList"
+                  "$ref": "#/components/schemas/SpinoffList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SpinoffList"
+                  "$ref": "#/components/schemas/SpinoffList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SpinoffList"
+                  "$ref": "#/components/schemas/SpinoffList"
                 }
               }
             }
@@ -886,7 +886,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_IdentifierTypes"
+                  "$ref": "#/components/schemas/IdentifierTypes"
                 }
               ]
             }
@@ -919,27 +919,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_MergersList"
+                  "$ref": "#/components/schemas/MergersList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_MergersList"
+                  "$ref": "#/components/schemas/MergersList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_MergersList"
+                  "$ref": "#/components/schemas/MergersList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_MergersList"
+                  "$ref": "#/components/schemas/MergersList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_MergersList"
+                  "$ref": "#/components/schemas/MergersList"
                 }
               }
             }
@@ -966,7 +966,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_IdentifierTypes"
+                  "$ref": "#/components/schemas/IdentifierTypes"
                 }
               ]
             }
@@ -999,27 +999,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_TakeoversList"
+                  "$ref": "#/components/schemas/TakeoversList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_TakeoversList"
+                  "$ref": "#/components/schemas/TakeoversList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_TakeoversList"
+                  "$ref": "#/components/schemas/TakeoversList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_TakeoversList"
+                  "$ref": "#/components/schemas/TakeoversList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_TakeoversList"
+                  "$ref": "#/components/schemas/TakeoversList"
                 }
               }
             }
@@ -1046,7 +1046,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_IdentifierTypes"
+                  "$ref": "#/components/schemas/IdentifierTypes"
                 }
               ]
             }
@@ -1079,27 +1079,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_TenderOffersList"
+                  "$ref": "#/components/schemas/TenderOffersList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_TenderOffersList"
+                  "$ref": "#/components/schemas/TenderOffersList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_TenderOffersList"
+                  "$ref": "#/components/schemas/TenderOffersList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_TenderOffersList"
+                  "$ref": "#/components/schemas/TenderOffersList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_TenderOffersList"
+                  "$ref": "#/components/schemas/TenderOffersList"
                 }
               }
             }
@@ -1126,7 +1126,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_IdentifierTypes"
+                  "$ref": "#/components/schemas/IdentifierTypes"
                 }
               ]
             }
@@ -1159,27 +1159,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_RightsList"
+                  "$ref": "#/components/schemas/RightsList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_RightsList"
+                  "$ref": "#/components/schemas/RightsList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_RightsList"
+                  "$ref": "#/components/schemas/RightsList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_RightsList"
+                  "$ref": "#/components/schemas/RightsList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_RightsList"
+                  "$ref": "#/components/schemas/RightsList"
                 }
               }
             }
@@ -1214,27 +1214,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityRightsList"
+                  "$ref": "#/components/schemas/SecurityRightsList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityRightsList"
+                  "$ref": "#/components/schemas/SecurityRightsList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityRightsList"
+                  "$ref": "#/components/schemas/SecurityRightsList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityRightsList"
+                  "$ref": "#/components/schemas/SecurityRightsList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityRightsList"
+                  "$ref": "#/components/schemas/SecurityRightsList"
                 }
               }
             }
@@ -1261,7 +1261,7 @@
             "schema": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_IdentifierTypes"
+                  "$ref": "#/components/schemas/IdentifierTypes"
                 }
               ]
             }
@@ -1294,27 +1294,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecuritySwapsList"
+                  "$ref": "#/components/schemas/SecuritySwapsList"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecuritySwapsList"
+                  "$ref": "#/components/schemas/SecuritySwapsList"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecuritySwapsList"
+                  "$ref": "#/components/schemas/SecuritySwapsList"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecuritySwapsList"
+                  "$ref": "#/components/schemas/SecuritySwapsList"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecuritySwapsList"
+                  "$ref": "#/components/schemas/SecuritySwapsList"
                 }
               }
             }
@@ -1334,7 +1334,7 @@
         ],
         "type": "string"
       },
-      "Stratus_CommonLib_Objects_Common": {
+      "Common": {
         "type": "object",
         "properties": {
           "Delay": {
@@ -1356,9 +1356,10 @@
               }
             ]
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Shared_Exchange_ExchangeDescription": {
+      "ExchangeDescription": {
         "type": "object",
         "properties": {
           "MarketIdentificationCode": {
@@ -1369,12 +1370,13 @@
             "type": "string",
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Shared_Exchange_ExchangeList": {
+      "ExchangeList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -1382,15 +1384,16 @@
               "ExchangeDescriptions": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Exchange_ExchangeDescription"
+                  "$ref": "#/components/schemas/ExchangeDescription"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_CorporateActionsEventType": {
+      "CorporateActionsEventType": {
         "type": "object",
         "properties": {
           "EventDescription": {
@@ -1405,12 +1408,13 @@
             "type": "string",
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_EventTypeList": {
+      "EventTypeList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -1418,15 +1422,16 @@
               "EventTypes": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_CorporateActionsEventType"
+                  "$ref": "#/components/schemas/CorporateActionsEventType"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Shared_Security_SecurityDescription": {
+      "SecurityDescription": {
         "type": "object",
         "properties": {
           "Symbol": {
@@ -1445,12 +1450,13 @@
             "type": "string",
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Shared_Security_SymbolList": {
+      "SymbolList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -1458,7 +1464,7 @@
               "Exchange": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/HotPot_Shared_Exchange_ExchangeDescription"
+                    "$ref": "#/components/schemas/ExchangeDescription"
                   }
                 ],
                 "nullable": true
@@ -1466,15 +1472,16 @@
               "SecurityDescriptions": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Security_SecurityDescription"
+                  "$ref": "#/components/schemas/SecurityDescription"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_SymbolChange": {
+      "SymbolChange": {
         "type": "object",
         "properties": {
           "EffectiveDate": {
@@ -1521,12 +1528,13 @@
             "type": "string",
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_SymbolChangeList": {
+      "SymbolChangeList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -1534,15 +1542,16 @@
               "SymbolChanges": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SymbolChange"
+                  "$ref": "#/components/schemas/SymbolChange"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_IdentifierChange": {
+      "IdentifierChange": {
         "type": "object",
         "properties": {
           "EffectiveDate": {
@@ -1581,12 +1590,13 @@
             "type": "string",
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_IdentifierChangeList": {
+      "IdentifierChangeList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -1594,15 +1604,16 @@
               "IdentifierChanges": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_IdentifierChange"
+                  "$ref": "#/components/schemas/IdentifierChange"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_ListingChange": {
+      "ListingChange": {
         "type": "object",
         "properties": {
           "EffectiveDate": {
@@ -1637,12 +1648,13 @@
             "type": "string",
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_ListingChangeList": {
+      "ListingChangeList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -1650,15 +1662,16 @@
               "ListingChanges": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_ListingChange"
+                  "$ref": "#/components/schemas/ListingChange"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_IdentifierTypes": {
+      "IdentifierTypes": {
         "enum": [
           "Symbol",
           "CIK",
@@ -1673,7 +1686,7 @@
         ],
         "type": "string"
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_Security": {
+      "Security": {
         "type": "object",
         "properties": {
           "Name": {
@@ -1732,9 +1745,10 @@
             "type": "string",
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_EventSummary": {
+      "EventSummary": {
         "type": "object",
         "properties": {
           "EventType": {
@@ -1765,12 +1779,13 @@
             "type": "string",
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_EventSummaryList": {
+      "EventSummaryList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -1778,7 +1793,7 @@
               "Security": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                    "$ref": "#/components/schemas/Security"
                   }
                 ],
                 "nullable": true
@@ -1786,21 +1801,22 @@
               "EventSummaries": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_EventSummary"
+                  "$ref": "#/components/schemas/EventSummary"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_SecurityEvent": {
+      "SecurityEvent": {
         "type": "object",
         "properties": {
           "Security": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
@@ -1808,16 +1824,17 @@
           "EventSummaries": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_EventSummary"
+              "$ref": "#/components/schemas/EventSummary"
             },
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_SecurityEventSummariesList": {
+      "SecurityEventSummariesList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -1825,15 +1842,16 @@
               "SecurityEventSummaries": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityEvent"
+                  "$ref": "#/components/schemas/SecurityEvent"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_Distribution": {
+      "Distribution": {
         "type": "object",
         "properties": {
           "PaymentType": {
@@ -1917,17 +1935,18 @@
           "DistributedSecurity": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_DistributionsList": {
+      "DistributionsList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -1935,7 +1954,7 @@
               "Security": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                    "$ref": "#/components/schemas/Security"
                   }
                 ],
                 "nullable": true
@@ -1943,21 +1962,22 @@
               "Distributions": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Distribution"
+                  "$ref": "#/components/schemas/Distribution"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_SecurityDistributions": {
+      "SecurityDistributions": {
         "type": "object",
         "properties": {
           "Security": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
@@ -1965,16 +1985,17 @@
           "DistributionSet": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Distribution"
+              "$ref": "#/components/schemas/Distribution"
             },
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_SecurityDistributionsList": {
+      "SecurityDistributionsList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -1994,15 +2015,16 @@
               "ExchangeDistributions": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityDistributions"
+                  "$ref": "#/components/schemas/SecurityDistributions"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_Split": {
+      "Split": {
         "type": "object",
         "properties": {
           "SplitRatio": {
@@ -2025,12 +2047,13 @@
             "type": "string",
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_SplitList": {
+      "SplitList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -2038,7 +2061,7 @@
               "Security": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                    "$ref": "#/components/schemas/Security"
                   }
                 ],
                 "nullable": true
@@ -2046,21 +2069,22 @@
               "Splits": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Split"
+                  "$ref": "#/components/schemas/Split"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_ExchangeSplit": {
+      "ExchangeSplit": {
         "type": "object",
         "properties": {
           "Security": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
@@ -2068,17 +2092,18 @@
           "Split": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Split"
+                "$ref": "#/components/schemas/Split"
               }
             ],
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_ExchangeSplitList": {
+      "ExchangeSplitList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -2086,15 +2111,16 @@
               "ExchangeSplits": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_ExchangeSplit"
+                  "$ref": "#/components/schemas/ExchangeSplit"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_Spinoff": {
+      "Spinoff": {
         "type": "object",
         "properties": {
           "ExDate": {
@@ -2159,17 +2185,18 @@
           "DistributedSecurity": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_SpinoffList": {
+      "SpinoffList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -2177,7 +2204,7 @@
               "Security": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                    "$ref": "#/components/schemas/Security"
                   }
                 ],
                 "nullable": true
@@ -2185,15 +2212,16 @@
               "SpinoffOptions": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Spinoff"
+                  "$ref": "#/components/schemas/Spinoff"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_Merger": {
+      "Merger": {
         "type": "object",
         "properties": {
           "EffectiveDate": {
@@ -2270,17 +2298,18 @@
           "PaidSecurity": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_MergersList": {
+      "MergersList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -2288,7 +2317,7 @@
               "Security": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                    "$ref": "#/components/schemas/Security"
                   }
                 ],
                 "nullable": true
@@ -2296,15 +2325,16 @@
               "MergerOptions": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Merger"
+                  "$ref": "#/components/schemas/Merger"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_Takeover": {
+      "Takeover": {
         "type": "object",
         "properties": {
           "EffectiveDate": {
@@ -2421,17 +2451,18 @@
           "PaidSecurity": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_TakeoversList": {
+      "TakeoversList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -2439,7 +2470,7 @@
               "Security": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                    "$ref": "#/components/schemas/Security"
                   }
                 ],
                 "nullable": true
@@ -2447,15 +2478,16 @@
               "TakeoverOptions": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Takeover"
+                  "$ref": "#/components/schemas/Takeover"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_TenderOffer": {
+      "TenderOffer": {
         "type": "object",
         "properties": {
           "EffectiveDate": {
@@ -2575,17 +2607,18 @@
           "PaidSecurity": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_TenderOffersList": {
+      "TenderOffersList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -2593,7 +2626,7 @@
               "Security": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                    "$ref": "#/components/schemas/Security"
                   }
                 ],
                 "nullable": true
@@ -2601,15 +2634,16 @@
               "TenderOfferOptions": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_TenderOffer"
+                  "$ref": "#/components/schemas/TenderOffer"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_Rights": {
+      "Rights": {
         "type": "object",
         "properties": {
           "ExDate": {
@@ -2667,17 +2701,18 @@
           "DistributedSecurity": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_RightsList": {
+      "RightsList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -2685,7 +2720,7 @@
               "Security": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                    "$ref": "#/components/schemas/Security"
                   }
                 ],
                 "nullable": true
@@ -2693,21 +2728,22 @@
               "SecurityRights": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Rights"
+                  "$ref": "#/components/schemas/Rights"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_SecurityRights": {
+      "SecurityRights": {
         "type": "object",
         "properties": {
           "Security": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
@@ -2715,16 +2751,17 @@
           "RightsSet": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Rights"
+              "$ref": "#/components/schemas/Rights"
             },
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_SecurityRightsList": {
+      "SecurityRightsList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -2744,15 +2781,16 @@
               "ExchangeRights": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecurityRights"
+                  "$ref": "#/components/schemas/SecurityRights"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_SecuritySwap": {
+      "SecuritySwap": {
         "type": "object",
         "properties": {
           "ExDate": {
@@ -2778,7 +2816,7 @@
           "DistributedSecurity": {
             "allOf": [
               {
-                "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                "$ref": "#/components/schemas/Security"
               }
             ],
             "nullable": true
@@ -2790,12 +2828,13 @@
           "IsDefaultOption": {
             "type": "boolean"
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Geoduck_Dtos_CorporateActions_SecuritySwapsList": {
+      "SecuritySwapsList": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -2803,7 +2842,7 @@
               "Security": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_Security"
+                    "$ref": "#/components/schemas/Security"
                   }
                 ],
                 "nullable": true
@@ -2811,11 +2850,12 @@
               "SecuritySwaps": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Geoduck_Dtos_CorporateActions_SecuritySwap"
+                  "$ref": "#/components/schemas/SecuritySwap"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       }

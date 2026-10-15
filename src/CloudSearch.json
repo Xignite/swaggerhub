@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "CloudSearch",
-    "version": "1.0.4"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -51,27 +51,27 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Gateways_TypeAhead_SearchResults"
+                  "$ref": "#/components/schemas/SearchResults"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Gateways_TypeAhead_SearchResults"
+                  "$ref": "#/components/schemas/SearchResults"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Gateways_TypeAhead_SearchResults"
+                  "$ref": "#/components/schemas/SearchResults"
                 }
               },
               "text/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Gateways_TypeAhead_SearchResults"
+                  "$ref": "#/components/schemas/SearchResults"
                 }
               },
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Gateways_TypeAhead_SearchResults"
+                  "$ref": "#/components/schemas/SearchResults"
                 }
               }
             }
@@ -91,7 +91,7 @@
         ],
         "type": "string"
       },
-      "Stratus_CommonLib_Objects_Common": {
+      "Common": {
         "type": "object",
         "properties": {
           "Delay": {
@@ -113,9 +113,10 @@
               }
             ]
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Shared_Gateways_TypeAhead_Result": {
+      "Result": {
         "type": "object",
         "properties": {
           "Value": {
@@ -130,12 +131,13 @@
             "type": "string",
             "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "HotPot_Shared_Gateways_TypeAhead_SearchResults": {
+      "SearchResults": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Stratus_CommonLib_Objects_Common"
+            "$ref": "#/components/schemas/Common"
           },
           {
             "type": "object",
@@ -147,11 +149,12 @@
               "Results": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/HotPot_Shared_Gateways_TypeAhead_Result"
+                  "$ref": "#/components/schemas/Result"
                 },
                 "nullable": true
               }
-            }
+            },
+            "additionalProperties": false
           }
         ]
       }
