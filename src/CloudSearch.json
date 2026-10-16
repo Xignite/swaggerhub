@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "CloudSearch",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "servers": [
     {
@@ -113,8 +113,7 @@
               }
             ]
           }
-        },
-        "additionalProperties": false
+        }
       },
       "Result": {
         "type": "object",
@@ -131,8 +130,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "SearchResults": {
         "allOf": [
@@ -153,8 +151,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       }
