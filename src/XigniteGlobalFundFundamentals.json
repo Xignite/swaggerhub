@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalFundFundamentals",
-    "version": "1.0.8"
+    "version": "1.0.9"
   },
   "servers": [
     {
@@ -1873,8 +1873,7 @@
               }
             ]
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundType": {
         "type": "object",
@@ -1891,8 +1890,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "CountryDescription": {
         "type": "object",
@@ -1920,8 +1918,7 @@
             },
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "CountryList": {
         "allOf": [
@@ -1938,8 +1935,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1958,8 +1954,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundDescription": {
         "type": "object",
@@ -2019,8 +2014,7 @@
             },
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundList": {
         "allOf": [
@@ -2037,8 +2031,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2057,8 +2050,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2089,8 +2081,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundFundamentalDescriptionList": {
         "allOf": [
@@ -2107,8 +2098,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2175,8 +2165,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "Fundamental": {
         "type": "object",
@@ -2209,8 +2198,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundamentalsSet": {
         "type": "object",
@@ -2230,8 +2218,7 @@
             },
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundFundamentals": {
         "allOf": [
@@ -2256,8 +2243,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2364,8 +2350,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "ProfilesSet": {
         "type": "object",
@@ -2382,8 +2367,7 @@
             ],
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundProfiles": {
         "allOf": [
@@ -2408,8 +2392,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2420,8 +2403,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FeeSchedule": {
         "allOf": [
@@ -2451,8 +2433,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2470,8 +2451,7 @@
             },
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FeeSchedulesSet": {
         "type": "object",
@@ -2500,8 +2480,7 @@
             ],
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundFeeSchedules": {
         "allOf": [
@@ -2526,8 +2505,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2611,8 +2589,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2630,8 +2607,7 @@
             },
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundHoldings": {
         "allOf": [
@@ -2656,8 +2632,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2693,8 +2668,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2712,8 +2686,7 @@
             },
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundManagers": {
         "allOf": [
@@ -2738,8 +2711,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2851,8 +2823,7 @@
           "TrailingReturnSinceInceptionSpecified": {
             "type": "boolean"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "LoadAdjustedTrailingReturns": {
         "type": "object",
@@ -2948,8 +2919,7 @@
           "LoadAdjustedTrailingReturnSinceInceptionSpecified": {
             "type": "boolean"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "MonthEndTrailingReturnsSet": {
         "type": "object",
@@ -2974,8 +2944,7 @@
             ],
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundMonthEndTrailingReturns": {
         "allOf": [
@@ -3000,8 +2969,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -3113,8 +3081,7 @@
           "QuarterEndTrailingReturnSinceInceptionSpecified": {
             "type": "boolean"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "QuarterEndLoadAdjustedTrailingReturns": {
         "type": "object",
@@ -3210,8 +3177,7 @@
           "QuarterEndLoadAdjustedTrailingReturnSinceInceptionSpecified": {
             "type": "boolean"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "QuarterEndTrailingReturnsSet": {
         "type": "object",
@@ -3236,8 +3202,7 @@
             ],
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundQuarterEndTrailingReturns": {
         "allOf": [
@@ -3262,8 +3227,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -3327,8 +3291,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -3379,8 +3342,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundNAVHistory": {
         "allOf": [
@@ -3425,8 +3387,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -3465,8 +3426,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundDividendHistory": {
         "allOf": [
@@ -3499,8 +3459,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -3515,8 +3474,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "BreakdownSet": {
         "type": "object",
@@ -3532,8 +3490,7 @@
             },
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "Breakdown": {
         "type": "object",
@@ -3553,8 +3510,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundBreakdowns": {
         "allOf": [
@@ -3579,8 +3535,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       }
