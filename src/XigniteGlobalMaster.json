@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalMaster",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "servers": [
     {
@@ -2061,8 +2061,7 @@
               }
             ]
           }
-        },
-        "additionalProperties": false
+        }
       },
       "DataProviders": {
         "enum": [
@@ -2090,8 +2089,7 @@
                   }
                 ]
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2110,8 +2108,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "PossibleValues": {
         "allOf": [
@@ -2132,8 +2129,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -2144,7 +2140,19 @@
           },
           {
             "type": "object",
-            "additionalProperties": false
+            "properties": {
+              "MIC": {
+                "type": "string",
+                "nullable": true
+              },
+              "LegacyValues": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            }
           }
         ]
       },
@@ -2191,8 +2199,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "SymbolChangeList": {
         "allOf": [
@@ -2213,8 +2220,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -3222,6 +3228,7 @@
           "XZRH",
           "XBSL",
           "XGVA",
+          "TXSE",
           "_CBOMSCI",
           "_CBOM",
           "_CBOF",
@@ -3295,8 +3302,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "IdentifiersByExchange": {
         "allOf": [
@@ -3329,8 +3335,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -3370,8 +3375,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "CustomAttribute": {
         "type": "object",
@@ -3388,8 +3392,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "Security": {
         "allOf": [
@@ -3470,8 +3473,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -3562,8 +3564,7 @@
                   }
                 ]
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -3599,8 +3600,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -3679,8 +3679,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -3783,8 +3782,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -3860,8 +3858,7 @@
           "MostLiquidExchange": {
             "type": "boolean"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "LookupItems": {
         "allOf": [
@@ -3882,8 +3879,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -4139,8 +4135,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       }
