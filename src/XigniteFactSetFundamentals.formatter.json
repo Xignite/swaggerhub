@@ -1305,8 +1305,7 @@
               }
             ]
           }
-        },
-        "additionalProperties": false
+        }
       },
       "Company": {
         "type": "object",
@@ -1375,8 +1374,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "CompanyList": {
         "allOf": [
@@ -1393,8 +1391,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1413,8 +1410,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "ExchangeList": {
         "allOf": [
@@ -1431,8 +1427,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1467,8 +1462,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundamentalDescriptionList": {
         "allOf": [
@@ -1485,8 +1479,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1501,8 +1494,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "Sector": {
         "type": "object",
@@ -1522,8 +1514,7 @@
             },
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "SectorList": {
         "allOf": [
@@ -1540,8 +1531,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1583,8 +1573,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FundamentalsSet": {
         "type": "object",
@@ -1604,8 +1593,7 @@
             },
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "CompanyFundamentals": {
         "allOf": [
@@ -1630,8 +1618,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1675,8 +1662,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "FinancialStatement": {
         "type": "object",
@@ -1721,8 +1707,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "CompanyFinancialStatements": {
         "allOf": [
@@ -1747,8 +1732,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1776,8 +1760,7 @@
                 ],
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1805,8 +1788,7 @@
                 ],
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1834,8 +1816,7 @@
                 ],
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       }
