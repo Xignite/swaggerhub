@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalNews",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "servers": [
     {
@@ -1323,8 +1323,7 @@
               }
             ]
           }
-        },
-        "additionalProperties": false
+        }
       },
       "Security": {
         "type": "object",
@@ -1368,8 +1367,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "TagGroup": {
         "type": "object",
@@ -1385,8 +1383,7 @@
             },
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "MarketHeadline": {
         "type": "object",
@@ -1444,8 +1441,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "MarketHeadlines": {
         "allOf": [
@@ -1462,8 +1458,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1516,8 +1511,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "SecurityHeadlines": {
         "allOf": [
@@ -1542,8 +1536,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1586,8 +1579,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1606,8 +1598,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1627,8 +1618,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1655,8 +1645,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1676,8 +1665,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1696,8 +1684,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1712,8 +1699,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "ExchangeList": {
         "type": "object",
@@ -1724,9 +1710,27 @@
               "$ref": "#/components/schemas/ExchangeDescription"
             },
             "nullable": true
+          },
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "SecurityDescription": {
         "type": "object",
@@ -1747,8 +1751,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "SymbolList": {
         "type": "object",
@@ -1767,9 +1770,27 @@
               "$ref": "#/components/schemas/SecurityDescription"
             },
             "nullable": true
+          },
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
           }
-        },
-        "additionalProperties": false
+        }
       }
     },
     "securitySchemes": {
