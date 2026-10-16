@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteIPOs",
-    "version": "1.0.2"
+    "version": "1.0.3"
   },
   "servers": [
     {
@@ -606,8 +606,16 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
+      },
+      "OutcomeTypes": {
+        "enum": [
+          "Success",
+          "SystemError",
+          "RequestError",
+          "RegistrationError"
+        ],
+        "type": "string"
       },
       "ExchangeList": {
         "type": "object",
@@ -618,18 +626,27 @@
               "$ref": "#/components/schemas/ExchangeDescription"
             },
             "nullable": true
+          },
+          "Outcome": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutcomeTypes"
+              }
+            ]
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Identity": {
+            "type": "string",
+            "nullable": true
+          },
+          "Delay": {
+            "type": "number",
+            "format": "double"
           }
-        },
-        "additionalProperties": false
-      },
-      "OutcomeTypes": {
-        "enum": [
-          "Success",
-          "SystemError",
-          "RequestError",
-          "RegistrationError"
-        ],
-        "type": "string"
+        }
       },
       "Common": {
         "type": "object",
@@ -653,8 +670,7 @@
               }
             ]
           }
-        },
-        "additionalProperties": false
+        }
       },
       "IPODescription": {
         "type": "object",
@@ -750,8 +766,7 @@
           "SpecialPurposeAcquisitionCompanySpecified": {
             "type": "boolean"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "IPOUnderwriter": {
         "type": "object",
@@ -764,8 +779,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "IPODetails": {
         "allOf": [
@@ -790,8 +804,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -811,8 +824,7 @@
                 ],
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -843,8 +855,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -863,8 +874,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -883,8 +893,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -927,8 +936,7 @@
             "type": "number",
             "format": "double"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "IPOsPerformance": {
         "allOf": [
@@ -945,8 +953,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       }
