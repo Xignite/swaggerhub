@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalRealTimeOptions",
-    "version": "1.0.12"
+    "version": "1.0.13"
   },
   "servers": [
     {
@@ -2754,8 +2754,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       }
