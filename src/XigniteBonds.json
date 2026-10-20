@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteBonds",
-    "version": "1.0.3"
+    "version": "1.0.4"
   },
   "servers": [
     {
@@ -617,8 +617,7 @@
               }
             ]
           }
-        },
-        "additionalProperties": false
+        }
       },
       "BondResult": {
         "type": "object",
@@ -647,8 +646,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "ListBondsResult": {
         "allOf": [
@@ -677,8 +675,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -697,8 +694,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "BondTypeList": {
         "allOf": [
@@ -715,8 +711,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -754,8 +749,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "BondLastSale": {
         "type": "object",
@@ -808,8 +802,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "LastSale": {
         "allOf": [
@@ -843,8 +836,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -959,8 +951,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "PriceComposite": {
         "allOf": [
@@ -994,8 +985,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1066,8 +1056,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "DailyOpenHighLowClosePrice": {
         "allOf": [
@@ -1101,8 +1090,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       }
