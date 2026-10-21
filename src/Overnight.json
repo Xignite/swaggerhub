@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "Overnight",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "servers": [
     {
@@ -375,8 +375,7 @@
               }
             ]
           }
-        },
-        "additionalProperties": false
+        }
       },
       "Security": {
         "type": "object",
@@ -420,8 +419,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "QuoteWithSecurity": {
         "allOf": [
@@ -439,8 +437,7 @@
                 ],
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -543,8 +540,7 @@
               "TradingHalted": {
                 "type": "boolean"
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -559,8 +555,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "SecurityDescription": {
         "type": "object",
@@ -577,8 +572,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "SymbolList": {
         "allOf": [
@@ -603,8 +597,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -675,8 +668,7 @@
             "type": "number",
             "format": "double"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "EquityChartBars": {
         "allOf": [
@@ -713,8 +705,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       }
