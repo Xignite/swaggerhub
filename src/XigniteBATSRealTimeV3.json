@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteBATSRealTimeV3",
-    "version": "3.0.12"
+    "version": "3.0.13"
   },
   "servers": [
     {
@@ -532,8 +532,7 @@
               }
             ]
           }
-        },
-        "additionalProperties": false
+        }
       },
       "Security": {
         "type": "object",
@@ -577,8 +576,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "QuoteWithSecurity": {
         "allOf": [
@@ -596,8 +594,7 @@
                 ],
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -732,8 +729,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -793,8 +789,7 @@
                 "type": "number",
                 "format": "double"
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -809,8 +804,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "SecurityDescription": {
         "type": "object",
@@ -827,8 +821,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "SymbolList": {
         "allOf": [
@@ -853,8 +846,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -925,8 +917,7 @@
             "type": "number",
             "format": "double"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "EquityChartBars": {
         "allOf": [
@@ -963,8 +954,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1031,8 +1021,7 @@
             "type": "number",
             "format": "double"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "GlobalBars": {
         "allOf": [
@@ -1065,8 +1054,7 @@
                 ],
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1102,8 +1090,7 @@
                 ],
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       }
