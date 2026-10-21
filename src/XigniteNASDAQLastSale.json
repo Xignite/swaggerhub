@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteNASDAQLastSale",
-    "version": "1.0.12"
+    "version": "1.0.13"
   },
   "servers": [
     {
@@ -887,8 +887,7 @@
               }
             ]
           }
-        },
-        "additionalProperties": false
+        }
       },
       "Security": {
         "type": "object",
@@ -932,8 +931,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "QuoteWithSecurity": {
         "allOf": [
@@ -951,8 +949,7 @@
                 ],
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1067,8 +1064,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1104,8 +1100,7 @@
                 "type": "number",
                 "format": "double"
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1124,9 +1119,67 @@
               "IdentifierType": {
                 "type": "string",
                 "nullable": true
+              },
+              "Symbol": {
+                "type": "string",
+                "nullable": true
+              },
+              "CompanyName": {
+                "type": "string",
+                "nullable": true
+              },
+              "Date": {
+                "type": "string",
+                "nullable": true
+              },
+              "Time": {
+                "type": "string",
+                "nullable": true
+              },
+              "Open": {
+                "type": "number",
+                "format": "double"
+              },
+              "Close": {
+                "type": "number",
+                "format": "double"
+              },
+              "High": {
+                "type": "number",
+                "format": "double"
+              },
+              "Low": {
+                "type": "number",
+                "format": "double"
+              },
+              "Last": {
+                "type": "number",
+                "format": "double"
+              },
+              "Volume": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousClose": {
+                "type": "number",
+                "format": "double"
+              },
+              "PreviousCloseDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "Change": {
+                "type": "number",
+                "format": "double"
+              },
+              "PercentChange": {
+                "type": "number",
+                "format": "double"
+              },
+              "TradingHalted": {
+                "type": "boolean"
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1141,8 +1194,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "SecurityDescription": {
         "type": "object",
@@ -1159,8 +1211,7 @@
             "type": "string",
             "nullable": true
           }
-        },
-        "additionalProperties": false
+        }
       },
       "SymbolList": {
         "allOf": [
@@ -1185,8 +1236,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1257,8 +1307,7 @@
             "type": "number",
             "format": "double"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "EquityChartBars": {
         "allOf": [
@@ -1295,8 +1344,7 @@
                 "type": "string",
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1363,8 +1411,7 @@
             "type": "number",
             "format": "double"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "GlobalBars": {
         "allOf": [
@@ -1397,8 +1444,7 @@
                 ],
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
@@ -1434,8 +1480,7 @@
                 ],
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       }
