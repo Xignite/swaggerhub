@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalHistorical",
-    "version": "3.0.10"
+    "version": "3.0.11"
   },
   "servers": [
     {
@@ -2357,8 +2357,7 @@
             "type": "number",
             "format": "double"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "ChartBarsSet": {
         "allOf": [
@@ -2391,8 +2390,7 @@
                 },
                 "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       }
