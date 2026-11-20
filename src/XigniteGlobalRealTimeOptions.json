@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalRealTimeOptions",
-    "version": "1.0.13"
+    "version": "1.0.14"
   },
   "servers": [
     {
@@ -2002,6 +2002,26 @@
                 "type": "boolean"
               },
               "Exchange": {
+                "type": "string",
+                "nullable": true
+              },
+              "ExtendedHoursType": {
+                "type": "string",
+                "nullable": true
+              },
+              "ExtendedHoursPrice": {
+                "type": "number",
+                "format": "double"
+              },
+              "ExtendedHoursSize": {
+                "type": "number",
+                "format": "double"
+              },
+              "ExtendedHoursDate": {
+                "type": "string",
+                "nullable": true
+              },
+              "ExtendedHoursTime": {
                 "type": "string",
                 "nullable": true
               }
