@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteGlobalQuotes",
-    "version": "3.0.13"
+    "version": "3.0.14"
   },
   "servers": [
     {
@@ -1351,6 +1351,10 @@
               },
               "TradingHalted": {
                 "type": "boolean"
+              },
+              "FinancialStatus": {
+                "type": "string",
+                "nullable": true
               },
               "BidMarketIdentificationCode": {
                 "type": "string",
