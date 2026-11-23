@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "XigniteSuperQuotes",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "servers": [
     {
@@ -292,8 +292,7 @@
               }
             ]
           }
-        },
-        "additionalProperties": false
+        }
       },
       "Quote": {
         "allOf": [
@@ -433,9 +432,12 @@
               },
               "TradingHalted": {
                 "type": "boolean"
+              },
+              "FinancialStatus": {
+                "type": "string",
+                "nullable": true
               }
-            },
-            "additionalProperties": false
+            }
           }
         ]
       },
